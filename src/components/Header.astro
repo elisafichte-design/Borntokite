@@ -1,0 +1,27 @@
+---
+import site from "../data/site.json";
+const { lang, nav, ui } = Astro.props;
+const base = lang === site.defaultLocale ? "" : `/${lang}`;
+const wa = `https://wa.me/${site.whatsappClean}`;
+---
+<header>
+  <div class="container bar">
+    <a class="brand" href={`${base}/`} aria-label={site.name}>
+      <img src="/logo-encre.png" alt={site.name} width="440" height="246" />
+    </a>
+    <nav aria-label="Principal">
+      {nav.map((n) => <a href={`${base}/${n.slug}/`}>{n.label}</a>)}
+    </nav>
+    <a class="btn btn--ghost" href={wa} rel="noopener">{ui.whatsapp}</a>
+  </div>
+</header>
+<style>
+  header { border-bottom: 1px solid var(--line); position: sticky; top: 0; background: var(--bg); z-index: 5; }
+  .bar { display: flex; align-items: center; gap: var(--space-5); padding-block: var(--space-3); }
+  .brand { border: 0; flex: none; }
+  .brand img { width: 96px; height: auto; }
+  nav { display: flex; gap: var(--space-5); flex: 1; flex-wrap: wrap; }
+  nav a { color: var(--ink); border: 0; font-size: var(--size-small); }
+  nav a:hover { color: var(--accent); }
+  @media (max-width: 900px) { nav { display: none; } .bar { justify-content: space-between; } }
+</style>

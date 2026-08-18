@@ -1,0 +1,40 @@
+---
+import site from "../data/site.json";
+const { lang, ui } = Astro.props;
+const base = lang === site.defaultLocale ? "" : `/${lang}`;
+const year = 2026;
+---
+<footer>
+  <div class="container inner">
+    <div>
+      <img src="/logo-encre.png" alt={site.name} width="440" height="246" loading="lazy" decoding="async" />
+      <p class="faint addr">
+        {site.street}, {site.locality}<br />
+        {site.region}, Île Maurice
+      </p>
+    </div>
+    <div>
+      <p class="eyebrow">Contact</p>
+      <p><a href={`https://wa.me/${site.whatsappClean}`} rel="noopener">WhatsApp</a></p>
+      <p><a href={`mailto:${site.email}`}>{site.email}</a></p>
+      {site.instagram && <p><a href={`https://instagram.com/${site.instagram}`} rel="noopener">@{site.instagram}</a></p>}
+    </div>
+    <div>
+      <p class="eyebrow">Langues</p>
+      {site.locales.map((l) => (
+        <p><a href={l === site.defaultLocale ? "/" : `/${l}/`}>{l.toUpperCase()}</a></p>
+      ))}
+    </div>
+  </div>
+  <div class="container legal">
+    <p class="faint">© {year} {site.name}</p>
+    <p><a href={`${base}/mentions-legales/`}>{ui.footerLegal}</a></p>
+  </div>
+</footer>
+<style>
+  footer { border-top: 1px solid var(--line); padding-block: var(--space-8) var(--space-6); }
+  .inner { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-7); }
+  .inner img { width: 120px; height: auto; }
+  .addr { margin-top: var(--space-4); font-size: var(--size-small); }
+  .legal { display: flex; justify-content: space-between; gap: var(--space-4); margin-top: var(--space-7); padding-top: var(--space-5); border-top: 1px solid var(--line); font-size: var(--size-small); }
+</style>
