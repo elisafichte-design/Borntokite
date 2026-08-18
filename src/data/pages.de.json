@@ -1,0 +1,171 @@
+{
+  "_note": "Traduction a produire. Structure identique au francais : memes slugs de reference, memes blocs.",
+  "nav": [
+    {
+      "slug": "cours-de-kitesurf",
+      "label": "Kitesurf"
+    },
+    {
+      "slug": "wingfoil",
+      "label": "Wingfoil"
+    },
+    {
+      "slug": "surf",
+      "label": "Surf"
+    },
+    {
+      "slug": "tarifs",
+      "label": "Tarifs"
+    },
+    {
+      "slug": "le-spot-du-morne",
+      "label": "Le spot"
+    },
+    {
+      "slug": "excursions",
+      "label": "Excursions"
+    },
+    {
+      "slug": "contact",
+      "label": "Contact"
+    }
+  ],
+  "ui": {
+    "whatsapp": "Schreib uns auf WhatsApp",
+    "seePrices": "Preise ansehen",
+    "onRequest": "Auf Anfrage",
+    "perPerson": "pro Person",
+    "skipToContent": "Zum Inhalt springen",
+    "footerLegal": "Impressum",
+    "footerPrivacy": "Datenschutz",
+    "booking": {
+      "name": "Vorname",
+      "activity": "Aktivität",
+      "activities": [
+        "Kitesurfen",
+        "Wingfoil",
+        "Surfen",
+        "noch offen"
+      ],
+      "day": "Wunschtag",
+      "slot": "Tageszeit",
+      "morning": "Vormittag",
+      "afternoon": "Nachmittag",
+      "submit": "Weiter auf WhatsApp",
+      "hint": "Die Nachricht öffnet sich fertig geschrieben in WhatsApp und wird nur gesendet, wenn Sie sie abschicken. Die genaue Uhrzeit wird je nach Wind bestätigt.",
+      "calendly": "Termin online buchen",
+      "dateLocale": "de-DE",
+      "template": "Hallo Born To Kite! Ich heiße {name}. Ich möchte am {date} buchen, {slot}. Aktivität: {activity}. Ist das möglich?\n\n(gesendet von {source})"
+    }
+  },
+  "pages": [
+    {
+      "slug": "",
+      "title": "École de kitesurf au Morne, île Maurice",
+      "description": "École locale et familiale de kitesurf, wingfoil et surf sur le lagon du Morne. Cours privés et semi-privés, downwind, sessions VIP en bateau. Tarifs affichés.",
+      "blocks": [],
+      "stub": true
+    },
+    {
+      "slug": "tarifs",
+      "title": "Tarifs 2026",
+      "description": "Tous les tarifs de l'école Born To Kite au Morne : cours privé, cours semi-privé, downwind Bel Ombre au Morne, leçons VIP en bateau, session surf. Prix affichés en clair.",
+      "blocks": [],
+      "stub": true
+    },
+    {
+      "slug": "le-spot-du-morne",
+      "title": "Le spot du Morne : vent, saisons et sécurité",
+      "description": "Tout sur le lagon du Morne : vent dominant, saison des alizés, eau plate protégée par la barrière de corail, règles de priorité en mer.",
+      "blocks": [],
+      "stub": true
+    },
+    {
+      "slug": "excursions",
+      "title": "Excursions et visites guidées",
+      "description": "Excursions et visites guidées au départ du Morne, en complément des sessions de kitesurf. Réservation par WhatsApp.",
+      "blocks": [],
+      "stub": true
+    },
+    {
+      "slug": "cours-de-kitesurf",
+      "title": "Cours de kitesurf au Morne",
+      "description": "Du premier jour à l'autonomie sur le lagon du Morne. Cours privés et semi-privés, matériel inclus.",
+      "blocks": [],
+      "stub": true
+    },
+    {
+      "slug": "wingfoil",
+      "title": "Wingfoil à l'île Maurice",
+      "description": "Cours de wingfoil sur le lagon du Morne, mêmes tarifs que le kitesurf.",
+      "blocks": [],
+      "stub": true
+    },
+    {
+      "slug": "surf",
+      "title": "Sessions de surf encadrées",
+      "description": "Sessions de surf encadrées dans le sud de l'île Maurice, tous niveaux.",
+      "blocks": [],
+      "stub": true
+    },
+    {
+      "slug": "downwind-bel-ombre-le-morne",
+      "title": "Downwind Bel Ombre → Le Morne",
+      "description": "2 à 3 heures de navigation accompagnée de Bel Ombre au Morne. 75 € par personne.",
+      "blocks": [],
+      "stub": true
+    },
+    {
+      "slug": "lecons-vip-bateau",
+      "title": "Leçons VIP en bateau",
+      "description": "Session privée sur un banc de sable, accès en bateau, loin du spot débutant. 220 € par personne.",
+      "blocks": [],
+      "stub": true
+    },
+    {
+      "slug": "carte-cadeau",
+      "title": "Carte cadeau",
+      "description": "Offrez une session de kitesurf sur le lagon du Morne.",
+      "blocks": [],
+      "stub": true
+    },
+    {
+      "slug": "l-ecole",
+      "title": "L'école",
+      "description": "Qui nous sommes, notre équipe et les langues que nous parlons.",
+      "blocks": [],
+      "stub": true
+    },
+    {
+      "slug": "contact",
+      "title": "Contact et réservation",
+      "description": "Nous écrire sur WhatsApp, nos horaires et notre point de rendez-vous au Morne.",
+      "blocks": [
+        {
+          "type": "prose",
+          "eyebrow": "Kontakt",
+          "title": "Kontakt und Buchung.",
+          "body": [
+            "WhatsApp: +230 5487 9629. Über diesen Kanal organisiert die Schule die Sessions.",
+            "Treffpunkt: Beachfront Kitelagoon, Le Morne, Rivière Noire, Mauritius. Plus Code G8P9+C6."
+          ],
+          "aValider": true
+        },
+        {
+          "type": "cta",
+          "title": "Session buchen",
+          "body": "Vier Felder, und Ihre Anfrage geht mit allen nötigen Angaben auf WhatsApp ein.",
+          "form": true,
+          "aValider": true
+        }
+      ]
+    },
+    {
+      "slug": "mentions-legales",
+      "title": "Mentions légales et confidentialité",
+      "description": "Mentions légales, éditeur du site et politique de confidentialité.",
+      "blocks": [],
+      "stub": true
+    }
+  ]
+}

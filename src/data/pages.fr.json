@@ -1,0 +1,799 @@
+{
+  "_note": "Textes repris du site actuel. La rédaction appartient à la cliente : ne pas réécrire sans son accord. Les pages marquées \"stub\": true attendent leur contenu.",
+  "nav": [
+    {
+      "slug": "cours-de-kitesurf",
+      "label": "Kitesurf"
+    },
+    {
+      "slug": "wingfoil",
+      "label": "Wingfoil"
+    },
+    {
+      "slug": "surf",
+      "label": "Surf"
+    },
+    {
+      "slug": "tarifs",
+      "label": "Tarifs"
+    },
+    {
+      "slug": "le-spot-du-morne",
+      "label": "Le spot"
+    },
+    {
+      "slug": "excursions",
+      "label": "Excursions"
+    },
+    {
+      "slug": "contact",
+      "label": "Contact"
+    }
+  ],
+  "ui": {
+    "whatsapp": "Écrire sur WhatsApp",
+    "seePrices": "Voir les tarifs",
+    "onRequest": "Sur demande",
+    "perPerson": "par personne",
+    "skipToContent": "Aller au contenu",
+    "footerLegal": "Mentions légales",
+    "footerPrivacy": "Confidentialité"
+  },
+  "pages": [
+    {
+      "slug": "",
+      "title": "École de kitesurf au Morne, île Maurice",
+      "description": "École locale et familiale de kitesurf, wingfoil et surf sur le lagon du Morne. Cours privés et semi-privés, downwind, sessions VIP en bateau. Tarifs affichés.",
+      "blocks": [
+        {
+          "type": "hero",
+          "eyebrow": "Le Morne · Île Maurice",
+          "title": "Bienvenue à l'île Maurice. Apprenez à voler sur l'eau.",
+          "lead": "Born To Kite est une école de kitesurf locale et familiale, née en janvier 2026 sur le lagon du Morne. Plus de dix ans à transmettre la passion du kite, dans la bonne humeur et une sécurité maximale.",
+          "image": "/photos/kitesurf-contre-jour-lagon-le-morne.webp",
+          "alt": "Kitesurfeuse en contre-jour sur le lagon du Morne, île Maurice",
+          "cta": {
+            "label": "Voir les tarifs",
+            "href": "/tarifs/"
+          }
+        },
+        {
+          "type": "sectionnav",
+          "label": "Sections de la page",
+          "items": [
+            {
+              "id": "disciplines",
+              "label": "Nos cours"
+            },
+            {
+              "href": "/tarifs/",
+              "label": "Tarifs"
+            },
+            {
+              "id": "meteo",
+              "label": "Météo"
+            },
+            {
+              "id": "galerie",
+              "label": "Galerie"
+            },
+            {
+              "id": "avis",
+              "label": "Avis"
+            },
+            {
+              "id": "faq",
+              "label": "Questions"
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "items": [
+            {
+              "value": "10+",
+              "label": "années d'expérience en kitesurf"
+            },
+            {
+              "value": "5,0",
+              "label": "sur 31 avis Google"
+            },
+            {
+              "value": "2026",
+              "label": "ouverture de l'école"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "image": "/photos/banc-de-sable-lagon-le-morne.webp",
+          "alt": "Banc de sable et lagon turquoise du Morne vus du ciel, île Maurice",
+          "width": 1600,
+          "height": 1061,
+          "caption": "Le lagon du Morne, au sud-ouest de l'île Maurice."
+        },
+        {
+          "type": "prose",
+          "eyebrow": "Notre histoire",
+          "title": "Une école locale, familiale, et passionnée.",
+          "body": [
+            "Bienvenue à l'île Maurice ! Born To Kite est une école locale et familiale qui a vu le jour en janvier 2026. Professeur de kite depuis plus de dix ans, mon objectif est simple : vous transmettre ma passion dans la bonne humeur, la bienveillance, et dans des conditions de sécurité maximale.",
+            "Venez vous évader dans les eaux turquoises de l'île Maurice en pratiquant un sport hors du commun, fort en sensations, et vivre une expérience qui vous ressemble.",
+            "Nous sommes situés au sud de l'île Maurice, principalement sur le lagon du Morne, mais selon la météo, nous pouvons nous déplacer ailleurs dans cette région pour vous offrir les meilleures conditions."
+          ]
+        },
+        {
+          "type": "cards",
+          "eyebrow": "Nos disciplines",
+          "heading": "Trois façons de glisser sur le lagon.",
+          "items": [
+            {
+              "title": "Kitesurf",
+              "body": "De l'initiation aux figures avancées, sur l'un des plus beaux spots de l'océan Indien.",
+              "href": "/cours-de-kitesurf/",
+              "linkLabel": "Voir les cours de kitesurf",
+              "image": "/photos/cours-de-kitesurf-lagon-le-morne.webp",
+              "alt": "Kitesurfeur sur le lagon du Morne devant la montagne, île Maurice"
+            },
+            {
+              "title": "Wingfoil",
+              "body": "La glisse au-dessus de l'eau, en douceur ou en vitesse — une discipline en plein essor.",
+              "href": "/wingfoil/",
+              "linkLabel": "Voir les cours de wingfoil",
+              "image": "/photos/wingfoil-le-morne-ile-maurice.webp",
+              "alt": "Élèves préparant une aile de wingfoil sur la plage du Morne, île Maurice"
+            },
+            {
+              "title": "Surf",
+              "body": "Profitez des vagues mauriciennes avec un encadrement adapté à tous les niveaux. Selon les prévisions, plusieurs spots dans le sud de l'île sont possibles, pour trouver toujours les meilleures conditions.",
+              "href": "/surf/",
+              "linkLabel": "Voir les sessions de surf",
+              "image": "/photos/surf-vague-sud-ile-maurice.webp",
+              "alt": "Surfeur sur une vague au sud de l'île Maurice"
+            }
+          ],
+          "id": "disciplines"
+        },
+        {
+          "type": "image",
+          "image": "/photos/kitesurf-coucher-de-soleil-ile-maurice.webp",
+          "alt": "Kitesurfeur au coucher de soleil sur le lagon du Morne, île Maurice",
+          "width": 1600,
+          "height": 1067
+        },
+        {
+          "type": "weather",
+          "eyebrow": "Météo & vent",
+          "heading": "Les conditions en direct sur le Morne.",
+          "spot": 118,
+          "loadLabel": "Afficher les prévisions Windguru",
+          "consent": "Le module est hébergé par Windguru. Il ne se charge qu'après ce clic.",
+          "note": "Pour la prévision la plus fine (modèle Arome 2.5 km), sélectionnez-le dans le menu déroulant du module, ou consultez",
+          "id": "meteo"
+        },
+        {
+          "type": "gallery",
+          "eyebrow": "Galerie",
+          "heading": "Le lagon, la glisse, les sourires.",
+          "items": [
+            {
+              "image": "/photos/galerie-briefing-eleves-le-morne.webp",
+              "alt": "Briefing des élèves avant la session, plage du Morne"
+            },
+            {
+              "image": "/photos/galerie-eleves-dans-le-lagon.webp",
+              "alt": "Élèves dans le lagon peu profond du Morne"
+            },
+            {
+              "image": "/photos/galerie-moniteur-dans-le-lagon.webp",
+              "alt": "Moniteur de Born To Kite dans le lagon du Morne"
+            },
+            {
+              "image": "/photos/galerie-preparation-de-l-aile.webp",
+              "alt": "Préparation de l'aile de wingfoil sur la plage"
+            },
+            {
+              "image": "/photos/galerie-materiel-sur-la-plage.webp",
+              "alt": "Gonflage de l'aile de kitesurf sur la plage du Morne, île Maurice"
+            },
+            {
+              "image": "/photos/galerie-crystal-rock-lagon.webp",
+              "alt": "Crystal Rock, rocher au milieu du lagon turquoise"
+            },
+            {
+              "image": "/photos/galerie-surfeur-au-couchant.webp",
+              "alt": "Surfeur au coucher de soleil, côte sud de l'île Maurice"
+            },
+            {
+              "image": "/photos/galerie-portrait-eleve.webp",
+              "alt": "Portrait d'une élève après sa session sur le lagon"
+            }
+          ],
+          "id": "galerie"
+        },
+        {
+          "type": "reviews",
+          "eyebrow": "Avis clients",
+          "heading": "Ce que disent nos élèves.",
+          "source": "5,0 sur 31 avis Google, reproduits mot pour mot.",
+          "items": [
+            {
+              "author": "Salfati Serge",
+              "text": "Après un premier apprentissage du kite surfing, grâce à un coach expérimenté et pédagogue, j'ai pu kiter seul et prendre du plaisir. Avec un tel professeur, vous atteindrez rapidement le niveau et le label « Born to Kite »."
+            },
+            {
+              "author": "Mélouna Tifra",
+              "text": "Super séance de Kite avec Ritik ! Mon copain et moi avons fais un cours en duo ! C'était génial de pouvoir partager ça ensemble. Le spot de Kit est vraiment trop beau ! Ritik est un super coach, vous pouvez lui faire confiance les yeux fermés. On se sera bien amusé ! On reviendra sans hésitation"
+            },
+            {
+              "author": "Noria Laplace",
+              "text": "J'ai passé un super moment avec Ritik, il est patient et très pédagogue ! Très bonne ambiance, on a bien rigolé, mention spéciale à ses 3 garçons !"
+            },
+            {
+              "author": "Alan Morel",
+              "text": "Super école de kite ! Très professionnels et aussi vraiment super sympa !!! Je recommande à 100%"
+            },
+            {
+              "author": "Kenneth L",
+              "text": "École de kitesurf locale, apprentissage dans la bonne humeur et la détente."
+            },
+            {
+              "author": "Ariyana Erdogan",
+              "text": "Expérience incroyable. Merci merci merci"
+            }
+          ],
+          "id": "avis"
+        },
+        {
+          "type": "cta",
+          "title": "Offrez une session de kite.",
+          "body": "Une carte cadeau Born To Kite, c'est offrir un souvenir sur le lagon du Morne — cours, stage, ou session VIP, à choisir selon l'envie.",
+          "label": "Demander une carte cadeau"
+        },
+        {
+          "type": "prose",
+          "eyebrow": "Au-delà du kite",
+          "title": "Excursions & visites guidées",
+          "body": [
+            "Au-delà du kite, nous proposons aussi des excursions en bateau et des visites guidées de l'île — au gré de vos envies et du nombre de participants. Tarifs sur demande, à ajuster selon le programme souhaité."
+          ]
+        },
+        {
+          "type": "faq",
+          "heading": "Questions fréquentes.",
+          "items": [
+            {
+              "q": "Quel niveau faut-il pour commencer le kitesurf ?",
+              "a": "Aucun niveau requis — nos cours débutent par la théorie et la manipulation de l'aile à terre avant d'aller dans l'eau. Savoir nager est indispensable."
+            },
+            {
+              "q": "Combien de temps pour apprendre à naviguer seul ?",
+              "a": "En général, 6 à 10 heures de cours permettent d'acquérir les bases pour naviguer en autonomie, selon l'aisance et les conditions de vent."
+            },
+            {
+              "q": "Le matériel est-il fourni ?",
+              "a": "Oui, tout le matériel (aile, planche, harnais, casque, gilet) est fourni et adapté à votre gabarit et au vent du jour."
+            },
+            {
+              "q": "Que se passe-t-il s'il n'y a pas de vent ?",
+              "a": "La session est reportée à un autre créneau sans frais — la sécurité et la qualité de l'apprentissage passent avant tout."
+            },
+            {
+              "q": "Comment réserver ?",
+              "a": "Le plus simple est de nous écrire sur WhatsApp avec vos disponibilités — nous confirmons le créneau selon la météo."
+            }
+          ],
+          "id": "faq"
+        },
+        {
+          "type": "cta",
+          "title": "Prêt à voler sur l'eau ?",
+          "body": "Écrivez-nous sur WhatsApp ou suivez nos sessions sur Instagram — réponse rapide garantie."
+        }
+      ]
+    },
+    {
+      "slug": "tarifs",
+      "title": "Tarifs 2026",
+      "description": "Tous les tarifs de l'école Born To Kite au Morne : cours privé, cours semi-privé, downwind Bel Ombre au Morne, leçons VIP en bateau, session surf. Prix affichés en clair.",
+      "blocks": [
+        {
+          "type": "prose",
+          "eyebrow": "Tarifs 2026",
+          "title": "Tarifs des cours de kitesurf, wingfoil et surf",
+          "aValider": true
+        },
+        {
+          "type": "prices",
+          "heading": "Kitesurf et wingfoil",
+          "items": [
+            {
+              "name": "Cours privé",
+              "detail": "Un encadrement 100% individuel, pour progresser à votre rythme.",
+              "lines": [
+                "2 h — 150 €",
+                "6 h — 420 €",
+                "8 h — 550 €",
+                "10 h — 700 €"
+              ]
+            },
+            {
+              "name": "Cours semi-privé",
+              "detail": "2 personnes maximum par moniteur, pour progresser ensemble.",
+              "lines": [
+                "2 h — 80 €/pers",
+                "6 h — 230 €/pers",
+                "8 h — 300 €/pers",
+                "10 h — 380 €/pers"
+              ]
+            },
+            {
+              "name": "Supervision & location",
+              "detail": "Vous êtes déjà autonome ? Naviguez sous supervision ou louez notre matériel.",
+              "lines": [
+                "Sur demande"
+              ]
+            },
+            {
+              "name": "Stages multi-jours",
+              "detail": "Une progression accélérée sur plusieurs jours consécutifs, matériel inclus.",
+              "lines": [
+                "Sur demande"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "image": "/photos/moniteur-kitesurf-materiel-le-morne.webp",
+          "alt": "Moniteur de kitesurf de Born To Kite avec sa planche au Morne, île Maurice",
+          "width": 1200,
+          "height": 800
+        },
+        {
+          "type": "prices",
+          "heading": "Sorties",
+          "items": [
+            {
+              "name": "Down wind",
+              "detail": "2 à 3 heures de navigation de Bel Ombre au Morne, accompagné pour une session mémorable.",
+              "lines": [
+                "75 €/personne"
+              ],
+              "accent": true
+            },
+            {
+              "name": "Leçons VIP",
+              "detail": "Direction un banc de sable en bateau, loin du spot débutant : eau turquoise, cadre privé.",
+              "lines": [
+                "220 €/personne"
+              ],
+              "accent": true
+            }
+          ]
+        },
+        {
+          "type": "prices",
+          "heading": "Surf",
+          "items": [
+            {
+              "name": "Session surf",
+              "detail": "Une heure trente encadrée, matériel inclus.",
+              "lines": [
+                "60 € — 1 h 30"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "prices",
+          "heading": "En option",
+          "aValider": true,
+          "items": [
+            {
+              "name": "Photos et vidéos de session",
+              "detail": "Un photographe capte votre session depuis la plage ou depuis l'eau. Sur demande, selon disponibilité.",
+              "lines": [
+                "Sur demande"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "image": "/photos/bateau-ecole-le-morne-noir-et-blanc.webp",
+          "alt": "Bateau de l'école devant la montagne du Morne, île Maurice",
+          "width": 1400,
+          "height": 933
+        },
+        {
+          "type": "cta",
+          "title": "Prêt à voler sur l'eau ?",
+          "body": "Écrivez-nous sur WhatsApp ou suivez nos sessions sur Instagram — réponse rapide garantie."
+        }
+      ]
+    },
+    {
+      "slug": "le-spot-du-morne",
+      "title": "Le spot du Morne : vent, saisons et sécurité",
+      "description": "Tout sur le lagon du Morne : vent dominant, saison des alizés, eau plate protégée par la barrière de corail, règles de priorité en mer.",
+      "blocks": [
+        {
+          "type": "prose",
+          "eyebrow": "Le spot",
+          "title": "Un lagon né du volcan et du corail.",
+          "body": [
+            "L'île Maurice est née d'une activité volcanique il y a environ 8 millions d'années. Elle est aujourd'hui entourée d'un récif corallien quasi continu, qui forme un lagon peu profond et protégé des grosses houles de l'océan Indien, le cadre idéal pour apprendre le kite en toute sécurité.",
+            "Le Morne, classé au patrimoine mondial de l'UNESCO, doit son relief spectaculaire à cette origine volcanique. Sa péninsule crée un plan d'eau à la fois venté et abrité, unique sur l'île.",
+            "Les récifs coralliens sont un écosystème fragile : ils abritent une grande partie de la vie marine mauricienne et protègent aussi le littoral de l'érosion. En naviguant, nous veillons à rester dans les zones de sable et à ne jamais toucher le corail avec le matériel."
+          ]
+        },
+        {
+          "type": "image",
+          "image": "/photos/montagne-du-morne-vue-du-lagon.webp",
+          "alt": "La montagne du Morne vue depuis le lagon, île Maurice",
+          "width": 1600,
+          "height": 1061
+        },
+        {
+          "type": "prose",
+          "eyebrow": "Météo & vent",
+          "title": "Le vent",
+          "body": [
+            "Sur le Morne, le vent dominant est le sud-est (les alizés), généralement plus fort en début d'après-midi. Nos moniteurs vérifient les conditions avant chaque session et adaptent la taille du matériel à la force du vent et à votre niveau.",
+            "Le lagon du Morne est protégé par la barrière de corail : l'eau y est plate, sans grosse vague, ce qui en fait un spot idéal pour apprendre."
+          ]
+        },
+        {
+          "type": "image",
+          "image": "/photos/kites-et-arc-en-ciel-spot-du-morne.webp",
+          "alt": "Ailes de kitesurf posées sur le spot du Morne sous un arc-en-ciel, île Maurice",
+          "width": 1200,
+          "height": 1600,
+          "full": false,
+          "caption": "Le spot de lancement, côté lagon."
+        },
+        {
+          "type": "faq",
+          "heading": "Règles de priorité en mer",
+          "items": [
+            {
+              "q": "Priorité au rider sous le vent",
+              "a": "Le rider situé sous le vent (downwind) est toujours prioritaire."
+            },
+            {
+              "q": "Ne jamais couper une ligne",
+              "a": "Ne passez jamais entre un rider et son kite, ni au-dessus de ses lignes."
+            },
+            {
+              "q": "Anticipez, communiquez",
+              "a": "En cas de doute, ralentissez et laissez la priorité."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "excursions",
+      "title": "Excursions et visites guidées",
+      "description": "Excursions et visites guidées au départ du Morne, en complément des sessions de kitesurf. Réservation par WhatsApp.",
+      "blocks": [
+        {
+          "type": "prose",
+          "eyebrow": "Au-delà du kite",
+          "title": "Excursions et visites guidées.",
+          "body": [
+            "Contenu à compléter avec la cliente.",
+            "Les tarifs des excursions ne sont pas affichés : ils dépendent du prestataire et de la commission appliquée. La réservation se fait directement par WhatsApp."
+          ]
+        },
+        {
+          "type": "cta",
+          "title": "Demander une excursion",
+          "body": "Dites-nous ce qui vous intéresse et pour combien de personnes, on vous fait une proposition."
+        }
+      ],
+      "stub": true
+    },
+    {
+      "slug": "cours-de-kitesurf",
+      "title": "Cours de kitesurf au Morne, île Maurice",
+      "description": "Cours de kitesurf privés et semi-privés sur le lagon du Morne, matériel inclus. Tarifs affichés, de 2 h à 10 h, avec une école locale et familiale.",
+      "blocks": [
+        {
+          "type": "prose",
+          "eyebrow": "Nos disciplines",
+          "title": "Cours de kitesurf au Morne, île Maurice",
+          "aValider": true,
+          "body": [
+            "De l'initiation aux figures avancées, sur l'un des plus beaux spots de l'océan Indien."
+          ]
+        },
+        {
+          "type": "image",
+          "image": "/photos/cours-de-kitesurf-lagon-le-morne.webp",
+          "alt": "Kitesurfeur sur le lagon du Morne devant la montagne, île Maurice",
+          "width": 1000,
+          "height": 750
+        },
+        {
+          "type": "prices",
+          "heading": "Apprentissage",
+          "items": [
+            {
+              "name": "Cours privé",
+              "detail": "Un encadrement 100% individuel, pour progresser à votre rythme.",
+              "lines": [
+                "2 h — 150 €",
+                "6 h — 420 €",
+                "8 h — 550 €",
+                "10 h — 700 €"
+              ]
+            },
+            {
+              "name": "Cours semi-privé",
+              "detail": "2 personnes maximum par moniteur, pour progresser ensemble.",
+              "lines": [
+                "2 h — 80 €/pers",
+                "6 h — 230 €/pers",
+                "8 h — 300 €/pers",
+                "10 h — 380 €/pers"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "prices",
+          "heading": "Autonomie et immersion",
+          "items": [
+            {
+              "name": "Supervision & location",
+              "detail": "Vous êtes déjà autonome ? Naviguez sous supervision ou louez notre matériel.",
+              "lines": [
+                "Sur demande"
+              ]
+            },
+            {
+              "name": "Stages multi-jours",
+              "detail": "Une progression accélérée sur plusieurs jours consécutifs, matériel inclus.",
+              "lines": [
+                "Sur demande"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "prices",
+          "heading": "Sorties",
+          "items": [
+            {
+              "name": "Down wind",
+              "detail": "2 à 3 heures de navigation de Bel Ombre au Morne, accompagné pour une session mémorable.",
+              "lines": [
+                "75 €/personne"
+              ],
+              "accent": true
+            },
+            {
+              "name": "Leçons VIP",
+              "detail": "Direction un banc de sable en bateau, loin du spot débutant : eau turquoise, cadre privé.",
+              "lines": [
+                "220 €/personne"
+              ],
+              "accent": true
+            }
+          ]
+        },
+        {
+          "type": "faq",
+          "heading": "Questions fréquentes.",
+          "items": [
+            {
+              "q": "Quel niveau faut-il pour commencer le kitesurf ?",
+              "a": "Aucun niveau requis — nos cours débutent par la théorie et la manipulation de l'aile à terre avant d'aller dans l'eau. Savoir nager est indispensable."
+            },
+            {
+              "q": "Combien de temps pour apprendre à naviguer seul ?",
+              "a": "En général, 6 à 10 heures de cours permettent d'acquérir les bases pour naviguer en autonomie, selon l'aisance et les conditions de vent."
+            },
+            {
+              "q": "Le matériel est-il fourni ?",
+              "a": "Oui, tout le matériel (aile, planche, harnais, casque, gilet) est fourni et adapté à votre gabarit et au vent du jour."
+            },
+            {
+              "q": "Que se passe-t-il s'il n'y a pas de vent ?",
+              "a": "La session est reportée à un autre créneau sans frais — la sécurité et la qualité de l'apprentissage passent avant tout."
+            },
+            {
+              "q": "Comment réserver ?",
+              "a": "Le plus simple est de nous écrire sur WhatsApp avec vos disponibilités — nous confirmons le créneau selon la météo."
+            }
+          ]
+        },
+        {
+          "type": "cta",
+          "title": "Prêt à voler sur l'eau ?",
+          "body": "Écrivez-nous sur WhatsApp ou suivez nos sessions sur Instagram — réponse rapide garantie."
+        }
+      ],
+      "course": true
+    },
+    {
+      "slug": "wingfoil",
+      "title": "Cours de wingfoil au Morne, île Maurice",
+      "description": "Cours de wingfoil sur le lagon plat du Morne, aux mêmes tarifs que le kitesurf. Matériel inclus, encadrement individuel ou à deux, île Maurice.",
+      "blocks": [
+        {
+          "type": "prose",
+          "eyebrow": "Nos disciplines",
+          "title": "Cours de wingfoil au Morne, île Maurice",
+          "aValider": true,
+          "body": [
+            "La glisse au-dessus de l'eau, en douceur ou en vitesse — une discipline en plein essor."
+          ]
+        },
+        {
+          "type": "image",
+          "image": "/photos/wingfoil-le-morne-ile-maurice.webp",
+          "alt": "Élèves préparant une aile de wingfoil sur la plage du Morne, île Maurice",
+          "width": 1000,
+          "height": 750
+        },
+        {
+          "type": "prices",
+          "heading": "Mêmes tarifs que le kitesurf",
+          "items": [
+            {
+              "name": "Cours privé",
+              "detail": "Un encadrement 100% individuel, pour progresser à votre rythme.",
+              "lines": [
+                "2 h — 150 €",
+                "6 h — 420 €",
+                "8 h — 550 €",
+                "10 h — 700 €"
+              ]
+            },
+            {
+              "name": "Cours semi-privé",
+              "detail": "2 personnes maximum par moniteur, pour progresser ensemble.",
+              "lines": [
+                "2 h — 80 €/pers",
+                "6 h — 230 €/pers",
+                "8 h — 300 €/pers",
+                "10 h — 380 €/pers"
+              ]
+            },
+            {
+              "name": "Supervision & location",
+              "detail": "Vous êtes déjà autonome ? Naviguez sous supervision ou louez notre matériel.",
+              "lines": [
+                "Sur demande"
+              ]
+            },
+            {
+              "name": "Stages multi-jours",
+              "detail": "Une progression accélérée sur plusieurs jours consécutifs, matériel inclus.",
+              "lines": [
+                "Sur demande"
+              ]
+            },
+            {
+              "name": "Leçons VIP",
+              "detail": "Direction un banc de sable en bateau, loin du spot débutant : eau turquoise, cadre privé.",
+              "lines": [
+                "220 €/personne"
+              ],
+              "accent": true
+            }
+          ]
+        },
+        {
+          "type": "cta",
+          "title": "Prêt à voler sur l'eau ?",
+          "body": "Écrivez-nous sur WhatsApp ou suivez nos sessions sur Instagram — réponse rapide garantie."
+        }
+      ],
+      "course": true
+    },
+    {
+      "slug": "surf",
+      "title": "Cours de surf encadrés, sud de l'île Maurice",
+      "description": "Sessions de surf encadrées au sud de l'île Maurice, une heure trente, matériel inclus. Plusieurs spots selon les prévisions, tous niveaux.",
+      "blocks": [
+        {
+          "type": "prose",
+          "eyebrow": "Nos disciplines",
+          "title": "Sessions de surf encadrées, sud de l'île Maurice",
+          "aValider": true,
+          "body": [
+            "Profitez des vagues mauriciennes avec un encadrement adapté à tous les niveaux. Selon les prévisions, plusieurs spots dans le sud de l'île sont possibles, pour trouver toujours les meilleures conditions."
+          ]
+        },
+        {
+          "type": "image",
+          "image": "/photos/surf-vague-sud-ile-maurice.webp",
+          "alt": "Surfeur sur une vague au sud de l'île Maurice",
+          "width": 1000,
+          "height": 750
+        },
+        {
+          "type": "prices",
+          "heading": "Cours",
+          "items": [
+            {
+              "name": "Session surf",
+              "detail": "Une heure trente encadrée, matériel inclus.",
+              "lines": [
+                "60 € — 1 h 30"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "eyebrow": "Les vagues",
+          "title": "Les vagues",
+          "body": [
+            "L'intérieur du lagon reste plat — les vagues surfables se trouvent au large, hors du récif, encadrées selon le niveau de chacun."
+          ]
+        },
+        {
+          "type": "prose",
+          "eyebrow": "Sécurité",
+          "title": "Sécurité",
+          "body": [
+            "Savoir nager est indispensable. Respectez la priorité du surfeur déjà sur la vague et gardez vos distances avec les autres pratiquants."
+          ]
+        },
+        {
+          "type": "cta",
+          "title": "Prêt à voler sur l'eau ?",
+          "body": "Écrivez-nous sur WhatsApp ou suivez nos sessions sur Instagram — réponse rapide garantie."
+        }
+      ],
+      "course": true
+    },
+    {
+      "slug": "downwind-bel-ombre-le-morne",
+      "title": "Downwind Bel Ombre → Le Morne",
+      "description": "2 à 3 heures de navigation accompagnée de Bel Ombre au Morne. 75 € par personne.",
+      "blocks": [],
+      "stub": true
+    },
+    {
+      "slug": "lecons-vip-bateau",
+      "title": "Leçons VIP en bateau",
+      "description": "Session privée sur un banc de sable, accès en bateau, loin du spot débutant. 220 € par personne.",
+      "blocks": [],
+      "stub": true
+    },
+    {
+      "slug": "carte-cadeau",
+      "title": "Carte cadeau",
+      "description": "Offrez une session de kitesurf sur le lagon du Morne.",
+      "blocks": [],
+      "stub": true
+    },
+    {
+      "slug": "l-ecole",
+      "title": "L'école",
+      "description": "Qui nous sommes, notre équipe et les langues que nous parlons.",
+      "blocks": [],
+      "stub": true
+    },
+    {
+      "slug": "contact",
+      "title": "Contact et réservation",
+      "description": "Nous écrire sur WhatsApp, nos horaires et notre point de rendez-vous au Morne.",
+      "blocks": [],
+      "stub": true
+    },
+    {
+      "slug": "mentions-legales",
+      "title": "Mentions légales et confidentialité",
+      "description": "Mentions légales, éditeur du site et politique de confidentialité.",
+      "blocks": [],
+      "stub": true
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Born To Kite",
+  "domain": "https://borntokitemauritius.com",
+  "whatsapp": "+230 5487 9629",
+  "whatsappClean": "23054879629",
+  "contactName": "Ritik Jouan",
+  "email": "contact@borntokitemauritius.com",
+  "street": "Beachfront Kitelagoon",
+  "locality": "Le Morne",
+  "region": "Rivière Noire",
+  "country": "MU",
+  "latitude": -20.4638821,
+  "longitude": 57.3181116,
+  "founded": "2026-01",
+  "instagram": "born_to_kite_",
+  "locales": [
+    "fr",
+    "en",
+    "de"
+  ],
+  "defaultLocale": "fr",
+  "_todo": [
+    "Confirmer le numéro WhatsApp et le nom du contact avec la cliente",
+    "Créer contact@borntokitemauritius.com avant la mise en ligne",
+    "Faire ajouter le site web sur la fiche Google Business Profile : le champ est vide",
+    "Faire changer la catégorie de la fiche : « Club de sport » → « École de kitesurf »",
+    "Créer le compte Calendly (fuseau Indian/Mauritius) et coller son URL dans calendlyUrl : tant que le champ est vide, le bouton ne s'affiche pas",
+    "Demander à la cliente les horaires d'ouverture : ni le site ni le JSON-LD n'en affichent"
+  ],
+  "plusCode": "G8P9+C6 Le Morne",
+  "sameAs": [
+    "https://maps.google.com/?cid=16583647237779172102",
+    "https://www.instagram.com/born_to_kite_/",
+    "https://www.threads.com/@born_to_kite_"
+  ],
+  "googleRating": {
+    "value": "5,0",
+    "count": 31
+  },
+  "calendlyUrl": ""
+}
