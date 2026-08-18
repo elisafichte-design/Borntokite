@@ -1,0 +1,173 @@
+/* ==========================================================================
+   Born To Kite — jetons du design system
+   Piste A « Éditorial photo » (maquette `pistes-charte-graphique.html`).
+   Fond crème, encre bleu-nuit, un seul accent terracotta.
+   Aucune couleur en dur dans un composant : tout part d'ici.
+   ========================================================================== */
+
+/* Les polices sont chargées depuis le <head> de Base.astro, pas ici.
+   Un @import dans le CSS crée une chaîne de quatre requêtes en série avant
+   le premier texte affiché. Ne pas le remettre.
+   Prochain gain : auto-héberger Fraunces et Inter dans public/fonts/,
+   ce qui supprime le domaine tiers et une résolution DNS. */
+
+:root {
+  /* Couleurs — sept valeurs, nommées par fonction. Pas une de plus. */
+  --bg: #faf8f4;          /* fond de page, blanc cassé chaud */
+  --surface: #f2ece1;     /* sable, seule surface distincte (rare) */
+  --line: #e3ddd2;        /* filets et bordures */
+  --ink: #14202b;         /* titres et texte principal */
+  --ink-muted: #4a5560;   /* paragraphes, texte secondaire — 7,2:1 */
+  --ink-faint: #7a6f5c;   /* surtitres, détails de tarif — 4,7:1 */
+  --accent: #b4532a;      /* terracotta, trois éléments par écran maximum */
+
+  /* Voile du hero : 4 arrêts. Voile haut pour le logo, fenêtre claire au
+     tiers pour laisser respirer la photo, assombrissement en pied pour le texte. */
+  --overlay-image: linear-gradient(
+    180deg,
+    rgba(10, 20, 30, 0.5) 0%,
+    rgba(10, 20, 30, 0.06) 30%,
+    rgba(9, 17, 26, 0.62) 62%,
+    rgba(7, 14, 22, 0.93) 100%
+  );
+  --scrim: rgba(8, 16, 24, 0.6);
+
+  /* Typographie — la serif ne sert qu'aux titres et aux prix. */
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  --size-h1: clamp(1.95rem, 5.4vw, 3.6rem);
+  --size-h2: clamp(1.55rem, 3vw, 2.3rem);
+  --size-h3: clamp(1.15rem, 1.6vw, 1.35rem);
+  --size-lead: 1.0625rem;
+  --size-body: 0.95rem;
+  --size-small: 0.8125rem;
+  --size-eyebrow: 0.625rem;
+  --size-stat: clamp(2.2rem, 3.6vw, 3rem);
+
+  --lh-tight: 1.05;
+  --lh-heading: 1.2;
+  --lh-body: 1.7;
+  --ls-eyebrow: 0.16em;
+  --ls-mono: 0.06em;
+  --ls-display: -0.02em;
+  --weight-body: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-display: 400; /* aucun titre en gras — c'est le parti pris de la piste A */
+
+  /* Espacement */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+  --section-y: clamp(44px, 6vw, 96px);
+  --container: 1180px;
+  --container-narrow: 720px;
+  --gutter: clamp(22px, 4vw, 48px);
+
+  /* Hauteur de l'en-tête collant. Sert au menu d'ancres et au décalage
+     des ancres, pour qu'un titre visé ne se cache pas sous les barres. */
+  --header-h: 79px;
+
+  /* Formes — un seul arrondi, aucune ombre portée */
+  --radius: 2px;
+
+  /* Mouvement — opacité et bordure uniquement, pas de lift ni de scale */
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --dur-fast: 140ms;
+  --dur-base: 220ms;
+  --opacity-hover: 0.78;
+  --opacity-active: 0.65;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--size-body);
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
+  text-wrap: pretty;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  color: var(--ink);
+  font-weight: var(--weight-display);
+  letter-spacing: var(--ls-display);
+  margin: 0;
+}
+h1 { font-size: var(--size-h1); line-height: var(--lh-tight); }
+h2 { font-size: var(--size-h2); line-height: var(--lh-heading); letter-spacing: -0.01em; }
+h3 { font-size: var(--size-h3); line-height: var(--lh-heading); letter-spacing: -0.01em; }
+p { margin: 0; }
+
+/* Les liens restent en encre : l'accent se garde pour ce qui doit être vu. */
+a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+  transition: border-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+}
+a:hover { color: var(--accent); border-color: var(--accent); }
+hr { border: none; border-top: 1px solid var(--line); margin: 0; }
+
+img { max-width: 100%; height: auto; display: block; }
+
+/* Ancres : on décale la cible sous l'en-tête et le menu de sections. */
+html { scroll-behavior: smooth; }
+[id] { scroll-margin-top: calc(var(--header-h) + 56px); }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Utilitaires de mise en page */
+.container { max-width: var(--container); margin: 0 auto; padding-inline: var(--gutter); }
+.narrow { max-width: var(--container-narrow); }
+.section { padding-block: var(--section-y); }
+.eyebrow {
+  font-size: var(--size-eyebrow);
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  font-weight: var(--weight-medium);
+}
+.lead { font-size: var(--size-lead); color: var(--ink-muted); line-height: 1.6; }
+.muted { color: var(--ink-muted); }
+.faint { color: var(--ink-faint); }
+.accent { color: var(--accent); }
+
+.btn {
+  display: inline-block;
+  background: var(--ink);
+  color: var(--bg);
+  border: 1px solid var(--ink);
+  border-radius: var(--radius);
+  padding: 14px 22px;
+  font-size: var(--size-small);
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.01em;
+  transition: opacity var(--dur-fast) var(--ease-out);
+}
+.btn:hover { opacity: var(--opacity-hover); color: var(--bg); border-color: var(--ink); }
+.btn:active { opacity: var(--opacity-active); }
+.btn--ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+.btn--ghost:hover { color: var(--ink); border-color: var(--ink); opacity: 1; }
+/* Sur photo : l'inverse exact, crème sur l'image assombrie. */
+.btn--onphoto { background: var(--bg); color: var(--ink); border-color: var(--bg); }
+.btn--onphoto:hover { color: var(--ink); border-color: var(--bg); }
+
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
