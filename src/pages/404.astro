@@ -1,0 +1,61 @@
+---
+// Page 404. Cloudflare Pages sert /404.html automatiquement pour toute URL
+// inconnue, quelle que soit la langue, d'où les trois langues sur une seule page.
+import Base from "../layouts/Base.astro";
+import fr from "../data/pages.fr.json";
+import site from "../data/site.json";
+
+const wa = `https://wa.me/${site.whatsappClean}`;
+---
+
+<Base
+  title="Page introuvable"
+  description="Cette page n'existe pas ou plus. Retrouvez les cours, les tarifs et le spot du Morne depuis l'accueil."
+  lang="fr"
+  slug="404"
+  nav={fr.nav}
+  ui={fr.ui}
+>
+  <section class="section">
+    <div class="container narrow">
+      <p class="eyebrow">Erreur 404</p>
+      <h1>Cette page n'existe pas.</h1>
+
+      <p class="lead lg">
+        Le lien est peut-être ancien, ou l'adresse comporte une faute de frappe.
+        Tout le site reste accessible depuis les liens ci-dessous.
+      </p>
+      <p class="faint tr">
+        This page does not exist. Use the links below to find your way back.<br />
+        Diese Seite existiert nicht. Über die Links unten geht es zurück.
+      </p>
+
+      <ul class="liens">
+        <li><a href="/">Accueil</a></li>
+        <li><a href="/tarifs/">Tarifs</a></li>
+        <li><a href="/cours-de-kitesurf/">Cours de kitesurf</a></li>
+        <li><a href="/wingfoil/">Wingfoil</a></li>
+        <li><a href="/surf/">Surf</a></li>
+        <li><a href="/le-spot-du-morne/">Le spot du Morne</a></li>
+      </ul>
+
+      <a class="btn" href={wa} rel="noopener">{fr.ui.whatsapp}</a>
+    </div>
+  </section>
+</Base>
+
+<style>
+  h1 { margin-top: var(--space-4); }
+  .lg { margin-top: var(--space-5); }
+  .tr { margin-top: var(--space-4); font-size: var(--size-small); }
+  .liens {
+    list-style: none;
+    margin: var(--space-7) 0 0;
+    padding: 0;
+    border-top: 1px solid var(--line);
+  }
+  .liens li { border-bottom: 1px solid var(--line); }
+  .liens a { display: block; padding-block: var(--space-4); border: 0; }
+  .liens a:hover { color: var(--accent); }
+  .btn { margin-top: var(--space-7); }
+</style>
