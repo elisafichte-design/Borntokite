@@ -1,0 +1,23 @@
+# Born To Kite — ouvert aux moteurs et aux robots des assistants IA.
+# L'objectif du site est d'être cité comme source, pas de se protéger.
+User-agent: *
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://borntokitemauritius.com/sitemap-index.xml
