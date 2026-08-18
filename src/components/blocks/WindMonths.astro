@@ -1,0 +1,61 @@
+---
+// Le vent mois par mois. Tout est en texte HTML : c'est la condition pour que
+// Google et les assistants IA puissent citer ces chiffres. Jamais d'image,
+// jamais d'iframe pour ces données.
+//
+// Les valeurs viennent du bloc `windmonths` de pages.<lang>.json. Ne jamais
+// remplir une case au jugé : une donnée de vent fausse envoie un élève sur
+// l'eau dans de mauvaises conditions.
+const { block } = Astro.props;
+---
+<section class="section">
+  <div class="container">
+    {block.eyebrow && <p class="eyebrow">{block.eyebrow}</p>}
+    {block.heading && <h2>{block.heading}</h2>}
+    {block.lead && <p class="lead intro">{block.lead}</p>}
+
+    <table>
+      <caption class="sr">{block.caption}</caption>
+      <thead>
+        <tr>
+          <th scope="col">Mois</th>
+          <th scope="col">Vent moyen</th>
+          <th scope="col">Jours navigables</th>
+          <th scope="col">Eau</th>
+          <th scope="col">Pour qui</th>
+        </tr>
+      </thead>
+      <tbody>
+        {block.months.map((m) => (
+          <tr class={m.best ? "best" : undefined}>
+            <th scope="row">{m.month}</th>
+            <td>{m.wind}</td>
+            <td>{m.days}</td>
+            <td>{m.water}</td>
+            <td>{m.who}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+
+    {block.source && <p class="faint src">{block.source}</p>}
+  </div>
+</section>
+<style>
+  h2 { margin-top: var(--space-4); }
+  .intro { margin-top: var(--space-4); max-width: 60ch; }
+  table { width: 100%; border-collapse: collapse; margin-top: var(--space-6); font-size: var(--size-small); }
+  caption.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  th, td { text-align: left; padding: var(--space-3) var(--space-4) var(--space-3) 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+  thead th { font-weight: var(--weight-medium); font-size: var(--size-eyebrow); letter-spacing: var(--ls-eyebrow); text-transform: uppercase; color: var(--ink-faint); }
+  tbody th { font-weight: var(--weight-medium); white-space: nowrap; }
+  tbody td { color: var(--ink-muted); }
+  /* La saison forte : accentuée par le seul accent du site, une fois. */
+  tr.best th { color: var(--accent); }
+  .src { margin-top: var(--space-4); font-size: var(--size-small); }
+  /* Mobile : le tableau défile plutôt que d'écraser les colonnes. */
+  @media (max-width: 700px) {
+    table { display: block; overflow-x: auto; white-space: nowrap; }
+    td, th { padding-right: var(--space-5); }
+  }
+</style>

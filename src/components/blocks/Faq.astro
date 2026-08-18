@@ -1,0 +1,25 @@
+---
+const { block } = Astro.props;
+---
+<section class="section">
+  <div class="container narrow">
+    {block.heading && <h2>{block.heading}</h2>}
+    <div class="list">
+      {block.items.map((i) => (
+        <details>
+          <summary>{i.q}</summary>
+          <p class="muted">{i.a}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+<style>
+  .list { margin-top: var(--space-5); }
+  details { border-bottom: 1px solid var(--line); padding-block: var(--space-4); }
+  summary { cursor: pointer; font-weight: var(--weight-medium); list-style: none; display: flex; justify-content: space-between; gap: var(--space-4); }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; color: var(--ink-faint); flex: none; }
+  details[open] summary::after { content: "–"; }
+  details p { margin-top: var(--space-3); max-width: 56ch; }
+</style>

@@ -1,0 +1,36 @@
+---
+// Orientation vers les pages disciplines. Pas de carte au sens graphique :
+// une photo, un titre, une phrase, un lien. Le filet remplace le conteneur.
+const { block } = Astro.props;
+---
+<section class="section">
+  <div class="container">
+    {block.eyebrow && <p class="eyebrow">{block.eyebrow}</p>}
+    {block.heading && <h2>{block.heading}</h2>}
+    <div class="grid">
+      {block.items.map((it) => (
+        <a class="item" href={it.href}>
+          <img src={it.image} alt={it.alt} width="1200" height="900" loading="lazy" decoding="async" />
+          <h3>{it.title}</h3>
+          <p class="muted">{it.body}</p>
+          <span class="go">{it.linkLabel}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+<style>
+  h2 { margin-top: var(--space-4); }
+  .grid { display: grid; gap: var(--space-7); margin-top: var(--space-7); grid-template-columns: 1fr; }
+  @media (min-width: 760px) { .grid { grid-template-columns: repeat(3, 1fr); gap: var(--space-6); } }
+  .item { border: 0; display: block; color: var(--ink); }
+  .item img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+  .item h3 { margin-top: var(--space-4); }
+  .item p { margin-top: var(--space-2); font-size: var(--size-small); }
+  .go {
+    display: inline-block; margin-top: var(--space-3); font-size: var(--size-small);
+    font-weight: var(--weight-medium); border-bottom: 1px solid var(--line); padding-bottom: 2px;
+    transition: border-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+  }
+  .item:hover .go { color: var(--accent); border-color: var(--accent); }
+</style>

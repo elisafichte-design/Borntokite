@@ -1,0 +1,30 @@
+---
+// Avis clients. Reproduits mot pour mot, jamais retouchés : une faute de frappe
+// dans un avis fait partie de l'avis. Aucune balise Review ni AggregateRating,
+// voir la note dans CLAUDE.md.
+const { block } = Astro.props;
+---
+<section class="section">
+  <div class="container">
+    {block.eyebrow && <p class="eyebrow">{block.eyebrow}</p>}
+    {block.heading && <h2>{block.heading}</h2>}
+    {block.source && <p class="faint src">{block.source}</p>}
+    <div class="grid">
+      {block.items.map((r) => (
+        <figure>
+          <blockquote>{r.text}</blockquote>
+          <figcaption class="faint">{r.author}</figcaption>
+        </figure>
+      ))}
+    </div>
+  </div>
+</section>
+<style>
+  h2 { margin-top: var(--space-4); }
+  .src { margin-top: var(--space-3); font-size: var(--size-small); }
+  .grid { display: grid; gap: 0; margin-top: var(--space-6); grid-template-columns: 1fr; }
+  @media (min-width: 760px) { .grid { grid-template-columns: repeat(3, 1fr); gap: 0 var(--space-6); } }
+  figure { margin: 0; padding-block: var(--space-5); border-top: 1px solid var(--line); }
+  blockquote { margin: 0; }
+  figcaption { margin-top: var(--space-3); font-size: var(--size-small); }
+</style>

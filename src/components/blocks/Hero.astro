@@ -1,0 +1,29 @@
+---
+const { block } = Astro.props;
+---
+<section class="hero">
+  {block.image
+    ? <img class="bg" src={block.image} alt={block.alt} width="1600" height="1067" fetchpriority="high" />
+    : <div class="bg placeholder" aria-hidden="true"><span>PHOTO — {block.alt}</span></div>}
+  <div class="veil"></div>
+  <div class="container inner">
+    {block.eyebrow && <p class="eyebrow">{block.eyebrow}</p>}
+    <h1>{block.title}</h1>
+    {block.lead && <p class="lead narrow">{block.lead}</p>}
+    {block.cta && <a class="btn btn--onphoto" href={block.cta.href}>{block.cta.label}</a>}
+  </div>
+</section>
+<style>
+  .hero { position: relative; min-height: min(74vh, 660px); display: flex; align-items: flex-end; overflow: hidden; }
+  .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .placeholder { background: var(--surface); display: grid; place-items: center; color: var(--ink-faint); font-family: var(--font-mono); font-size: var(--size-small); letter-spacing: var(--ls-mono); }
+  .veil { position: absolute; inset: 0; background: var(--overlay-image); }
+  /* Ombre imperceptible : la photo argentique a des zones claires,
+     c'est ce qui garantit la lisibilité sans assombrir davantage l'image. */
+  .inner { position: relative; width: 100%; padding-block: var(--space-9) var(--space-7);
+           text-shadow: 0 1px 16px rgba(4, 10, 16, 0.55); }
+  .eyebrow { color: rgba(255, 255, 255, 0.92); }
+  h1 { margin-top: var(--space-4); max-width: 16ch; color: #fff; }
+  .lead { margin-top: var(--space-4); color: rgba(255, 255, 255, 0.88); max-width: 44ch; }
+  .btn { margin-top: var(--space-5); text-shadow: none; }
+</style>

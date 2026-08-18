@@ -1,0 +1,20 @@
+---
+const { block } = Astro.props;
+---
+<section class="section">
+  <div class="container">
+    {block.eyebrow && <p class="eyebrow">{block.eyebrow}</p>}
+    {block.heading && <h2>{block.heading}</h2>}
+    <div class="grid">
+      {block.items.map((it) => (
+        <img src={it.image} alt={it.alt} width="700" height="700" loading="lazy" decoding="async" />
+      ))}
+    </div>
+  </div>
+</section>
+<style>
+  h2 { margin-top: var(--space-4); }
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; margin-top: var(--space-6); }
+  @media (min-width: 760px) { .grid { grid-template-columns: repeat(4, 1fr); } }
+  .grid img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+</style>

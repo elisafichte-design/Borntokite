@@ -1,0 +1,81 @@
+---
+// Menu d'ancres collant, sous l'en-tête. Sur une page longue comme l'accueil,
+// c'est ce qui évite au visiteur de scroller à l'aveugle pour trouver les tarifs.
+//
+// Il se colle sous l'en-tête, d'où --header-h. Les sections visées portent un
+// `id` défini dans le JSON de contenu.
+const { block } = Astro.props;
+---
+<nav class="secnav" aria-label={block.label || "Sections de la page"}>
+  <div class="container inner">
+    {block.items.map((i) =>
+      i.href ? <a href={i.href} class="page">{i.label}</a>
+             : <a href={`#${i.id}`} data-target={i.id}>{i.label}</a>
+    )}
+  </div>
+</nav>
+<style>
+  .secnav {
+    position: sticky;
+    top: var(--header-h);
+    z-index: 4;
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+  }
+  .inner {
+    display: flex;
+    gap: var(--space-6);
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .inner::-webkit-scrollbar { display: none; }
+  .secnav a {
+    flex: none;
+    border: 0;
+    padding-block: var(--space-4);
+    font-size: var(--size-small);
+    color: var(--ink-muted);
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    transition: color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
+  }
+  .secnav a:hover { color: var(--ink); }
+  /* Un seul élément actif à la fois : c'est le seul accent de cette barre. */
+  .secnav a[aria-current="true"] { color: var(--accent); border-bottom-color: var(--accent); }
+  /* Un lien de page, pas une ancre : les tarifs restent à un clic partout. */
+  .secnav a.page { color: var(--ink); font-weight: var(--weight-medium); }
+  .secnav a.page:hover { color: var(--accent); }
+</style>
+<script>
+  const nav = document.querySelector(".secnav");
+  if (nav) {
+    const liens = new Map();
+    nav.querySelectorAll("a[data-target]").forEach((a) => liens.set(a.dataset.target, a));
+    const cibles = [...liens.keys()].map((id) => document.getElementById(id)).filter(Boolean);
+
+    const marquer = (id) => {
+      liens.forEach((a, k) => {
+        if (k === id) a.setAttribute("aria-current", "true");
+        else a.removeAttribute("aria-current");
+      });
+      // On garde l'onglet actif visible quand la barre défile horizontalement.
+      const actif = liens.get(id);
+      if (actif && nav.querySelector(".inner").scrollWidth > nav.clientWidth) {
+        actif.scrollIntoView({ block: "nearest", inline: "nearest" });
+      }
+    };
+
+    const vues = new Set();
+    const obs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => (e.isIntersecting ? vues.add(e.target.id) : vues.delete(e.target.id)));
+        const premier = cibles.find((c) => vues.has(c.id));
+        if (premier) marquer(premier.id);
+      },
+      { rootMargin: "-140px 0px -55% 0px", threshold: 0 }
+    );
+    cibles.forEach((c) => obs.observe(c));
+  }
+</script>

@@ -1,0 +1,15 @@
+---
+const { block, heading = 2 } = Astro.props;
+const H = heading === 1 ? "h1" : "h2";
+---
+<section class="section">
+  <div class="container narrow">
+    {block.eyebrow && <p class="eyebrow">{block.eyebrow}</p>}
+    {block.title && <H>{block.title}</H>}
+    {(block.body || []).map((p) => <p class="muted para">{p}</p>)}
+  </div>
+</section>
+<style>
+  h1, h2 { margin-top: var(--space-4); }
+  .para { margin-top: var(--space-5); }
+</style>

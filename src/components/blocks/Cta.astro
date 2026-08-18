@@ -1,0 +1,17 @@
+---
+import site from "../../data/site.json";
+const { block, ui } = Astro.props;
+---
+<section class="section">
+  <div class="container narrow box">
+    <h2>{block.title}</h2>
+    {block.body && <p class="muted body">{block.body}</p>}
+    <a class="btn" href={`https://wa.me/${site.whatsappClean}`} rel="noopener">{block.label || ui.whatsapp}</a>
+  </div>
+</section>
+<style>
+  /* Piste A : pas de carte, pas d'ombre. Le bloc est délimité par deux filets. */
+  .box { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding-block: var(--space-7); }
+  .body { margin-top: var(--space-4); max-width: 46ch; }
+  .btn { margin-top: var(--space-6); }
+</style>

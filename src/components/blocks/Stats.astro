@@ -1,0 +1,22 @@
+---
+const { block } = Astro.props;
+---
+<section class="band">
+  <div class="container grid">
+    {block.items.map((i) => (
+      <div class="cell">
+        <p class="v">{i.value}</p>
+        <p class="l faint">{i.label}</p>
+      </div>
+    ))}
+  </div>
+</section>
+<style>
+  .band { border-block: 1px solid var(--line); }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+  .cell { padding: var(--space-6) var(--space-4); border-right: 1px solid var(--line); }
+  .cell:first-child { padding-left: 0; }
+  .cell:last-child { border-right: 0; }
+  .v { font-family: var(--font-display); font-size: var(--size-stat); line-height: 1; letter-spacing: var(--ls-display); }
+  .l { font-size: var(--size-small); margin-top: var(--space-2); }
+</style>
