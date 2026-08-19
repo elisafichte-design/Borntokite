@@ -35,9 +35,10 @@ const spot = block.spot || 118;
     btn.addEventListener("click", () => {
       const slot = btn.closest(".slot");
       const f = document.createElement("iframe");
-      f.src = `https://www.windguru.cz/int/iframe.php?id_spot=${slot.dataset.spot}`;
+      f.src = `https://www.windguru.cz/widget-fcst-iframe.php?s=${slot.dataset.spot}`;
       f.title = slot.dataset.label;
       f.loading = "lazy";
+      f.referrerPolicy = "strict-origin-when-cross-origin";
       slot.textContent = "";
       slot.classList.add("on");
       slot.appendChild(f);
