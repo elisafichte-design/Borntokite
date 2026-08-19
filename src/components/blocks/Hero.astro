@@ -3,7 +3,7 @@ const { block } = Astro.props;
 ---
 <section class="hero">
   {block.image
-    ? <img class="bg" src={block.image} alt={block.alt} width="1600" height="1067" fetchpriority="high" />
+    ? <img class="bg" src={block.image} alt={block.alt} width="1600" height="1067" fetchpriority="high" style={block.position ? `object-position:${block.position}` : undefined} />
     : <div class="bg placeholder" aria-hidden="true"><span>PHOTO — {block.alt}</span></div>}
   <div class="veil"></div>
   <div class="container inner">

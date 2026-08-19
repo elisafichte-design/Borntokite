@@ -21,7 +21,6 @@
   "defaultLocale": "fr",
   "_todo": [
     "Confirmer le numéro WhatsApp et le nom du contact avec la cliente",
-    "Créer contact@borntokitemauritius.com avant la mise en ligne",
     "Faire ajouter le site web sur la fiche Google Business Profile : le champ est vide",
     "Faire changer la catégorie de la fiche : « Club de sport » → « École de kitesurf »",
     "Créer le compte Calendly (fuseau Indian/Mauritius) et coller son URL dans calendlyUrl : tant que le champ est vide, le bouton ne s'affiche pas",

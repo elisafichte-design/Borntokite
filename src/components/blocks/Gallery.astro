@@ -7,7 +7,7 @@ const { block } = Astro.props;
     {block.heading && <h2>{block.heading}</h2>}
     <div class="grid">
       {block.items.map((it) => (
-        <img src={it.image} alt={it.alt} width="700" height="700" loading="lazy" decoding="async" />
+        <img src={it.image} alt={it.alt} width="700" height="700" loading="lazy" decoding="async" style={it.position ? `object-position:${it.position}` : undefined} />
       ))}
     </div>
   </div>

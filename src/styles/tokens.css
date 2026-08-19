@@ -5,11 +5,24 @@
    Aucune couleur en dur dans un composant : tout part d'ici.
    ========================================================================== */
 
-/* Les polices sont chargées depuis le <head> de Base.astro, pas ici.
-   Un @import dans le CSS crée une chaîne de quatre requêtes en série avant
-   le premier texte affiché. Ne pas le remettre.
-   Prochain gain : auto-héberger Fraunces et Inter dans public/fonts/,
-   ce qui supprime le domaine tiers et une résolution DNS. */
+/* Polices auto-hébergées : aucun appel à Google Fonts et aucun changement de
+   famille après le premier rendu. Les deux petits fichiers sont préchargés
+   depuis Base.astro. */
+@font-face {
+  font-family: "Fraunces";
+  src: url("/fonts/fraunces-latin-400.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/inter-latin-variable.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+}
 
 :root {
   /* Couleurs — sept valeurs, nommées par fonction. Pas une de plus. */
@@ -120,7 +133,11 @@ a {
   border-bottom: 1px solid var(--line);
   transition: border-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
 }
-a:hover { color: var(--accent); border-color: var(--accent); }
+/* Le hover est réservé aux pointeurs précis. Sur écran tactile, un état hover
+   peut rester bloqué après un tap et faire « sauter » le texte noir en rouge. */
+@media (hover: hover) and (pointer: fine) {
+  a:hover { color: var(--accent); border-color: var(--accent); }
+}
 hr { border: none; border-top: 1px solid var(--line); margin: 0; }
 
 img { max-width: 100%; height: auto; display: block; }

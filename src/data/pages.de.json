@@ -26,11 +26,20 @@
       "label": "Excursions"
     },
     {
+      "slug": "l-ecole",
+      "label": "Die Schule"
+    },
+    {
+      "slug": "meteo",
+      "label": "Live-Wetter"
+    },
+    {
       "slug": "contact",
       "label": "Contact"
     }
   ],
   "ui": {
+    "menu": "Menü",
     "whatsapp": "Schreib uns auf WhatsApp",
     "seePrices": "Preise ansehen",
     "onRequest": "Auf Anfrage",
@@ -79,6 +88,32 @@
       "description": "Tout sur le lagon du Morne : vent dominant, saison des alizés, eau plate protégée par la barrière de corail, règles de priorité en mer.",
       "blocks": [],
       "stub": true
+    },
+    {
+      "slug": "meteo",
+      "title": "Live-Wetter und Wind am Le Morne",
+      "description": "Live-Vorhersage und tägliches Wetter-Update von Born To Kite für die Lagune von Le Morne.",
+      "blocks": [
+        {
+          "type": "prose",
+          "eyebrow": "Wetter am Le Morne",
+          "title": "Die Bedingungen live.",
+          "body": [
+            "Unsere Lehrer prüfen die Bedingungen vor jeder Session und passen das Material an Windstärke und Niveau an."
+          ]
+        },
+        {
+          "type": "weather",
+          "eyebrow": "Vorhersage",
+          "heading": "Live-Wetter am Le Morne.",
+          "spot": 118,
+          "loadLabel": "Windguru-Vorhersage anzeigen",
+          "consent": "Das Modul wird von Windguru gehostet und erst nach diesem Klick geladen.",
+          "note": "Für die genaueste Vorhersage wählen Sie das Modell Arome 2,5 km oder besuchen Sie",
+          "liveLabel": "Ritiks tägliches Wetter-Update auf Instagram ansehen",
+          "liveHref": "https://www.instagram.com/born_to_kite_/"
+        }
+      ]
     },
     {
       "slug": "excursions",

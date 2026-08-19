@@ -3,16 +3,23 @@ import site from "../data/site.json";
 const { lang, nav, ui } = Astro.props;
 const base = lang === site.defaultLocale ? "" : `/${lang}`;
 const wa = `https://wa.me/${site.whatsappClean}`;
+const hrefFor = (n) => n.href || `${base}/${n.slug}/`;
 ---
 <header>
   <div class="container bar">
     <a class="brand" href={`${base}/`} aria-label={site.name}>
       <img src="/logo-encre.png" alt={site.name} width="440" height="246" />
     </a>
-    <nav aria-label="Principal">
-      {nav.map((n) => <a href={`${base}/${n.slug}/`}>{n.label}</a>)}
+    <nav class="desktop" aria-label="Principal">
+      {nav.map((n) => <a href={hrefFor(n)}>{n.label}</a>)}
     </nav>
     <a class="btn btn--ghost" href={wa} rel="noopener">{ui.whatsapp}</a>
+    <details class="mobile">
+      <summary>{ui.menu || "Menu"}</summary>
+      <nav aria-label="Principal">
+        {nav.map((n) => <a href={hrefFor(n)}>{n.label}</a>)}
+      </nav>
+    </details>
   </div>
 </header>
 <style>
@@ -20,8 +27,16 @@ const wa = `https://wa.me/${site.whatsappClean}`;
   .bar { display: flex; align-items: center; gap: var(--space-5); padding-block: var(--space-3); }
   .brand { border: 0; flex: none; }
   .brand img { width: 96px; height: auto; }
-  nav { display: flex; gap: var(--space-5); flex: 1; flex-wrap: wrap; }
+  nav { display: flex; gap: var(--space-4); flex: 1; flex-wrap: wrap; }
   nav a { color: var(--ink); border: 0; font-size: var(--size-small); }
-  nav a:hover { color: var(--accent); }
-  @media (max-width: 900px) { nav { display: none; } .bar { justify-content: space-between; } }
+  .mobile { display: none; }
+  @media (hover: hover) and (pointer: fine) { nav a:hover { color: var(--accent); } }
+  @media (max-width: 1040px) {
+    .desktop { display: none; }
+    .bar { justify-content: space-between; flex-wrap: wrap; gap: var(--space-3); }
+    .bar > .btn { margin-left: auto; }
+    .mobile { display: block; width: 100%; border-top: 1px solid var(--line); padding-top: var(--space-3); }
+    summary { cursor: pointer; font-size: var(--size-small); font-weight: var(--weight-semibold); }
+    .mobile nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: var(--space-3); padding-bottom: var(--space-2); }
+  }
 </style>
