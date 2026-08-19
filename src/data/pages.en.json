@@ -184,8 +184,7 @@
           "heading": "Live conditions at Le Morne.",
           "spot": 118,
           "loadLabel": "Show the Windguru forecast",
-          "consent": "The module is hosted by Windguru and only loads after you click.",
-          "note": "For the most detailed forecast, select the Arome 2.5 km model in the module menu, or visit",
+          "note": "The module displays AROME-FR 2.5 km for a detailed local short-range forecast. For longer-range forecasts, visit",
           "liveLabel": "See today's weather update on Instagram",
           "liveHref": "https://www.instagram.com/born_to_kite_/",
           "id": "meteo"
@@ -551,8 +550,7 @@
           "heading": "Live weather at Le Morne.",
           "spot": 118,
           "loadLabel": "Show the Windguru forecast",
-          "consent": "The module is hosted by Windguru and only loads after you click.",
-          "note": "For the most detailed forecast, select the Arome 2.5 km model in the module menu, or visit",
+          "note": "The module displays AROME-FR 2.5 km for a detailed local short-range forecast. For longer-range forecasts, visit",
           "liveLabel": "See Ritik's weather update today on Instagram",
           "liveHref": "https://www.instagram.com/born_to_kite_/"
         },
@@ -1071,7 +1069,7 @@
           "body": [
             "Website publisher: Born To Kite, Ritik Jouan, Beachfront Kitelagoon, Le Morne, Rivière Noire, Mauritius. Contact: contact@borntokitemauritius.com or +230 5487 9629.",
             "The website is hosted on Cloudflare Pages and uses the domain borntokitemauritius.com.",
-            "The website does not create user accounts or collect data through a form. WhatsApp and email links open the services selected by the visitor. The Windguru module only loads after a click.",
+            "The website does not create user accounts or collect data through a form. WhatsApp and email links open the services selected by the visitor. The Windguru module uses deferred loading: when it loads, the browser connects to Windguru, which may receive technical data such as the IP address.",
             "For questions about your personal data or to exercise your rights of access and rectification, email contact@borntokitemauritius.com. Personal data processing in Mauritius is governed by the Data Protection Act 2017."
           ]
         }

@@ -184,8 +184,7 @@
           "heading": "Die aktuellen Bedingungen am Le Morne.",
           "spot": 118,
           "loadLabel": "Windguru-Vorhersage anzeigen",
-          "consent": "Das Modul wird von Windguru gehostet und erst nach einem Klick geladen.",
-          "note": "Für die genaueste Vorhersage wähle im Modul das Modell Arome 2,5 km oder besuche",
+          "note": "Das Modul zeigt AROME-FR 2,5 km für eine detaillierte lokale Kurzfristprognose. Für längerfristige Vorhersagen besuche",
           "liveLabel": "Heutiges Wetter-Update auf Instagram ansehen",
           "liveHref": "https://www.instagram.com/born_to_kite_/",
           "id": "meteo"
@@ -551,8 +550,7 @@
           "heading": "Live-Wetter am Le Morne.",
           "spot": 118,
           "loadLabel": "Windguru-Vorhersage anzeigen",
-          "consent": "Das Modul wird von Windguru gehostet und erst nach einem Klick geladen.",
-          "note": "Für die genaueste Vorhersage wähle im Modul das Modell Arome 2,5 km oder besuche",
+          "note": "Das Modul zeigt AROME-FR 2,5 km für eine detaillierte lokale Kurzfristprognose. Für längerfristige Vorhersagen besuche",
           "liveLabel": "Ritiks heutiges Wetter-Update auf Instagram ansehen",
           "liveHref": "https://www.instagram.com/born_to_kite_/"
         },
@@ -1071,7 +1069,7 @@
           "body": [
             "Websitebetreiber: Born To Kite, Ritik Jouan, Beachfront Kitelagoon, Le Morne, Rivière Noire, Mauritius. Kontakt: contact@borntokitemauritius.com oder +230 5487 9629.",
             "Die Website wird über Cloudflare Pages gehostet und verwendet die Domain borntokitemauritius.com.",
-            "Die Website erstellt keine Benutzerkonten und erfasst keine Daten über ein Formular. WhatsApp- und E-Mail-Links öffnen die vom Besucher gewählten Dienste. Das Windguru-Modul wird erst nach einem Klick geladen.",
+            "Die Website erstellt keine Benutzerkonten und erfasst keine Daten über ein Formular. WhatsApp- und E-Mail-Links öffnen die vom Besucher gewählten Dienste. Das Windguru-Modul wird verzögert geladen: Beim Laden verbindet sich der Browser mit Windguru, das technische Daten wie die IP-Adresse erhalten kann.",
             "Bei Fragen zu deinen personenbezogenen Daten oder zur Ausübung deiner Rechte auf Auskunft und Berichtigung schreibe an contact@borntokitemauritius.com. Die Verarbeitung personenbezogener Daten auf Mauritius unterliegt dem Data Protection Act 2017."
           ]
         }

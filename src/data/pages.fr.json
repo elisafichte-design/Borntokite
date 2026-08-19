@@ -184,8 +184,7 @@
           "heading": "Les conditions en direct sur le Morne.",
           "spot": 118,
           "loadLabel": "Afficher les prévisions Windguru",
-          "consent": "Le module est hébergé par Windguru. Il ne se charge qu'après ce clic.",
-          "note": "Pour la prévision la plus fine (modèle Arome 2.5 km), sélectionnez-le dans le menu déroulant du module, ou consultez",
+          "note": "Le module affiche AROME-FR 2,5 km pour une prévision locale détaillée à court terme. Pour les prévisions plus longues, consultez",
           "liveLabel": "Voir la météo du jour sur Instagram",
           "liveHref": "https://www.instagram.com/born_to_kite_/",
           "id": "meteo"
@@ -551,8 +550,7 @@
           "heading": "Météo en direct au Morne.",
           "spot": 118,
           "loadLabel": "Afficher les prévisions Windguru",
-          "consent": "Le module est hébergé par Windguru. Il ne se charge qu'après ce clic.",
-          "note": "Pour la prévision la plus fine (modèle Arome 2.5 km), sélectionnez-le dans le menu déroulant du module, ou consultez",
+          "note": "Le module affiche AROME-FR 2,5 km pour une prévision locale détaillée à court terme. Pour les prévisions plus longues, consultez",
           "liveLabel": "Voir la météo du jour de Ritik sur Instagram",
           "liveHref": "https://www.instagram.com/born_to_kite_/"
         },
@@ -1071,7 +1069,7 @@
           "body": [
             "Éditeur du site : Born To Kite, Ritik Jouan, Beachfront Kitelagoon, Le Morne, Rivière Noire, île Maurice. Contact : contact@borntokitemauritius.com ou +230 5487 9629.",
             "Le site est hébergé par Cloudflare Pages et le nom de domaine est borntokitemauritius.com.",
-            "Le site ne crée aucun compte et ne collecte aucune donnée au moyen d'un formulaire. Les liens WhatsApp et e-mail ouvrent les services choisis par le visiteur. Le module Windguru ne se charge qu'après un clic.",
+            "Le site ne crée aucun compte et ne collecte aucune donnée au moyen d'un formulaire. Les liens WhatsApp et e-mail ouvrent les services choisis par le visiteur. Le module Windguru est intégré en chargement différé : lorsqu'il se charge, le navigateur se connecte à Windguru, qui peut recevoir des données techniques comme l'adresse IP.",
             "Pour toute question sur vos données personnelles ou pour exercer vos droits d'accès et de rectification, écrivez à contact@borntokitemauritius.com. Le traitement des données personnelles à Maurice est encadré par le Data Protection Act 2017."
           ]
         }
