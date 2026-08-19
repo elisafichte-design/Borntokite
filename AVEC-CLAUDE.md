@@ -61,6 +61,10 @@ Un assistant a naturellement tendance à « améliorer » les phrases. C'est exa
 
 > Crée la page [nom] avec le slug [adresse]. Écris-moi trois propositions de `title` sous 60 caractères et de `description` entre 140 et 160, je choisirai. Pour le corps, utilise ce texte : [ton texte]
 
+Ajoute à la demande :
+
+> Duplique ensuite la page dans `pages.en.json` et `pages.de.json`, traduis-la, puis crée ses trois routes explicites dans `src/pages/`, `src/pages/en/` et `src/pages/de/`. Garde le même slug dans les trois langues.
+
 **Remplir une page vide**
 
 > La page [nom] est marquée `"stub": true`. Remplis-la en reprenant exclusivement les textes de l'ancien site, dans `index_3.html`. N'invente aucune phrase. Là où il manque du contenu, laisse un bloc « À compléter » et liste-moi les manques à la fin.
@@ -109,7 +113,7 @@ Un assistant a naturellement tendance à « améliorer » les phrases. C'est exa
 
 La phrase à envoyer :
 
-> Termine l'intégration de la réservation. Les libellés existent déjà dans `pages.en.json` sous `ui.booking` : reporte-les en français dans `pages.fr.json`, crée le composant `Booking.astro` en respectant les jetons de `tokens.css`, et branche-le dans `src/pages/[...path].astro`. Quatre champs maximum. Le formulaire n'envoie rien : il ouvre WhatsApp avec le message pré-rempli. Le lien Calendly est un lien sortant, jamais une iframe, et il ne s'affiche que si `calendlyUrl` est renseigné dans `site.json`.
+> Termine l'intégration de la réservation. Crée le composant `Booking.astro` en respectant les jetons de `tokens.css`, puis branche-le dans `src/layouts/ContentPage.astro`. Quatre champs maximum. Le formulaire n'envoie rien : il ouvre WhatsApp avec le message pré-rempli. Le lien Calendly est un lien sortant, jamais une iframe, et il ne s'affiche que si `calendlyUrl` est renseigné dans `site.json`.
 
 **Ce que tu dois faire toi, avant :** créer le compte Calendly, régler le fuseau sur `Indian/Mauritius`, et coller son adresse dans `calendlyUrl`. Tant que le champ est vide, le bouton ne s'affiche pas, c'est voulu.
 

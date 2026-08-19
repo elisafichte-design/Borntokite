@@ -1,8 +1,12 @@
 ---
 import site from "../data/site.json";
-const { lang, ui } = Astro.props;
+const { lang, ui, slug = "" } = Astro.props;
 const base = lang === site.defaultLocale ? "" : `/${lang}`;
 const year = 2026;
+const languageHref = (locale) => {
+  const prefix = locale === site.defaultLocale ? "" : `/${locale}`;
+  return `${prefix}/${slug ? `${slug}/` : ""}`.replace(/\/+/g, "/");
+};
 ---
 <footer>
   <div class="container inner">
@@ -22,7 +26,7 @@ const year = 2026;
     <div>
       <p class="eyebrow">Langues</p>
       {site.locales.map((l) => (
-        <p><a href={l === site.defaultLocale ? "/" : `/${l}/`}>{l.toUpperCase()}</a></p>
+        <p><a href={languageHref(l)} hreflang={l}>{l.toUpperCase()}</a></p>
       ))}
     </div>
   </div>

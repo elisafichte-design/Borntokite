@@ -7,8 +7,11 @@
 // remplir une case au jugé : une donnée de vent fausse envoie un élève sur
 // l'eau dans de mauvaises conditions.
 import windFr from "../../data/wind.fr.json";
+import windEn from "../../data/wind.en.json";
+import windDe from "../../data/wind.de.json";
 const { block } = Astro.props;
-const data = block.data === "fr" ? { ...windFr, ...block } : block;
+const windByLocale = { fr: windFr, en: windEn, de: windDe };
+const data = block.data && windByLocale[block.data] ? { ...windByLocale[block.data], ...block } : block;
 const columns = data.columns || ["Mois", "Vent moyen", "Jours navigables", "Eau", "Pour qui", "Saison"];
 ---
 <section class="section">

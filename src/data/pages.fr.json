@@ -868,15 +868,83 @@
       "slug": "downwind-bel-ombre-le-morne",
       "title": "Downwind Bel Ombre → Le Morne",
       "description": "2 à 3 heures de navigation accompagnée de Bel Ombre au Morne. 75 € par personne.",
-      "blocks": [],
-      "stub": true
+      "blocks": [
+        {
+          "type": "prose",
+          "eyebrow": "Sorties",
+          "title": "Downwind Bel Ombre → Le Morne",
+          "body": [
+            "2 à 3 heures de navigation de Bel Ombre au Morne, accompagné pour une session mémorable."
+          ]
+        },
+        {
+          "type": "image",
+          "image": "/photos/bateau-ecole-le-morne-noir-et-blanc.webp",
+          "alt": "Bateau de l'école devant la montagne du Morne, île Maurice",
+          "width": 1400,
+          "height": 933
+        },
+        {
+          "type": "prices",
+          "heading": "La session",
+          "items": [
+            {
+              "name": "Down wind",
+              "detail": "2 à 3 heures de navigation de Bel Ombre au Morne, accompagné pour une session mémorable.",
+              "lines": [
+                "75 €/personne"
+              ],
+              "accent": true
+            }
+          ]
+        },
+        {
+          "type": "cta",
+          "title": "Réserver le downwind",
+          "body": "Écrivez-nous avec votre niveau et vos disponibilités. La session est confirmée selon les conditions de vent."
+        }
+      ]
     },
     {
       "slug": "lecons-vip-bateau",
       "title": "Leçons VIP en bateau",
       "description": "Session privée sur un banc de sable, accès en bateau, loin du spot débutant. 220 € par personne.",
-      "blocks": [],
-      "stub": true
+      "blocks": [
+        {
+          "type": "prose",
+          "eyebrow": "Sorties",
+          "title": "Leçons VIP en bateau",
+          "body": [
+            "Direction un banc de sable en bateau, loin du spot débutant : eau turquoise, cadre privé."
+          ]
+        },
+        {
+          "type": "image",
+          "image": "/photos/banc-de-sable-lagon-le-morne.webp",
+          "alt": "Banc de sable et lagon turquoise du Morne vus du ciel, île Maurice",
+          "width": 1600,
+          "height": 1061
+        },
+        {
+          "type": "prices",
+          "heading": "La session",
+          "items": [
+            {
+              "name": "Leçon VIP",
+              "detail": "Session privée sur un banc de sable, accès en bateau, loin du spot débutant.",
+              "lines": [
+                "220 €/personne"
+              ],
+              "accent": true
+            }
+          ]
+        },
+        {
+          "type": "cta",
+          "title": "Réserver une leçon VIP",
+          "body": "Écrivez-nous avec votre niveau et vos disponibilités. La session est confirmée selon les conditions de vent."
+        }
+      ]
     },
     {
       "slug": "carte-cadeau",
@@ -995,8 +1063,19 @@
       "slug": "mentions-legales",
       "title": "Mentions légales et confidentialité",
       "description": "Mentions légales, éditeur du site et politique de confidentialité.",
-      "blocks": [],
-      "stub": true
+      "blocks": [
+        {
+          "type": "prose",
+          "eyebrow": "Informations",
+          "title": "Mentions légales et confidentialité.",
+          "body": [
+            "Éditeur du site : Born To Kite, Ritik Jouan, Beachfront Kitelagoon, Le Morne, Rivière Noire, île Maurice. Contact : contact@borntokitemauritius.com ou +230 5487 9629.",
+            "Le site est hébergé par Cloudflare Pages et le nom de domaine est borntokitemauritius.com.",
+            "Le site ne crée aucun compte et ne collecte aucune donnée au moyen d'un formulaire. Les liens WhatsApp et e-mail ouvrent les services choisis par le visiteur. Le module Windguru ne se charge qu'après un clic.",
+            "Pour toute question sur vos données personnelles ou pour exercer vos droits d'accès et de rectification, écrivez à contact@borntokitemauritius.com. Le traitement des données personnelles à Maurice est encadré par le Data Protection Act 2017."
+          ]
+        }
+      ]
     }
   ]
 }

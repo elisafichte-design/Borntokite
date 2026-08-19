@@ -44,7 +44,7 @@ const fullTitle = slug === "" ? `${site.name} — ${title}` : `${title} | ${site
     <a class="skip" href="#main">{ui.skipToContent}</a>
     <Header lang={lang} nav={nav} ui={ui} />
     <main id="main"><slot /></main>
-    <Footer lang={lang} ui={ui} />
+    <Footer lang={lang} slug={slug} ui={ui} />
     <style>
       .skip {
         position: absolute;

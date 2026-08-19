@@ -1,0 +1,161 @@
+---
+// Rendu commun des pages. Les routes restent volontairement explicites dans
+// src/pages/ afin que GitHub et les outils de design reconnaissent un vrai site
+// multipage. Le contenu demeure centralisé dans les JSON de chaque langue.
+import Base from "./Base.astro";
+import Hero from "../components/blocks/Hero.astro";
+import Prose from "../components/blocks/Prose.astro";
+import Stats from "../components/blocks/Stats.astro";
+import Prices from "../components/blocks/Prices.astro";
+import Faq from "../components/blocks/Faq.astro";
+import Cta from "../components/blocks/Cta.astro";
+import ImageBlock from "../components/blocks/Image.astro";
+import Reviews from "../components/blocks/Reviews.astro";
+import WindMonths from "../components/blocks/WindMonths.astro";
+import SectionNav from "../components/blocks/SectionNav.astro";
+import Cards from "../components/blocks/Cards.astro";
+import Gallery from "../components/blocks/Gallery.astro";
+import Weather from "../components/blocks/Weather.astro";
+import site from "../data/site.json";
+import fr from "../data/pages.fr.json";
+import en from "../data/pages.en.json";
+import de from "../data/pages.de.json";
+
+const { lang = "fr", slug = "" } = Astro.props;
+const pagesByLang = { fr, en, de };
+const data = pagesByLang[lang];
+const page = data?.pages.find((candidate) => candidate.slug === slug);
+
+if (!page) {
+  throw new Error(`Page introuvable dans le contenu : ${lang}/${slug}`);
+}
+
+const pathFor = (locale, pageSlug) =>
+  (locale === site.defaultLocale ? `/${pageSlug}` : `/${locale}/${pageSlug}`).replace(/\/+/g, "/");
+const canonicalUrl = new URL(pathFor(lang, slug ? `${slug}/` : ""), site.domain).href;
+
+const components = {
+  hero: Hero,
+  prose: Prose,
+  stats: Stats,
+  prices: Prices,
+  faq: Faq,
+  cta: Cta,
+  image: ImageBlock,
+  cards: Cards,
+  gallery: Gallery,
+  weather: Weather,
+  reviews: Reviews,
+  windmonths: WindMonths,
+  sectionnav: SectionNav,
+};
+
+// Un seul h1 par page : le hero le porte. Sans hero, le premier bloc prose
+// titré devient le h1.
+const blocks = page.blocks || [];
+const hasHero = blocks.some((block) => block.type === "hero");
+const h1Index = hasHero ? -1 : blocks.findIndex((block) => block.type === "prose" && block.title);
+
+const graph = [
+  {
+    "@type": "SportsActivityLocation",
+    "@id": `${site.domain}/#school`,
+    name: site.name,
+    description: page.description,
+    url: site.domain,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: site.street,
+      addressLocality: site.locality,
+      addressRegion: site.region,
+      addressCountry: site.country,
+    },
+    geo: { "@type": "GeoCoordinates", latitude: site.latitude, longitude: site.longitude },
+    sport: ["Kitesurfing", "Wingfoiling", "Surfing"],
+    telephone: site.whatsapp,
+    email: site.email,
+    sameAs: site.sameAs,
+  },
+];
+
+if (slug) {
+  const base = lang === site.defaultLocale ? "" : `/${lang}`;
+  graph.push({
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: site.name, item: new URL(`${base}/`, site.domain).href },
+      { "@type": "ListItem", position: 2, name: page.title, item: canonicalUrl },
+    ],
+  });
+}
+
+if (page.course) {
+  const offers = [];
+  for (const block of blocks.filter((item) => item.type === "prices")) {
+    for (const item of block.items || []) {
+      for (const line of item.lines || []) {
+        const price = /(\d[\d\s]*)\s*€/.exec(line);
+        if (!price) continue;
+        const hours = /(\d+)\s*h(?:\s*(\d+))?/i.exec(line);
+        offers.push({
+          "@type": "Offer",
+          name: hours ? `${item.name} — ${hours[0]}` : item.name,
+          price: price[1].replace(/\s/g, ""),
+          priceCurrency: "EUR",
+          availability: "https://schema.org/InStock",
+          url: canonicalUrl,
+        });
+      }
+    }
+  }
+  const duration = offers.length ? /(\d+)\s*h/i.exec(offers[0].name) : null;
+  graph.push({
+    "@type": "Course",
+    name: page.title,
+    description: page.description,
+    url: canonicalUrl,
+    provider: { "@id": `${site.domain}/#school` },
+    inLanguage: lang,
+    ...(offers.length ? { offers } : {}),
+    hasCourseInstance: {
+      "@type": "CourseInstance",
+      courseMode: "Onsite",
+      location: { "@id": `${site.domain}/#school` },
+      ...(duration ? { courseWorkload: `PT${duration[1]}H` } : {}),
+    },
+  });
+}
+
+const faqBlock = blocks.find((block) => block.type === "faq");
+if (faqBlock) {
+  graph.push({
+    "@type": "FAQPage",
+    mainEntity: faqBlock.items.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  });
+}
+
+const jsonld = { "@context": "https://schema.org", "@graph": graph };
+---
+
+<Base
+  title={page.title}
+  description={page.description}
+  lang={lang}
+  slug={slug}
+  nav={data.nav}
+  ui={data.ui}
+  jsonld={jsonld}
+>
+  {
+    blocks.map((block, index) => {
+      const Component = components[block.type];
+      if (!Component) return null;
+      const element = <Component block={block} ui={data.ui} heading={index === h1Index ? 1 : 2} />;
+      return block.id ? <div id={block.id}>{element}</div> : element;
+    })
+  }
+</Base>
