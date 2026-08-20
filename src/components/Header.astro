@@ -1,9 +1,15 @@
 ---
 import site from "../data/site.json";
-const { lang, nav, ui } = Astro.props;
+const { lang, slug = "", nav, ui } = Astro.props;
 const base = lang === site.defaultLocale ? "" : `/${lang}`;
 const wa = `https://wa.me/${site.whatsappClean}`;
 const hrefFor = (n) => n.href || `${base}/${n.slug}/`;
+const languageHref = (locale) => {
+  const prefix = locale === site.defaultLocale ? "" : `/${locale}`;
+  return `${prefix}/${slug ? `${slug}/` : ""}`.replace(/\/+/g, "/");
+};
+const languageNames = { fr: "Français", en: "English", de: "Deutsch" };
+const languageNavLabel = { fr: "Choisir la langue", en: "Choose language", de: "Sprache wählen" }[lang];
 ---
 <header>
   <div class="container bar">
@@ -13,10 +19,28 @@ const hrefFor = (n) => n.href || `${base}/${n.slug}/`;
     <nav class="desktop" aria-label="Principal">
       {nav.map((n) => <a href={hrefFor(n)}>{n.label}</a>)}
     </nav>
-    <a class="btn btn--ghost" href={wa} rel="noopener">{ui.whatsapp}</a>
+    <div class="actions">
+      <nav class="languages" aria-label={languageNavLabel}>
+        {site.locales.map((locale) => (
+          <a
+            href={languageHref(locale)}
+            hreflang={locale}
+            lang={locale}
+            title={languageNames[locale]}
+            aria-current={locale === lang ? "page" : undefined}
+          >
+            {locale.toUpperCase()}
+          </a>
+        ))}
+      </nav>
+      <a class="btn btn--whatsapp whatsapp" href={wa} target="_blank" rel="noopener" aria-label={ui.whatsapp}>
+        <img class="wa-icon" src="/whatsapp-logo.svg" alt="" width="20" height="20" aria-hidden="true" />
+        <span class="wa-label">{ui.whatsapp}</span>
+      </a>
+    </div>
     <details class="mobile">
       <summary>{ui.menu || "Menu"}</summary>
-      <nav aria-label="Principal">
+      <nav class="mobile-nav" aria-label="Principal">
         {nav.map((n) => <a href={hrefFor(n)}>{n.label}</a>)}
       </nav>
     </details>
@@ -27,16 +51,46 @@ const hrefFor = (n) => n.href || `${base}/${n.slug}/`;
   .bar { display: flex; align-items: center; gap: var(--space-5); padding-block: var(--space-3); }
   .brand { border: 0; flex: none; }
   .brand img { width: 96px; height: auto; }
-  nav { display: flex; gap: var(--space-4); flex: 1; flex-wrap: wrap; }
-  nav a { color: var(--ink); border: 0; font-size: var(--size-small); }
+  .desktop { display: flex; gap: var(--space-4); flex: 1; flex-wrap: wrap; }
+  .desktop a, .mobile-nav a { color: var(--ink); border: 0; font-size: var(--size-small); }
+  .actions { display: flex; align-items: center; gap: var(--space-3); flex: none; }
+  .languages { display: flex; border: 1px solid var(--line); border-radius: var(--radius); }
+  .languages a {
+    border: 0;
+    border-right: 1px solid var(--line);
+    color: var(--ink-muted);
+    font-size: var(--size-eyebrow);
+    font-weight: var(--weight-semibold);
+    letter-spacing: var(--ls-mono);
+    line-height: 1;
+    padding: 10px 9px;
+  }
+  .languages a:last-child { border-right: 0; }
+  .languages a[aria-current="page"] { background: var(--ink); color: var(--bg); }
+  .whatsapp { padding: 11px 14px; }
+  .wa-label { white-space: nowrap; }
   .mobile { display: none; }
-  @media (hover: hover) and (pointer: fine) { nav a:hover { color: var(--accent); } }
+  @media (hover: hover) and (pointer: fine) {
+    .desktop a:hover, .mobile-nav a:hover { color: var(--accent); }
+    .languages a:hover { color: var(--ink); border-color: var(--line); }
+    .languages a[aria-current="page"]:hover { color: var(--bg); }
+  }
+  @media (max-width: 1180px) {
+    .wa-label { display: none; }
+  }
   @media (max-width: 1040px) {
     .desktop { display: none; }
     .bar { justify-content: space-between; flex-wrap: wrap; gap: var(--space-3); }
-    .bar > .btn { margin-left: auto; }
+    .actions { margin-left: auto; }
     .mobile { display: block; width: 100%; border-top: 1px solid var(--line); padding-top: var(--space-3); }
     summary { cursor: pointer; font-size: var(--size-small); font-weight: var(--weight-semibold); }
-    .mobile nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: var(--space-3); padding-bottom: var(--space-2); }
+    .mobile-nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-4); margin-top: var(--space-3); padding-bottom: var(--space-2); }
+  }
+  @media (max-width: 420px) {
+    .bar { gap: var(--space-2); }
+    .brand img { width: 82px; }
+    .actions { gap: var(--space-2); }
+    .languages a { padding-inline: 7px; }
+    .whatsapp { padding-inline: 11px; }
   }
 </style>

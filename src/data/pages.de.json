@@ -353,14 +353,14 @@
               "name": "Betreuung & Materialmiete",
               "detail": "Du fährst bereits selbstständig? Fahre unter Aufsicht oder miete unsere Ausrüstung.",
               "lines": [
-                "Sur demande"
+                "Auf Anfrage"
               ]
             },
             {
               "name": "Mehrtägige Kurse",
               "detail": "Mehrere aufeinanderfolgende Tage für schnellere Fortschritte, Ausrüstung inklusive.",
               "lines": [
-                "Sur demande"
+                "Auf Anfrage"
               ]
             }
           ]
@@ -380,7 +380,7 @@
               "name": "Downwind",
               "detail": "Eine geführte 2- bis 3-stündige Fahrt von Bel Ombre nach Le Morne.",
               "lines": [
-                "75 €/Persononne"
+                "75 €/Person"
               ],
               "accent": true
             },
@@ -388,7 +388,7 @@
               "name": "VIP-Kurse",
               "detail": "Mit dem Boot geht es zu einer Sandbank, weit weg vom Anfängerbereich, mit türkisfarbenem Wasser und privater Atmosphäre.",
               "lines": [
-                "220 €/Persononne"
+                "220 €/Person"
               ],
               "accent": true
             }
@@ -416,7 +416,7 @@
               "name": "Fotos und Videos der Session",
               "detail": "Ein Fotograf begleitet deine Session vom Strand oder vom Wasser aus. Auf Anfrage und je nach Verfügbarkeit.",
               "lines": [
-                "Sur demande"
+                "Auf Anfrage"
               ]
             }
           ]
@@ -659,14 +659,14 @@
               "name": "Betreuung & Materialmiete",
               "detail": "Du fährst bereits selbstständig? Fahre unter Aufsicht oder miete unsere Ausrüstung.",
               "lines": [
-                "Sur demande"
+                "Auf Anfrage"
               ]
             },
             {
               "name": "Mehrtägige Kurse",
               "detail": "Mehrere aufeinanderfolgende Tage für schnellere Fortschritte, Ausrüstung inklusive.",
               "lines": [
-                "Sur demande"
+                "Auf Anfrage"
               ]
             }
           ]
@@ -679,7 +679,7 @@
               "name": "Downwind",
               "detail": "Eine geführte 2- bis 3-stündige Fahrt von Bel Ombre nach Le Morne.",
               "lines": [
-                "75 €/Persononne"
+                "75 €/Person"
               ],
               "accent": true
             },
@@ -687,7 +687,7 @@
               "name": "VIP-Kurse",
               "detail": "Mit dem Boot geht es zu einer Sandbank, weit weg vom Anfängerbereich, mit türkisfarbenem Wasser und privater Atmosphäre.",
               "lines": [
-                "220 €/Persononne"
+                "220 €/Person"
               ],
               "accent": true
             }
@@ -776,21 +776,21 @@
               "name": "Betreuung & Materialmiete",
               "detail": "Du fährst bereits selbstständig? Fahre unter Aufsicht oder miete unsere Ausrüstung.",
               "lines": [
-                "Sur demande"
+                "Auf Anfrage"
               ]
             },
             {
               "name": "Mehrtägige Kurse",
               "detail": "Mehrere aufeinanderfolgende Tage für schnellere Fortschritte, Ausrüstung inklusive.",
               "lines": [
-                "Sur demande"
+                "Auf Anfrage"
               ]
             },
             {
               "name": "VIP-Kurse",
               "detail": "Mit dem Boot geht es zu einer Sandbank, weit weg vom Anfängerbereich, mit türkisfarbenem Wasser und privater Atmosphäre.",
               "lines": [
-                "220 €/Persononne"
+                "220 €/Person"
               ],
               "accent": true
             }
@@ -890,7 +890,7 @@
               "name": "Downwind",
               "detail": "Eine geführte 2- bis 3-stündige Fahrt von Bel Ombre nach Le Morne.",
               "lines": [
-                "75 €/Persononne"
+                "75 €/Person"
               ],
               "accent": true
             }
@@ -931,7 +931,7 @@
               "name": "VIP-Kurs",
               "detail": "Private Session auf einer Sandbank, erreichbar per Boot und weit weg vom Anfängerbereich.",
               "lines": [
-                "220 €/Persononne"
+                "220 €/Person"
               ],
               "accent": true
             }

@@ -1,12 +1,17 @@
 ---
 import site from "../data/site.json";
-const { lang, ui, slug = "" } = Astro.props;
+const { lang, ui, nav = [] } = Astro.props;
 const base = lang === site.defaultLocale ? "" : `/${lang}`;
 const year = 2026;
-const languageHref = (locale) => {
-  const prefix = locale === site.defaultLocale ? "" : `/${locale}`;
-  return `${prefix}/${slug ? `${slug}/` : ""}`.replace(/\/+/g, "/");
-};
+const usefulSlugs = ["cours-de-kitesurf", "tarifs", "le-spot-du-morne", "meteo", "l-ecole", "contact"];
+const usefulLinks = nav.filter((item) => usefulSlugs.includes(item.slug));
+const hrefFor = (item) => item.href || `${base}/${item.slug}/`;
+const copy = {
+  fr: { useful: "Liens utiles", map: "Voir sur Google Maps" },
+  en: { useful: "Useful links", map: "View on Google Maps" },
+  de: { useful: "Nützliche Links", map: "Auf Google Maps ansehen" },
+}[lang];
+const mapsUrl = site.sameAs?.find((url) => url.includes("maps.google"));
 ---
 <footer>
   <div class="container inner">
@@ -18,16 +23,22 @@ const languageHref = (locale) => {
       </p>
     </div>
     <div>
-      <p class="eyebrow">Contact</p>
-      <p><a href={`https://wa.me/${site.whatsappClean}`} rel="noopener">WhatsApp</a></p>
-      <p><a href={`mailto:${site.email}`}>{site.email}</a></p>
-      {site.instagram && <p><a href={`https://instagram.com/${site.instagram}`} rel="noopener">@{site.instagram}</a></p>}
+      <p class="eyebrow">{copy.useful}</p>
+      <ul class="footer-links">
+        {usefulLinks.map((item) => <li><a href={hrefFor(item)}>{item.label}</a></li>)}
+      </ul>
     </div>
     <div>
-      <p class="eyebrow">Langues</p>
-      {site.locales.map((l) => (
-        <p><a href={languageHref(l)} hreflang={l}>{l.toUpperCase()}</a></p>
-      ))}
+      <p class="eyebrow">Contact</p>
+      <a class="btn btn--whatsapp footer-wa" href={`https://wa.me/${site.whatsappClean}`} target="_blank" rel="noopener">
+        <img class="wa-icon" src="/whatsapp-logo.svg" alt="" width="20" height="20" aria-hidden="true" />
+        WhatsApp
+      </a>
+      <ul class="footer-links contact-links">
+        <li><a href={`mailto:${site.email}`}>{site.email}</a></li>
+        {site.instagram && <li><a href={`https://instagram.com/${site.instagram}`} target="_blank" rel="noopener">@{site.instagram}</a></li>}
+        {mapsUrl && <li><a href={mapsUrl} target="_blank" rel="noopener">{copy.map}</a></li>}
+      </ul>
     </div>
   </div>
   <div class="container legal">
@@ -40,5 +51,13 @@ const languageHref = (locale) => {
   .inner { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-7); }
   .inner img { width: 120px; height: auto; }
   .addr { margin-top: var(--space-4); font-size: var(--size-small); }
+  .footer-links { list-style: none; margin: var(--space-4) 0 0; padding: 0; display: grid; gap: var(--space-2); }
+  .footer-links a { font-size: var(--size-small); }
+  .footer-wa { margin-top: var(--space-4); }
+  .footer-wa .wa-icon { width: 20px; }
+  .contact-links { margin-top: var(--space-4); }
   .legal { display: flex; justify-content: space-between; gap: var(--space-4); margin-top: var(--space-7); padding-top: var(--space-5); border-top: 1px solid var(--line); font-size: var(--size-small); }
+  @media (max-width: 560px) {
+    .legal { align-items: flex-start; flex-direction: column; }
+  }
 </style>

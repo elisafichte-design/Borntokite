@@ -25,7 +25,7 @@
 }
 
 :root {
-  /* Couleurs — sept valeurs, nommées par fonction. Pas une de plus. */
+  /* Palette principale, nommée par fonction. */
   --bg: #faf8f4;          /* fond de page, blanc cassé chaud */
   --surface: #f2ece1;     /* sable, seule surface distincte (rare) */
   --line: #e3ddd2;        /* filets et bordures */
@@ -33,6 +33,7 @@
   --ink-muted: #4a5560;   /* paragraphes, texte secondaire — 7,2:1 */
   --ink-faint: #7a6f5c;   /* surtitres, détails de tarif — 4,7:1 */
   --accent: #b4532a;      /* terracotta, trois éléments par écran maximum */
+  --whatsapp: #25d366;    /* couleur de marque, réservée aux CTA WhatsApp */
 
   /* Voile du hero : 4 arrêts. Voile haut pour le logo, fenêtre claire au
      tiers pour laisser respirer la photo, assombrissement en pied pour le texte. */
@@ -179,6 +180,24 @@ html { scroll-behavior: smooth; }
 .btn:active { opacity: var(--opacity-active); }
 .btn--ghost { background: transparent; color: var(--ink); border-color: var(--line); }
 .btn--ghost:hover { color: var(--ink); border-color: var(--ink); opacity: 1; }
+.btn--whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  background: var(--whatsapp);
+  color: var(--ink);
+  border-color: var(--whatsapp);
+}
+.btn--whatsapp:hover { color: var(--ink); border-color: var(--whatsapp); }
+.wa-icon {
+  width: 20px;
+  height: 20px;
+  flex: none;
+  border-radius: 50%;
+  background: var(--bg);
+  padding: 2px;
+}
 /* Sur photo : l'inverse exact, crème sur l'image assombrie. */
 .btn--onphoto { background: var(--bg); color: var(--ink); border-color: var(--bg); }
 .btn--onphoto:hover { color: var(--ink); border-color: var(--bg); }

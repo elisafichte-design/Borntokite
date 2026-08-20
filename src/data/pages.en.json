@@ -353,14 +353,14 @@
               "name": "Supervision & equipment hire",
               "detail": "Already independent? Ride under supervision or hire our equipment.",
               "lines": [
-                "Sur demande"
+                "On request"
               ]
             },
             {
               "name": "Multi-day courses",
               "detail": "Build your skills over several consecutive days, with equipment included.",
               "lines": [
-                "Sur demande"
+                "On request"
               ]
             }
           ]
@@ -380,7 +380,7 @@
               "name": "Downwind",
               "detail": "A guided 2 to 3-hour ride from Bel Ombre to Le Morne.",
               "lines": [
-                "75 €/persononne"
+                "75 €/person"
               ],
               "accent": true
             },
@@ -388,7 +388,7 @@
               "name": "VIP lessons",
               "detail": "Travel by boat to a sandbank away from the beginner area, with turquoise water and a private setting.",
               "lines": [
-                "220 €/persononne"
+                "220 €/person"
               ],
               "accent": true
             }
@@ -416,7 +416,7 @@
               "name": "Session photos and videos",
               "detail": "A photographer captures your session from the beach or the water. Available on request, subject to availability.",
               "lines": [
-                "Sur demande"
+                "On request"
               ]
             }
           ]
@@ -659,14 +659,14 @@
               "name": "Supervision & equipment hire",
               "detail": "Already independent? Ride under supervision or hire our equipment.",
               "lines": [
-                "Sur demande"
+                "On request"
               ]
             },
             {
               "name": "Multi-day courses",
               "detail": "Build your skills over several consecutive days, with equipment included.",
               "lines": [
-                "Sur demande"
+                "On request"
               ]
             }
           ]
@@ -679,7 +679,7 @@
               "name": "Downwind",
               "detail": "A guided 2 to 3-hour ride from Bel Ombre to Le Morne.",
               "lines": [
-                "75 €/persononne"
+                "75 €/person"
               ],
               "accent": true
             },
@@ -687,7 +687,7 @@
               "name": "VIP lessons",
               "detail": "Travel by boat to a sandbank away from the beginner area, with turquoise water and a private setting.",
               "lines": [
-                "220 €/persononne"
+                "220 €/person"
               ],
               "accent": true
             }
@@ -776,21 +776,21 @@
               "name": "Supervision & equipment hire",
               "detail": "Already independent? Ride under supervision or hire our equipment.",
               "lines": [
-                "Sur demande"
+                "On request"
               ]
             },
             {
               "name": "Multi-day courses",
               "detail": "Build your skills over several consecutive days, with equipment included.",
               "lines": [
-                "Sur demande"
+                "On request"
               ]
             },
             {
               "name": "VIP lessons",
               "detail": "Travel by boat to a sandbank away from the beginner area, with turquoise water and a private setting.",
               "lines": [
-                "220 €/persononne"
+                "220 €/person"
               ],
               "accent": true
             }
@@ -890,7 +890,7 @@
               "name": "Downwind",
               "detail": "A guided 2 to 3-hour ride from Bel Ombre to Le Morne.",
               "lines": [
-                "75 €/persononne"
+                "75 €/person"
               ],
               "accent": true
             }
@@ -931,7 +931,7 @@
               "name": "VIP lesson",
               "detail": "A private session on a sandbank reached by boat, away from the beginner area.",
               "lines": [
-                "220 €/persononne"
+                "220 €/person"
               ],
               "accent": true
             }
