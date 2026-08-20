@@ -1,0 +1,22 @@
+{
+  "eyebrow": "Vent au Morne",
+  "heading": "Le vent mois par mois.",
+  "lead": "Les conditions observées par l'école pour choisir la période la plus adaptée à votre niveau.",
+  "caption": "Conditions de vent au Morne mois par mois",
+  "columns": ["Mois", "Vent moyen", "Jours navigables", "Eau", "Pour qui", "Saison"],
+  "months": [
+    { "month": "Janvier", "wind": "7–12 nœuds", "days": "5–10 / 31", "water": "27 °C · lycra", "who": "Débutants", "season": "Saison basse" },
+    { "month": "Février", "wind": "5–10 nœuds", "days": "0–7 / 28", "water": "27 °C · lycra", "who": "Débutants", "season": "Saison basse" },
+    { "month": "Mars", "wind": "10–17 nœuds", "days": "10–20 / 31", "water": "27 °C · lycra", "who": "Tout le monde", "season": "Début de saison" },
+    { "month": "Avril", "wind": "10–20 nœuds", "days": "10–22 / 30", "water": "27 °C · lycra", "who": "Tout le monde", "season": "Début de saison" },
+    { "month": "Mai", "wind": "10–22 nœuds", "days": "10–22 / 31", "water": "26 °C · combinaison courte", "who": "Tout le monde", "season": "Mi-saison" },
+    { "month": "Juin", "wind": "15–30 nœuds", "days": "15–25 / 30", "water": "25 °C · combinaison longue", "who": "Tout le monde", "season": "Pleine saison", "best": true },
+    { "month": "Juillet", "wind": "15–33 nœuds", "days": "15–25 / 31", "water": "24 °C · combinaison longue", "who": "Tout le monde", "season": "Pleine saison", "best": true },
+    { "month": "Août", "wind": "15–33 nœuds", "days": "20–30 / 31", "water": "24 °C · combinaison longue", "who": "Tout le monde", "season": "Pleine saison", "best": true },
+    { "month": "Septembre", "wind": "15–33 nœuds", "days": "20–30 / 30", "water": "26 °C · combinaison longue ou courte", "who": "Tout le monde", "season": "Fin de saison" },
+    { "month": "Octobre", "wind": "15–30 nœuds", "days": "10–20 / 31", "water": "26 °C · combinaison courte", "who": "Tout le monde", "season": "Fin de saison" },
+    { "month": "Novembre", "wind": "12–20 nœuds", "days": "7–12 / 30", "water": "27 °C · lycra", "who": "Tout le monde", "season": "Fin de saison" },
+    { "month": "Décembre", "wind": "10–17 nœuds", "days": "5–10 / 31", "water": "27 °C · lycra", "who": "Débutants", "season": "Fin de saison" }
+  ],
+  "source": "Données renseignées par Ritik, Born To Kite. La nature reste imprévisible : les conditions peuvent varier d'une année à l'autre."
+}

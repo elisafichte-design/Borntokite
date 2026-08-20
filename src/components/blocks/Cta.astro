@@ -1,17 +1,36 @@
 ---
 import site from "../../data/site.json";
 const { block, ui } = Astro.props;
+const message = block.message ? `?text=${encodeURIComponent(block.message)}` : "";
+const href = block.href || `https://wa.me/${site.whatsappClean}${message}`;
+const isWhatsApp = href.startsWith("https://wa.me/");
 ---
-<section class="section">
+<section class:list={["section", { featured: block.featured }]}>
   <div class="container narrow box">
+    {block.eyebrow && <p class="eyebrow">{block.eyebrow}</p>}
     <h2>{block.title}</h2>
     {block.body && <p class="muted body">{block.body}</p>}
-    <a class="btn" href={`https://wa.me/${site.whatsappClean}`} rel="noopener">{block.label || ui.whatsapp}</a>
+    <a
+      class:list={["btn", { "btn--whatsapp": isWhatsApp }]}
+      href={href}
+      target={isWhatsApp ? "_blank" : undefined}
+      rel={isWhatsApp ? "noopener" : undefined}
+    >
+      {isWhatsApp && <img class="wa-icon" src="/whatsapp-logo.svg" alt="" width="20" height="20" aria-hidden="true" />}
+      {block.label || ui.whatsapp}
+    </a>
   </div>
 </section>
 <style>
   /* Piste A : pas de carte, pas d'ombre. Le bloc est délimité par deux filets. */
   .box { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding-block: var(--space-7); }
+  .eyebrow + h2 { margin-top: var(--space-4); }
   .body { margin-top: var(--space-4); max-width: 46ch; }
   .btn { margin-top: var(--space-6); }
+  .featured { background: var(--ink); }
+  .featured .box { border-color: var(--ink-muted); }
+  .featured h2, .featured .body { color: var(--bg); }
+  .featured .eyebrow { color: var(--line); }
+  .featured .btn { background: var(--bg); color: var(--ink); border-color: var(--bg); }
+  .featured .btn--whatsapp { background: var(--whatsapp); color: var(--ink); border-color: var(--whatsapp); }
 </style>

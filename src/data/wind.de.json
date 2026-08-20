@@ -1,0 +1,22 @@
+{
+  "eyebrow": "Wind am Le Morne",
+  "heading": "Der Wind Monat für Monat.",
+  "lead": "Von der Schule beobachtete Bedingungen, damit du die passende Reisezeit für dein Niveau wählen kannst.",
+  "caption": "Monatliche Windbedingungen am Le Morne",
+  "columns": ["Monat", "Durchschnittswind", "Fahrbare Tage", "Wasser", "Geeignet für", "Saison"],
+  "months": [
+    { "month": "Januar", "wind": "7–12 Knoten", "days": "5–10 / 31", "water": "27 °C · Lycra", "who": "Anfänger", "season": "Nebensaison" },
+    { "month": "Februar", "wind": "5–10 Knoten", "days": "0–7 / 28", "water": "27 °C · Lycra", "who": "Anfänger", "season": "Nebensaison" },
+    { "month": "März", "wind": "10–17 Knoten", "days": "10–20 / 31", "water": "27 °C · Lycra", "who": "Alle Niveaus", "season": "Saisonbeginn" },
+    { "month": "April", "wind": "10–20 Knoten", "days": "10–22 / 30", "water": "27 °C · Lycra", "who": "Alle Niveaus", "season": "Saisonbeginn" },
+    { "month": "Mai", "wind": "10–22 Knoten", "days": "10–22 / 31", "water": "26 °C · Shorty", "who": "Alle Niveaus", "season": "Zwischensaison" },
+    { "month": "Juni", "wind": "15–30 Knoten", "days": "15–25 / 30", "water": "25 °C · langer Neoprenanzug", "who": "Alle Niveaus", "season": "Hauptsaison", "best": true },
+    { "month": "Juli", "wind": "15–33 Knoten", "days": "15–25 / 31", "water": "24 °C · langer Neoprenanzug", "who": "Alle Niveaus", "season": "Hauptsaison", "best": true },
+    { "month": "August", "wind": "15–33 Knoten", "days": "20–30 / 31", "water": "24 °C · langer Neoprenanzug", "who": "Alle Niveaus", "season": "Hauptsaison", "best": true },
+    { "month": "September", "wind": "15–33 Knoten", "days": "20–30 / 30", "water": "26 °C · langer Neoprenanzug oder Shorty", "who": "Alle Niveaus", "season": "Saisonende" },
+    { "month": "Oktober", "wind": "15–30 Knoten", "days": "10–20 / 31", "water": "26 °C · Shorty", "who": "Alle Niveaus", "season": "Saisonende" },
+    { "month": "November", "wind": "12–20 Knoten", "days": "7–12 / 30", "water": "27 °C · Lycra", "who": "Alle Niveaus", "season": "Saisonende" },
+    { "month": "Dezember", "wind": "10–17 Knoten", "days": "5–10 / 31", "water": "27 °C · Lycra", "who": "Anfänger", "season": "Saisonende" }
+  ],
+  "source": "Daten von Ritik, Born To Kite. Die Natur bleibt unberechenbar und die Bedingungen können von Jahr zu Jahr variieren."
+}

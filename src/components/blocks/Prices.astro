@@ -12,7 +12,7 @@ const { block } = Astro.props;
             {it.detail && <p class="detail faint">{it.detail}</p>}
           </div>
           <div class="lines">
-            {it.lines.map((l) => <p class={it.accent ? "line accent" : "line"}>{l}</p>)}
+            {it.lines.map((l) => <p class="line">{l}</p>)}
           </div>
         </div>
       ))}

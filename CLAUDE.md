@@ -14,14 +14,21 @@
 
 ## Architecture
 
-Le contenu est en JSON, le rendu est un seul template.
+Le contenu est en JSON, le rendu est mutualisé, mais chaque URL possède un
+fichier de route explicite. Cette structure permet aux outils branchés sur
+GitHub, notamment Claude Design, de reconnaître et modifier un vrai site
+multipage.
 
 - `src/data/site.json` — coordonnées, langues, informations d'entreprise.
 - `src/data/pages.<lang>.json` — toutes les pages d'une langue, sous forme de blocs.
-- `src/pages/[...path].astro` — génère les 39 pages à partir de ces JSON.
+- `src/pages/` — une route explicite par page française, anglaise et allemande.
+- `src/layouts/ContentPage.astro` — rendu commun des blocs, SEO et JSON-LD.
 - `src/components/blocks/` — un composant par type de bloc.
 
-**Ajouter une page** : ajouter une entrée dans `pages.fr.json` avec `slug`, `title`, `description` et `blocks`. Rien d'autre à faire, la route, le sitemap et les `hreflang` suivent.
+**Ajouter une page** : ajouter une entrée avec le même `slug` dans les trois
+fichiers `pages.<lang>.json`, puis créer les trois petits fichiers de route dans
+`src/pages/`, `src/pages/en/` et `src/pages/de/`. Le sitemap et les `hreflang`
+suivent ensuite automatiquement.
 
 **Ajouter une langue** : dupliquer `pages.fr.json`, traduire, ajouter le code dans `site.json`. Les slugs restent identiques d'une langue à l'autre, c'est ce qui permet aux `hreflang` de se répondre correctement.
 
@@ -57,17 +64,23 @@ Un seul `h1` par page : le hero le porte, et sans hero le template promeut autom
 
 ## État actuel
 
-Fait : structure, design system (piste A), i18n FR/EN/DE, SEO technique, photos, page d'accueil complète (12 sections), tarifs, spot, kitesurf, wingfoil, surf, réservation (micro-formulaire WhatsApp sur six pages, `ReserveAction` dans le JSON-LD, page contact remplie).
+Fait : structure multipage explicite, design system (piste A), contenus complets
+FR/EN/DE, SEO technique, photos, page d'accueil complète, tarifs, spot, météo,
+kitesurf, wingfoil, surf, excursions, downwind, leçon VIP, carte cadeau, équipe,
+contact et informations légales.
 
 Logo : `public/logo-encre.png` (encre, fond clair) pour l'en-tête et le pied de page ; `public/logo-blanc.png` conservé pour un usage sur photo ou fond sombre.
 
-À faire : traductions EN et DE, contenu des pages en attente (`"stub": true` dans le JSON), versions courtes ES et RU, section équipe, page mentions légales, Cloudflare Web Analytics, URL Calendly à coller dans `site.json`, polices Fraunces et Inter à héberger en local plutôt que sur `fonts.googleapis.com`.
+À faire : versions courtes ES et RU, Cloudflare Web Analytics, URL Calendly à
+coller dans `site.json`, et confirmation des tarifs de supervision, location et
+stages multi-jours.
 
 Quatre titres de pages qu'elle n'a jamais écrites sont marqués `"aValider": true` dans `pages.fr.json` : tarifs, kitesurf, wingfoil, surf. Des alternatives à lui soumettre sont dans le doc projet `btk-decisions-structure.md`.
 
 Fiche Google Business Profile : elle **existe** (5,0 sur 31 avis). Deux trous à faire combler par la cliente, dans cet ordre : le champ site web est vide, et la catégorie est « Club de sport » au lieu d'« École de kitesurf ».
 
-Bloqué côté cliente : création de `contact@borntokitemauritius.com`, réparation du HTTPS du domaine, photos et prénoms de l'équipe.
+Bloqué côté cliente : confirmation du numéro WhatsApp, du contact public, des
+horaires d'ouverture et des tarifs encore indiqués « sur demande ».
 
 ## Emplacement des fichiers
 

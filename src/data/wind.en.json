@@ -1,0 +1,22 @@
+{
+  "eyebrow": "Wind at Le Morne",
+  "heading": "Wind month by month.",
+  "lead": "Conditions observed by the school to help you choose the period best suited to your level.",
+  "caption": "Month-by-month wind conditions at Le Morne",
+  "columns": ["Month", "Average wind", "Rideable days", "Water", "Best for", "Season"],
+  "months": [
+    { "month": "January", "wind": "7–12 knots", "days": "5–10 / 31", "water": "27 °C · rash vest", "who": "Beginners", "season": "Low season" },
+    { "month": "February", "wind": "5–10 knots", "days": "0–7 / 28", "water": "27 °C · rash vest", "who": "Beginners", "season": "Low season" },
+    { "month": "March", "wind": "10–17 knots", "days": "10–20 / 31", "water": "27 °C · rash vest", "who": "All levels", "season": "Start of season" },
+    { "month": "April", "wind": "10–20 knots", "days": "10–22 / 30", "water": "27 °C · rash vest", "who": "All levels", "season": "Start of season" },
+    { "month": "May", "wind": "10–22 knots", "days": "10–22 / 31", "water": "26 °C · short wetsuit", "who": "All levels", "season": "Mid-season" },
+    { "month": "June", "wind": "15–30 knots", "days": "15–25 / 30", "water": "25 °C · full wetsuit", "who": "All levels", "season": "Peak season", "best": true },
+    { "month": "July", "wind": "15–33 knots", "days": "15–25 / 31", "water": "24 °C · full wetsuit", "who": "All levels", "season": "Peak season", "best": true },
+    { "month": "August", "wind": "15–33 knots", "days": "20–30 / 31", "water": "24 °C · full wetsuit", "who": "All levels", "season": "Peak season", "best": true },
+    { "month": "September", "wind": "15–33 knots", "days": "20–30 / 30", "water": "26 °C · full or short wetsuit", "who": "All levels", "season": "End of season" },
+    { "month": "October", "wind": "15–30 knots", "days": "10–20 / 31", "water": "26 °C · short wetsuit", "who": "All levels", "season": "End of season" },
+    { "month": "November", "wind": "12–20 knots", "days": "7–12 / 30", "water": "27 °C · rash vest", "who": "All levels", "season": "End of season" },
+    { "month": "December", "wind": "10–17 knots", "days": "5–10 / 31", "water": "27 °C · rash vest", "who": "Beginners", "season": "End of season" }
+  ],
+  "source": "Data provided by Ritik, Born To Kite. Nature remains unpredictable and conditions can vary from one year to the next."
+}

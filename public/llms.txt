@@ -16,21 +16,28 @@ Langues parlées : français, anglais, allemand.
 - Leçons VIP, banc de sable en bateau : 220 €/personne
 - Session surf, 1 h 30 : 60 €
 - Wingfoil : mêmes tarifs que le kitesurf
-- Supervision, location et stages multi-jours : sur demande
+- Supervision, location et stages multi-jours : tarifs à confirmer
 - Excursions : sur demande, réservation WhatsApp
 
 ## Le spot
 
 Lagon du Morne, eau plate protégée par la barrière de corail, praticable avec
 pied. Vent dominant de sud-est (alizés), plus fort en début d'après-midi.
-Saison principale d'avril à novembre.
+Saison principale de mars à novembre. La période la plus régulière va de juin
+à août, avec généralement 15 à 33 nœuds et 15 à 30 jours navigables par mois.
+Février est le mois le moins intéressant pour le kite. Le vent souffle en
+général de 7 h à 18 h 30 et se renforce en début d'après-midi. Il varie aussi
+avec la marée et monte avec la marée montante.
 
 ## Pages
 
 - /tarifs/ : tous les tarifs en clair
 - /le-spot-du-morne/ : vent, saisons, sécurité, règles de priorité
+- /meteo/ : prévisions en direct, météo quotidienne et tableau des 12 mois
 - /cours-de-kitesurf/ : de l'initiation à l'autonomie
 - /wingfoil/ : cours de wingfoil
 - /surf/ : sessions de surf encadrées
 - /excursions/ : excursions et visites guidées
+- /carte-cadeau/ : offrir un cours, un stage ou une session VIP
+- /l-ecole/ : l'équipe Born To Kite
 - /contact/ : réservation

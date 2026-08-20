@@ -6,39 +6,42 @@
 // Les valeurs viennent du bloc `windmonths` de pages.<lang>.json. Ne jamais
 // remplir une case au jugé : une donnée de vent fausse envoie un élève sur
 // l'eau dans de mauvaises conditions.
+import windFr from "../../data/wind.fr.json";
+import windEn from "../../data/wind.en.json";
+import windDe from "../../data/wind.de.json";
 const { block } = Astro.props;
+const windByLocale = { fr: windFr, en: windEn, de: windDe };
+const data = block.data && windByLocale[block.data] ? { ...windByLocale[block.data], ...block } : block;
+const columns = data.columns || ["Mois", "Vent moyen", "Jours navigables", "Eau", "Pour qui", "Saison"];
 ---
 <section class="section">
   <div class="container">
-    {block.eyebrow && <p class="eyebrow">{block.eyebrow}</p>}
-    {block.heading && <h2>{block.heading}</h2>}
-    {block.lead && <p class="lead intro">{block.lead}</p>}
+    {data.eyebrow && <p class="eyebrow">{data.eyebrow}</p>}
+    {data.heading && <h2>{data.heading}</h2>}
+    {data.lead && <p class="lead intro">{data.lead}</p>}
 
     <table>
-      <caption class="sr">{block.caption}</caption>
+      <caption class="sr">{data.caption}</caption>
       <thead>
         <tr>
-          <th scope="col">Mois</th>
-          <th scope="col">Vent moyen</th>
-          <th scope="col">Jours navigables</th>
-          <th scope="col">Eau</th>
-          <th scope="col">Pour qui</th>
+          {columns.map((column) => <th scope="col">{column}</th>)}
         </tr>
       </thead>
       <tbody>
-        {block.months.map((m) => (
+        {data.months.map((m) => (
           <tr class={m.best ? "best" : undefined}>
             <th scope="row">{m.month}</th>
             <td>{m.wind}</td>
             <td>{m.days}</td>
             <td>{m.water}</td>
             <td>{m.who}</td>
+            <td>{m.season}</td>
           </tr>
         ))}
       </tbody>
     </table>
 
-    {block.source && <p class="faint src">{block.source}</p>}
+    {data.source && <p class="faint src">{data.source}</p>}
   </div>
 </section>
 <style>

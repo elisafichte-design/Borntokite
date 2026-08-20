@@ -26,11 +26,20 @@
       "label": "Excursions"
     },
     {
+      "slug": "l-ecole",
+      "label": "L'école"
+    },
+    {
+      "slug": "meteo",
+      "label": "Météo en direct"
+    },
+    {
       "slug": "contact",
       "label": "Contact"
     }
   ],
   "ui": {
+    "menu": "Menu",
     "whatsapp": "Écrire sur WhatsApp",
     "seePrices": "Voir les tarifs",
     "onRequest": "Sur demande",
@@ -123,6 +132,13 @@
           ]
         },
         {
+          "type": "image",
+          "video": "/videos/born-to-kite-session-le-morne.mp4",
+          "poster": "/photos/video-session-kite-le-morne-poster.webp",
+          "alt": "Une session de kitesurf Born To Kite sur le lagon du Morne",
+          "full": false
+        },
+        {
           "type": "cards",
           "eyebrow": "Nos disciplines",
           "heading": "Trois façons de glisser sur le lagon.",
@@ -140,8 +156,9 @@
               "body": "La glisse au-dessus de l'eau, en douceur ou en vitesse — une discipline en plein essor.",
               "href": "/wingfoil/",
               "linkLabel": "Voir les cours de wingfoil",
-              "image": "/photos/wingfoil-le-morne-ile-maurice.webp",
-              "alt": "Élèves préparant une aile de wingfoil sur la plage du Morne, île Maurice"
+              "image": "/photos/wingfoil-le-morne-2026.webp",
+              "alt": "Wingfoiler au-dessus du lagon du Morne, île Maurice",
+              "position": "center 45%"
             },
             {
               "title": "Surf",
@@ -167,8 +184,9 @@
           "heading": "Les conditions en direct sur le Morne.",
           "spot": 118,
           "loadLabel": "Afficher les prévisions Windguru",
-          "consent": "Le module est hébergé par Windguru. Il ne se charge qu'après ce clic.",
-          "note": "Pour la prévision la plus fine (modèle Arome 2.5 km), sélectionnez-le dans le menu déroulant du module, ou consultez",
+          "note": "Le module affiche AROME-FR 2,5 km pour une prévision locale détaillée à court terme. Pour les prévisions plus longues, consultez",
+          "liveLabel": "Voir la météo du jour sur Instagram",
+          "liveHref": "https://www.instagram.com/born_to_kite_/",
           "id": "meteo"
         },
         {
@@ -216,6 +234,7 @@
           "eyebrow": "Avis clients",
           "heading": "Ce que disent nos élèves.",
           "source": "5,0 sur 31 avis Google, reproduits mot pour mot.",
+          "sourceLabel": "Voir tous les avis sur Google",
           "items": [
             {
               "author": "Salfati Serge",
@@ -248,7 +267,10 @@
           "type": "cta",
           "title": "Offrez une session de kite.",
           "body": "Une carte cadeau Born To Kite, c'est offrir un souvenir sur le lagon du Morne — cours, stage, ou session VIP, à choisir selon l'envie.",
-          "label": "Demander une carte cadeau"
+          "label": "Découvrir la carte cadeau",
+          "href": "/carte-cadeau/",
+          "featured": true,
+          "eyebrow": "Carte cadeau"
         },
         {
           "type": "prose",
@@ -276,7 +298,7 @@
             },
             {
               "q": "Que se passe-t-il s'il n'y a pas de vent ?",
-              "a": "La session est reportée à un autre créneau sans frais — la sécurité et la qualité de l'apprentissage passent avant tout."
+              "a": "Si le vent manque, la séance est remboursée ou reportée. L'école peut aussi changer de spot pour trouver de meilleures conditions."
             },
             {
               "q": "Comment réserver ?",
@@ -445,6 +467,41 @@
           ]
         },
         {
+          "type": "cards",
+          "variant": "vignettes",
+          "eyebrow": "Avant d'aller à l'eau",
+          "heading": "Vent, vagues et sécurité.",
+          "items": [
+            {
+              "title": "Le vent",
+              "body": "Sur le Morne, le vent dominant est le sud-est (les alizés), généralement plus fort en début d'après-midi."
+            },
+            {
+              "title": "Les vagues",
+              "body": "L'intérieur du lagon reste plat — les vagues surfables se trouvent au large, hors du récif, encadrées selon le niveau de chacun."
+            },
+            {
+              "title": "Sécurité",
+              "body": "Savoir nager est indispensable. Respectez la priorité du surfeur déjà sur la vague et gardez vos distances avec les autres pratiquants."
+            }
+          ]
+        },
+        {
+          "type": "windmonths",
+          "data": "fr"
+        },
+        {
+          "type": "prose",
+          "eyebrow": "Les conseils de Ritik",
+          "title": "Choisir sa période.",
+          "body": [
+            "Le vent souffle généralement de 7 h à 18 h 30 et il est plus fort en début d'après-midi. Il dépend aussi de la marée : il monte avec la marée montante.",
+            "De novembre à avril, l'école s'adapte : si le vent manque, le client est remboursé ou la séance reportée. L'école peut aussi changer de spot pour trouver de meilleures conditions.",
+            "Février est le mois le moins intéressant pour le kite. Décembre et la mi-janvier sont aussi moins réguliers, mais la nature reste imprévisible.",
+            "Le lagon est plus fréquenté de mai à septembre et commence à se vider à partir de la fin septembre."
+          ]
+        },
+        {
           "type": "image",
           "image": "/photos/kites-et-arc-en-ciel-spot-du-morne.webp",
           "alt": "Ailes de kitesurf posées sur le spot du Morne sous un arc-en-ciel, île Maurice",
@@ -474,6 +531,36 @@
       ]
     },
     {
+      "slug": "meteo",
+      "title": "Météo en direct et vent au Morne",
+      "description": "Prévisions en direct, météo quotidienne de Born To Kite et tableau du vent mois par mois sur le lagon du Morne.",
+      "blocks": [
+        {
+          "type": "prose",
+          "eyebrow": "Météo au Morne",
+          "title": "Les conditions en direct.",
+          "body": [
+            "Le vent souffle généralement de 7 h à 18 h 30 et il est plus fort en début d'après-midi. Il dépend aussi de la marée : il monte avec la marée montante.",
+            "Nos moniteurs vérifient les conditions avant chaque session et adaptent la taille du matériel à la force du vent et à votre niveau."
+          ]
+        },
+        {
+          "type": "weather",
+          "eyebrow": "Prévisions",
+          "heading": "Météo en direct au Morne.",
+          "spot": 118,
+          "loadLabel": "Afficher les prévisions Windguru",
+          "note": "Le module affiche AROME-FR 2,5 km pour une prévision locale détaillée à court terme. Pour les prévisions plus longues, consultez",
+          "liveLabel": "Voir la météo du jour de Ritik sur Instagram",
+          "liveHref": "https://www.instagram.com/born_to_kite_/"
+        },
+        {
+          "type": "windmonths",
+          "data": "fr"
+        }
+      ]
+    },
+    {
       "slug": "excursions",
       "title": "Excursions et visites guidées",
       "description": "Excursions et visites guidées au départ du Morne, en complément des sessions de kitesurf. Réservation par WhatsApp.",
@@ -483,8 +570,31 @@
           "eyebrow": "Au-delà du kite",
           "title": "Excursions et visites guidées.",
           "body": [
-            "Contenu à compléter avec la cliente.",
-            "Les tarifs des excursions ne sont pas affichés : ils dépendent du prestataire et de la commission appliquée. La réservation se fait directement par WhatsApp."
+            "Au-delà du kite, nous proposons aussi des excursions en bateau et des visites guidées de l'île — au gré de vos envies et du nombre de participants. Tarifs sur demande, à ajuster selon le programme souhaité."
+          ]
+        },
+        {
+          "type": "gallery",
+          "eyebrow": "Île Maurice",
+          "heading": "Le Morne et son lagon.",
+          "items": [
+            {
+              "image": "/photos/banc-de-sable-lagon-le-morne.webp",
+              "alt": "Banc de sable et lagon turquoise du Morne vus du ciel"
+            },
+            {
+              "image": "/photos/galerie-crystal-rock-lagon.webp",
+              "alt": "Crystal Rock au milieu du lagon turquoise"
+            },
+            {
+              "image": "/photos/montagne-du-morne-vue-du-lagon.webp",
+              "alt": "La montagne du Morne vue depuis le lagon"
+            },
+            {
+              "image": "/photos/groupe-eleves-kite-le-morne.webp",
+              "alt": "Ritik et un groupe d'élèves devant la montagne du Morne",
+              "position": "center 70%"
+            }
           ]
         },
         {
@@ -492,8 +602,7 @@
           "title": "Demander une excursion",
           "body": "Dites-nous ce qui vous intéresse et pour combien de personnes, on vous fait une proposition."
         }
-      ],
-      "stub": true
+      ]
     },
     {
       "slug": "cours-de-kitesurf",
@@ -757,43 +866,214 @@
       "slug": "downwind-bel-ombre-le-morne",
       "title": "Downwind Bel Ombre → Le Morne",
       "description": "2 à 3 heures de navigation accompagnée de Bel Ombre au Morne. 75 € par personne.",
-      "blocks": [],
-      "stub": true
+      "blocks": [
+        {
+          "type": "prose",
+          "eyebrow": "Sorties",
+          "title": "Downwind Bel Ombre → Le Morne",
+          "body": [
+            "2 à 3 heures de navigation de Bel Ombre au Morne, accompagné pour une session mémorable."
+          ]
+        },
+        {
+          "type": "image",
+          "image": "/photos/bateau-ecole-le-morne-noir-et-blanc.webp",
+          "alt": "Bateau de l'école devant la montagne du Morne, île Maurice",
+          "width": 1400,
+          "height": 933
+        },
+        {
+          "type": "prices",
+          "heading": "La session",
+          "items": [
+            {
+              "name": "Down wind",
+              "detail": "2 à 3 heures de navigation de Bel Ombre au Morne, accompagné pour une session mémorable.",
+              "lines": [
+                "75 €/personne"
+              ],
+              "accent": true
+            }
+          ]
+        },
+        {
+          "type": "cta",
+          "title": "Réserver le downwind",
+          "body": "Écrivez-nous avec votre niveau et vos disponibilités. La session est confirmée selon les conditions de vent."
+        }
+      ]
     },
     {
       "slug": "lecons-vip-bateau",
       "title": "Leçons VIP en bateau",
       "description": "Session privée sur un banc de sable, accès en bateau, loin du spot débutant. 220 € par personne.",
-      "blocks": [],
-      "stub": true
+      "blocks": [
+        {
+          "type": "prose",
+          "eyebrow": "Sorties",
+          "title": "Leçons VIP en bateau",
+          "body": [
+            "Direction un banc de sable en bateau, loin du spot débutant : eau turquoise, cadre privé."
+          ]
+        },
+        {
+          "type": "image",
+          "image": "/photos/banc-de-sable-lagon-le-morne.webp",
+          "alt": "Banc de sable et lagon turquoise du Morne vus du ciel, île Maurice",
+          "width": 1600,
+          "height": 1061
+        },
+        {
+          "type": "prices",
+          "heading": "La session",
+          "items": [
+            {
+              "name": "Leçon VIP",
+              "detail": "Session privée sur un banc de sable, accès en bateau, loin du spot débutant.",
+              "lines": [
+                "220 €/personne"
+              ],
+              "accent": true
+            }
+          ]
+        },
+        {
+          "type": "cta",
+          "title": "Réserver une leçon VIP",
+          "body": "Écrivez-nous avec votre niveau et vos disponibilités. La session est confirmée selon les conditions de vent."
+        }
+      ]
     },
     {
       "slug": "carte-cadeau",
       "title": "Carte cadeau",
       "description": "Offrez une session de kitesurf sur le lagon du Morne.",
-      "blocks": [],
-      "stub": true
+      "blocks": [
+        {
+          "type": "prose",
+          "eyebrow": "Carte cadeau",
+          "title": "Offrez une session de kite.",
+          "body": [
+            "Une carte cadeau Born To Kite, c'est offrir un souvenir sur le lagon du Morne — cours, stage, ou session VIP, à choisir selon l'envie."
+          ]
+        },
+        {
+          "type": "image",
+          "image": "/photos/kitesurf-coucher-de-soleil-ile-maurice.webp",
+          "alt": "Kitesurfeur au coucher de soleil sur le lagon du Morne",
+          "width": 1600,
+          "height": 1067
+        },
+        {
+          "type": "cta",
+          "title": "Demander une carte cadeau",
+          "body": "Cours, stage ou session VIP : écrivez-nous pour choisir la formule.",
+          "label": "Écrire sur WhatsApp",
+          "message": "Bonjour Born To Kite ! Je souhaite offrir une carte cadeau. Pouvez-vous m'aider à choisir la formule ?",
+          "featured": true
+        }
+      ]
     },
     {
       "slug": "l-ecole",
       "title": "L'école",
       "description": "Qui nous sommes, notre équipe et les langues que nous parlons.",
-      "blocks": [],
-      "stub": true
+      "blocks": [
+        {
+          "type": "prose",
+          "eyebrow": "Notre histoire",
+          "title": "Une école locale, familiale, et passionnée.",
+          "body": [
+            "Bienvenue à l'île Maurice ! Born To Kite est une école locale et familiale qui a vu le jour en janvier 2026. Professeur de kite depuis plus de dix ans, mon objectif est simple : vous transmettre ma passion dans la bonne humeur, la bienveillance, et dans des conditions de sécurité maximale.",
+            "Venez vous évader dans les eaux turquoises de l'île Maurice en pratiquant un sport hors du commun, fort en sensations, et vivre une expérience qui vous ressemble.",
+            "Nous sommes situés au sud de l'île Maurice, principalement sur le lagon du Morne, mais selon la météo, nous pouvons nous déplacer ailleurs dans cette région pour vous offrir les meilleures conditions."
+          ]
+        },
+        {
+          "type": "cards",
+          "variant": "people",
+          "eyebrow": "L'équipe",
+          "heading": "Les visages de Born To Kite.",
+          "items": [
+            {
+              "title": "Ritik",
+              "image": "/photos/equipe-ritik-kitesurf-le-morne.webp",
+              "alt": "Ritik, moniteur de Born To Kite, en kitesurf au Morne",
+              "position": "center 35%"
+            },
+            {
+              "title": "Elisa",
+              "image": "/photos/equipe-elisa-kitesurf-le-morne.webp",
+              "alt": "Elisa en kitesurf au Morne",
+              "position": "center 45%"
+            },
+            {
+              "title": "Angel et Dengel",
+              "image": "/photos/equipe-angel-dengel-le-morne.webp",
+              "alt": "Angel et Dengel avec leur équipement de kite",
+              "position": "center 42%"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "video": "/videos/born-to-kite-session-le-morne.mp4",
+          "poster": "/photos/video-session-kite-le-morne-poster.webp",
+          "alt": "Une session de kitesurf avec l'équipe Born To Kite au Morne",
+          "full": false
+        },
+        {
+          "type": "cta",
+          "title": "Prêt à voler sur l'eau ?",
+          "body": "Écrivez-nous sur WhatsApp ou suivez nos sessions sur Instagram — réponse rapide garantie."
+        }
+      ]
     },
     {
       "slug": "contact",
       "title": "Contact et réservation",
       "description": "Nous écrire sur WhatsApp, nos horaires et notre point de rendez-vous au Morne.",
-      "blocks": [],
-      "stub": true
+      "blocks": [
+        {
+          "type": "prose",
+          "eyebrow": "Nous contacter",
+          "title": "Contact et réservation.",
+          "body": [
+            "WhatsApp : +230 5487 9629. C'est le canal utilisé par l'école pour organiser les sessions.",
+            "E-mail : contact@borntokitemauritius.com.",
+            "Point de rendez-vous : Beachfront Kitelagoon, Le Morne, Rivière Noire, île Maurice. Plus code G8P9+C6."
+          ]
+        },
+        {
+          "type": "cta",
+          "title": "Réserver une session",
+          "body": "Écrivez-nous avec vos disponibilités : l'heure exacte est confirmée selon le vent."
+        },
+        {
+          "type": "cta",
+          "title": "Nous écrire par e-mail",
+          "label": "contact@borntokitemauritius.com",
+          "href": "mailto:contact@borntokitemauritius.com"
+        }
+      ]
     },
     {
       "slug": "mentions-legales",
       "title": "Mentions légales et confidentialité",
       "description": "Mentions légales, éditeur du site et politique de confidentialité.",
-      "blocks": [],
-      "stub": true
+      "blocks": [
+        {
+          "type": "prose",
+          "eyebrow": "Informations",
+          "title": "Mentions légales et confidentialité.",
+          "body": [
+            "Éditeur du site : Born To Kite, Ritik Jouan, Beachfront Kitelagoon, Le Morne, Rivière Noire, île Maurice. Contact : contact@borntokitemauritius.com ou +230 5487 9629.",
+            "Le site est hébergé par Cloudflare Pages et le nom de domaine est borntokitemauritius.com.",
+            "Le site ne crée aucun compte et ne collecte aucune donnée au moyen d'un formulaire. Les liens WhatsApp et e-mail ouvrent les services choisis par le visiteur. Le module Windguru est intégré en chargement différé : lorsqu'il se charge, le navigateur se connecte à Windguru, qui peut recevoir des données techniques comme l'adresse IP.",
+            "Pour toute question sur vos données personnelles ou pour exercer vos droits d'accès et de rectification, écrivez à contact@borntokitemauritius.com. Le traitement des données personnelles à Maurice est encadré par le Data Protection Act 2017."
+          ]
+        }
+      ]
     }
   ]
 }

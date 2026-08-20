@@ -33,8 +33,8 @@ Trois fichiers seulement, dans le dossier `src/data/` :
 | Fichier | Ce qu'il contient |
 |---|---|
 | `pages.fr.json` | **Toutes les pages du site en français** : titres, textes, tarifs, photos, questions fréquentes |
-| `pages.en.json` | La même chose en anglais |
-| `pages.de.json` | La même chose en allemand |
+| `pages.en.json` | Toutes les pages, entièrement traduites en anglais |
+| `pages.de.json` | Toutes les pages, entièrement traduites en allemand |
 | `site.json` | Tes coordonnées : téléphone, e-mail, adresse, Instagram |
 
 Tout le reste du dépôt, c'est la mécanique. Tu n'y touches pas.
@@ -75,7 +75,11 @@ Dans `pages.fr.json`, tu verras une longue liste de pages. Chacune ressemble à 
 - **`description`** : le petit texte gris sous le titre dans Google. Entre 140 et 160 caractères.
 - **`blocks`** : le contenu de la page, morceau par morceau.
 
-Copie une page existante, change le `slug`, le `title`, la `description` et les textes. Le menu, le plan du site et les liens entre les langues se mettent à jour tout seuls.
+Copie une page existante, change le `slug`, le `title`, la `description` et les
+textes dans les trois fichiers de langue. Demande ensuite à Claude de créer les
+trois petits fichiers de route correspondants dans `src/pages/`,
+`src/pages/en/` et `src/pages/de/`. Le plan du site et les liens entre les
+langues se mettent alors à jour tout seuls.
 
 ---
 

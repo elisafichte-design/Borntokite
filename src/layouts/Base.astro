@@ -18,6 +18,7 @@ const fullTitle = slug === "" ? `${site.name} — ${title}` : `${title} | ${site
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
     <link rel="canonical" href={canonical} />
     {site.locales.map((l) => (
       <link rel="alternate" hreflang={l} href={new URL(path(l, slug ? slug + "/" : ""), site.domain).href} />
@@ -33,21 +34,17 @@ const fullTitle = slug === "" ? `${site.name} — ${title}` : `${title} | ${site
     <meta property="og:image" content={new URL("/og.jpg", site.domain).href} />
     <meta name="twitter:card" content="summary_large_image" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Inter:wght@400;500;600&display=swap"
-    />
+    <link rel="preload" href="/fonts/fraunces-latin-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin />
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     {jsonld && <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />}
   </head>
   <body>
     <a class="skip" href="#main">{ui.skipToContent}</a>
-    <Header lang={lang} nav={nav} ui={ui} />
+    <Header lang={lang} slug={slug} nav={nav} ui={ui} />
     <main id="main"><slot /></main>
-    <Footer lang={lang} ui={ui} />
+    <Footer lang={lang} slug={slug} nav={nav} ui={ui} />
     <style>
       .skip {
         position: absolute;

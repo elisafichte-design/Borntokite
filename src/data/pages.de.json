@@ -1,9 +1,9 @@
 {
-  "_note": "Traduction a produire. Structure identique au francais : memes slugs de reference, memes blocs.",
+  "_note": "Die Übersetzungen basieren auf den freigegebenen französischen Texten. Die französische Version bleibt die Referenz.",
   "nav": [
     {
       "slug": "cours-de-kitesurf",
-      "label": "Kitesurf"
+      "label": "Kitesurfen"
     },
     {
       "slug": "wingfoil",
@@ -11,161 +11,1069 @@
     },
     {
       "slug": "surf",
-      "label": "Surf"
+      "label": "Surfen"
     },
     {
       "slug": "tarifs",
-      "label": "Tarifs"
+      "label": "Preise"
     },
     {
       "slug": "le-spot-du-morne",
-      "label": "Le spot"
+      "label": "Der Spot"
     },
     {
       "slug": "excursions",
-      "label": "Excursions"
+      "label": "Ausflüge"
+    },
+    {
+      "slug": "l-ecole",
+      "label": "Die Schule"
+    },
+    {
+      "slug": "meteo",
+      "label": "Live-Wetter"
     },
     {
       "slug": "contact",
-      "label": "Contact"
+      "label": "Kontakt"
     }
   ],
   "ui": {
-    "whatsapp": "Schreib uns auf WhatsApp",
+    "menu": "Menü",
+    "whatsapp": "Über WhatsApp schreiben",
     "seePrices": "Preise ansehen",
     "onRequest": "Auf Anfrage",
     "perPerson": "pro Person",
     "skipToContent": "Zum Inhalt springen",
     "footerLegal": "Impressum",
-    "footerPrivacy": "Datenschutz",
-    "booking": {
-      "name": "Vorname",
-      "activity": "Aktivität",
-      "activities": [
-        "Kitesurfen",
-        "Wingfoil",
-        "Surfen",
-        "noch offen"
-      ],
-      "day": "Wunschtag",
-      "slot": "Tageszeit",
-      "morning": "Vormittag",
-      "afternoon": "Nachmittag",
-      "submit": "Weiter auf WhatsApp",
-      "hint": "Die Nachricht öffnet sich fertig geschrieben in WhatsApp und wird nur gesendet, wenn Sie sie abschicken. Die genaue Uhrzeit wird je nach Wind bestätigt.",
-      "calendly": "Termin online buchen",
-      "dateLocale": "de-DE",
-      "template": "Hallo Born To Kite! Ich heiße {name}. Ich möchte am {date} buchen, {slot}. Aktivität: {activity}. Ist das möglich?\n\n(gesendet von {source})"
-    }
+    "footerPrivacy": "Datenschutz"
   },
   "pages": [
     {
       "slug": "",
-      "title": "École de kitesurf au Morne, île Maurice",
-      "description": "École locale et familiale de kitesurf, wingfoil et surf sur le lagon du Morne. Cours privés et semi-privés, downwind, sessions VIP en bateau. Tarifs affichés.",
-      "blocks": [],
-      "stub": true
+      "title": "Kitesurf-Schule am Le Morne, Mauritius",
+      "description": "Lokale, familiengeführte Schule für Kitesurfen, Wingfoil und Surfen in der Lagune von Le Morne. Privat- und Halbprivatkurse, Downwind-Touren und VIP-Sessions per Boot. Preise online.",
+      "blocks": [
+        {
+          "type": "hero",
+          "eyebrow": "Le Morne · Mauritius",
+          "title": "Willkommen auf Mauritius. Lerne, über das Wasser zu fliegen.",
+          "lead": "Born To Kite ist eine lokale, familiengeführte Kitesurf-Schule, die im Januar 2026 an der Lagune von Le Morne gegründet wurde. Seit mehr als zehn Jahren geben wir unsere Begeisterung fürs Kitesurfen weiter, mit guter Stimmung und größtmöglicher Sicherheit.",
+          "image": "/photos/kitesurf-contre-jour-lagon-le-morne.webp",
+          "alt": "Kitesurferin im Gegenlicht auf der Lagune von Le Morne, Mauritius",
+          "cta": {
+            "label": "Preise ansehen",
+            "href": "/de/tarifs/"
+          }
+        },
+        {
+          "type": "sectionnav",
+          "label": "Seitenbereiche",
+          "items": [
+            {
+              "id": "disciplines",
+              "label": "Unsere Kurse"
+            },
+            {
+              "href": "/de/tarifs/",
+              "label": "Preise"
+            },
+            {
+              "id": "meteo",
+              "label": "Wetter"
+            },
+            {
+              "id": "galerie",
+              "label": "Galerie"
+            },
+            {
+              "id": "avis",
+              "label": "Bewertungen"
+            },
+            {
+              "id": "faq",
+              "label": "Fragen"
+            }
+          ]
+        },
+        {
+          "type": "stats",
+          "items": [
+            {
+              "value": "10+",
+              "label": "Jahre Kitesurf-Erfahrung"
+            },
+            {
+              "value": "5,0",
+              "label": "aus 31 Google-Bewertungen"
+            },
+            {
+              "value": "2026",
+              "label": "Eröffnung der Schule"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "image": "/photos/banc-de-sable-lagon-le-morne.webp",
+          "alt": "Sandbank und türkisfarbene Lagune von Le Morne aus der Luft, Mauritius",
+          "width": 1600,
+          "height": 1061,
+          "caption": "Die Lagune von Le Morne im Südwesten von Mauritius."
+        },
+        {
+          "type": "prose",
+          "eyebrow": "Unsere Geschichte",
+          "title": "Eine lokale, familiengeführte Schule mit echter Leidenschaft.",
+          "body": [
+            "Willkommen auf Mauritius! Born To Kite ist eine lokale, familiengeführte Schule, die im Januar 2026 gegründet wurde. Seit mehr als zehn Jahren unterrichte ich Kitesurfen. Mein Ziel ist einfach: meine Leidenschaft mit Geduld, guter Stimmung und größtmöglicher Sicherheit weiterzugeben.",
+            "Tauche in das türkisfarbene Wasser von Mauritius ein, entdecke einen außergewöhnlichen Sport und erlebe eine Session, die zu dir passt.",
+            "Wir sind im Süden von Mauritius zu Hause, hauptsächlich an der Lagune von Le Morne. Je nach Wetter können wir einen anderen Spot in der Region wählen, um dir die bestmöglichen Bedingungen zu bieten."
+          ]
+        },
+        {
+          "type": "image",
+          "video": "/videos/born-to-kite-session-le-morne.mp4",
+          "poster": "/photos/video-session-kite-le-morne-poster.webp",
+          "alt": "Eine Kitesurf-Session mit Born To Kite auf der Lagune von Le Morne",
+          "full": false
+        },
+        {
+          "type": "cards",
+          "eyebrow": "Unsere Aktivitäten",
+          "heading": "Drei Arten, über die Lagune zu gleiten.",
+          "items": [
+            {
+              "title": "Kitesurfen",
+              "body": "Vom ersten Versuch bis zu fortgeschrittenen Tricks, an einem der schönsten Spots im Indischen Ozean.",
+              "href": "/de/cours-de-kitesurf/",
+              "linkLabel": "Kitesurf-Kurse ansehen",
+              "image": "/photos/cours-de-kitesurf-lagon-le-morne.webp",
+              "alt": "Kitesurfer auf der Lagune vor dem Berg Le Morne, Mauritius"
+            },
+            {
+              "title": "Wingfoil",
+              "body": "Sanft oder schnell über dem Wasser gleiten, mit einer Wassersportart, die immer beliebter wird.",
+              "href": "/de/wingfoil/",
+              "linkLabel": "Wingfoil-Kurse ansehen",
+              "image": "/photos/wingfoil-le-morne-2026.webp",
+              "alt": "Wingfoiler über der Lagune von Le Morne, Mauritius",
+              "position": "center 45%"
+            },
+            {
+              "title": "Surfen",
+              "body": "Genieße die Wellen von Mauritius mit einem Coaching für jedes Niveau. Je nach Vorhersage wählen wir zwischen mehreren Spots im Süden der Insel, um die besten Bedingungen zu finden.",
+              "href": "/de/surf/",
+              "linkLabel": "Surf-Sessions ansehen",
+              "image": "/photos/surf-vague-sud-ile-maurice.webp",
+              "alt": "Surfer auf einer Welle im Süden von Mauritius"
+            }
+          ],
+          "id": "disciplines"
+        },
+        {
+          "type": "image",
+          "image": "/photos/kitesurf-coucher-de-soleil-ile-maurice.webp",
+          "alt": "Kitesurfer bei Sonnenuntergang auf der Lagune von Le Morne, Mauritius",
+          "width": 1600,
+          "height": 1067
+        },
+        {
+          "type": "weather",
+          "eyebrow": "Wetter & Wind",
+          "heading": "Die aktuellen Bedingungen am Le Morne.",
+          "spot": 118,
+          "loadLabel": "Windguru-Vorhersage anzeigen",
+          "note": "Das Modul zeigt AROME-FR 2,5 km für eine detaillierte lokale Kurzfristprognose. Für längerfristige Vorhersagen besuche",
+          "liveLabel": "Heutiges Wetter-Update auf Instagram ansehen",
+          "liveHref": "https://www.instagram.com/born_to_kite_/",
+          "id": "meteo"
+        },
+        {
+          "type": "gallery",
+          "eyebrow": "Galerie",
+          "heading": "Die Lagune, das Gleiten und das Lächeln.",
+          "items": [
+            {
+              "image": "/photos/galerie-briefing-eleves-le-morne.webp",
+              "alt": "Einweisung der Schüler vor der Session am Strand von Le Morne"
+            },
+            {
+              "image": "/photos/galerie-eleves-dans-le-lagon.webp",
+              "alt": "Schüler im flachen Wasser der Lagune von Le Morne"
+            },
+            {
+              "image": "/photos/galerie-moniteur-dans-le-lagon.webp",
+              "alt": "Born To Kite Lehrer in der Lagune von Le Morne"
+            },
+            {
+              "image": "/photos/galerie-preparation-de-l-aile.webp",
+              "alt": "Vorbereitung eines Wingfoil-Wings am Strand"
+            },
+            {
+              "image": "/photos/galerie-materiel-sur-la-plage.webp",
+              "alt": "Aufpumpen eines Kites am Strand von Le Morne, Mauritius"
+            },
+            {
+              "image": "/photos/galerie-crystal-rock-lagon.webp",
+              "alt": "Crystal Rock mitten in der türkisfarbenen Lagune"
+            },
+            {
+              "image": "/photos/galerie-surfeur-au-couchant.webp",
+              "alt": "Surfer bei Sonnenuntergang an der Südküste von Mauritius"
+            },
+            {
+              "image": "/photos/galerie-portrait-eleve.webp",
+              "alt": "Porträt einer Schülerin nach ihrer Session auf der Lagune"
+            }
+          ],
+          "id": "galerie"
+        },
+        {
+          "type": "reviews",
+          "eyebrow": "Gästebewertungen",
+          "heading": "Das sagen unsere Schüler.",
+          "source": "5,0 aus 31 Google-Bewertungen, in der jeweiligen Originalsprache wiedergegeben.",
+          "sourceLabel": "Alle Bewertungen auf Google ansehen",
+          "items": [
+            {
+              "author": "Salfati Serge",
+              "text": "Après un premier apprentissage du kite surfing, grâce à un coach expérimenté et pédagogue, j'ai pu kiter seul et prendre du plaisir. Avec un tel professeur, vous atteindrez rapidement le niveau et le label « Born to Kite »."
+            },
+            {
+              "author": "Mélouna Tifra",
+              "text": "Super séance de Kite avec Ritik ! Mon copain et moi avons fais un cours en duo ! C'était génial de pouvoir partager ça ensemble. Le spot de Kit est vraiment trop beau ! Ritik est un super coach, vous pouvez lui faire confiance les yeux fermés. On se sera bien amusé ! On reviendra sans hésitation"
+            },
+            {
+              "author": "Noria Laplace",
+              "text": "J'ai passé un super moment avec Ritik, il est patient et très pédagogue ! Très bonne ambiance, on a bien rigolé, mention spéciale à ses 3 garçons !"
+            },
+            {
+              "author": "Alan Morel",
+              "text": "Super école de kite ! Très professionnels et aussi vraiment super sympa !!! Je recommande à 100%"
+            },
+            {
+              "author": "Kenneth L",
+              "text": "École de kitesurf locale, apprentissage dans la bonne humeur et la détente."
+            },
+            {
+              "author": "Ariyana Erdogan",
+              "text": "Expérience incroyable. Merci merci merci"
+            }
+          ],
+          "id": "avis"
+        },
+        {
+          "type": "cta",
+          "title": "Verschenke eine Kitesurf-Session.",
+          "body": "Mit einem Born To Kite Gutschein verschenkst du eine bleibende Erinnerung an die Lagune von Le Morne. Zur Wahl stehen ein Kurs, ein mehrtägiges Training oder eine VIP-Session.",
+          "label": "Gutschein entdecken",
+          "href": "/de/carte-cadeau/",
+          "featured": true,
+          "eyebrow": "Gutschein"
+        },
+        {
+          "type": "prose",
+          "eyebrow": "Mehr als Kitesurfen",
+          "title": "Ausflüge & geführte Touren",
+          "body": [
+            "Neben dem Kitesurfen bieten wir Bootsausflüge und geführte Inseltouren an, abgestimmt auf eure Interessen und die Gruppengröße. Preise gibt es auf Anfrage und richten sich nach dem gewünschten Programm."
+          ]
+        },
+        {
+          "type": "faq",
+          "heading": "Häufige Fragen.",
+          "items": [
+            {
+              "q": "Welches Niveau brauche ich, um mit dem Kitesurfen zu beginnen?",
+              "a": "Vorkenntnisse sind nicht erforderlich. Der Kurs beginnt mit Theorie und Kite-Handling an Land, bevor es ins Wasser geht. Du musst schwimmen können."
+            },
+            {
+              "q": "Wie lange dauert es, selbstständig zu fahren?",
+              "a": "In der Regel reichen 6 bis 10 Unterrichtsstunden, um die Grundlagen für selbstständiges Fahren zu lernen. Das hängt von deinem Gefühl auf dem Wasser und den Windbedingungen ab."
+            },
+            {
+              "q": "Ist die Ausrüstung inklusive?",
+              "a": "Ja. Kite, Board, Trapez, Helm und Schwimmweste sind inklusive und werden passend zu deiner Größe und zum Wind des Tages ausgewählt."
+            },
+            {
+              "q": "Was passiert, wenn es keinen Wind gibt?",
+              "a": "Wenn der Wind nicht ausreicht, wird die Session erstattet oder verschoben. Die Schule kann auch zu einem anderen Spot wechseln, um bessere Bedingungen zu finden."
+            },
+            {
+              "q": "Wie buche ich?",
+              "a": "Am einfachsten schickst du uns deine verfügbaren Zeiten per WhatsApp. Wir bestätigen den Termin abhängig vom Wetter."
+            }
+          ],
+          "id": "faq"
+        },
+        {
+          "type": "cta",
+          "title": "Bereit, über das Wasser zu fliegen?",
+          "body": "Schreib uns auf WhatsApp oder folge unseren Sessions auf Instagram. Wir antworten schnell."
+        }
+      ]
     },
     {
       "slug": "tarifs",
-      "title": "Tarifs 2026",
-      "description": "Tous les tarifs de l'école Born To Kite au Morne : cours privé, cours semi-privé, downwind Bel Ombre au Morne, leçons VIP en bateau, session surf. Prix affichés en clair.",
-      "blocks": [],
-      "stub": true
+      "title": "Preise 2026",
+      "description": "Alle Preise von Born To Kite am Le Morne: Privat- und Halbprivatkurse, Downwind von Bel Ombre nach Le Morne, VIP-Bootskurse und Surf-Sessions. Klare Preise online.",
+      "blocks": [
+        {
+          "type": "prose",
+          "eyebrow": "Preise 2026",
+          "title": "Preise für Kitesurf-, Wingfoil- und Surfkurse",
+          "aValider": true
+        },
+        {
+          "type": "prices",
+          "heading": "Kitesurfen und Wingfoil",
+          "items": [
+            {
+              "name": "Privatkurs",
+              "detail": "Persönliches Einzelcoaching, damit du in deinem Tempo Fortschritte machst.",
+              "lines": [
+                "2 h — 150 €",
+                "6 h — 420 €",
+                "8 h — 550 €",
+                "10 h — 700 €"
+              ]
+            },
+            {
+              "name": "Halbprivatkurs",
+              "detail": "Maximal zwei Personen pro Lehrer, damit ihr gemeinsam Fortschritte macht.",
+              "lines": [
+                "2 h — 80 €/Person",
+                "6 h — 230 €/Person",
+                "8 h — 300 €/Person",
+                "10 h — 380 €/Person"
+              ]
+            },
+            {
+              "name": "Betreuung & Materialmiete",
+              "detail": "Du fährst bereits selbstständig? Fahre unter Aufsicht oder miete unsere Ausrüstung.",
+              "lines": [
+                "Auf Anfrage"
+              ]
+            },
+            {
+              "name": "Mehrtägige Kurse",
+              "detail": "Mehrere aufeinanderfolgende Tage für schnellere Fortschritte, Ausrüstung inklusive.",
+              "lines": [
+                "Auf Anfrage"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "image": "/photos/moniteur-kitesurf-materiel-le-morne.webp",
+          "alt": "Born To Kite Kitesurf-Lehrer mit seinem Board am Le Morne, Mauritius",
+          "width": 1200,
+          "height": 800
+        },
+        {
+          "type": "prices",
+          "heading": "Touren",
+          "items": [
+            {
+              "name": "Downwind",
+              "detail": "Eine geführte 2- bis 3-stündige Fahrt von Bel Ombre nach Le Morne.",
+              "lines": [
+                "75 €/Person"
+              ],
+              "accent": true
+            },
+            {
+              "name": "VIP-Kurse",
+              "detail": "Mit dem Boot geht es zu einer Sandbank, weit weg vom Anfängerbereich, mit türkisfarbenem Wasser und privater Atmosphäre.",
+              "lines": [
+                "220 €/Person"
+              ],
+              "accent": true
+            }
+          ]
+        },
+        {
+          "type": "prices",
+          "heading": "Surfen",
+          "items": [
+            {
+              "name": "Surf-Session",
+              "detail": "Eine betreute 90-minütige Session mit Ausrüstung.",
+              "lines": [
+                "60 € — 1 h 30"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "prices",
+          "heading": "Optional",
+          "aValider": true,
+          "items": [
+            {
+              "name": "Fotos und Videos der Session",
+              "detail": "Ein Fotograf begleitet deine Session vom Strand oder vom Wasser aus. Auf Anfrage und je nach Verfügbarkeit.",
+              "lines": [
+                "Auf Anfrage"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "image": "/photos/bateau-ecole-le-morne-noir-et-blanc.webp",
+          "alt": "Boot der Schule vor dem Berg Le Morne, Mauritius",
+          "width": 1400,
+          "height": 933
+        },
+        {
+          "type": "cta",
+          "title": "Bereit, über das Wasser zu fliegen?",
+          "body": "Schreib uns auf WhatsApp oder folge unseren Sessions auf Instagram. Wir antworten schnell."
+        }
+      ]
     },
     {
       "slug": "le-spot-du-morne",
-      "title": "Le spot du Morne : vent, saisons et sécurité",
-      "description": "Tout sur le lagon du Morne : vent dominant, saison des alizés, eau plate protégée par la barrière de corail, règles de priorité en mer.",
-      "blocks": [],
-      "stub": true
+      "title": "Der Spot Le Morne: Wind, Saison und Sicherheit",
+      "description": "Alles über die Lagune von Le Morne: vorherrschender Wind, Passat-Saison, durch das Korallenriff geschütztes Flachwasser und Vorfahrtsregeln auf dem Wasser.",
+      "blocks": [
+        {
+          "type": "prose",
+          "eyebrow": "Der Spot",
+          "title": "Eine Lagune aus Vulkan und Korallen.",
+          "body": [
+            "Mauritius entstand vor etwa 8 Millionen Jahren durch vulkanische Aktivität. Heute umgibt ein fast durchgehendes Korallenriff die Insel. Es bildet eine flache Lagune, die vor dem starken Wellengang des Indischen Ozeans geschützt ist und ideale Bedingungen bietet, um sicher Kitesurfen zu lernen.",
+            "Le Morne gehört zum UNESCO-Welterbe und verdankt seine markante Landschaft diesem vulkanischen Ursprung. Die Halbinsel schafft ein Gewässer, das zugleich windig und geschützt ist und auf der Insel einzigartig bleibt.",
+            "Korallenriffe sind ein empfindliches Ökosystem. Sie beherbergen einen großen Teil der Meereswelt von Mauritius und schützen die Küste vor Erosion. Beim Fahren bleiben wir über sandigen Bereichen und achten darauf, die Korallen niemals mit der Ausrüstung zu berühren."
+          ]
+        },
+        {
+          "type": "image",
+          "image": "/photos/montagne-du-morne-vue-du-lagon.webp",
+          "alt": "Der Berg Le Morne von der Lagune aus gesehen, Mauritius",
+          "width": 1600,
+          "height": 1061
+        },
+        {
+          "type": "prose",
+          "eyebrow": "Wetter & Wind",
+          "title": "Der Wind",
+          "body": [
+            "Am Le Morne weht überwiegend der Südostpassat, der am frühen Nachmittag meist stärker wird. Unsere Lehrer prüfen die Bedingungen vor jeder Session und wählen die Ausrüstung passend zur Windstärke und zu deinem Niveau.",
+            "Die Lagune von Le Morne wird durch das Korallenriff geschützt. Das Wasser ist flach und frei von großen Wellen, ideal zum Lernen."
+          ]
+        },
+        {
+          "type": "cards",
+          "variant": "vignettes",
+          "eyebrow": "Bevor es aufs Wasser geht",
+          "heading": "Wind, Wellen und Sicherheit.",
+          "items": [
+            {
+              "title": "Der Wind",
+              "body": "Am Le Morne weht überwiegend der Südostpassat, der am frühen Nachmittag meist stärker wird."
+            },
+            {
+              "title": "Die Wellen",
+              "body": "Im Inneren der Lagune bleibt das Wasser flach. Surfbare Wellen liegen weiter draußen hinter dem Riff, mit Coaching passend zum jeweiligen Niveau."
+            },
+            {
+              "title": "Sicherheit",
+              "body": "Du musst schwimmen können. Gib dem Surfer auf der Welle Vorfahrt und halte ausreichend Abstand zu anderen Wassersportlern."
+            }
+          ]
+        },
+        {
+          "type": "windmonths",
+          "data": "de"
+        },
+        {
+          "type": "prose",
+          "eyebrow": "Ritiks Tipps",
+          "title": "Die passende Reisezeit wählen.",
+          "body": [
+            "Der Wind weht in der Regel von 7:00 bis 18:30 Uhr und ist am frühen Nachmittag stärker. Er hängt auch von der Tide ab und nimmt mit auflaufendem Wasser zu.",
+            "Von November bis April passt sich die Schule den Bedingungen an. Reicht der Wind nicht aus, wird die Session erstattet oder verschoben. Wir können auch zu einem anderen Spot wechseln.",
+            "Der Februar ist der unzuverlässigste Monat zum Kitesurfen. Auch Dezember und Mitte Januar sind weniger konstant, wobei die Natur immer unberechenbar bleibt.",
+            "Von Mai bis September ist die Lagune stärker besucht. Ab Ende September wird es ruhiger."
+          ]
+        },
+        {
+          "type": "image",
+          "image": "/photos/kites-et-arc-en-ciel-spot-du-morne.webp",
+          "alt": "Kites am Spot Le Morne unter einem Regenbogen, Mauritius",
+          "width": 1200,
+          "height": 1600,
+          "full": false,
+          "caption": "Der Startbereich auf der Lagunenseite."
+        },
+        {
+          "type": "faq",
+          "heading": "Vorfahrtsregeln auf dem Wasser",
+          "items": [
+            {
+              "q": "Der Fahrer in Lee hat Vorfahrt",
+              "a": "Der Fahrer in Lee hat immer Vorfahrt."
+            },
+            {
+              "q": "Niemals eine Kite-Leine kreuzen",
+              "a": "Fahre niemals zwischen einem Fahrer und seinem Kite oder über dessen Leinen."
+            },
+            {
+              "q": "Vorausschauend fahren und kommunizieren",
+              "a": "Im Zweifel langsamer werden und Vorfahrt gewähren."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "meteo",
+      "title": "Live-Wetter und Wind am Le Morne",
+      "description": "Live-Vorhersage, tägliches Wetter-Update von Born To Kite und eine monatliche Windübersicht für die Lagune von Le Morne.",
+      "blocks": [
+        {
+          "type": "prose",
+          "eyebrow": "Wetter am Le Morne",
+          "title": "Die aktuellen Bedingungen.",
+          "body": [
+            "Der Wind weht in der Regel von 7:00 bis 18:30 Uhr und ist am frühen Nachmittag stärker. Er hängt auch von der Tide ab und nimmt mit auflaufendem Wasser zu.",
+            "Unsere Lehrer prüfen die Bedingungen vor jeder Session und wählen die Ausrüstung passend zur Windstärke und zu deinem Niveau."
+          ]
+        },
+        {
+          "type": "weather",
+          "eyebrow": "Vorhersage",
+          "heading": "Live-Wetter am Le Morne.",
+          "spot": 118,
+          "loadLabel": "Windguru-Vorhersage anzeigen",
+          "note": "Das Modul zeigt AROME-FR 2,5 km für eine detaillierte lokale Kurzfristprognose. Für längerfristige Vorhersagen besuche",
+          "liveLabel": "Ritiks heutiges Wetter-Update auf Instagram ansehen",
+          "liveHref": "https://www.instagram.com/born_to_kite_/"
+        },
+        {
+          "type": "windmonths",
+          "data": "de"
+        }
+      ]
     },
     {
       "slug": "excursions",
-      "title": "Excursions et visites guidées",
-      "description": "Excursions et visites guidées au départ du Morne, en complément des sessions de kitesurf. Réservation par WhatsApp.",
-      "blocks": [],
-      "stub": true
+      "title": "Ausflüge und geführte Touren",
+      "description": "Ausflüge und geführte Touren ab Le Morne als Ergänzung zu den Kitesurf-Sessions. Buchung über WhatsApp.",
+      "blocks": [
+        {
+          "type": "prose",
+          "eyebrow": "Mehr als Kitesurfen",
+          "title": "Ausflüge und geführte Touren.",
+          "body": [
+            "Neben dem Kitesurfen bieten wir Bootsausflüge und geführte Inseltouren an, abgestimmt auf eure Interessen und die Gruppengröße. Preise gibt es auf Anfrage und richten sich nach dem gewünschten Programm."
+          ]
+        },
+        {
+          "type": "gallery",
+          "eyebrow": "Mauritius",
+          "heading": "Le Morne und seine Lagune.",
+          "items": [
+            {
+              "image": "/photos/banc-de-sable-lagon-le-morne.webp",
+              "alt": "Sandbank und türkisfarbene Lagune von Le Morne aus der Luft"
+            },
+            {
+              "image": "/photos/galerie-crystal-rock-lagon.webp",
+              "alt": "Crystal Rock mitten in der türkisfarbenen Lagune"
+            },
+            {
+              "image": "/photos/montagne-du-morne-vue-du-lagon.webp",
+              "alt": "Der Berg Le Morne von der Lagune aus gesehen"
+            },
+            {
+              "image": "/photos/groupe-eleves-kite-le-morne.webp",
+              "alt": "Ritik und eine Gruppe von Schülern vor dem Berg Le Morne",
+              "position": "center 70%"
+            }
+          ]
+        },
+        {
+          "type": "cta",
+          "title": "Ausflug anfragen",
+          "body": "Sag uns, was dich interessiert und wie viele Personen mitkommen. Wir schlagen dir ein passendes Programm vor."
+        }
+      ]
     },
     {
       "slug": "cours-de-kitesurf",
-      "title": "Cours de kitesurf au Morne",
-      "description": "Du premier jour à l'autonomie sur le lagon du Morne. Cours privés et semi-privés, matériel inclus.",
-      "blocks": [],
-      "stub": true
+      "title": "Kitesurf-Kurse am Le Morne, Mauritius",
+      "description": "Private und halbprivate Kitesurf-Kurse auf der Lagune von Le Morne, inklusive Ausrüstung. Klare Preise für 2 bis 10 Stunden bei einer lokalen, familiengeführten Schule.",
+      "blocks": [
+        {
+          "type": "prose",
+          "eyebrow": "Unsere Aktivitäten",
+          "title": "Kitesurf-Kurse am Le Morne, Mauritius",
+          "aValider": true,
+          "body": [
+            "Vom ersten Versuch bis zu fortgeschrittenen Tricks, an einem der schönsten Spots im Indischen Ozean."
+          ]
+        },
+        {
+          "type": "image",
+          "image": "/photos/cours-de-kitesurf-lagon-le-morne.webp",
+          "alt": "Kitesurfer auf der Lagune vor dem Berg Le Morne, Mauritius",
+          "width": 1000,
+          "height": 750
+        },
+        {
+          "type": "prices",
+          "heading": "Lernen",
+          "items": [
+            {
+              "name": "Privatkurs",
+              "detail": "Persönliches Einzelcoaching, damit du in deinem Tempo Fortschritte machst.",
+              "lines": [
+                "2 h — 150 €",
+                "6 h — 420 €",
+                "8 h — 550 €",
+                "10 h — 700 €"
+              ]
+            },
+            {
+              "name": "Halbprivatkurs",
+              "detail": "Maximal zwei Personen pro Lehrer, damit ihr gemeinsam Fortschritte macht.",
+              "lines": [
+                "2 h — 80 €/Person",
+                "6 h — 230 €/Person",
+                "8 h — 300 €/Person",
+                "10 h — 380 €/Person"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "prices",
+          "heading": "Selbstständiges Fahren und Vertiefung",
+          "items": [
+            {
+              "name": "Betreuung & Materialmiete",
+              "detail": "Du fährst bereits selbstständig? Fahre unter Aufsicht oder miete unsere Ausrüstung.",
+              "lines": [
+                "Auf Anfrage"
+              ]
+            },
+            {
+              "name": "Mehrtägige Kurse",
+              "detail": "Mehrere aufeinanderfolgende Tage für schnellere Fortschritte, Ausrüstung inklusive.",
+              "lines": [
+                "Auf Anfrage"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "prices",
+          "heading": "Touren",
+          "items": [
+            {
+              "name": "Downwind",
+              "detail": "Eine geführte 2- bis 3-stündige Fahrt von Bel Ombre nach Le Morne.",
+              "lines": [
+                "75 €/Person"
+              ],
+              "accent": true
+            },
+            {
+              "name": "VIP-Kurse",
+              "detail": "Mit dem Boot geht es zu einer Sandbank, weit weg vom Anfängerbereich, mit türkisfarbenem Wasser und privater Atmosphäre.",
+              "lines": [
+                "220 €/Person"
+              ],
+              "accent": true
+            }
+          ]
+        },
+        {
+          "type": "faq",
+          "heading": "Häufige Fragen.",
+          "items": [
+            {
+              "q": "Welches Niveau brauche ich, um mit dem Kitesurfen zu beginnen?",
+              "a": "Vorkenntnisse sind nicht erforderlich. Der Kurs beginnt mit Theorie und Kite-Handling an Land, bevor es ins Wasser geht. Du musst schwimmen können."
+            },
+            {
+              "q": "Wie lange dauert es, selbstständig zu fahren?",
+              "a": "In der Regel reichen 6 bis 10 Unterrichtsstunden, um die Grundlagen für selbstständiges Fahren zu lernen. Das hängt von deinem Gefühl auf dem Wasser und den Windbedingungen ab."
+            },
+            {
+              "q": "Ist die Ausrüstung inklusive?",
+              "a": "Ja. Kite, Board, Trapez, Helm und Schwimmweste sind inklusive und werden passend zu deiner Größe und zum Wind des Tages ausgewählt."
+            },
+            {
+              "q": "Was passiert, wenn es keinen Wind gibt?",
+              "a": "Die Session wird ohne Aufpreis auf einen anderen Termin verschoben. Sicherheit und die Qualität des Unterrichts stehen an erster Stelle."
+            },
+            {
+              "q": "Wie buche ich?",
+              "a": "Am einfachsten schickst du uns deine verfügbaren Zeiten per WhatsApp. Wir bestätigen den Termin abhängig vom Wetter."
+            }
+          ]
+        },
+        {
+          "type": "cta",
+          "title": "Bereit, über das Wasser zu fliegen?",
+          "body": "Schreib uns auf WhatsApp oder folge unseren Sessions auf Instagram. Wir antworten schnell."
+        }
+      ],
+      "course": true
     },
     {
       "slug": "wingfoil",
-      "title": "Wingfoil à l'île Maurice",
-      "description": "Cours de wingfoil sur le lagon du Morne, mêmes tarifs que le kitesurf.",
-      "blocks": [],
-      "stub": true
+      "title": "Wingfoil-Kurse am Le Morne, Mauritius",
+      "description": "Wingfoil-Kurse auf dem flachen Wasser der Lagune von Le Morne zu den gleichen Preisen wie Kitesurfen. Ausrüstung inklusive, als Privatkurs oder zu zweit.",
+      "blocks": [
+        {
+          "type": "prose",
+          "eyebrow": "Unsere Aktivitäten",
+          "title": "Wingfoil-Kurse am Le Morne, Mauritius",
+          "aValider": true,
+          "body": [
+            "Sanft oder schnell über dem Wasser gleiten, mit einer Wassersportart, die immer beliebter wird."
+          ]
+        },
+        {
+          "type": "image",
+          "image": "/photos/wingfoil-le-morne-ile-maurice.webp",
+          "alt": "Schüler bereiten einen Wingfoil-Wing am Strand von Le Morne vor, Mauritius",
+          "width": 1000,
+          "height": 750
+        },
+        {
+          "type": "prices",
+          "heading": "Gleiche Preise wie beim Kitesurfen",
+          "items": [
+            {
+              "name": "Privatkurs",
+              "detail": "Persönliches Einzelcoaching, damit du in deinem Tempo Fortschritte machst.",
+              "lines": [
+                "2 h — 150 €",
+                "6 h — 420 €",
+                "8 h — 550 €",
+                "10 h — 700 €"
+              ]
+            },
+            {
+              "name": "Halbprivatkurs",
+              "detail": "Maximal zwei Personen pro Lehrer, damit ihr gemeinsam Fortschritte macht.",
+              "lines": [
+                "2 h — 80 €/Person",
+                "6 h — 230 €/Person",
+                "8 h — 300 €/Person",
+                "10 h — 380 €/Person"
+              ]
+            },
+            {
+              "name": "Betreuung & Materialmiete",
+              "detail": "Du fährst bereits selbstständig? Fahre unter Aufsicht oder miete unsere Ausrüstung.",
+              "lines": [
+                "Auf Anfrage"
+              ]
+            },
+            {
+              "name": "Mehrtägige Kurse",
+              "detail": "Mehrere aufeinanderfolgende Tage für schnellere Fortschritte, Ausrüstung inklusive.",
+              "lines": [
+                "Auf Anfrage"
+              ]
+            },
+            {
+              "name": "VIP-Kurse",
+              "detail": "Mit dem Boot geht es zu einer Sandbank, weit weg vom Anfängerbereich, mit türkisfarbenem Wasser und privater Atmosphäre.",
+              "lines": [
+                "220 €/Person"
+              ],
+              "accent": true
+            }
+          ]
+        },
+        {
+          "type": "cta",
+          "title": "Bereit, über das Wasser zu fliegen?",
+          "body": "Schreib uns auf WhatsApp oder folge unseren Sessions auf Instagram. Wir antworten schnell."
+        }
+      ],
+      "course": true
     },
     {
       "slug": "surf",
-      "title": "Sessions de surf encadrées",
-      "description": "Sessions de surf encadrées dans le sud de l'île Maurice, tous niveaux.",
-      "blocks": [],
-      "stub": true
+      "title": "Betreute Surfkurse im Süden von Mauritius",
+      "description": "Betreute 90-minütige Surf-Sessions im Süden von Mauritius, inklusive Ausrüstung. Je nach Vorhersage stehen mehrere Spots für alle Niveaus zur Auswahl.",
+      "blocks": [
+        {
+          "type": "prose",
+          "eyebrow": "Unsere Aktivitäten",
+          "title": "Betreute Surf-Sessions im Süden von Mauritius",
+          "aValider": true,
+          "body": [
+            "Genieße die Wellen von Mauritius mit einem Coaching für jedes Niveau. Je nach Vorhersage wählen wir zwischen mehreren Spots im Süden der Insel, um die besten Bedingungen zu finden."
+          ]
+        },
+        {
+          "type": "image",
+          "image": "/photos/surf-vague-sud-ile-maurice.webp",
+          "alt": "Surfer auf einer Welle im Süden von Mauritius",
+          "width": 1000,
+          "height": 750
+        },
+        {
+          "type": "prices",
+          "heading": "Kurse",
+          "items": [
+            {
+              "name": "Surf-Session",
+              "detail": "Eine betreute 90-minütige Session mit Ausrüstung.",
+              "lines": [
+                "60 € — 1 h 30"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "eyebrow": "Die Wellen",
+          "title": "Die Wellen",
+          "body": [
+            "Im Inneren der Lagune bleibt das Wasser flach. Surfbare Wellen liegen weiter draußen hinter dem Riff, mit Coaching passend zum jeweiligen Niveau."
+          ]
+        },
+        {
+          "type": "prose",
+          "eyebrow": "Sicherheit",
+          "title": "Sicherheit",
+          "body": [
+            "Du musst schwimmen können. Gib dem Surfer auf der Welle Vorfahrt und halte ausreichend Abstand zu anderen Wassersportlern."
+          ]
+        },
+        {
+          "type": "cta",
+          "title": "Bereit, über das Wasser zu fliegen?",
+          "body": "Schreib uns auf WhatsApp oder folge unseren Sessions auf Instagram. Wir antworten schnell."
+        }
+      ],
+      "course": true
     },
     {
       "slug": "downwind-bel-ombre-le-morne",
-      "title": "Downwind Bel Ombre → Le Morne",
-      "description": "2 à 3 heures de navigation accompagnée de Bel Ombre au Morne. 75 € par personne.",
-      "blocks": [],
-      "stub": true
+      "title": "Downwind von Bel Ombre nach Le Morne",
+      "description": "Eine geführte 2- bis 3-stündige Fahrt von Bel Ombre nach Le Morne. 75 € pro Person.",
+      "blocks": [
+        {
+          "type": "prose",
+          "eyebrow": "Touren",
+          "title": "Downwind von Bel Ombre nach Le Morne",
+          "body": [
+            "Eine geführte 2- bis 3-stündige Fahrt von Bel Ombre nach Le Morne."
+          ]
+        },
+        {
+          "type": "image",
+          "image": "/photos/bateau-ecole-le-morne-noir-et-blanc.webp",
+          "alt": "Boot der Schule vor dem Berg Le Morne, Mauritius",
+          "width": 1400,
+          "height": 933
+        },
+        {
+          "type": "prices",
+          "heading": "Die Session",
+          "items": [
+            {
+              "name": "Downwind",
+              "detail": "Eine geführte 2- bis 3-stündige Fahrt von Bel Ombre nach Le Morne.",
+              "lines": [
+                "75 €/Person"
+              ],
+              "accent": true
+            }
+          ]
+        },
+        {
+          "type": "cta",
+          "title": "Downwind buchen",
+          "body": "Schreib uns dein Niveau und deine verfügbaren Zeiten. Die Session wird abhängig von den Windbedingungen bestätigt."
+        }
+      ]
     },
     {
       "slug": "lecons-vip-bateau",
-      "title": "Leçons VIP en bateau",
-      "description": "Session privée sur un banc de sable, accès en bateau, loin du spot débutant. 220 € par personne.",
-      "blocks": [],
-      "stub": true
+      "title": "VIP-Kurse per Boot",
+      "description": "Private Session auf einer Sandbank, erreichbar per Boot und weit weg vom Anfängerbereich. 220 € pro Person.",
+      "blocks": [
+        {
+          "type": "prose",
+          "eyebrow": "Touren",
+          "title": "VIP-Kurse per Boot",
+          "body": [
+            "Mit dem Boot geht es zu einer Sandbank, weit weg vom Anfängerbereich, mit türkisfarbenem Wasser und privater Atmosphäre."
+          ]
+        },
+        {
+          "type": "image",
+          "image": "/photos/banc-de-sable-lagon-le-morne.webp",
+          "alt": "Sandbank und türkisfarbene Lagune von Le Morne aus der Luft, Mauritius",
+          "width": 1600,
+          "height": 1061
+        },
+        {
+          "type": "prices",
+          "heading": "Die Session",
+          "items": [
+            {
+              "name": "VIP-Kurs",
+              "detail": "Private Session auf einer Sandbank, erreichbar per Boot und weit weg vom Anfängerbereich.",
+              "lines": [
+                "220 €/Person"
+              ],
+              "accent": true
+            }
+          ]
+        },
+        {
+          "type": "cta",
+          "title": "VIP-Kurs buchen",
+          "body": "Schreib uns dein Niveau und deine verfügbaren Zeiten. Die Session wird abhängig von den Windbedingungen bestätigt."
+        }
+      ]
     },
     {
       "slug": "carte-cadeau",
-      "title": "Carte cadeau",
-      "description": "Offrez une session de kitesurf sur le lagon du Morne.",
-      "blocks": [],
-      "stub": true
+      "title": "Gutschein",
+      "description": "Verschenke eine Kitesurf-Session auf der Lagune von Le Morne.",
+      "blocks": [
+        {
+          "type": "prose",
+          "eyebrow": "Gutschein",
+          "title": "Verschenke eine Kitesurf-Session.",
+          "body": [
+            "Mit einem Born To Kite Gutschein verschenkst du eine bleibende Erinnerung an die Lagune von Le Morne. Zur Wahl stehen ein Kurs, ein mehrtägiges Training oder eine VIP-Session."
+          ]
+        },
+        {
+          "type": "image",
+          "image": "/photos/kitesurf-coucher-de-soleil-ile-maurice.webp",
+          "alt": "Kitesurfer bei Sonnenuntergang auf der Lagune von Le Morne",
+          "width": 1600,
+          "height": 1067
+        },
+        {
+          "type": "cta",
+          "title": "Gutschein anfragen",
+          "body": "Wähle zwischen Kurs, mehrtägigem Training oder VIP-Session. Schreib uns, damit wir die passende Option finden.",
+          "label": "Über WhatsApp schreiben",
+          "message": "Hallo Born To Kite! Ich möchte einen Gutschein verschenken. Könnt ihr mir helfen, die passende Option zu wählen?",
+          "featured": true
+        }
+      ]
     },
     {
       "slug": "l-ecole",
-      "title": "L'école",
-      "description": "Qui nous sommes, notre équipe et les langues que nous parlons.",
-      "blocks": [],
-      "stub": true
+      "title": "Die Schule",
+      "description": "Lerne unser Team kennen und erfahre, welche Sprachen wir sprechen.",
+      "blocks": [
+        {
+          "type": "prose",
+          "eyebrow": "Unsere Geschichte",
+          "title": "Eine lokale, familiengeführte Schule mit echter Leidenschaft.",
+          "body": [
+            "Willkommen auf Mauritius! Born To Kite ist eine lokale, familiengeführte Schule, die im Januar 2026 gegründet wurde. Seit mehr als zehn Jahren unterrichte ich Kitesurfen. Mein Ziel ist einfach: meine Leidenschaft mit Geduld, guter Stimmung und größtmöglicher Sicherheit weiterzugeben.",
+            "Tauche in das türkisfarbene Wasser von Mauritius ein, entdecke einen außergewöhnlichen Sport und erlebe eine Session, die zu dir passt.",
+            "Wir sind im Süden von Mauritius zu Hause, hauptsächlich an der Lagune von Le Morne. Je nach Wetter können wir einen anderen Spot in der Region wählen, um dir die bestmöglichen Bedingungen zu bieten."
+          ]
+        },
+        {
+          "type": "cards",
+          "variant": "people",
+          "eyebrow": "Das Team",
+          "heading": "Das Team von Born To Kite.",
+          "items": [
+            {
+              "title": "Ritik",
+              "image": "/photos/equipe-ritik-kitesurf-le-morne.webp",
+              "alt": "Ritik, Lehrer bei Born To Kite, beim Kitesurfen am Le Morne",
+              "position": "center 35%"
+            },
+            {
+              "title": "Elisa",
+              "image": "/photos/equipe-elisa-kitesurf-le-morne.webp",
+              "alt": "Elisa beim Kitesurfen am Le Morne",
+              "position": "center 45%"
+            },
+            {
+              "title": "Angel et Dengel",
+              "image": "/photos/equipe-angel-dengel-le-morne.webp",
+              "alt": "Angel und Dengel mit ihrer Kitesurf-Ausrüstung",
+              "position": "center 42%"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "video": "/videos/born-to-kite-session-le-morne.mp4",
+          "poster": "/photos/video-session-kite-le-morne-poster.webp",
+          "alt": "Eine Kitesurf-Session mit dem Born To Kite Team am Le Morne",
+          "full": false
+        },
+        {
+          "type": "cta",
+          "title": "Bereit, über das Wasser zu fliegen?",
+          "body": "Schreib uns auf WhatsApp oder folge unseren Sessions auf Instagram. Wir antworten schnell."
+        }
+      ]
     },
     {
       "slug": "contact",
-      "title": "Contact et réservation",
-      "description": "Nous écrire sur WhatsApp, nos horaires et notre point de rendez-vous au Morne.",
+      "title": "Kontakt und Buchung",
+      "description": "Kontaktiere uns über WhatsApp und finde unseren Treffpunkt am Le Morne.",
       "blocks": [
         {
           "type": "prose",
           "eyebrow": "Kontakt",
           "title": "Kontakt und Buchung.",
           "body": [
-            "WhatsApp: +230 5487 9629. Über diesen Kanal organisiert die Schule die Sessions.",
+            "WhatsApp: +230 5487 9629. Die Schule organisiert die Sessions über WhatsApp.",
+            "E-Mail: contact@borntokitemauritius.com.",
             "Treffpunkt: Beachfront Kitelagoon, Le Morne, Rivière Noire, Mauritius. Plus Code G8P9+C6."
-          ],
-          "aValider": true
+          ]
         },
         {
           "type": "cta",
           "title": "Session buchen",
-          "body": "Vier Felder, und Ihre Anfrage geht mit allen nötigen Angaben auf WhatsApp ein.",
-          "form": true,
-          "aValider": true
+          "body": "Schreib uns deine verfügbaren Zeiten. Die genaue Uhrzeit wird abhängig vom Wind bestätigt."
+        },
+        {
+          "type": "cta",
+          "title": "E-Mail schreiben",
+          "label": "contact@borntokitemauritius.com",
+          "href": "mailto:contact@borntokitemauritius.com"
         }
       ]
     },
     {
       "slug": "mentions-legales",
-      "title": "Mentions légales et confidentialité",
-      "description": "Mentions légales, éditeur du site et politique de confidentialité.",
-      "blocks": [],
-      "stub": true
+      "title": "Impressum und Datenschutz",
+      "description": "Impressum, Websitebetreiber und Datenschutzinformationen.",
+      "blocks": [
+        {
+          "type": "prose",
+          "eyebrow": "Informationen",
+          "title": "Impressum und Datenschutz.",
+          "body": [
+            "Websitebetreiber: Born To Kite, Ritik Jouan, Beachfront Kitelagoon, Le Morne, Rivière Noire, Mauritius. Kontakt: contact@borntokitemauritius.com oder +230 5487 9629.",
+            "Die Website wird über Cloudflare Pages gehostet und verwendet die Domain borntokitemauritius.com.",
+            "Die Website erstellt keine Benutzerkonten und erfasst keine Daten über ein Formular. WhatsApp- und E-Mail-Links öffnen die vom Besucher gewählten Dienste. Das Windguru-Modul wird verzögert geladen: Beim Laden verbindet sich der Browser mit Windguru, das technische Daten wie die IP-Adresse erhalten kann.",
+            "Bei Fragen zu deinen personenbezogenen Daten oder zur Ausübung deiner Rechte auf Auskunft und Berichtigung schreibe an contact@borntokitemauritius.com. Die Verarbeitung personenbezogener Daten auf Mauritius unterliegt dem Data Protection Act 2017."
+          ]
+        }
+      ]
     }
   ]
 }
