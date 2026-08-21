@@ -14,7 +14,9 @@ const languageNavLabel = { fr: "Choisir la langue", en: "Choose language", de: "
 <header>
   <div class="container bar">
     <a class="brand" href={`${base}/`} aria-label={site.name}>
-      <img src="/logo-encre.png" alt={site.name} width="440" height="246" />
+      <span class="logo-crop">
+        <img src="/logo-new.jpeg" alt={site.name} width="1140" height="1112" />
+      </span>
     </a>
     <nav class="desktop" aria-label="Principal">
       {nav.map((n) => <a href={hrefFor(n)}>{n.label}</a>)}
@@ -51,14 +53,29 @@ const languageNavLabel = { fr: "Choisir la langue", en: "Choose language", de: "
     border-bottom: 1px solid var(--line);
     position: sticky;
     top: 0;
-    background: rgba(250, 248, 244, .94);
+    background: rgba(255, 255, 255, .96);
     backdrop-filter: saturate(140%) blur(8px);
     -webkit-backdrop-filter: saturate(140%) blur(8px);
     z-index: 5;
   }
-  .bar { display: flex; align-items: center; gap: var(--space-5); padding-block: var(--space-3); }
-  .brand { border: 0; flex: none; }
-  .brand img { width: 96px; height: auto; }
+  header::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 -1px;
+    height: 3px;
+    background: var(--brand-gradient);
+  }
+  .bar { display: flex; align-items: center; gap: var(--space-5); padding-block: var(--space-2); }
+  .brand { border: 0; flex: none; display: block; }
+  .logo-crop { display: block; position: relative; overflow: hidden; width: 112px; height: 80px; background: #fff; }
+  .logo-crop img {
+    position: absolute;
+    width: 150px;
+    max-width: none;
+    height: auto;
+    left: -20px;
+    top: -34px;
+  }
   .desktop { display: flex; gap: var(--space-4); flex: 1; flex-wrap: wrap; }
   .desktop a, .mobile-nav a { color: var(--ink); border: 0; font-size: var(--size-small); }
   .actions { display: flex; align-items: center; gap: var(--space-3); flex: none; }
@@ -80,6 +97,7 @@ const languageNavLabel = { fr: "Choisir la langue", en: "Choose language", de: "
   .mobile { display: none; }
   @media (hover: hover) and (pointer: fine) {
     .desktop a:hover, .mobile-nav a:hover { color: var(--accent); }
+    .brand:hover { opacity: var(--opacity-hover); }
     .languages a:hover { color: var(--ink); border-color: var(--line); }
     .languages a[aria-current="page"]:hover { color: var(--bg); }
   }
@@ -96,7 +114,8 @@ const languageNavLabel = { fr: "Choisir la langue", en: "Choose language", de: "
   }
   @media (max-width: 420px) {
     .bar { gap: var(--space-2); }
-    .brand img { width: 82px; }
+    .logo-crop { width: 92px; height: 66px; }
+    .logo-crop img { width: 124px; left: -17px; top: -28px; }
     .actions { gap: var(--space-2); }
     .languages a { padding-inline: 7px; }
     .whatsapp { padding-inline: 11px; }

@@ -19,6 +19,7 @@ const fullTitle = slug === "" ? `${site.name} — ${title}` : `${title} | ${site
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
+    <meta name="theme-color" content="#123b60" />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <link rel="canonical" href={canonical} />
     {site.locales.map((l) => (
@@ -38,7 +39,7 @@ const fullTitle = slug === "" ? `${site.name} — ${title}` : `${title} | ${site
     <link rel="preload" href="/fonts/fraunces-latin-400.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin />
 
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/logo-new.jpeg" type="image/jpeg" />
     {jsonld && <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />}
     <Reveal />
   </head>
