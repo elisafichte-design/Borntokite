@@ -3,8 +3,8 @@ const { block } = Astro.props;
 ---
 <section class="band">
   <div class="container grid">
-    {block.items.map((i) => (
-      <div class="cell">
+    {block.items.map((i, index) => (
+      <div class="cell" data-reveal="1" data-delay={index * 120}>
         <p class="v">{i.value}</p>
         <p class="l faint">{i.label}</p>
       </div>
@@ -19,4 +19,9 @@ const { block } = Astro.props;
   .cell:last-child { border-right: 0; }
   .v { font-family: var(--font-display); font-size: var(--size-stat); line-height: 1; letter-spacing: var(--ls-display); }
   .l { font-size: var(--size-small); margin-top: var(--space-2); }
+  @media (max-width: 760px) {
+    .grid { grid-template-columns: 1fr; }
+    .cell { padding-inline: 0; border-right: 0; border-bottom: 1px solid var(--line); }
+    .cell:last-child { border-bottom: 0; }
+  }
 </style>

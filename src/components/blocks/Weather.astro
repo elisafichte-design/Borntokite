@@ -7,9 +7,11 @@ const model = block.model || 92;
 ---
 <section class="section">
   <div class="container narrow">
-    {block.eyebrow && <p class="eyebrow">{block.eyebrow}</p>}
-    {block.heading && <h2>{block.heading}</h2>}
-    <div class="slot">
+    <div data-reveal="1">
+      {block.eyebrow && <p class="eyebrow">{block.eyebrow}</p>}
+      {block.heading && <h2>{block.heading}</h2>}
+    </div>
+    <div class="slot" data-reveal="1" data-delay="120">
       <iframe
         src={`https://www.windguru.cz/widget-fcst-iframe.php?s=${spot}&m=${model}`}
         title={block.loadLabel}

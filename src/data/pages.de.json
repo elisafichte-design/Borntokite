@@ -149,7 +149,12 @@
               "href": "/de/cours-de-kitesurf/",
               "linkLabel": "Kitesurf-Kurse ansehen",
               "image": "/photos/cours-de-kitesurf-lagon-le-morne.webp",
-              "alt": "Kitesurfer auf der Lagune vor dem Berg Le Morne, Mauritius"
+              "alt": "Kitesurfer auf der Lagune vor dem Berg Le Morne, Mauritius",
+              "facts": [
+                { "label": "Dauer", "value": "ab 2 Std." },
+                { "label": "Niveau", "value": "Anfänger → Fortgeschritten" },
+                { "label": "Preis", "value": "ab 80 €/Person" }
+              ]
             },
             {
               "title": "Wingfoil",
@@ -158,7 +163,12 @@
               "linkLabel": "Wingfoil-Kurse ansehen",
               "image": "/photos/wingfoil-le-morne-2026.webp",
               "alt": "Wingfoiler über der Lagune von Le Morne, Mauritius",
-              "position": "center 45%"
+              "position": "center 45%",
+              "facts": [
+                { "label": "Dauer", "value": "ab 2 Std." },
+                { "label": "Niveau", "value": "alle Niveaus" },
+                { "label": "Preis", "value": "ab 80 €/Person" }
+              ]
             },
             {
               "title": "Surfen",
@@ -166,7 +176,12 @@
               "href": "/de/surf/",
               "linkLabel": "Surf-Sessions ansehen",
               "image": "/photos/surf-vague-sud-ile-maurice.webp",
-              "alt": "Surfer auf einer Welle im Süden von Mauritius"
+              "alt": "Surfer auf einer Welle im Süden von Mauritius",
+              "facts": [
+                { "label": "Dauer", "value": "1 Std. 30" },
+                { "label": "Niveau", "value": "alle Niveaus" },
+                { "label": "Preis", "value": "60 €" }
+              ]
             }
           ],
           "id": "disciplines"
@@ -310,7 +325,8 @@
         {
           "type": "cta",
           "title": "Bereit, über das Wasser zu fliegen?",
-          "body": "Schreib uns auf WhatsApp oder folge unseren Sessions auf Instagram. Wir antworten schnell."
+          "body": "Schreib uns auf WhatsApp oder folge unseren Sessions auf Instagram. Wir antworten schnell.",
+          "image": "/photos/montagne-du-morne-vue-du-lagon.webp"
         }
       ]
     },
@@ -350,10 +366,17 @@
               ]
             },
             {
-              "name": "Betreuung & Materialmiete",
-              "detail": "Du fährst bereits selbstständig? Fahre unter Aufsicht oder miete unsere Ausrüstung.",
+              "name": "Betreuung",
+              "detail": "Du fährst bereits selbstständig? Fahre unter Aufsicht der Schule.",
               "lines": [
-                "Auf Anfrage"
+                "30 €/Std."
+              ]
+            },
+            {
+              "name": "Materialmiete",
+              "detail": "Miete die benötigte Ausrüstung für eine selbstständige Session.",
+              "lines": [
+                "20 €/Std."
               ]
             },
             {
@@ -607,7 +630,7 @@
     {
       "slug": "cours-de-kitesurf",
       "title": "Kitesurf-Kurse am Le Morne, Mauritius",
-      "description": "Private und halbprivate Kitesurf-Kurse auf der Lagune von Le Morne, inklusive Ausrüstung. Klare Preise für 2 bis 10 Stunden bei einer lokalen, familiengeführten Schule.",
+      "description": "Private und halbprivate Kitesurf-Kurse auf der Lagune von Le Morne, von den ersten Fahrten bis zum Freestyle-Training. Ausrüstung inklusive und Coaching passend zu deinem Niveau.",
       "blocks": [
         {
           "type": "prose",
@@ -615,7 +638,7 @@
           "title": "Kitesurf-Kurse am Le Morne, Mauritius",
           "aValider": true,
           "body": [
-            "Vom ersten Versuch bis zu fortgeschrittenen Tricks, an einem der schönsten Spots im Indischen Ozean."
+            "Von den ersten Fahrten bis zu fortgeschrittenen Tricks, verbessere dich an einem der schönsten Spots im Indischen Ozean."
           ]
         },
         {
@@ -656,10 +679,17 @@
           "heading": "Selbstständiges Fahren und Vertiefung",
           "items": [
             {
-              "name": "Betreuung & Materialmiete",
-              "detail": "Du fährst bereits selbstständig? Fahre unter Aufsicht oder miete unsere Ausrüstung.",
+              "name": "Betreuung",
+              "detail": "Du fährst bereits selbstständig? Fahre unter Aufsicht der Schule.",
               "lines": [
-                "Auf Anfrage"
+                "30 €/Std."
+              ]
+            },
+            {
+              "name": "Materialmiete",
+              "detail": "Miete die benötigte Ausrüstung für eine selbstständige Session.",
+              "lines": [
+                "20 €/Std."
               ]
             },
             {
@@ -669,6 +699,15 @@
                 "Auf Anfrage"
               ]
             }
+          ]
+        },
+        {
+          "type": "prose",
+          "eyebrow": "Fortgeschrittene Rider",
+          "title": "Verbessere dein Freestyle-Level am Le Morne.",
+          "body": [
+            "Du fährst bereits selbstständig und möchtest den nächsten Schritt machen? Arbeite mit individuellem Coaching an Pop, Rotationen, Grabs und sicheren Landungen.",
+            "Jede Session konzentriert sich auf wenige klare Ziele. So gewinnst du mehr Konstanz, korrigierst Bewegungen, die dich bremsen, und probierst neue Tricks bei passenden Bedingungen."
           ]
         },
         {
@@ -710,6 +749,10 @@
               "a": "Ja. Kite, Board, Trapez, Helm und Schwimmweste sind inklusive und werden passend zu deiner Größe und zum Wind des Tages ausgewählt."
             },
             {
+              "q": "Bietet ihr Freestyle-Coaching für fortgeschrittene Rider an?",
+              "a": "Ja. Das Coaching wird an dein Niveau und deine Ziele angepasst, mit gezielter Arbeit an Pop, Rotationen, Grabs, Landungen und Konstanz."
+            },
+            {
               "q": "Was passiert, wenn es keinen Wind gibt?",
               "a": "Die Session wird ohne Aufpreis auf einen anderen Termin verschoben. Sicherheit und die Qualität des Unterrichts stehen an erster Stelle."
             },
@@ -730,7 +773,7 @@
     {
       "slug": "wingfoil",
       "title": "Wingfoil-Kurse am Le Morne, Mauritius",
-      "description": "Wingfoil-Kurse auf dem flachen Wasser der Lagune von Le Morne zu den gleichen Preisen wie Kitesurfen. Ausrüstung inklusive, als Privatkurs oder zu zweit.",
+      "description": "Wingfoil-Kurse und schrittweises Lernen auf dem flachen Wasser der Lagune von Le Morne. Ausrüstung inklusive, als Privatkurs oder zu zweit.",
       "blocks": [
         {
           "type": "prose",
@@ -738,7 +781,7 @@
           "title": "Wingfoil-Kurse am Le Morne, Mauritius",
           "aValider": true,
           "body": [
-            "Sanft oder schnell über dem Wasser gleiten, mit einer Wassersportart, die immer beliebter wird."
+            "Wingfoil Schritt für Schritt lernen: Umgang mit dem Wing, Gleichgewicht auf dem Board, Abheben und die ersten Fahrten über die Lagune."
           ]
         },
         {
@@ -750,7 +793,7 @@
         },
         {
           "type": "prices",
-          "heading": "Gleiche Preise wie beim Kitesurfen",
+          "heading": "Wingfoil lernen",
           "items": [
             {
               "name": "Privatkurs",
@@ -773,10 +816,17 @@
               ]
             },
             {
-              "name": "Betreuung & Materialmiete",
-              "detail": "Du fährst bereits selbstständig? Fahre unter Aufsicht oder miete unsere Ausrüstung.",
+              "name": "Betreuung",
+              "detail": "Du fährst bereits selbstständig? Fahre unter Aufsicht der Schule.",
               "lines": [
-                "Auf Anfrage"
+                "30 €/Std."
+              ]
+            },
+            {
+              "name": "Materialmiete",
+              "detail": "Miete die benötigte Ausrüstung für eine selbstständige Session.",
+              "lines": [
+                "20 €/Std."
               ]
             },
             {

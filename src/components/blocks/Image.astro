@@ -2,10 +2,10 @@
 // Respiration photo. Deux variantes :
 //   full: true  → bandeau pleine largeur, recadré (réservé aux photos paysage)
 //   full: false → image dans la colonne de texte, ratio d'origine conservé
-const { block } = Astro.props;
+const { block, index = 0 } = Astro.props;
 const full = block.full !== false;
 ---
-<figure class={full ? "fig full" : "fig held"}>
+<figure class={full ? "fig full" : "fig held"} data-reveal={full ? "zoom" : (index % 2 === 0 ? "tiltl" : "tiltr")}>
   {block.video ? (
     <video controls playsinline preload="none" poster={block.poster} aria-label={block.alt}>
       <source src={block.video} type="video/mp4" />

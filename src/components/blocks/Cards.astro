@@ -5,21 +5,33 @@ const { block } = Astro.props;
 ---
 <section class="section">
   <div class="container">
-    {block.eyebrow && <p class="eyebrow">{block.eyebrow}</p>}
-    {block.heading && <h2>{block.heading}</h2>}
+    <div data-reveal="1">
+      {block.eyebrow && <p class="eyebrow">{block.eyebrow}</p>}
+      {block.heading && <h2>{block.heading}</h2>}
+    </div>
     <div class:list={["grid", block.variant]}>
-      {block.items.map((it) => it.href ? (
-        <a class="item" href={it.href}>
-          {it.image && <img src={it.image} alt={it.alt} width="1200" height="900" loading="lazy" decoding="async" style={it.position ? `object-position:${it.position}` : undefined} />}
+      {block.items.map((it, index) => it.href ? (
+        <a class="item" href={it.href} data-reveal="1" data-delay={index * 140}>
+          {it.image && <div class="media"><img src={it.image} alt={it.alt} width="1200" height="900" loading="lazy" decoding="async" style={it.position ? `object-position:${it.position}` : undefined} /></div>}
           <h3>{it.title}</h3>
           {it.body && <p class="muted">{it.body}</p>}
+          {it.facts && (
+            <dl class="facts">
+              {it.facts.map((fact) => <div><dt>{fact.label}</dt><dd>{fact.value}</dd></div>)}
+            </dl>
+          )}
           {it.linkLabel && <span class="go">{it.linkLabel}</span>}
         </a>
       ) : (
-        <article class="item">
-          {it.image && <img src={it.image} alt={it.alt} width="1200" height="900" loading="lazy" decoding="async" style={it.position ? `object-position:${it.position}` : undefined} />}
+        <article class="item" data-reveal="1" data-delay={index * 140}>
+          {it.image && <div class="media"><img src={it.image} alt={it.alt} width="1200" height="900" loading="lazy" decoding="async" style={it.position ? `object-position:${it.position}` : undefined} /></div>}
           <h3>{it.title}</h3>
           {it.body && <p class="muted">{it.body}</p>}
+          {it.facts && (
+            <dl class="facts">
+              {it.facts.map((fact) => <div><dt>{fact.label}</dt><dd>{fact.value}</dd></div>)}
+            </dl>
+          )}
         </article>
       ))}
     </div>
@@ -30,6 +42,7 @@ const { block } = Astro.props;
   .grid { display: grid; gap: var(--space-7); margin-top: var(--space-7); grid-template-columns: 1fr; }
   @media (min-width: 760px) { .grid { grid-template-columns: repeat(3, 1fr); gap: var(--space-6); } }
   .item { border: 0; display: block; color: var(--ink); }
+  .media { overflow: hidden; background: var(--surface); }
   .item img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
   .item h3 { margin-top: var(--space-4); }
   .item p { margin-top: var(--space-2); font-size: var(--size-small); }
@@ -39,5 +52,19 @@ const { block } = Astro.props;
     transition: border-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
   }
   .vignettes .item { border-top: 1px solid var(--line); padding-top: var(--space-5); }
-  @media (hover: hover) and (pointer: fine) { .item:hover .go { color: var(--accent); border-color: var(--accent); } }
+  .facts { margin: var(--space-5) 0 0; border: 1px solid var(--line); border-radius: var(--radius); display: grid; grid-template-columns: repeat(3, 1fr); }
+  .facts > div { padding: var(--space-3) var(--space-4); border-right: 1px solid var(--line); }
+  .facts > div:last-child { border-right: 0; }
+  .facts dt { font-size: var(--size-eyebrow); letter-spacing: var(--ls-eyebrow); text-transform: uppercase; color: var(--ink-faint); }
+  .facts dd { margin: var(--space-1) 0 0; font-size: var(--size-small); font-weight: var(--weight-medium); }
+  @media (hover: hover) and (pointer: fine) {
+    .item img { transition: transform 900ms var(--ease-out); }
+    .item:hover img { transform: scale(1.04); }
+    .item:hover .go { color: var(--accent); border-color: var(--accent); }
+  }
+  @media (max-width: 760px) {
+    .facts { grid-template-columns: 1fr; }
+    .facts > div { border-right: 0; border-bottom: 1px solid var(--line); }
+    .facts > div:last-child { border-bottom: 0; }
+  }
 </style>

@@ -149,7 +149,12 @@
               "href": "/en/cours-de-kitesurf/",
               "linkLabel": "See kitesurf lessons",
               "image": "/photos/cours-de-kitesurf-lagon-le-morne.webp",
-              "alt": "Kitesurfer on Le Morne lagoon in front of the mountain, Mauritius"
+              "alt": "Kitesurfer on Le Morne lagoon in front of the mountain, Mauritius",
+              "facts": [
+                { "label": "Duration", "value": "from 2 h" },
+                { "label": "Level", "value": "beginner → advanced" },
+                { "label": "Price", "value": "from €80/person" }
+              ]
             },
             {
               "title": "Wingfoil",
@@ -158,7 +163,12 @@
               "linkLabel": "See wingfoil lessons",
               "image": "/photos/wingfoil-le-morne-2026.webp",
               "alt": "Wingfoiler riding above Le Morne lagoon, Mauritius",
-              "position": "center 45%"
+              "position": "center 45%",
+              "facts": [
+                { "label": "Duration", "value": "from 2 h" },
+                { "label": "Level", "value": "all levels" },
+                { "label": "Price", "value": "from €80/person" }
+              ]
             },
             {
               "title": "Surf",
@@ -166,7 +176,12 @@
               "href": "/en/surf/",
               "linkLabel": "See surf sessions",
               "image": "/photos/surf-vague-sud-ile-maurice.webp",
-              "alt": "Surfer riding a wave in the south of Mauritius"
+              "alt": "Surfer riding a wave in the south of Mauritius",
+              "facts": [
+                { "label": "Duration", "value": "1 h 30" },
+                { "label": "Level", "value": "all levels" },
+                { "label": "Price", "value": "€60" }
+              ]
             }
           ],
           "id": "disciplines"
@@ -310,7 +325,8 @@
         {
           "type": "cta",
           "title": "Ready to fly over the water?",
-          "body": "Message us on WhatsApp or follow our sessions on Instagram. We reply quickly."
+          "body": "Message us on WhatsApp or follow our sessions on Instagram. We reply quickly.",
+          "image": "/photos/montagne-du-morne-vue-du-lagon.webp"
         }
       ]
     },
@@ -350,10 +366,17 @@
               ]
             },
             {
-              "name": "Supervision & equipment hire",
-              "detail": "Already independent? Ride under supervision or hire our equipment.",
+              "name": "Supervision",
+              "detail": "Already independent? Ride under the school's supervision.",
               "lines": [
-                "On request"
+                "€30/hour"
+              ]
+            },
+            {
+              "name": "Equipment hire",
+              "detail": "Hire the equipment you need for an independent session.",
+              "lines": [
+                "€20/hour"
               ]
             },
             {
@@ -607,7 +630,7 @@
     {
       "slug": "cours-de-kitesurf",
       "title": "Kitesurf lessons at Le Morne, Mauritius",
-      "description": "Private and semi-private kitesurf lessons on Le Morne lagoon, with equipment included. Clear prices for 2 to 10 hours with a local, family-run school.",
+      "description": "Private and semi-private kitesurf lessons on Le Morne lagoon, from first rides to freestyle progression. Equipment included and coaching matched to your level.",
       "blocks": [
         {
           "type": "prose",
@@ -615,7 +638,7 @@
           "title": "Kitesurf lessons at Le Morne, Mauritius",
           "aValider": true,
           "body": [
-            "From your first lesson to advanced tricks, on one of the Indian Ocean's most beautiful spots."
+            "From your first kite to advanced tricks, progress on one of the Indian Ocean's most beautiful spots."
           ]
         },
         {
@@ -656,10 +679,17 @@
           "heading": "Independent riding and immersion",
           "items": [
             {
-              "name": "Supervision & equipment hire",
-              "detail": "Already independent? Ride under supervision or hire our equipment.",
+              "name": "Supervision",
+              "detail": "Already independent? Ride under the school's supervision.",
               "lines": [
-                "On request"
+                "€30/hour"
+              ]
+            },
+            {
+              "name": "Equipment hire",
+              "detail": "Hire the equipment you need for an independent session.",
+              "lines": [
+                "€20/hour"
               ]
             },
             {
@@ -669,6 +699,15 @@
                 "On request"
               ]
             }
+          ]
+        },
+        {
+          "type": "prose",
+          "eyebrow": "Advanced riders",
+          "title": "Take your freestyle further at Le Morne.",
+          "body": [
+            "Already riding independently and ready for the next step? Work on your pop, rotations, grabs and landings with individual coaching matched to your current level.",
+            "Each session focuses on a few clear goals, helping you build consistency, correct the movements holding you back and try new tricks in suitable conditions."
           ]
         },
         {
@@ -710,6 +749,10 @@
               "a": "Yes. The kite, board, harness, helmet and buoyancy aid are all included and selected for your size and the day's wind."
             },
             {
+              "q": "Do you offer freestyle coaching for advanced riders?",
+              "a": "Yes. Coaching is adapted to your level and goals, with focused work on pop, rotations, grabs, landings and consistency."
+            },
+            {
               "q": "What happens if there is no wind?",
               "a": "The session is rescheduled at no extra cost. Safety and the quality of your lesson come first."
             },
@@ -730,7 +773,7 @@
     {
       "slug": "wingfoil",
       "title": "Wingfoil lessons at Le Morne, Mauritius",
-      "description": "Wingfoil lessons on the flat waters of Le Morne lagoon at the same prices as kitesurfing. Equipment included, with private or two-person coaching in Mauritius.",
+      "description": "Wingfoil lessons and progressive learning on the flat waters of Le Morne lagoon. Equipment included, with private or two-person coaching in Mauritius.",
       "blocks": [
         {
           "type": "prose",
@@ -738,7 +781,7 @@
           "title": "Wingfoil lessons at Le Morne, Mauritius",
           "aValider": true,
           "body": [
-            "Glide above the water at an easy pace or at speed in one of the fastest-growing watersports."
+            "Learn wingfoil step by step: handling the wing, balancing on the board, taking off and completing your first rides across the lagoon."
           ]
         },
         {
@@ -750,7 +793,7 @@
         },
         {
           "type": "prices",
-          "heading": "Same prices as kitesurfing",
+          "heading": "Learning wingfoil",
           "items": [
             {
               "name": "Private lesson",
@@ -773,10 +816,17 @@
               ]
             },
             {
-              "name": "Supervision & equipment hire",
-              "detail": "Already independent? Ride under supervision or hire our equipment.",
+              "name": "Supervision",
+              "detail": "Already independent? Ride under the school's supervision.",
               "lines": [
-                "On request"
+                "€30/hour"
+              ]
+            },
+            {
+              "name": "Equipment hire",
+              "detail": "Hire the equipment you need for an independent session.",
+              "lines": [
+                "€20/hour"
               ]
             },
             {

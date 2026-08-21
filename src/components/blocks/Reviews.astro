@@ -6,14 +6,16 @@ import site from "../../data/site.json";
 const { block } = Astro.props;
 const sourceHref = block.sourceHref || site.sameAs[0];
 ---
-<section class="section">
+<section class="section reviews">
   <div class="container">
-    {block.eyebrow && <p class="eyebrow">{block.eyebrow}</p>}
-    {block.heading && <h2>{block.heading}</h2>}
-    {block.source && <p class="faint src">{block.source}</p>}
+    <div data-reveal="1">
+      {block.eyebrow && <p class="eyebrow">{block.eyebrow}</p>}
+      {block.heading && <h2>{block.heading}</h2>}
+      {block.source && <p class="faint src">{block.source}</p>}
+    </div>
     <div class="grid">
-      {block.items.map((r) => (
-        <figure>
+      {block.items.map((r, index) => (
+        <figure data-reveal="1" data-delay={(index % 3) * 110}>
           <blockquote>{r.text}</blockquote>
           <figcaption class="faint">{r.author}</figcaption>
         </figure>
@@ -23,10 +25,11 @@ const sourceHref = block.sourceHref || site.sameAs[0];
   </div>
 </section>
 <style>
+  .reviews { background: var(--surface); border-block: 1px solid var(--line); }
   h2 { margin-top: var(--space-4); }
   .src { margin-top: var(--space-3); font-size: var(--size-small); }
-  .grid { display: grid; gap: 0; margin-top: var(--space-6); grid-template-columns: 1fr; }
-  @media (min-width: 760px) { .grid { grid-template-columns: repeat(3, 1fr); gap: 0 var(--space-6); } }
+  .grid { display: grid; gap: var(--space-5); margin-top: var(--space-6); grid-template-columns: 1fr; }
+  @media (min-width: 760px) { .grid { grid-template-columns: repeat(3, 1fr); } }
   figure { margin: 0; padding-block: var(--space-5); border-top: 1px solid var(--line); }
   blockquote { margin: 0; }
   figcaption { margin-top: var(--space-3); font-size: var(--size-small); }

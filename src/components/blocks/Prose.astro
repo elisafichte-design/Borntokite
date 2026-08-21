@@ -3,7 +3,7 @@ const { block, heading = 2 } = Astro.props;
 const H = heading === 1 ? "h1" : "h2";
 ---
 <section class="section">
-  <div class="container narrow">
+  <div class="container narrow" data-reveal="1">
     {block.eyebrow && <p class="eyebrow">{block.eyebrow}</p>}
     {block.title && <H>{block.title}</H>}
     {(block.body || []).map((p) => <p class="muted para">{p}</p>)}

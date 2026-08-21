@@ -3,18 +3,26 @@ const { block } = Astro.props;
 ---
 <section class="section">
   <div class="container">
-    {block.eyebrow && <p class="eyebrow">{block.eyebrow}</p>}
-    {block.heading && <h2>{block.heading}</h2>}
+    <div data-reveal="1">
+      {block.eyebrow && <p class="eyebrow">{block.eyebrow}</p>}
+      {block.heading && <h2>{block.heading}</h2>}
+    </div>
     <div class="grid">
-      {block.items.map((it) => (
-        <img src={it.image} alt={it.alt} width="700" height="700" loading="lazy" decoding="async" style={it.position ? `object-position:${it.position}` : undefined} />
+      {block.items.map((it, index) => (
+        <div class="tile" data-reveal="1" data-delay={(index % 4) * 80}>
+          <img src={it.image} alt={it.alt} width="700" height="700" loading="lazy" decoding="async" style={it.position ? `object-position:${it.position}` : undefined} />
+        </div>
       ))}
     </div>
   </div>
 </section>
 <style>
   h2 { margin-top: var(--space-4); }
-  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; margin-top: var(--space-6); }
-  @media (min-width: 760px) { .grid { grid-template-columns: repeat(4, 1fr); } }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: var(--space-3); margin-top: var(--space-6); }
+  .tile { overflow: hidden; background: var(--surface); }
   .grid img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+  @media (hover: hover) and (pointer: fine) {
+    .grid img { transition: transform 900ms var(--ease-out), opacity var(--dur-base) var(--ease-out); }
+    .tile:hover img { transform: scale(1.05); opacity: .92; }
+  }
 </style>

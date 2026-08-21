@@ -149,7 +149,12 @@
               "href": "/cours-de-kitesurf/",
               "linkLabel": "Voir les cours de kitesurf",
               "image": "/photos/cours-de-kitesurf-lagon-le-morne.webp",
-              "alt": "Kitesurfeur sur le lagon du Morne devant la montagne, île Maurice"
+              "alt": "Kitesurfeur sur le lagon du Morne devant la montagne, île Maurice",
+              "facts": [
+                { "label": "Durée", "value": "dès 2 h" },
+                { "label": "Niveau", "value": "débutant → avancé" },
+                { "label": "Prix", "value": "dès 80 €/pers" }
+              ]
             },
             {
               "title": "Wingfoil",
@@ -158,7 +163,12 @@
               "linkLabel": "Voir les cours de wingfoil",
               "image": "/photos/wingfoil-le-morne-2026.webp",
               "alt": "Wingfoiler au-dessus du lagon du Morne, île Maurice",
-              "position": "center 45%"
+              "position": "center 45%",
+              "facts": [
+                { "label": "Durée", "value": "dès 2 h" },
+                { "label": "Niveau", "value": "tous niveaux" },
+                { "label": "Prix", "value": "dès 80 €/pers" }
+              ]
             },
             {
               "title": "Surf",
@@ -166,7 +176,12 @@
               "href": "/surf/",
               "linkLabel": "Voir les sessions de surf",
               "image": "/photos/surf-vague-sud-ile-maurice.webp",
-              "alt": "Surfeur sur une vague au sud de l'île Maurice"
+              "alt": "Surfeur sur une vague au sud de l'île Maurice",
+              "facts": [
+                { "label": "Durée", "value": "1 h 30" },
+                { "label": "Niveau", "value": "tous niveaux" },
+                { "label": "Prix", "value": "60 €" }
+              ]
             }
           ],
           "id": "disciplines"
@@ -310,7 +325,8 @@
         {
           "type": "cta",
           "title": "Prêt à voler sur l'eau ?",
-          "body": "Écrivez-nous sur WhatsApp ou suivez nos sessions sur Instagram — réponse rapide garantie."
+          "body": "Écrivez-nous sur WhatsApp ou suivez nos sessions sur Instagram — réponse rapide garantie.",
+          "image": "/photos/montagne-du-morne-vue-du-lagon.webp"
         }
       ]
     },
@@ -350,10 +366,17 @@
               ]
             },
             {
-              "name": "Supervision & location",
-              "detail": "Vous êtes déjà autonome ? Naviguez sous supervision ou louez notre matériel.",
+              "name": "Supervision",
+              "detail": "Vous êtes déjà autonome ? Naviguez sous la supervision de l'école.",
               "lines": [
-                "Sur demande"
+                "30 €/h"
+              ]
+            },
+            {
+              "name": "Location de matériel",
+              "detail": "Louez le matériel nécessaire pour naviguer en autonomie.",
+              "lines": [
+                "20 €/h"
               ]
             },
             {
@@ -607,7 +630,7 @@
     {
       "slug": "cours-de-kitesurf",
       "title": "Cours de kitesurf au Morne, île Maurice",
-      "description": "Cours de kitesurf privés et semi-privés sur le lagon du Morne, matériel inclus. Tarifs affichés, de 2 h à 10 h, avec une école locale et familiale.",
+      "description": "Cours privés et semi-privés de kitesurf sur le lagon du Morne, de l'initiation au perfectionnement freestyle. Matériel inclus et coaching adapté à votre niveau.",
       "blocks": [
         {
           "type": "prose",
@@ -615,7 +638,7 @@
           "title": "Cours de kitesurf au Morne, île Maurice",
           "aValider": true,
           "body": [
-            "De l'initiation aux figures avancées, sur l'un des plus beaux spots de l'océan Indien."
+            "De votre première aile aux figures avancées, progressez sur l'un des plus beaux spots de l'océan Indien."
           ]
         },
         {
@@ -656,10 +679,17 @@
           "heading": "Autonomie et immersion",
           "items": [
             {
-              "name": "Supervision & location",
-              "detail": "Vous êtes déjà autonome ? Naviguez sous supervision ou louez notre matériel.",
+              "name": "Supervision",
+              "detail": "Vous êtes déjà autonome ? Naviguez sous la supervision de l'école.",
               "lines": [
-                "Sur demande"
+                "30 €/h"
+              ]
+            },
+            {
+              "name": "Location de matériel",
+              "detail": "Louez le matériel nécessaire pour naviguer en autonomie.",
+              "lines": [
+                "20 €/h"
               ]
             },
             {
@@ -669,6 +699,15 @@
                 "Sur demande"
               ]
             }
+          ]
+        },
+        {
+          "type": "prose",
+          "eyebrow": "Riders confirmés",
+          "title": "Perfectionnez votre freestyle au Morne.",
+          "body": [
+            "Vous naviguez déjà en autonomie et vous voulez passer un cap ? Travaillez votre pop, vos rotations, vos grabs et vos réceptions avec un coaching individuel adapté à votre niveau.",
+            "Chaque session se concentre sur quelques objectifs précis pour gagner en régularité, corriger les mouvements qui vous bloquent et tenter de nouvelles figures dans des conditions adaptées."
           ]
         },
         {
@@ -710,6 +749,10 @@
               "a": "Oui, tout le matériel (aile, planche, harnais, casque, gilet) est fourni et adapté à votre gabarit et au vent du jour."
             },
             {
+              "q": "Proposez-vous des cours de freestyle pour les riders confirmés ?",
+              "a": "Oui. Le coaching s'adapte à votre niveau et à vos objectifs pour travailler le pop, les rotations, les grabs, les réceptions et la régularité de vos figures."
+            },
+            {
               "q": "Que se passe-t-il s'il n'y a pas de vent ?",
               "a": "La session est reportée à un autre créneau sans frais — la sécurité et la qualité de l'apprentissage passent avant tout."
             },
@@ -730,7 +773,7 @@
     {
       "slug": "wingfoil",
       "title": "Cours de wingfoil au Morne, île Maurice",
-      "description": "Cours de wingfoil sur le lagon plat du Morne, aux mêmes tarifs que le kitesurf. Matériel inclus, encadrement individuel ou à deux, île Maurice.",
+      "description": "Cours et apprentissage du wingfoil sur le lagon plat du Morne. Matériel inclus, encadrement individuel ou à deux, île Maurice.",
       "blocks": [
         {
           "type": "prose",
@@ -738,7 +781,7 @@
           "title": "Cours de wingfoil au Morne, île Maurice",
           "aValider": true,
           "body": [
-            "La glisse au-dessus de l'eau, en douceur ou en vitesse — une discipline en plein essor."
+            "Apprentissage progressif du wingfoil : prise en main de l'aile, équilibre sur la planche, décollage et premières navigations sur le lagon."
           ]
         },
         {
@@ -750,7 +793,7 @@
         },
         {
           "type": "prices",
-          "heading": "Mêmes tarifs que le kitesurf",
+          "heading": "Apprentissage du wingfoil",
           "items": [
             {
               "name": "Cours privé",
@@ -773,10 +816,17 @@
               ]
             },
             {
-              "name": "Supervision & location",
-              "detail": "Vous êtes déjà autonome ? Naviguez sous supervision ou louez notre matériel.",
+              "name": "Supervision",
+              "detail": "Vous êtes déjà autonome ? Naviguez sous la supervision de l'école.",
               "lines": [
-                "Sur demande"
+                "30 €/h"
+              ]
+            },
+            {
+              "name": "Location de matériel",
+              "detail": "Louez le matériel nécessaire pour naviguer en autonomie.",
+              "lines": [
+                "20 €/h"
               ]
             },
             {

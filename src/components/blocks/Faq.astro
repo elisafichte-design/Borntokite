@@ -3,10 +3,10 @@ const { block } = Astro.props;
 ---
 <section class="section">
   <div class="container narrow">
-    {block.heading && <h2>{block.heading}</h2>}
+    {block.heading && <h2 data-reveal="1">{block.heading}</h2>}
     <div class="list">
-      {block.items.map((i) => (
-        <details>
+      {block.items.map((i, index) => (
+        <details data-reveal="1" data-delay={index * 70}>
           <summary>{i.q}</summary>
           <p class="muted">{i.a}</p>
         </details>
@@ -22,4 +22,5 @@ const { block } = Astro.props;
   summary::after { content: "+"; color: var(--ink-faint); flex: none; }
   details[open] summary::after { content: "–"; }
   details p { margin-top: var(--space-3); max-width: 56ch; }
+  @media (hover: hover) and (pointer: fine) { summary:hover { color: var(--accent); } }
 </style>

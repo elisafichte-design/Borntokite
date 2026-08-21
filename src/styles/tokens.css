@@ -145,8 +145,30 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* Ancres : on décale la cible sous l'en-tête et le menu de sections. */
 html { scroll-behavior: smooth; }
-[id] { scroll-margin-top: calc(var(--header-h) + 56px); }
+[id] { scroll-margin-top: calc(var(--btk-header-h, var(--header-h)) + 56px); }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Apparitions progressives. Sans JavaScript, tous les contenus restent visibles. */
+html:not([data-anim]) [data-reveal] {
+  opacity: 1 !important;
+  transform: none !important;
+  clip-path: none !important;
+}
+html[data-anim] [data-reveal] {
+  transition:
+    opacity 850ms var(--ease-out),
+    transform 950ms var(--ease-out),
+    clip-path 1100ms var(--ease-out);
+}
+html[data-anim] [data-reveal]:not([data-shown]) { opacity: 0; transform: translateY(22px); }
+html[data-anim] [data-reveal="tiltl"]:not([data-shown]) { transform: translateY(26px) rotate(-1deg); }
+html[data-anim] [data-reveal="tiltr"]:not([data-shown]) { transform: translateY(26px) rotate(1deg); }
+html[data-anim] [data-reveal="zoom"]:not([data-shown]) { transform: scale(1.06); }
+html[data-anim] [data-reveal="wipe"]:not([data-shown]) {
+  opacity: 1;
+  transform: scale(1.04);
+  clip-path: inset(0 0 100% 0);
+}
 
 /* Utilitaires de mise en page */
 .container { max-width: var(--container); margin: 0 auto; padding-inline: var(--gutter); }
@@ -206,4 +228,20 @@ html { scroll-behavior: smooth; }
 
 @media (prefers-reduced-motion: reduce) {
   * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
+
+@media (max-width: 760px) {
+  html[data-anim] [data-reveal] {
+    transition: opacity 420ms var(--ease-out), transform 480ms var(--ease-out);
+  }
+  html[data-anim] [data-reveal]:not([data-shown]) { transform: translateY(12px); }
+  html[data-anim] [data-reveal="tiltl"]:not([data-shown]),
+  html[data-anim] [data-reveal="tiltr"]:not([data-shown]) { transform: translateY(12px); }
+  html[data-anim] [data-reveal="zoom"]:not([data-shown]) { transform: none; }
+  html[data-anim] [data-reveal="wipe"]:not([data-shown]) {
+    opacity: 0;
+    transform: translateY(12px);
+    clip-path: none;
+  }
+  header, .secnav { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
 }

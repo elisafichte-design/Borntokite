@@ -17,9 +17,11 @@ const { block } = Astro.props;
 <style>
   .secnav {
     position: sticky;
-    top: var(--header-h);
+    top: var(--btk-header-h, var(--header-h));
     z-index: 4;
-    background: var(--bg);
+    background: rgba(250, 248, 244, .96);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     border-bottom: 1px solid var(--line);
   }
   .inner {

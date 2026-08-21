@@ -5,8 +5,10 @@ const message = block.message ? `?text=${encodeURIComponent(block.message)}` : "
 const href = block.href || `https://wa.me/${site.whatsappClean}${message}`;
 const isWhatsApp = href.startsWith("https://wa.me/");
 ---
-<section class:list={["section", { featured: block.featured }]}>
-  <div class="container narrow box">
+<section class:list={["section", { featured: block.featured, photo: block.image }]}>
+  {block.image && <img class="bg" src={block.image} alt="" width="1600" height="1067" loading="lazy" decoding="async" data-reveal="zoom" />}
+  {block.image && <div class="veil" aria-hidden="true"></div>}
+  <div class="container narrow box" data-reveal="1">
     {block.eyebrow && <p class="eyebrow">{block.eyebrow}</p>}
     <h2>{block.title}</h2>
     {block.body && <p class="muted body">{block.body}</p>}
@@ -22,8 +24,11 @@ const isWhatsApp = href.startsWith("https://wa.me/");
   </div>
 </section>
 <style>
+  section { position: relative; overflow: hidden; }
+  .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .veil { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(9, 17, 26, .72), rgba(7, 14, 22, .9)); }
   /* Piste A : pas de carte, pas d'ombre. Le bloc est délimité par deux filets. */
-  .box { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding-block: var(--space-7); }
+  .box { position: relative; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding-block: var(--space-7); }
   .eyebrow + h2 { margin-top: var(--space-4); }
   .body { margin-top: var(--space-4); max-width: 46ch; }
   .btn { margin-top: var(--space-6); }
@@ -33,4 +38,8 @@ const isWhatsApp = href.startsWith("https://wa.me/");
   .featured .eyebrow { color: var(--line); }
   .featured .btn { background: var(--bg); color: var(--ink); border-color: var(--bg); }
   .featured .btn--whatsapp { background: var(--whatsapp); color: var(--ink); border-color: var(--whatsapp); }
+  .photo .box { border-color: rgba(250, 248, 244, .45); }
+  .photo h2, .photo .body { color: var(--bg); }
+  .photo .eyebrow { color: var(--line); }
+  .photo .btn:not(.btn--whatsapp) { background: var(--bg); color: var(--ink); border-color: var(--bg); }
 </style>

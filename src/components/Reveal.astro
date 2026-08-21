@@ -1,0 +1,52 @@
+<script is:inline>
+  (function () {
+    if (window.__btkanim) return;
+    window.__btkanim = true;
+
+    var root = document.documentElement;
+    root.setAttribute("data-anim", "1");
+
+    var syncHeaderHeight = function () {
+      var header = document.querySelector("header");
+      if (!header) return;
+      root.style.setProperty("--btk-header-h", Math.round(header.getBoundingClientRect().height) + "px");
+      if (window.ResizeObserver && !window.__btkHeaderObserver) {
+        window.__btkHeaderObserver = new ResizeObserver(syncHeaderHeight);
+        window.__btkHeaderObserver.observe(header);
+      }
+    };
+    window.addEventListener("load", syncHeaderHeight);
+    window.addEventListener("resize", syncHeaderHeight, { passive: true });
+
+    var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var small = window.matchMedia("(max-width: 760px)").matches;
+    var show = function (el) { el.setAttribute("data-shown", "1"); };
+    var seen = new WeakSet();
+    var io = !reduced && window.IntersectionObserver ? new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var delay = parseInt(entry.target.getAttribute("data-delay") || "0", 10);
+        if (small) delay = Math.min(Math.round(delay * 0.45), 180);
+        window.setTimeout(function () { show(entry.target); }, delay);
+        io.unobserve(entry.target);
+      });
+    }, {
+      rootMargin: small ? "0px 0px 8% 0px" : "0px 0px -10% 0px",
+      threshold: 0.04
+    }) : null;
+
+    var scan = function () {
+      document.querySelectorAll("[data-reveal]").forEach(function (el) {
+        if (seen.has(el)) return;
+        seen.add(el);
+        if (!io) show(el);
+        else io.observe(el);
+      });
+      syncHeaderHeight();
+    };
+
+    scan();
+    new MutationObserver(scan).observe(document.documentElement, { childList: true, subtree: true });
+    window.setTimeout(function () { document.querySelectorAll("[data-reveal]").forEach(show); }, 4000);
+  })();
+</script>

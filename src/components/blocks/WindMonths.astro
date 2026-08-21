@@ -16,30 +16,34 @@ const columns = data.columns || ["Mois", "Vent moyen", "Jours navigables", "Eau"
 ---
 <section class="section">
   <div class="container">
-    {data.eyebrow && <p class="eyebrow">{data.eyebrow}</p>}
-    {data.heading && <h2>{data.heading}</h2>}
-    {data.lead && <p class="lead intro">{data.lead}</p>}
+    <div data-reveal="1">
+      {data.eyebrow && <p class="eyebrow">{data.eyebrow}</p>}
+      {data.heading && <h2>{data.heading}</h2>}
+      {data.lead && <p class="lead intro">{data.lead}</p>}
+    </div>
 
-    <table>
-      <caption class="sr">{data.caption}</caption>
-      <thead>
-        <tr>
-          {columns.map((column) => <th scope="col">{column}</th>)}
-        </tr>
-      </thead>
-      <tbody>
-        {data.months.map((m) => (
-          <tr class={m.best ? "best" : undefined}>
-            <th scope="row">{m.month}</th>
-            <td>{m.wind}</td>
-            <td>{m.days}</td>
-            <td>{m.water}</td>
-            <td>{m.who}</td>
-            <td>{m.season}</td>
+    <div class="table-wrap" data-reveal="1" data-delay="120">
+      <table>
+        <caption class="sr">{data.caption}</caption>
+        <thead>
+          <tr>
+            {columns.map((column) => <th scope="col">{column}</th>)}
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {data.months.map((m) => (
+            <tr class={m.best ? "best" : undefined}>
+              <th scope="row">{m.month}</th>
+              <td>{m.wind}</td>
+              <td>{m.days}</td>
+              <td>{m.water}</td>
+              <td>{m.who}</td>
+              <td>{m.season}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
 
     {data.source && <p class="faint src">{data.source}</p>}
   </div>
@@ -47,7 +51,8 @@ const columns = data.columns || ["Mois", "Vent moyen", "Jours navigables", "Eau"
 <style>
   h2 { margin-top: var(--space-4); }
   .intro { margin-top: var(--space-4); max-width: 60ch; }
-  table { width: 100%; border-collapse: collapse; margin-top: var(--space-6); font-size: var(--size-small); }
+  .table-wrap { overflow-x: auto; margin-top: var(--space-6); }
+  table { width: 100%; border-collapse: collapse; font-size: var(--size-small); }
   caption.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
   th, td { text-align: left; padding: var(--space-3) var(--space-4) var(--space-3) 0; border-bottom: 1px solid var(--line); vertical-align: top; }
   thead th { font-weight: var(--weight-medium); font-size: var(--size-eyebrow); letter-spacing: var(--ls-eyebrow); text-transform: uppercase; color: var(--ink-faint); }
@@ -58,7 +63,7 @@ const columns = data.columns || ["Mois", "Vent moyen", "Jours navigables", "Eau"
   .src { margin-top: var(--space-4); font-size: var(--size-small); }
   /* Mobile : le tableau défile plutôt que d'écraser les colonnes. */
   @media (max-width: 700px) {
-    table { display: block; overflow-x: auto; white-space: nowrap; }
+    table { white-space: nowrap; }
     td, th { padding-right: var(--space-5); }
   }
 </style>

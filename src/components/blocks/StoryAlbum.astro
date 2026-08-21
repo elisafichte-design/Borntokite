@@ -1,0 +1,51 @@
+---
+const { prose, firstImage, secondImage } = Astro.props;
+const media = [firstImage, secondImage].filter(Boolean);
+---
+<section class="section story">
+  <div class="container layout">
+    <div class="copy" data-reveal="1">
+      {prose.eyebrow && <p class="eyebrow">{prose.eyebrow}</p>}
+      {prose.title && <h2>{prose.title}</h2>}
+      {(prose.body || []).map((paragraph) => <p class="muted para">{paragraph}</p>)}
+    </div>
+    <div class="album">
+      {media.map((item, index) => (
+        <figure data-reveal={index % 2 === 0 ? "tiltl" : "tiltr"} data-delay={150 + index * 150}>
+          <div class:list={["frame", { captioned: item.caption }]}>
+            {item.video ? (
+              <video controls playsinline preload="none" poster={item.poster} aria-label={item.alt}>
+                <source src={item.video} type="video/mp4" />
+              </video>
+            ) : (
+              <img
+                src={item.image}
+                alt={item.alt}
+                width={item.width || 1600}
+                height={item.height || 1067}
+                loading="lazy"
+                decoding="async"
+                style={item.position ? `object-position:${item.position}` : undefined}
+              />
+            )}
+            {item.caption && <figcaption>{item.caption}</figcaption>}
+          </div>
+        </figure>
+      ))}
+    </div>
+  </div>
+</section>
+<style>
+  .layout { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: clamp(32px, 5vw, 64px); align-items: start; }
+  h2 { margin-top: var(--space-4); max-width: 24ch; }
+  .para { margin-top: var(--space-5); }
+  .album { display: grid; gap: var(--space-5); }
+  figure { margin: 0; }
+  .frame { overflow: hidden; background: var(--surface); padding: 10px 10px 0; }
+  img, video { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; background: var(--ink); }
+  figcaption { padding: var(--space-3) 2px var(--space-4); color: var(--ink-faint); font-family: var(--font-display); font-size: var(--size-small); }
+  .frame:not(.captioned) { padding-bottom: 10px; }
+  @media (max-width: 760px) {
+    .layout { grid-template-columns: 1fr; }
+  }
+</style>

@@ -1,20 +1,30 @@
 ---
-const { block } = Astro.props;
+import site from "../../data/site.json";
+const { block, ui } = Astro.props;
+const whatsappHref = `https://wa.me/${site.whatsappClean}`;
 ---
 <section class="hero">
   {block.image
-    ? <img class="bg" src={block.image} alt={block.alt} width="1600" height="1067" fetchpriority="high" style={block.position ? `object-position:${block.position}` : undefined} />
-    : <div class="bg placeholder" aria-hidden="true"><span>PHOTO — {block.alt}</span></div>}
+    ? <img class="bg" src={block.image} alt={block.alt} width="1600" height="1067" fetchpriority="high" data-reveal="zoom" style={block.position ? `object-position:${block.position}` : undefined} />
+    : <div class="bg placeholder" aria-hidden="true" data-reveal="zoom"><span>PHOTO — {block.alt}</span></div>}
   <div class="veil"></div>
   <div class="container inner">
-    {block.eyebrow && <p class="eyebrow">{block.eyebrow}</p>}
-    <h1>{block.title}</h1>
-    {block.lead && <p class="lead narrow">{block.lead}</p>}
-    {block.cta && <a class="btn btn--onphoto" href={block.cta.href}>{block.cta.label}</a>}
+    {block.eyebrow && <p class="eyebrow" data-reveal="1" data-delay="250">{block.eyebrow}</p>}
+    <h1 data-reveal="1" data-delay="380">{block.title}</h1>
+    {block.lead && <p class="lead narrow" data-reveal="1" data-delay="520">{block.lead}</p>}
+    <div class="actions" data-reveal="1" data-delay="660">
+      {block.cta && <a class="btn btn--onphoto" href={block.cta.href}>{block.cta.label}</a>}
+      {ui?.whatsapp && (
+        <a class="btn btn--whatsapp" href={whatsappHref} target="_blank" rel="noopener">
+          <img class="wa-icon" src="/whatsapp-logo.svg" alt="" width="20" height="20" aria-hidden="true" />
+          {ui.whatsapp}
+        </a>
+      )}
+    </div>
   </div>
 </section>
 <style>
-  .hero { position: relative; min-height: min(74vh, 660px); display: flex; align-items: flex-end; overflow: hidden; }
+  .hero { position: relative; min-height: min(84vh, 720px); display: flex; align-items: flex-end; overflow: hidden; }
   .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
   .placeholder { background: var(--surface); display: grid; place-items: center; color: var(--ink-faint); font-family: var(--font-mono); font-size: var(--size-small); letter-spacing: var(--ls-mono); }
   .veil { position: absolute; inset: 0; background: var(--overlay-image); }
@@ -25,5 +35,6 @@ const { block } = Astro.props;
   .eyebrow { color: rgba(255, 255, 255, 0.92); }
   h1 { margin-top: var(--space-4); max-width: 16ch; color: #fff; }
   .lead { margin-top: var(--space-4); color: rgba(255, 255, 255, 0.88); max-width: 44ch; }
-  .btn { margin-top: var(--space-5); text-shadow: none; }
+  .actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-5); }
+  .btn { text-shadow: none; }
 </style>

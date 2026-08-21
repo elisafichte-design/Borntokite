@@ -47,7 +47,15 @@ const languageNavLabel = { fr: "Choisir la langue", en: "Choose language", de: "
   </div>
 </header>
 <style>
-  header { border-bottom: 1px solid var(--line); position: sticky; top: 0; background: var(--bg); z-index: 5; }
+  header {
+    border-bottom: 1px solid var(--line);
+    position: sticky;
+    top: 0;
+    background: rgba(250, 248, 244, .94);
+    backdrop-filter: saturate(140%) blur(8px);
+    -webkit-backdrop-filter: saturate(140%) blur(8px);
+    z-index: 5;
+  }
   .bar { display: flex; align-items: center; gap: var(--space-5); padding-block: var(--space-3); }
   .brand { border: 0; flex: none; }
   .brand img { width: 96px; height: auto; }

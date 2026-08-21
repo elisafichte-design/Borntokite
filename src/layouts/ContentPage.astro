@@ -16,6 +16,7 @@ import SectionNav from "../components/blocks/SectionNav.astro";
 import Cards from "../components/blocks/Cards.astro";
 import Gallery from "../components/blocks/Gallery.astro";
 import Weather from "../components/blocks/Weather.astro";
+import StoryAlbum from "../components/blocks/StoryAlbum.astro";
 import site from "../data/site.json";
 import fr from "../data/pages.fr.json";
 import en from "../data/pages.en.json";
@@ -55,6 +56,9 @@ const components = {
 const blocks = page.blocks || [];
 const hasHero = blocks.some((block) => block.type === "hero");
 const h1Index = hasHero ? -1 : blocks.findIndex((block) => block.type === "prose" && block.title);
+const storyStart = slug === ""
+  ? blocks.findIndex((block, index) => block.type === "image" && blocks[index + 1]?.type === "prose" && blocks[index + 2]?.type === "image")
+  : -1;
 
 const graph = [
   {
@@ -152,9 +156,13 @@ const jsonld = { "@context": "https://schema.org", "@graph": graph };
 >
   {
     blocks.map((block, index) => {
+      if (index === storyStart) {
+        return <StoryAlbum firstImage={block} prose={blocks[index + 1]} secondImage={blocks[index + 2]} />;
+      }
+      if (storyStart >= 0 && (index === storyStart + 1 || index === storyStart + 2)) return null;
       const Component = components[block.type];
       if (!Component) return null;
-      const element = <Component block={block} ui={data.ui} heading={index === h1Index ? 1 : 2} />;
+      const element = <Component block={block} ui={data.ui} lang={lang} index={index} heading={index === h1Index ? 1 : 2} />;
       return block.id ? <div id={block.id}>{element}</div> : element;
     })
   }
