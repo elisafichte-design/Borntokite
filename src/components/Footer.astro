@@ -16,9 +16,7 @@ const mapsUrl = site.sameAs?.find((url) => url.includes("maps.google"));
 <footer>
   <div class="container inner">
     <div>
-      <span class="footer-logo">
-        <img src="/logo-new.jpeg" alt={site.name} width="1140" height="1112" loading="lazy" decoding="async" />
-      </span>
+      <img class="footer-logo" src="/logo-new-transparent.png" alt={site.name} width="1536" height="1024" loading="lazy" decoding="async" />
       <p class="faint addr">
         {site.street}, {site.locality}<br />
         {site.region}, Île Maurice
@@ -52,8 +50,7 @@ const mapsUrl = site.sameAs?.find((url) => url.includes("maps.google"));
   footer { position: relative; border-top: 1px solid var(--line); padding-block: var(--space-8) var(--space-6); background: #fff; }
   footer::before { content: ""; position: absolute; inset: -1px 0 auto; height: 4px; background: var(--brand-gradient); }
   .inner { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-7); }
-  .footer-logo { display: block; position: relative; overflow: hidden; width: 158px; height: 114px; background: #fff; }
-  .footer-logo img { position: absolute; width: 206px; max-width: none; height: auto; left: -26px; top: -45px; }
+  .footer-logo { display: block; width: 158px; height: auto; }
   .addr { margin-top: var(--space-4); font-size: var(--size-small); }
   .footer-links { list-style: none; margin: var(--space-4) 0 0; padding: 0; display: grid; gap: var(--space-2); }
   .footer-links a { font-size: var(--size-small); }
