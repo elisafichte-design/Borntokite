@@ -16,7 +16,7 @@ const mapsUrl = site.sameAs?.find((url) => url.includes("maps.google"));
 <footer>
   <div class="container inner">
     <div>
-      <img src="/logo-encre.png" alt={site.name} width="440" height="246" loading="lazy" decoding="async" />
+      <img src="/logo-wordmark-encre.png" alt={site.name} width="800" height="200" loading="lazy" decoding="async" />
       <p class="faint addr">
         {site.street}, {site.locality}<br />
         {site.region}, Île Maurice
@@ -49,7 +49,7 @@ const mapsUrl = site.sameAs?.find((url) => url.includes("maps.google"));
 <style>
   footer { border-top: 1px solid var(--line); padding-block: var(--space-8) var(--space-6); }
   .inner { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-7); }
-  .inner img { width: 120px; height: auto; }
+  .inner img { width: 160px; height: auto; }
   .addr { margin-top: var(--space-4); font-size: var(--size-small); }
   .footer-links { list-style: none; margin: var(--space-4) 0 0; padding: 0; display: grid; gap: var(--space-2); }
   .footer-links a { font-size: var(--size-small); }

@@ -14,7 +14,7 @@ const languageNavLabel = { fr: "Choisir la langue", en: "Choose language", de: "
 <header>
   <div class="container bar">
     <a class="brand" href={`${base}/`} aria-label={site.name}>
-      <img src="/logo-encre.png" alt={site.name} width="440" height="246" />
+      <img src="/logo-wordmark-encre.png" alt={site.name} width="800" height="200" />
     </a>
     <nav class="desktop" aria-label="Principal">
       {nav.map((n) => <a href={hrefFor(n)}>{n.label}</a>)}
@@ -58,7 +58,7 @@ const languageNavLabel = { fr: "Choisir la langue", en: "Choose language", de: "
   }
   .bar { display: flex; align-items: center; gap: var(--space-5); padding-block: var(--space-3); }
   .brand { border: 0; flex: none; }
-  .brand img { width: 96px; height: auto; }
+  .brand img { width: 140px; height: auto; }
   .desktop { display: flex; gap: var(--space-4); flex: 1; flex-wrap: wrap; }
   .desktop a, .mobile-nav a { color: var(--ink); border: 0; font-size: var(--size-small); }
   .actions { display: flex; align-items: center; gap: var(--space-3); flex: none; }
@@ -96,7 +96,7 @@ const languageNavLabel = { fr: "Choisir la langue", en: "Choose language", de: "
   }
   @media (max-width: 420px) {
     .bar { gap: var(--space-2); }
-    .brand img { width: 82px; }
+    .brand img { width: 118px; }
     .actions { gap: var(--space-2); }
     .languages a { padding-inline: 7px; }
     .whatsapp { padding-inline: 11px; }

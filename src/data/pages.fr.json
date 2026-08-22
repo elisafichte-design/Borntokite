@@ -481,6 +481,120 @@
           "height": 1061
         },
         {
+          "type": "spotsmap",
+          "eyebrow": "Born To Kite — carte des spots",
+          "title": "Le sud-ouest de Maurice, spot par spot.",
+          "intro": "De Tamarin à Souillac : huit spots de kite et de surf, du lagon protégé du Morne aux vagues réservées aux riders confirmés. Une carte dessinée pour se repérer — pas une carte marine.",
+          "legendLabel": "Légende de la carte",
+          "kiteLabel": "Kite",
+          "surfLabel": "Surf",
+          "schoolLabel": "École Born To Kite",
+          "schoolShortLabel": "Born To Kite",
+          "mapFromTo": "Tamarin → Souillac",
+          "mapScale": "Illustration, sans échelle",
+          "mapTitle": "Carte des spots de kite et de surf du sud-ouest de l'île Maurice",
+          "mapDescription": "Huit spots sont situés entre Tamarin et Souillac. Le lagon du Morne, où enseigne Born To Kite, est signalé par une étoile.",
+          "windLabel": "alizés · SE",
+          "levels": [
+            { "key": "beginner", "label": "Débutant" },
+            { "key": "intermediate", "label": "Intermédiaire" },
+            { "key": "advanced", "label": "Avancé / expert" }
+          ],
+          "spots": [
+            {
+              "number": 1,
+              "mapName": "Tamarin",
+              "name": "Tamarin — La Gauche",
+              "activity": "Surf",
+              "levelKey": "advanced",
+              "level": "Avancé",
+              "x": 560,
+              "y": 110,
+              "description": "La vague de reef la plus mythique de l'île — un long gauche puissant réservé aux surfeurs confirmés. Pas un spot pour débuter."
+            },
+            {
+              "number": 2,
+              "mapName": "Le Morne",
+              "name": "Le Morne — notre lagon",
+              "activity": "Kite",
+              "levelKey": "beginner",
+              "level": "Débutant",
+              "x": 230,
+              "y": 460,
+              "school": true,
+              "description": "Un lagon né du volcan et du corail : eau plate, peu profonde, protégée par la barrière de corail — avec Crystal Rock pour repère au milieu du turquoise. Le cadre idéal pour apprendre en toute sécurité, c'est ici que nous enseignons."
+            },
+            {
+              "number": 3,
+              "mapName": "Manawa",
+              "name": "Manawa",
+              "activity": "Kite",
+              "levelKey": "intermediate",
+              "level": "Intermédiaire à avancé",
+              "x": 165,
+              "y": 565,
+              "description": "La partie la plus ouverte du lagon, côté passe : plus de vent, plus de clapot, moins de fond. On y envoie les riders qui ont déjà passé les bases."
+            },
+            {
+              "number": 4,
+              "mapName": "One Eye",
+              "name": "One Eye",
+              "activity": "Kite & Surf",
+              "levelKey": "advanced",
+              "level": "Avancé / expert",
+              "x": 60,
+              "y": 510,
+              "description": "La vague légendaire du Morne, juste à l'extérieur du lagon. Puissante, rapide, respectée dans le monde entier — pour riders expérimentés uniquement."
+            },
+            {
+              "number": 5,
+              "mapName": "Chameau",
+              "name": "Chameau",
+              "activity": "Surf",
+              "levelKey": "advanced",
+              "level": "Avancé / expert",
+              "x": 78,
+              "y": 585,
+              "description": "Un reef en forme de bosse juste au sud de One Eye. Vague creuse et rapide, réservée aux surfeurs confirmés."
+            },
+            {
+              "number": 6,
+              "mapName": "Baie du Cap",
+              "name": "Baie du Cap",
+              "activity": "Kite",
+              "levelKey": "intermediate",
+              "level": "Intermédiaire à avancé",
+              "x": 390,
+              "y": 585,
+              "description": "Plus sauvage, plus venté, beaucoup moins fréquenté que Le Morne. Une étape possible sur la route du downwind vers l'ouest."
+            },
+            {
+              "number": 7,
+              "mapName": "Bel Ombre",
+              "name": "Bel Ombre",
+              "activity": "Kite",
+              "levelKey": "intermediate",
+              "level": "Intermédiaire",
+              "x": 555,
+              "y": 660,
+              "description": "Le point de départ de notre downwind signature Bel Ombre → Le Morne : plusieurs kilomètres de glisse le long de la côte, encadrés par bateau."
+            },
+            {
+              "number": 8,
+              "mapName": "Gris Gris",
+              "name": "Gris Gris / Souillac",
+              "activity": "Surf",
+              "levelKey": "advanced",
+              "level": "Avancé / expert",
+              "x": 770,
+              "y": 795,
+              "labelX": -105,
+              "description": "Falaises, houle du sud puissante et courants forts. Spectaculaire à regarder, exigeant à naviguer — pas un spot d'apprentissage."
+            }
+          ],
+          "disclaimer": "Carte dessinée à la main, non contractuelle et sans échelle — les positions et distances sont approximatives. Vérifiez toujours les conditions du jour avec un moniteur local avant de naviguer."
+        },
+        {
           "type": "prose",
           "eyebrow": "Météo & vent",
           "title": "Le vent",

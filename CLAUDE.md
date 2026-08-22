@@ -69,7 +69,7 @@ FR/EN/DE, SEO technique, photos, page d'accueil complète, tarifs, spot, météo
 kitesurf, wingfoil, surf, excursions, downwind, leçon VIP, carte cadeau, équipe,
 contact et informations légales.
 
-Logo : `public/logo-encre.png` (encre, fond clair) pour l'en-tête et le pied de page ; `public/logo-blanc.png` conservé pour un usage sur photo ou fond sombre.
+Logo : `public/logo-wordmark-encre.png` pour l'en-tête et le pied de page ; `public/logo-wordmark-blanc.png` pour un usage sur photo ou fond sombre. Les variantes principales et les symboles optimisés pour le web sont également rangés dans `public/` sous les noms `logo-principal-*` et `logo-symbole-*`.
 
 À faire : versions courtes ES et RU, Cloudflare Web Analytics, URL Calendly à
 coller dans `site.json`, et confirmation des tarifs de supervision, location et
