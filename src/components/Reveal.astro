@@ -17,6 +17,11 @@
     };
     window.addEventListener("load", syncHeaderHeight);
     window.addEventListener("resize", syncHeaderHeight, { passive: true });
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", syncHeaderHeight);
+    } else {
+      syncHeaderHeight();
+    }
 
     var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     var small = window.matchMedia("(max-width: 760px)").matches;

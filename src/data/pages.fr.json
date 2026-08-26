@@ -46,7 +46,12 @@
     "perPerson": "par personne",
     "skipToContent": "Aller au contenu",
     "footerLegal": "Mentions légales",
-    "footerPrivacy": "Confidentialité"
+    "footerPrivacy": "Confidentialité",
+    "consent": {
+      "text": "Les avis Google sont fournis par un service tiers qui dépose des cookies. Le reste du site n'en utilise aucun.",
+      "accept": "Accepter",
+      "decline": "Refuser"
+    }
   },
   "pages": [
     {
@@ -59,8 +64,8 @@
           "eyebrow": "Le Morne · Île Maurice",
           "title": "Bienvenue à l'île Maurice. Apprenez à voler sur l'eau.",
           "lead": "Born To Kite est une école de kitesurf locale et familiale, née en janvier 2026 sur le lagon du Morne. Plus de dix ans à transmettre la passion du kite, dans la bonne humeur et une sécurité maximale.",
-          "image": "/photos/kitesurf-contre-jour-lagon-le-morne.webp",
-          "alt": "Kitesurfeuse en contre-jour sur le lagon du Morne, île Maurice",
+          "image": "/photos/kitesurf-coucher-de-soleil-ile-maurice.webp",
+          "alt": "Kitesurfeur en silhouette au coucher de soleil sur le lagon du Morne, île Maurice",
           "cta": {
             "label": "Voir les tarifs",
             "href": "/tarifs/"
@@ -114,14 +119,6 @@
           ]
         },
         {
-          "type": "image",
-          "image": "/photos/banc-de-sable-lagon-le-morne.webp",
-          "alt": "Banc de sable et lagon turquoise du Morne vus du ciel, île Maurice",
-          "width": 1600,
-          "height": 1061,
-          "caption": "Le lagon du Morne, au sud-ouest de l'île Maurice."
-        },
-        {
           "type": "prose",
           "eyebrow": "Notre histoire",
           "title": "Une école locale, familiale, et passionnée.",
@@ -151,9 +148,18 @@
               "image": "/photos/cours-de-kitesurf-lagon-le-morne.webp",
               "alt": "Kitesurfeur sur le lagon du Morne devant la montagne, île Maurice",
               "facts": [
-                { "label": "Durée", "value": "dès 2 h" },
-                { "label": "Niveau", "value": "débutant → avancé" },
-                { "label": "Prix", "value": "dès 80 €/pers" }
+                {
+                  "label": "Durée",
+                  "value": "dès 2 h"
+                },
+                {
+                  "label": "Niveau",
+                  "value": "débutant → avancé"
+                },
+                {
+                  "label": "Prix",
+                  "value": "dès 80 €/pers"
+                }
               ]
             },
             {
@@ -165,31 +171,50 @@
               "alt": "Wingfoiler au-dessus du lagon du Morne, île Maurice",
               "position": "center 45%",
               "facts": [
-                { "label": "Durée", "value": "dès 2 h" },
-                { "label": "Niveau", "value": "tous niveaux" },
-                { "label": "Prix", "value": "dès 80 €/pers" }
+                {
+                  "label": "Durée",
+                  "value": "dès 2 h"
+                },
+                {
+                  "label": "Niveau",
+                  "value": "tous niveaux"
+                },
+                {
+                  "label": "Prix",
+                  "value": "dès 80 €/pers"
+                }
               ]
             },
             {
               "title": "Surf",
-              "body": "Profitez des vagues mauriciennes avec un encadrement adapté à tous les niveaux. Selon les prévisions, plusieurs spots dans le sud de l'île sont possibles, pour trouver toujours les meilleures conditions.",
+              "body": "Profitez des vagues mauriciennes avec un encadrement adapté à tous les niveaux.",
               "href": "/surf/",
               "linkLabel": "Voir les sessions de surf",
-              "image": "/photos/surf-vague-sud-ile-maurice.webp",
-              "alt": "Surfeur sur une vague au sud de l'île Maurice",
+              "image": "/photos/surf-planche-rose-ile-maurice.webp",
+              "alt": "Surfeur portant sa planche rose sur la plage, île Maurice",
               "facts": [
-                { "label": "Durée", "value": "1 h 30" },
-                { "label": "Niveau", "value": "tous niveaux" },
-                { "label": "Prix", "value": "60 €" }
+                {
+                  "label": "Durée",
+                  "value": "1 h 30"
+                },
+                {
+                  "label": "Niveau",
+                  "value": "tous niveaux"
+                },
+                {
+                  "label": "Prix",
+                  "value": "60 €"
+                }
               ]
             }
           ],
-          "id": "disciplines"
+          "id": "disciplines",
+          "lead": "Selon les prévisions, plusieurs spots dans le sud de l'île sont possibles, pour trouver toujours les meilleures conditions."
         },
         {
           "type": "image",
-          "image": "/photos/kitesurf-coucher-de-soleil-ile-maurice.webp",
-          "alt": "Kitesurfeur au coucher de soleil sur le lagon du Morne, île Maurice",
+          "image": "/photos/kitesurf-contre-jour-lagon-le-morne.webp",
+          "alt": "Kitesurfeuse en contre-jour sur le lagon du Morne, île Maurice",
           "width": 1600,
           "height": 1067
         },
@@ -230,16 +255,68 @@
               "alt": "Gonflage de l'aile de kitesurf sur la plage du Morne, île Maurice"
             },
             {
-              "image": "/photos/galerie-crystal-rock-lagon.webp",
-              "alt": "Crystal Rock, rocher au milieu du lagon turquoise"
-            },
-            {
               "image": "/photos/galerie-surfeur-au-couchant.webp",
               "alt": "Surfeur au coucher de soleil, côte sud de l'île Maurice"
             },
             {
-              "image": "/photos/galerie-portrait-eleve.webp",
-              "alt": "Portrait d'une élève après sa session sur le lagon"
+              "image": "/photos/galerie-eleve-kite-lagon-du-morne.webp",
+              "alt": "Élève en cours de kitesurf dans le lagon du Morne"
+            },
+            {
+              "image": "/photos/galerie-eleve-pilote-son-aile.webp",
+              "alt": "Élève pilotant son aile dans le lagon du Morne"
+            },
+            {
+              "image": "/photos/galerie-depart-a-l-eau-avec-le-moniteur.webp",
+              "alt": "Départ à l'eau accompagné par le moniteur, lagon du Morne"
+            },
+            {
+              "image": "/photos/galerie-moniteur-guide-une-eleve.webp",
+              "alt": "Le moniteur guide une élève sur la planche, lagon du Morne"
+            },
+            {
+              "image": "/photos/galerie-groupe-devant-le-morne.webp",
+              "alt": "Groupe d'élèves et de moniteurs devant la montagne du Morne"
+            },
+            {
+              "image": "/photos/galerie-aile-rouge-sur-la-plage.webp",
+              "alt": "Aile de kitesurf rouge posée sur la plage du Morne"
+            },
+            {
+              "image": "/photos/galerie-mise-en-place-de-l-aile.webp",
+              "alt": "Mise en place de l'aile sur la plage du Morne"
+            },
+            {
+              "image": "/photos/galerie-football-sur-la-plage-du-morne.webp",
+              "alt": "Partie de football sur la plage du Morne en fin de journée"
+            },
+            {
+              "image": "/photos/galerie-pause-sur-la-plage-du-morne.webp",
+              "alt": "Pause sur la plage du Morne entre deux sessions"
+            },
+            {
+              "image": "/photos/galerie-moniteur-et-son-fils-le-morne.webp",
+              "alt": "Un moniteur de Born To Kite et son fils sur le spot du Morne"
+            },
+            {
+              "image": "/photos/galerie-eleve-et-monitrice-le-morne.webp",
+              "alt": "Élève et monitrice devant la montagne du Morne"
+            },
+            {
+              "image": "/photos/galerie-apres-la-session-le-morne.webp",
+              "alt": "Élève et moniteur après la session, plage du Morne"
+            },
+            {
+              "image": "/photos/galerie-aile-gonflee-sur-la-plage.webp",
+              "alt": "Aile de kitesurf gonflée sur la plage du Morne"
+            },
+            {
+              "image": "/photos/galerie-avant-la-mise-a-l-eau.webp",
+              "alt": "Discussion avant la mise à l'eau, plage du Morne"
+            },
+            {
+              "image": "/photos/galerie-briefing-au-sol-le-morne.webp",
+              "alt": "Briefing au sol avec le moniteur, plage du Morne"
             }
           ],
           "id": "galerie"
@@ -276,7 +353,8 @@
               "text": "Expérience incroyable. Merci merci merci"
             }
           ],
-          "id": "avis"
+          "id": "avis",
+          "liveLabel": "Afficher les avis Google en direct"
         },
         {
           "type": "cta",
@@ -366,6 +444,13 @@
               ]
             },
             {
+              "name": "Perfectionnement & sauts",
+              "detail": "Pour riders autonomes qui veulent passer le cap.",
+              "lines": [
+                "40 €/h"
+              ]
+            },
+            {
               "name": "Supervision",
               "detail": "Vous êtes déjà autonome ? Naviguez sous la supervision de l'école.",
               "lines": [
@@ -426,6 +511,13 @@
               "detail": "Une heure trente encadrée, matériel inclus.",
               "lines": [
                 "60 € — 1 h 30"
+              ]
+            },
+            {
+              "name": "Session dans les vagues",
+              "detail": "Sur le spot du Morne.",
+              "lines": [
+                "50 €/h"
               ]
             }
           ]
@@ -496,9 +588,18 @@
           "mapDescription": "Huit spots sont situés entre Tamarin et Souillac. Le lagon du Morne, où enseigne Born To Kite, est signalé par une étoile.",
           "windLabel": "alizés · SE",
           "levels": [
-            { "key": "beginner", "label": "Débutant" },
-            { "key": "intermediate", "label": "Intermédiaire" },
-            { "key": "advanced", "label": "Avancé / expert" }
+            {
+              "key": "beginner",
+              "label": "Débutant"
+            },
+            {
+              "key": "intermediate",
+              "label": "Intermédiaire"
+            },
+            {
+              "key": "advanced",
+              "label": "Avancé / expert"
+            }
           ],
           "spots": [
             {
@@ -712,8 +813,8 @@
         },
         {
           "type": "gallery",
-          "eyebrow": "Île Maurice",
-          "heading": "Le Morne et son lagon.",
+          "eyebrow": "Galerie",
+          "heading": "L'île Maurice.",
           "items": [
             {
               "image": "/photos/banc-de-sable-lagon-le-morne.webp",
@@ -728,9 +829,100 @@
               "alt": "La montagne du Morne vue depuis le lagon"
             },
             {
-              "image": "/photos/groupe-eleves-kite-le-morne.webp",
-              "alt": "Ritik et un groupe d'élèves devant la montagne du Morne",
-              "position": "center 70%"
+              "image": "/photos/excursion-cascade-sud-ile-maurice.webp",
+              "alt": "Baignade sous une cascade dans le sud de l'île Maurice"
+            },
+            {
+              "image": "/photos/excursion-pecheur-et-chien-ile-maurice.webp",
+              "alt": "Pêcheur et chien sur une plage de l'île Maurice"
+            },
+            {
+              "image": "/photos/excursion-ilot-rocheux-lagon-ile-maurice.webp",
+              "alt": "Îlot rocheux au milieu du lagon, île Maurice"
+            },
+            {
+              "image": "/photos/excursion-dauphin-au-large-ile-maurice.webp",
+              "alt": "Aileron de dauphin à la surface, au large de l'île Maurice"
+            },
+            {
+              "image": "/photos/excursion-pecheur-au-couchant-ile-maurice.webp",
+              "alt": "Pêcheur à la ligne au coucher du soleil, île Maurice"
+            },
+            {
+              "image": "/photos/excursion-navire-au-large-au-couchant.webp",
+              "alt": "Navire au large au coucher du soleil, île Maurice"
+            },
+            {
+              "image": "/photos/excursion-pirogues-au-bord-du-lagon.webp",
+              "alt": "Pirogues au bord du lagon, île Maurice"
+            },
+            {
+              "image": "/photos/excursion-eglise-cap-malheureux.webp",
+              "alt": "L'église au toit rouge de Cap Malheureux, île Maurice"
+            },
+            {
+              "image": "/photos/excursion-pirogue-devant-le-coin-de-mire.webp",
+              "alt": "Pirogue au mouillage devant l'îlot Coin de Mire, île Maurice"
+            },
+            {
+              "image": "/photos/excursion-plage-du-nord-ile-maurice.webp",
+              "alt": "Familles sur une plage du nord de l'île Maurice"
+            },
+            {
+              "image": "/photos/excursion-preparation-de-la-planche.webp",
+              "alt": "Préparation d'une planche au bord du lagon, île Maurice"
+            },
+            {
+              "image": "/photos/excursion-pirogue-drapeau-mauricien.webp",
+              "alt": "Pirogue et drapeau mauricien sur le lagon"
+            },
+            {
+              "image": "/photos/excursion-crystal-rock-lagon-turquoise.webp",
+              "alt": "Crystal Rock, rocher isolé au milieu du lagon turquoise"
+            },
+            {
+              "image": "/photos/excursion-peche-a-la-ligne-dans-le-lagon.webp",
+              "alt": "Pêche à la ligne dans le lagon, île Maurice"
+            },
+            {
+              "image": "/photos/excursion-pecheur-sur-un-ponton.webp",
+              "alt": "Pêcheur sur un ponton face au lagon, île Maurice"
+            },
+            {
+              "image": "/photos/excursion-paniers-tresses-ile-maurice.webp",
+              "alt": "Paniers tressés colorés, artisanat mauricien"
+            },
+            {
+              "image": "/photos/excursion-visiteurs-sur-la-plage.webp",
+              "alt": "Visiteurs sur une plage de l'île Maurice"
+            },
+            {
+              "image": "/photos/excursion-coucher-de-soleil-sur-la-plage.webp",
+              "alt": "Silhouettes face au coucher du soleil sur la plage, île Maurice"
+            },
+            {
+              "image": "/photos/excursion-enfant-sur-la-plage.webp",
+              "alt": "Enfant sur la plage, île Maurice"
+            },
+            {
+              "image": "/photos/excursion-statue-de-shiva-grand-bassin.webp",
+              "alt": "Statue de Shiva à Grand Bassin, île Maurice"
+            },
+            {
+              "image": "/photos/excursion-au-bord-du-lagon.webp",
+              "alt": "Au bord du lagon, île Maurice"
+            },
+            {
+              "image": "/photos/excursion-etoile-de-mer-noir-et-blanc.webp",
+              "alt": "Étoile de mer dans le lagon, en noir et blanc"
+            },
+            {
+              "image": "/photos/excursion-le-morne-noir-et-blanc.webp",
+              "alt": "La montagne du Morne en noir et blanc, île Maurice"
+            },
+            {
+              "image": "/photos/excursion-pirogue-devant-le-morne-noir-et-blanc.webp",
+              "alt": "Pirogue devant la montagne du Morne, en noir et blanc"
             }
           ]
         },
@@ -784,6 +976,13 @@
                 "6 h — 230 €/pers",
                 "8 h — 300 €/pers",
                 "10 h — 380 €/pers"
+              ]
+            },
+            {
+              "name": "Perfectionnement & sauts",
+              "detail": "Pour riders autonomes qui veulent passer le cap.",
+              "lines": [
+                "40 €/h"
               ]
             }
           ]
@@ -979,15 +1178,15 @@
           "title": "Sessions de surf encadrées, sud de l'île Maurice",
           "aValider": true,
           "body": [
-            "Profitez des vagues mauriciennes avec un encadrement adapté à tous les niveaux. Selon les prévisions, plusieurs spots dans le sud de l'île sont possibles, pour trouver toujours les meilleures conditions."
+            "Profitez des vagues mauriciennes avec un encadrement adapté à tous les niveaux."
           ]
         },
         {
           "type": "image",
-          "image": "/photos/surf-vague-sud-ile-maurice.webp",
-          "alt": "Surfeur sur une vague au sud de l'île Maurice",
-          "width": 1000,
-          "height": 750
+          "image": "/photos/surf-planche-rose-ile-maurice.webp",
+          "alt": "Surfeur portant sa planche rose sur la plage, île Maurice",
+          "width": 1600,
+          "height": 1067
         },
         {
           "type": "prices",
@@ -998,6 +1197,13 @@
               "detail": "Une heure trente encadrée, matériel inclus.",
               "lines": [
                 "60 € — 1 h 30"
+              ]
+            },
+            {
+              "name": "Session dans les vagues",
+              "detail": "Sur le spot du Morne.",
+              "lines": [
+                "50 €/h"
               ]
             }
           ]
@@ -1123,10 +1329,10 @@
         },
         {
           "type": "image",
-          "image": "/photos/kitesurf-coucher-de-soleil-ile-maurice.webp",
-          "alt": "Kitesurfeur au coucher de soleil sur le lagon du Morne",
+          "image": "/photos/banc-de-sable-lagon-le-morne.webp",
+          "alt": "Banc de sable et lagon turquoise du Morne vus du ciel, île Maurice",
           "width": 1600,
-          "height": 1067
+          "height": 1061
         },
         {
           "type": "cta",

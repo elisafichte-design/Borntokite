@@ -8,6 +8,7 @@ const { block } = Astro.props;
     <div data-reveal="1">
       {block.eyebrow && <p class="eyebrow">{block.eyebrow}</p>}
       {block.heading && <h2>{block.heading}</h2>}
+      {block.lead && <p class="lead intro">{block.lead}</p>}
     </div>
     <div class:list={["grid", block.variant]}>
       {block.items.map((it, index) => it.href ? (
@@ -39,20 +40,32 @@ const { block } = Astro.props;
 </section>
 <style>
   h2 { margin-top: var(--space-4); }
+  .intro { margin-top: var(--space-4); max-width: var(--container-narrow); }
   .grid { display: grid; gap: var(--space-7); margin-top: var(--space-7); grid-template-columns: 1fr; }
   @media (min-width: 760px) { .grid { grid-template-columns: repeat(3, 1fr); gap: var(--space-6); } }
-  .item { border: 0; display: block; color: var(--ink); }
+  /* Sur trois colonnes, toutes les valeurs occupent deux lignes : les trois
+     tableaux de repères ont alors la même hauteur et s'alignent, même quand
+     une valeur passe à la ligne (« débutant, flèche, avancé »). */
+  @media (min-width: 760px) {
+    .facts dd { min-height: 3.4em; min-height: 2lh; }
+  }
+  /* Colonne flexible : le tableau de repères et le lien sont poussés en bas,
+     pour que les trois cartes s alignent même si un texte est plus long. */
+  .item { border: 0; display: flex; flex-direction: column; height: 100%; color: var(--ink); }
   .media { overflow: hidden; background: var(--surface); }
   .item img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
   .item h3 { margin-top: var(--space-4); }
   .item p { margin-top: var(--space-2); font-size: var(--size-small); }
+  /* Écart minimal avant le tableau de repères, que sa marge haute soit
+     absorbée ou non par l alignement en bas de carte. */
+  .item p:has(+ .facts) { margin-bottom: var(--space-5); }
   .go {
-    display: inline-block; margin-top: var(--space-3); font-size: var(--size-small);
+    display: inline-block; align-self: flex-start; margin-top: var(--space-3); font-size: var(--size-small);
     font-weight: var(--weight-medium); border-bottom: 1px solid var(--line); padding-bottom: 2px;
     transition: border-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
   }
   .vignettes .item { border-top: 1px solid var(--line); padding-top: var(--space-5); }
-  .facts { margin: var(--space-5) 0 0; border: 1px solid var(--line); border-radius: var(--radius); display: grid; grid-template-columns: repeat(3, 1fr); }
+  .facts { margin: auto 0 0; border: 1px solid var(--line); border-radius: var(--radius); display: grid; grid-template-columns: repeat(3, 1fr); }
   .facts > div { padding: var(--space-3) var(--space-4); border-right: 1px solid var(--line); }
   .facts > div:last-child { border-right: 0; }
   .facts dt { font-size: var(--size-eyebrow); letter-spacing: var(--ls-eyebrow); text-transform: uppercase; color: var(--ink-faint); }

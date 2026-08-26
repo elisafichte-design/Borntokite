@@ -1,0 +1,105 @@
+---
+// Bandeau de consentement. Il n'existe que pour un seul service : le module
+// d'avis Google (Elfsight), qui dépose ses propres cookies. Rien d'autre sur
+// le site n'en pose — pas d'analytics à cookie, pas de vidéo intégrée, pas
+// d'iframe Calendly. Sans accord explicite du visiteur, le script tiers n'est
+// jamais chargé : le refus est l'état par défaut, y compris si le visiteur
+// ferme la page sans répondre.
+import site from "../data/site.json";
+const { ui } = Astro.props;
+const c = ui.consent || {};
+const app = site.elfsightReviewsApp;
+---
+{app && (
+  <div class="consent" id="btk-consent" hidden>
+    <div class="inner">
+      <p class="txt">{c.text}</p>
+      <div class="acts">
+        <button type="button" class="btn btn--ghost" data-btk-consent="no">{c.decline}</button>
+        <button type="button" class="btn" data-btk-consent="yes">{c.accept}</button>
+      </div>
+    </div>
+  </div>
+)}
+{app && (
+  <script is:inline>
+    (function () {
+      if (window.__btkconsent) return;
+      window.__btkconsent = true;
+
+      var KEY = "btk-consent-v1";
+      var root = document.documentElement;
+      var loaded = false;
+
+      var loadWidget = function () {
+        if (loaded) return;
+        loaded = true;
+        var s = document.createElement("script");
+        s.src = "https://elfsightcdn.com/platform.js";
+        s.async = true;
+        document.head.appendChild(s);
+      };
+
+      var banner = function () { return document.getElementById("btk-consent"); };
+
+      var apply = function (value) {
+        root.setAttribute("data-consent", value);
+        var b = banner();
+        if (b) b.hidden = true;
+        if (value === "yes") loadWidget();
+      };
+
+      var stored = null;
+      try { stored = localStorage.getItem(KEY); } catch (e) {}
+
+      if (stored === "yes" || stored === "no") {
+        apply(stored);
+      } else {
+        var reveal = function () { var b = banner(); if (b) b.hidden = false; };
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", reveal);
+        } else {
+          reveal();
+        }
+      }
+
+      document.addEventListener("click", function (ev) {
+        var target = ev.target;
+        if (!target || !target.closest) return;
+        var el = target.closest("[data-btk-consent]");
+        if (!el) return;
+        var value = el.getAttribute("data-btk-consent");
+        try { localStorage.setItem(KEY, value); } catch (e) {}
+        apply(value);
+      });
+    })();
+  </script>
+)}
+<style>
+  .consent {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+    background: var(--bg);
+    border-top: 1px solid var(--line);
+  }
+  .inner {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: var(--space-4) var(--gutter);
+    display: flex;
+    align-items: center;
+    gap: var(--space-5);
+    flex-wrap: wrap;
+  }
+  .txt { flex: 1 1 320px; font-size: var(--size-small); }
+  .acts { display: flex; gap: var(--space-3); flex: none; }
+  .acts .btn { padding: 10px 16px; font-size: var(--size-small); }
+  @media (max-width: 560px) {
+    .inner { gap: var(--space-3); }
+    .acts { width: 100%; }
+    .acts .btn { flex: 1; text-align: center; }
+  }
+</style>

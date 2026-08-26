@@ -1,10 +1,16 @@
 ---
-// Avis clients. Reproduits mot pour mot, jamais retouchés : une faute de frappe
-// dans un avis fait partie de l'avis. Aucune balise Review ni AggregateRating,
-// voir la note dans CLAUDE.md.
+// Avis clients. Deux affichages, un seul visible à la fois :
+//  - le module Elfsight, en direct sur la fiche Google, chargé uniquement si
+//    le visiteur a accepté les cookies tiers (voir CookieConsent.astro) ;
+//  - à défaut, les avis reproduits mot pour mot, jamais retouchés : une faute
+//    de frappe dans un avis fait partie de l'avis. C'est aussi cette version
+//    que lisent les robots et les assistants IA, le module Elfsight étant
+//    injecté en JavaScript et donc invisible pour eux.
+// Aucune balise Review ni AggregateRating, voir la note dans CLAUDE.md.
 import site from "../../data/site.json";
 const { block } = Astro.props;
 const sourceHref = block.sourceHref || site.sameAs[0];
+const app = site.elfsightReviewsApp;
 ---
 <section class="section reviews">
   <div class="container">
@@ -13,13 +19,23 @@ const sourceHref = block.sourceHref || site.sameAs[0];
       {block.heading && <h2>{block.heading}</h2>}
       {block.source && <p class="faint src">{block.source}</p>}
     </div>
-    <div class="grid">
-      {block.items.map((r, index) => (
-        <figure data-reveal="1" data-delay={(index % 3) * 110}>
-          <blockquote>{r.text}</blockquote>
-          <figcaption class="faint">{r.author}</figcaption>
-        </figure>
-      ))}
+    {app && (
+      <div class="live" data-reveal="1" data-delay="120">
+        <div class={`elfsight-app-${app}`} data-elfsight-app-lazy></div>
+      </div>
+    )}
+    <div class="static">
+      <div class="grid">
+        {block.items.map((r, index) => (
+          <figure data-reveal="1" data-delay={(index % 3) * 110}>
+            <blockquote>{r.text}</blockquote>
+            <figcaption class="faint">{r.author}</figcaption>
+          </figure>
+        ))}
+      </div>
+      {app && block.liveLabel && (
+        <button type="button" class="btn btn--ghost live-btn" data-btk-consent="yes">{block.liveLabel}</button>
+      )}
     </div>
     <a class="btn btn--ghost all" href={sourceHref} target="_blank" rel="noopener">{block.sourceLabel || "Voir tous les avis sur Google"}</a>
   </div>
@@ -34,4 +50,8 @@ const sourceHref = block.sourceHref || site.sameAs[0];
   blockquote { margin: 0; }
   figcaption { margin-top: var(--space-3); font-size: var(--size-small); }
   .all { margin-top: var(--space-5); }
+  .live { display: none; margin-top: var(--space-6); }
+  .live-btn { margin-top: var(--space-5); }
+  :global(html[data-consent="yes"]) .live { display: block; }
+  :global(html[data-consent="yes"]) .static { display: none; }
 </style>

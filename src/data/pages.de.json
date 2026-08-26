@@ -46,7 +46,12 @@
     "perPerson": "pro Person",
     "skipToContent": "Zum Inhalt springen",
     "footerLegal": "Impressum",
-    "footerPrivacy": "Datenschutz"
+    "footerPrivacy": "Datenschutz",
+    "consent": {
+      "text": "Die Google-Bewertungen stammen von einem Drittanbieter, der Cookies setzt. Der Rest der Website verwendet keine.",
+      "accept": "Akzeptieren",
+      "decline": "Ablehnen"
+    }
   },
   "pages": [
     {
@@ -59,8 +64,8 @@
           "eyebrow": "Le Morne · Mauritius",
           "title": "Willkommen auf Mauritius. Lerne, über das Wasser zu fliegen.",
           "lead": "Born To Kite ist eine lokale, familiengeführte Kitesurf-Schule, die im Januar 2026 an der Lagune von Le Morne gegründet wurde. Seit mehr als zehn Jahren geben wir unsere Begeisterung fürs Kitesurfen weiter, mit guter Stimmung und größtmöglicher Sicherheit.",
-          "image": "/photos/kitesurf-contre-jour-lagon-le-morne.webp",
-          "alt": "Kitesurferin im Gegenlicht auf der Lagune von Le Morne, Mauritius",
+          "image": "/photos/kitesurf-coucher-de-soleil-ile-maurice.webp",
+          "alt": "Kitesurfer als Silhouette bei Sonnenuntergang auf der Lagune von Le Morne, Mauritius",
           "cta": {
             "label": "Preise ansehen",
             "href": "/de/tarifs/"
@@ -114,14 +119,6 @@
           ]
         },
         {
-          "type": "image",
-          "image": "/photos/banc-de-sable-lagon-le-morne.webp",
-          "alt": "Sandbank und türkisfarbene Lagune von Le Morne aus der Luft, Mauritius",
-          "width": 1600,
-          "height": 1061,
-          "caption": "Die Lagune von Le Morne im Südwesten von Mauritius."
-        },
-        {
           "type": "prose",
           "eyebrow": "Unsere Geschichte",
           "title": "Eine lokale, familiengeführte Schule mit echter Leidenschaft.",
@@ -151,9 +148,18 @@
               "image": "/photos/cours-de-kitesurf-lagon-le-morne.webp",
               "alt": "Kitesurfer auf der Lagune vor dem Berg Le Morne, Mauritius",
               "facts": [
-                { "label": "Dauer", "value": "ab 2 Std." },
-                { "label": "Niveau", "value": "Anfänger → Fortgeschritten" },
-                { "label": "Preis", "value": "ab 80 €/Person" }
+                {
+                  "label": "Dauer",
+                  "value": "ab 2 Std."
+                },
+                {
+                  "label": "Niveau",
+                  "value": "Anfänger → Fortgeschritten"
+                },
+                {
+                  "label": "Preis",
+                  "value": "ab 80 €/Person"
+                }
               ]
             },
             {
@@ -165,31 +171,50 @@
               "alt": "Wingfoiler über der Lagune von Le Morne, Mauritius",
               "position": "center 45%",
               "facts": [
-                { "label": "Dauer", "value": "ab 2 Std." },
-                { "label": "Niveau", "value": "alle Niveaus" },
-                { "label": "Preis", "value": "ab 80 €/Person" }
+                {
+                  "label": "Dauer",
+                  "value": "ab 2 Std."
+                },
+                {
+                  "label": "Niveau",
+                  "value": "alle Niveaus"
+                },
+                {
+                  "label": "Preis",
+                  "value": "ab 80 €/Person"
+                }
               ]
             },
             {
               "title": "Surfen",
-              "body": "Genieße die Wellen von Mauritius mit einem Coaching für jedes Niveau. Je nach Vorhersage wählen wir zwischen mehreren Spots im Süden der Insel, um die besten Bedingungen zu finden.",
+              "body": "Genieße die Wellen von Mauritius mit einem Coaching für jedes Niveau.",
               "href": "/de/surf/",
               "linkLabel": "Surf-Sessions ansehen",
-              "image": "/photos/surf-vague-sud-ile-maurice.webp",
-              "alt": "Surfer auf einer Welle im Süden von Mauritius",
+              "image": "/photos/surf-planche-rose-ile-maurice.webp",
+              "alt": "Surfer trägt sein rosa Board am Strand, Mauritius",
               "facts": [
-                { "label": "Dauer", "value": "1 Std. 30" },
-                { "label": "Niveau", "value": "alle Niveaus" },
-                { "label": "Preis", "value": "60 €" }
+                {
+                  "label": "Dauer",
+                  "value": "1 Std. 30"
+                },
+                {
+                  "label": "Niveau",
+                  "value": "alle Niveaus"
+                },
+                {
+                  "label": "Preis",
+                  "value": "60 €"
+                }
               ]
             }
           ],
-          "id": "disciplines"
+          "id": "disciplines",
+          "lead": "Je nach Vorhersage wählen wir zwischen mehreren Spots im Süden der Insel, um die besten Bedingungen zu finden."
         },
         {
           "type": "image",
-          "image": "/photos/kitesurf-coucher-de-soleil-ile-maurice.webp",
-          "alt": "Kitesurfer bei Sonnenuntergang auf der Lagune von Le Morne, Mauritius",
+          "image": "/photos/kitesurf-contre-jour-lagon-le-morne.webp",
+          "alt": "Kitesurferin im Gegenlicht auf der Lagune von Le Morne, Mauritius",
           "width": 1600,
           "height": 1067
         },
@@ -230,16 +255,68 @@
               "alt": "Aufpumpen eines Kites am Strand von Le Morne, Mauritius"
             },
             {
-              "image": "/photos/galerie-crystal-rock-lagon.webp",
-              "alt": "Crystal Rock mitten in der türkisfarbenen Lagune"
-            },
-            {
               "image": "/photos/galerie-surfeur-au-couchant.webp",
               "alt": "Surfer bei Sonnenuntergang an der Südküste von Mauritius"
             },
             {
-              "image": "/photos/galerie-portrait-eleve.webp",
-              "alt": "Porträt einer Schülerin nach ihrer Session auf der Lagune"
+              "image": "/photos/galerie-eleve-kite-lagon-du-morne.webp",
+              "alt": "Schülerin beim Kitesurfkurs in der Lagune von Le Morne"
+            },
+            {
+              "image": "/photos/galerie-eleve-pilote-son-aile.webp",
+              "alt": "Schülerin steuert ihren Kite in der Lagune von Le Morne"
+            },
+            {
+              "image": "/photos/galerie-depart-a-l-eau-avec-le-moniteur.webp",
+              "alt": "Wasserstart mit dem Lehrer, Lagune von Le Morne"
+            },
+            {
+              "image": "/photos/galerie-moniteur-guide-une-eleve.webp",
+              "alt": "Der Lehrer begleitet eine Schülerin auf dem Board, Lagune von Le Morne"
+            },
+            {
+              "image": "/photos/galerie-groupe-devant-le-morne.webp",
+              "alt": "Gruppe von Schülern und Lehrern vor dem Berg Le Morne"
+            },
+            {
+              "image": "/photos/galerie-aile-rouge-sur-la-plage.webp",
+              "alt": "Roter Kite am Strand von Le Morne"
+            },
+            {
+              "image": "/photos/galerie-mise-en-place-de-l-aile.webp",
+              "alt": "Aufbau des Kites am Strand von Le Morne"
+            },
+            {
+              "image": "/photos/galerie-football-sur-la-plage-du-morne.webp",
+              "alt": "Ein Fußballspiel am Strand von Le Morne am Ende des Tages"
+            },
+            {
+              "image": "/photos/galerie-pause-sur-la-plage-du-morne.webp",
+              "alt": "Pause am Strand von Le Morne zwischen zwei Sessions"
+            },
+            {
+              "image": "/photos/galerie-moniteur-et-son-fils-le-morne.webp",
+              "alt": "Ein Born-To-Kite-Lehrer und sein Sohn am Spot von Le Morne"
+            },
+            {
+              "image": "/photos/galerie-eleve-et-monitrice-le-morne.webp",
+              "alt": "Schülerin und Lehrerin vor dem Berg Le Morne"
+            },
+            {
+              "image": "/photos/galerie-apres-la-session-le-morne.webp",
+              "alt": "Schülerin und Lehrer nach der Session, Strand von Le Morne"
+            },
+            {
+              "image": "/photos/galerie-aile-gonflee-sur-la-plage.webp",
+              "alt": "Aufgepumpter Kite am Strand von Le Morne"
+            },
+            {
+              "image": "/photos/galerie-avant-la-mise-a-l-eau.webp",
+              "alt": "Besprechung vor dem Wasserstart, Strand von Le Morne"
+            },
+            {
+              "image": "/photos/galerie-briefing-au-sol-le-morne.webp",
+              "alt": "Einweisung an Land mit dem Lehrer, Strand von Le Morne"
             }
           ],
           "id": "galerie"
@@ -276,7 +353,8 @@
               "text": "Expérience incroyable. Merci merci merci"
             }
           ],
-          "id": "avis"
+          "id": "avis",
+          "liveLabel": "Google-Bewertungen live anzeigen"
         },
         {
           "type": "cta",
@@ -366,6 +444,13 @@
               ]
             },
             {
+              "name": "Fortgeschrittene & Sprünge",
+              "detail": "Für selbstständige Fahrer, die den nächsten Schritt gehen wollen.",
+              "lines": [
+                "40 €/Std."
+              ]
+            },
+            {
               "name": "Betreuung",
               "detail": "Du fährst bereits selbstständig? Fahre unter Aufsicht der Schule.",
               "lines": [
@@ -426,6 +511,13 @@
               "detail": "Eine betreute 90-minütige Session mit Ausrüstung.",
               "lines": [
                 "60 € — 1 h 30"
+              ]
+            },
+            {
+              "name": "Session in den Wellen",
+              "detail": "Am Spot von Le Morne.",
+              "lines": [
+                "50 €/Std."
               ]
             }
           ]
@@ -598,8 +690,8 @@
         },
         {
           "type": "gallery",
-          "eyebrow": "Mauritius",
-          "heading": "Le Morne und seine Lagune.",
+          "eyebrow": "Galerie",
+          "heading": "Mauritius.",
           "items": [
             {
               "image": "/photos/banc-de-sable-lagon-le-morne.webp",
@@ -614,9 +706,100 @@
               "alt": "Der Berg Le Morne von der Lagune aus gesehen"
             },
             {
-              "image": "/photos/groupe-eleves-kite-le-morne.webp",
-              "alt": "Ritik und eine Gruppe von Schülern vor dem Berg Le Morne",
-              "position": "center 70%"
+              "image": "/photos/excursion-cascade-sud-ile-maurice.webp",
+              "alt": "Baden unter einem Wasserfall im Süden von Mauritius"
+            },
+            {
+              "image": "/photos/excursion-pecheur-et-chien-ile-maurice.webp",
+              "alt": "Fischer und Hund an einem Strand auf Mauritius"
+            },
+            {
+              "image": "/photos/excursion-ilot-rocheux-lagon-ile-maurice.webp",
+              "alt": "Felseninsel mitten in der Lagune, Mauritius"
+            },
+            {
+              "image": "/photos/excursion-dauphin-au-large-ile-maurice.webp",
+              "alt": "Delfinflosse an der Oberfläche vor Mauritius"
+            },
+            {
+              "image": "/photos/excursion-pecheur-au-couchant-ile-maurice.webp",
+              "alt": "Angler bei Sonnenuntergang, Mauritius"
+            },
+            {
+              "image": "/photos/excursion-navire-au-large-au-couchant.webp",
+              "alt": "Schiff auf See bei Sonnenuntergang, Mauritius"
+            },
+            {
+              "image": "/photos/excursion-pirogues-au-bord-du-lagon.webp",
+              "alt": "Fischerboote am Rand der Lagune, Mauritius"
+            },
+            {
+              "image": "/photos/excursion-eglise-cap-malheureux.webp",
+              "alt": "Die Kirche mit rotem Dach in Cap Malheureux, Mauritius"
+            },
+            {
+              "image": "/photos/excursion-pirogue-devant-le-coin-de-mire.webp",
+              "alt": "Fischerboot vor der Insel Coin de Mire, Mauritius"
+            },
+            {
+              "image": "/photos/excursion-plage-du-nord-ile-maurice.webp",
+              "alt": "Familien an einem Strand im Norden von Mauritius"
+            },
+            {
+              "image": "/photos/excursion-preparation-de-la-planche.webp",
+              "alt": "Vorbereitung eines Boards am Rand der Lagune, Mauritius"
+            },
+            {
+              "image": "/photos/excursion-pirogue-drapeau-mauricien.webp",
+              "alt": "Fischerboot mit mauritischer Flagge auf der Lagune"
+            },
+            {
+              "image": "/photos/excursion-crystal-rock-lagon-turquoise.webp",
+              "alt": "Crystal Rock, ein einzelner Fels mitten in der türkisfarbenen Lagune"
+            },
+            {
+              "image": "/photos/excursion-peche-a-la-ligne-dans-le-lagon.webp",
+              "alt": "Angeln in der Lagune, Mauritius"
+            },
+            {
+              "image": "/photos/excursion-pecheur-sur-un-ponton.webp",
+              "alt": "Fischer auf einem Steg mit Blick auf die Lagune, Mauritius"
+            },
+            {
+              "image": "/photos/excursion-paniers-tresses-ile-maurice.webp",
+              "alt": "Bunte geflochtene Körbe, mauritisches Handwerk"
+            },
+            {
+              "image": "/photos/excursion-visiteurs-sur-la-plage.webp",
+              "alt": "Besucher an einem Strand auf Mauritius"
+            },
+            {
+              "image": "/photos/excursion-coucher-de-soleil-sur-la-plage.webp",
+              "alt": "Silhouetten vor dem Sonnenuntergang am Strand, Mauritius"
+            },
+            {
+              "image": "/photos/excursion-enfant-sur-la-plage.webp",
+              "alt": "Kind am Strand, Mauritius"
+            },
+            {
+              "image": "/photos/excursion-statue-de-shiva-grand-bassin.webp",
+              "alt": "Shiva-Statue in Grand Bassin, Mauritius"
+            },
+            {
+              "image": "/photos/excursion-au-bord-du-lagon.webp",
+              "alt": "Am Rand der Lagune, Mauritius"
+            },
+            {
+              "image": "/photos/excursion-etoile-de-mer-noir-et-blanc.webp",
+              "alt": "Seestern in der Lagune, in Schwarz-Weiß"
+            },
+            {
+              "image": "/photos/excursion-le-morne-noir-et-blanc.webp",
+              "alt": "Der Berg Le Morne in Schwarz-Weiß, Mauritius"
+            },
+            {
+              "image": "/photos/excursion-pirogue-devant-le-morne-noir-et-blanc.webp",
+              "alt": "Fischerboot vor dem Berg Le Morne, in Schwarz-Weiß"
             }
           ]
         },
@@ -670,6 +853,13 @@
                 "6 h — 230 €/Person",
                 "8 h — 300 €/Person",
                 "10 h — 380 €/Person"
+              ]
+            },
+            {
+              "name": "Fortgeschrittene & Sprünge",
+              "detail": "Für selbstständige Fahrer, die den nächsten Schritt gehen wollen.",
+              "lines": [
+                "40 €/Std."
               ]
             }
           ]
@@ -865,15 +1055,15 @@
           "title": "Betreute Surf-Sessions im Süden von Mauritius",
           "aValider": true,
           "body": [
-            "Genieße die Wellen von Mauritius mit einem Coaching für jedes Niveau. Je nach Vorhersage wählen wir zwischen mehreren Spots im Süden der Insel, um die besten Bedingungen zu finden."
+            "Genieße die Wellen von Mauritius mit einem Coaching für jedes Niveau."
           ]
         },
         {
           "type": "image",
-          "image": "/photos/surf-vague-sud-ile-maurice.webp",
-          "alt": "Surfer auf einer Welle im Süden von Mauritius",
-          "width": 1000,
-          "height": 750
+          "image": "/photos/surf-planche-rose-ile-maurice.webp",
+          "alt": "Surfer trägt sein rosa Board am Strand, Mauritius",
+          "width": 1600,
+          "height": 1067
         },
         {
           "type": "prices",
@@ -884,6 +1074,13 @@
               "detail": "Eine betreute 90-minütige Session mit Ausrüstung.",
               "lines": [
                 "60 € — 1 h 30"
+              ]
+            },
+            {
+              "name": "Session in den Wellen",
+              "detail": "Am Spot von Le Morne.",
+              "lines": [
+                "50 €/Std."
               ]
             }
           ]
@@ -1009,10 +1206,10 @@
         },
         {
           "type": "image",
-          "image": "/photos/kitesurf-coucher-de-soleil-ile-maurice.webp",
-          "alt": "Kitesurfer bei Sonnenuntergang auf der Lagune von Le Morne",
+          "image": "/photos/banc-de-sable-lagon-le-morne.webp",
+          "alt": "Sandbank und türkisfarbene Lagune von Le Morne aus der Luft, Mauritius",
           "width": 1600,
-          "height": 1067
+          "height": 1061
         },
         {
           "type": "cta",

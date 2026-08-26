@@ -7,7 +7,7 @@ const full = block.full !== false;
 ---
 <figure class={full ? "fig full" : "fig held"} data-reveal={full ? "zoom" : (index % 2 === 0 ? "tiltl" : "tiltr")}>
   {block.video ? (
-    <video controls playsinline preload="none" poster={block.poster} aria-label={block.alt}>
+    <video autoplay muted loop playsinline preload="auto" poster={block.poster} aria-label={block.alt}>
       <source src={block.video} type="video/mp4" />
     </video>
   ) : (

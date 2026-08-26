@@ -46,7 +46,12 @@
     "perPerson": "per person",
     "skipToContent": "Skip to content",
     "footerLegal": "Legal notice",
-    "footerPrivacy": "Privacy"
+    "footerPrivacy": "Privacy",
+    "consent": {
+      "text": "The Google reviews are provided by a third-party service that sets cookies. The rest of the site uses none.",
+      "accept": "Accept",
+      "decline": "Decline"
+    }
   },
   "pages": [
     {
@@ -59,8 +64,8 @@
           "eyebrow": "Le Morne · Mauritius",
           "title": "Welcome to Mauritius. Learn to fly over the water.",
           "lead": "Born To Kite is a local, family-run kitesurf school founded in January 2026 on Le Morne lagoon. More than ten years of sharing a passion for kitesurfing, with a friendly approach and safety at the centre of every session.",
-          "image": "/photos/kitesurf-contre-jour-lagon-le-morne.webp",
-          "alt": "Kitesurfer silhouetted against the light on Le Morne lagoon, Mauritius",
+          "image": "/photos/kitesurf-coucher-de-soleil-ile-maurice.webp",
+          "alt": "Kitesurfer silhouetted at sunset on Le Morne lagoon, Mauritius",
           "cta": {
             "label": "See prices",
             "href": "/en/tarifs/"
@@ -114,14 +119,6 @@
           ]
         },
         {
-          "type": "image",
-          "image": "/photos/banc-de-sable-lagon-le-morne.webp",
-          "alt": "Aerial view of a sandbank and the turquoise Le Morne lagoon, Mauritius",
-          "width": 1600,
-          "height": 1061,
-          "caption": "Le Morne lagoon, in the south-west of Mauritius."
-        },
-        {
           "type": "prose",
           "eyebrow": "Our story",
           "title": "A local, family-run school built on passion.",
@@ -151,9 +148,18 @@
               "image": "/photos/cours-de-kitesurf-lagon-le-morne.webp",
               "alt": "Kitesurfer on Le Morne lagoon in front of the mountain, Mauritius",
               "facts": [
-                { "label": "Duration", "value": "from 2 h" },
-                { "label": "Level", "value": "beginner → advanced" },
-                { "label": "Price", "value": "from €80/person" }
+                {
+                  "label": "Duration",
+                  "value": "from 2 h"
+                },
+                {
+                  "label": "Level",
+                  "value": "beginner → advanced"
+                },
+                {
+                  "label": "Price",
+                  "value": "from €80/person"
+                }
               ]
             },
             {
@@ -165,31 +171,50 @@
               "alt": "Wingfoiler riding above Le Morne lagoon, Mauritius",
               "position": "center 45%",
               "facts": [
-                { "label": "Duration", "value": "from 2 h" },
-                { "label": "Level", "value": "all levels" },
-                { "label": "Price", "value": "from €80/person" }
+                {
+                  "label": "Duration",
+                  "value": "from 2 h"
+                },
+                {
+                  "label": "Level",
+                  "value": "all levels"
+                },
+                {
+                  "label": "Price",
+                  "value": "from €80/person"
+                }
               ]
             },
             {
               "title": "Surf",
-              "body": "Enjoy the waves of Mauritius with coaching suited to every level. Depending on the forecast, we can choose between several spots in the south of the island to find the best conditions.",
+              "body": "Enjoy the waves of Mauritius with coaching suited to every level.",
               "href": "/en/surf/",
               "linkLabel": "See surf sessions",
-              "image": "/photos/surf-vague-sud-ile-maurice.webp",
-              "alt": "Surfer riding a wave in the south of Mauritius",
+              "image": "/photos/surf-planche-rose-ile-maurice.webp",
+              "alt": "Surfer carrying his pink board on the beach, Mauritius",
               "facts": [
-                { "label": "Duration", "value": "1 h 30" },
-                { "label": "Level", "value": "all levels" },
-                { "label": "Price", "value": "€60" }
+                {
+                  "label": "Duration",
+                  "value": "1 h 30"
+                },
+                {
+                  "label": "Level",
+                  "value": "all levels"
+                },
+                {
+                  "label": "Price",
+                  "value": "€60"
+                }
               ]
             }
           ],
-          "id": "disciplines"
+          "id": "disciplines",
+          "lead": "Depending on the forecast, we can choose between several spots in the south of the island to find the best conditions."
         },
         {
           "type": "image",
-          "image": "/photos/kitesurf-coucher-de-soleil-ile-maurice.webp",
-          "alt": "Kitesurfer at sunset on Le Morne lagoon, Mauritius",
+          "image": "/photos/kitesurf-contre-jour-lagon-le-morne.webp",
+          "alt": "Kitesurfer silhouetted against the light on Le Morne lagoon, Mauritius",
           "width": 1600,
           "height": 1067
         },
@@ -230,16 +255,68 @@
               "alt": "Inflating a kitesurf kite on Le Morne beach, Mauritius"
             },
             {
-              "image": "/photos/galerie-crystal-rock-lagon.webp",
-              "alt": "Crystal Rock in the middle of the turquoise lagoon"
-            },
-            {
               "image": "/photos/galerie-surfeur-au-couchant.webp",
               "alt": "Surfer at sunset on the south coast of Mauritius"
             },
             {
-              "image": "/photos/galerie-portrait-eleve.webp",
-              "alt": "Portrait of a student after her session on the lagoon"
+              "image": "/photos/galerie-eleve-kite-lagon-du-morne.webp",
+              "alt": "Student during a kitesurf lesson in Le Morne lagoon"
+            },
+            {
+              "image": "/photos/galerie-eleve-pilote-son-aile.webp",
+              "alt": "Student flying her kite in Le Morne lagoon"
+            },
+            {
+              "image": "/photos/galerie-depart-a-l-eau-avec-le-moniteur.webp",
+              "alt": "Water start with the instructor, Le Morne lagoon"
+            },
+            {
+              "image": "/photos/galerie-moniteur-guide-une-eleve.webp",
+              "alt": "The instructor guiding a student on the board, Le Morne lagoon"
+            },
+            {
+              "image": "/photos/galerie-groupe-devant-le-morne.webp",
+              "alt": "Group of students and instructors in front of Le Morne mountain"
+            },
+            {
+              "image": "/photos/galerie-aile-rouge-sur-la-plage.webp",
+              "alt": "Red kite laid out on Le Morne beach"
+            },
+            {
+              "image": "/photos/galerie-mise-en-place-de-l-aile.webp",
+              "alt": "Setting up the kite on Le Morne beach"
+            },
+            {
+              "image": "/photos/galerie-football-sur-la-plage-du-morne.webp",
+              "alt": "A game of football on Le Morne beach at the end of the day"
+            },
+            {
+              "image": "/photos/galerie-pause-sur-la-plage-du-morne.webp",
+              "alt": "A break on Le Morne beach between sessions"
+            },
+            {
+              "image": "/photos/galerie-moniteur-et-son-fils-le-morne.webp",
+              "alt": "A Born To Kite instructor and his son at the Le Morne spot"
+            },
+            {
+              "image": "/photos/galerie-eleve-et-monitrice-le-morne.webp",
+              "alt": "Student and instructor in front of Le Morne mountain"
+            },
+            {
+              "image": "/photos/galerie-apres-la-session-le-morne.webp",
+              "alt": "Student and instructor after the session, Le Morne beach"
+            },
+            {
+              "image": "/photos/galerie-aile-gonflee-sur-la-plage.webp",
+              "alt": "Inflated kite on Le Morne beach"
+            },
+            {
+              "image": "/photos/galerie-avant-la-mise-a-l-eau.webp",
+              "alt": "Talking things through before going in, Le Morne beach"
+            },
+            {
+              "image": "/photos/galerie-briefing-au-sol-le-morne.webp",
+              "alt": "Ground briefing with the instructor, Le Morne beach"
             }
           ],
           "id": "galerie"
@@ -276,7 +353,8 @@
               "text": "Expérience incroyable. Merci merci merci"
             }
           ],
-          "id": "avis"
+          "id": "avis",
+          "liveLabel": "Show live Google reviews"
         },
         {
           "type": "cta",
@@ -366,6 +444,13 @@
               ]
             },
             {
+              "name": "Advanced riding & jumps",
+              "detail": "For independent riders ready to step up.",
+              "lines": [
+                "40 €/h"
+              ]
+            },
+            {
               "name": "Supervision",
               "detail": "Already independent? Ride under the school's supervision.",
               "lines": [
@@ -426,6 +511,13 @@
               "detail": "A 90-minute coached session with equipment included.",
               "lines": [
                 "60 € — 1 h 30"
+              ]
+            },
+            {
+              "name": "Session in the waves",
+              "detail": "At the Le Morne spot.",
+              "lines": [
+                "50 €/h"
               ]
             }
           ]
@@ -598,8 +690,8 @@
         },
         {
           "type": "gallery",
-          "eyebrow": "Mauritius",
-          "heading": "Le Morne and its lagoon.",
+          "eyebrow": "Gallery",
+          "heading": "Mauritius.",
           "items": [
             {
               "image": "/photos/banc-de-sable-lagon-le-morne.webp",
@@ -614,9 +706,100 @@
               "alt": "Le Morne mountain seen from the lagoon"
             },
             {
-              "image": "/photos/groupe-eleves-kite-le-morne.webp",
-              "alt": "Ritik and a group of students in front of Le Morne mountain",
-              "position": "center 70%"
+              "image": "/photos/excursion-cascade-sud-ile-maurice.webp",
+              "alt": "Swimming under a waterfall in southern Mauritius"
+            },
+            {
+              "image": "/photos/excursion-pecheur-et-chien-ile-maurice.webp",
+              "alt": "Fisherman and dog on a Mauritian beach"
+            },
+            {
+              "image": "/photos/excursion-ilot-rocheux-lagon-ile-maurice.webp",
+              "alt": "Rocky islet in the middle of the lagoon, Mauritius"
+            },
+            {
+              "image": "/photos/excursion-dauphin-au-large-ile-maurice.webp",
+              "alt": "Dolphin fin breaking the surface off Mauritius"
+            },
+            {
+              "image": "/photos/excursion-pecheur-au-couchant-ile-maurice.webp",
+              "alt": "Angler at sunset, Mauritius"
+            },
+            {
+              "image": "/photos/excursion-navire-au-large-au-couchant.webp",
+              "alt": "Ship offshore at sunset, Mauritius"
+            },
+            {
+              "image": "/photos/excursion-pirogues-au-bord-du-lagon.webp",
+              "alt": "Fishing boats at the edge of the lagoon, Mauritius"
+            },
+            {
+              "image": "/photos/excursion-eglise-cap-malheureux.webp",
+              "alt": "The red-roofed church of Cap Malheureux, Mauritius"
+            },
+            {
+              "image": "/photos/excursion-pirogue-devant-le-coin-de-mire.webp",
+              "alt": "Fishing boat anchored in front of Coin de Mire island, Mauritius"
+            },
+            {
+              "image": "/photos/excursion-plage-du-nord-ile-maurice.webp",
+              "alt": "Families on a beach in northern Mauritius"
+            },
+            {
+              "image": "/photos/excursion-preparation-de-la-planche.webp",
+              "alt": "Getting a board ready at the edge of the lagoon, Mauritius"
+            },
+            {
+              "image": "/photos/excursion-pirogue-drapeau-mauricien.webp",
+              "alt": "Fishing boat flying the Mauritian flag on the lagoon"
+            },
+            {
+              "image": "/photos/excursion-crystal-rock-lagon-turquoise.webp",
+              "alt": "Crystal Rock, a lone rock in the middle of the turquoise lagoon"
+            },
+            {
+              "image": "/photos/excursion-peche-a-la-ligne-dans-le-lagon.webp",
+              "alt": "Line fishing in the lagoon, Mauritius"
+            },
+            {
+              "image": "/photos/excursion-pecheur-sur-un-ponton.webp",
+              "alt": "Fisherman on a jetty facing the lagoon, Mauritius"
+            },
+            {
+              "image": "/photos/excursion-paniers-tresses-ile-maurice.webp",
+              "alt": "Colourful woven baskets, Mauritian craft"
+            },
+            {
+              "image": "/photos/excursion-visiteurs-sur-la-plage.webp",
+              "alt": "Visitors on a beach in Mauritius"
+            },
+            {
+              "image": "/photos/excursion-coucher-de-soleil-sur-la-plage.webp",
+              "alt": "Silhouettes facing the sunset on the beach, Mauritius"
+            },
+            {
+              "image": "/photos/excursion-enfant-sur-la-plage.webp",
+              "alt": "Child on the beach, Mauritius"
+            },
+            {
+              "image": "/photos/excursion-statue-de-shiva-grand-bassin.webp",
+              "alt": "Statue of Shiva at Grand Bassin, Mauritius"
+            },
+            {
+              "image": "/photos/excursion-au-bord-du-lagon.webp",
+              "alt": "At the edge of the lagoon, Mauritius"
+            },
+            {
+              "image": "/photos/excursion-etoile-de-mer-noir-et-blanc.webp",
+              "alt": "Starfish in the lagoon, in black and white"
+            },
+            {
+              "image": "/photos/excursion-le-morne-noir-et-blanc.webp",
+              "alt": "Le Morne mountain in black and white, Mauritius"
+            },
+            {
+              "image": "/photos/excursion-pirogue-devant-le-morne-noir-et-blanc.webp",
+              "alt": "Fishing boat in front of Le Morne mountain, in black and white"
             }
           ]
         },
@@ -670,6 +853,13 @@
                 "6 h — 230 €/person",
                 "8 h — 300 €/person",
                 "10 h — 380 €/person"
+              ]
+            },
+            {
+              "name": "Advanced riding & jumps",
+              "detail": "For independent riders ready to step up.",
+              "lines": [
+                "40 €/h"
               ]
             }
           ]
@@ -865,15 +1055,15 @@
           "title": "Coached surf sessions in southern Mauritius",
           "aValider": true,
           "body": [
-            "Enjoy the waves of Mauritius with coaching suited to every level. Depending on the forecast, we can choose between several spots in the south of the island to find the best conditions."
+            "Enjoy the waves of Mauritius with coaching suited to every level."
           ]
         },
         {
           "type": "image",
-          "image": "/photos/surf-vague-sud-ile-maurice.webp",
-          "alt": "Surfer riding a wave in the south of Mauritius",
-          "width": 1000,
-          "height": 750
+          "image": "/photos/surf-planche-rose-ile-maurice.webp",
+          "alt": "Surfer carrying his pink board on the beach, Mauritius",
+          "width": 1600,
+          "height": 1067
         },
         {
           "type": "prices",
@@ -884,6 +1074,13 @@
               "detail": "A 90-minute coached session with equipment included.",
               "lines": [
                 "60 € — 1 h 30"
+              ]
+            },
+            {
+              "name": "Session in the waves",
+              "detail": "At the Le Morne spot.",
+              "lines": [
+                "50 €/h"
               ]
             }
           ]
@@ -1009,10 +1206,10 @@
         },
         {
           "type": "image",
-          "image": "/photos/kitesurf-coucher-de-soleil-ile-maurice.webp",
-          "alt": "Kitesurfer at sunset on Le Morne lagoon",
+          "image": "/photos/banc-de-sable-lagon-le-morne.webp",
+          "alt": "Aerial view of a sandbank and the turquoise Le Morne lagoon, Mauritius",
           "width": 1600,
-          "height": 1067
+          "height": 1061
         },
         {
           "type": "cta",
