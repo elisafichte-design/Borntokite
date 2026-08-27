@@ -871,6 +871,10 @@
               "alt": "Aileron de dauphin à la surface, au large de l'île Maurice"
             },
             {
+              "image": "/photos/excursion-etoile-de-mer-noir-et-blanc.webp",
+              "alt": "Étoile de mer dans le lagon, en noir et blanc"
+            },
+            {
               "image": "/photos/excursion-pecheur-au-couchant-ile-maurice.webp",
               "alt": "Pêcheur à la ligne au coucher du soleil, île Maurice"
             },
@@ -893,6 +897,10 @@
             {
               "image": "/photos/excursion-plage-du-nord-ile-maurice.webp",
               "alt": "Familles sur une plage du nord de l'île Maurice"
+            },
+            {
+              "image": "/photos/excursion-le-morne-noir-et-blanc.webp",
+              "alt": "La montagne du Morne en noir et blanc, île Maurice"
             },
             {
               "image": "/photos/excursion-preparation-de-la-planche.webp",
@@ -919,6 +927,10 @@
               "alt": "Paniers tressés colorés, artisanat mauricien"
             },
             {
+              "image": "/photos/excursion-pirogue-devant-le-morne-noir-et-blanc.webp",
+              "alt": "Pirogue devant la montagne du Morne, en noir et blanc"
+            },
+            {
               "image": "/photos/excursion-visiteurs-sur-la-plage.webp",
               "alt": "Visiteurs sur une plage de l'île Maurice"
             },
@@ -937,18 +949,6 @@
             {
               "image": "/photos/excursion-au-bord-du-lagon.webp",
               "alt": "Au bord du lagon, île Maurice"
-            },
-            {
-              "image": "/photos/excursion-etoile-de-mer-noir-et-blanc.webp",
-              "alt": "Étoile de mer dans le lagon, en noir et blanc"
-            },
-            {
-              "image": "/photos/excursion-le-morne-noir-et-blanc.webp",
-              "alt": "La montagne du Morne en noir et blanc, île Maurice"
-            },
-            {
-              "image": "/photos/excursion-pirogue-devant-le-morne-noir-et-blanc.webp",
-              "alt": "Pirogue devant la montagne du Morne, en noir et blanc"
             }
           ]
         },
@@ -1443,8 +1443,7 @@
         {
           "type": "cta",
           "title": "Prêt à voler sur l'eau ?",
-          "body": "Écrivez-nous sur WhatsApp ou suivez nos sessions sur Instagram — réponse rapide garantie.",
-          "image": "/photos/kitesurf-figure-coucher-de-soleil-le-morne.webp"
+          "body": "Écrivez-nous sur WhatsApp ou suivez nos sessions sur Instagram — réponse rapide garantie."
         }
       ]
     },

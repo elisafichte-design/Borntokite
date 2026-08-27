@@ -748,6 +748,10 @@
               "alt": "Delfinflosse an der Oberfläche vor Mauritius"
             },
             {
+              "image": "/photos/excursion-etoile-de-mer-noir-et-blanc.webp",
+              "alt": "Seestern in der Lagune, in Schwarz-Weiß"
+            },
+            {
               "image": "/photos/excursion-pecheur-au-couchant-ile-maurice.webp",
               "alt": "Angler bei Sonnenuntergang, Mauritius"
             },
@@ -770,6 +774,10 @@
             {
               "image": "/photos/excursion-plage-du-nord-ile-maurice.webp",
               "alt": "Familien an einem Strand im Norden von Mauritius"
+            },
+            {
+              "image": "/photos/excursion-le-morne-noir-et-blanc.webp",
+              "alt": "Der Berg Le Morne in Schwarz-Weiß, Mauritius"
             },
             {
               "image": "/photos/excursion-preparation-de-la-planche.webp",
@@ -796,6 +804,10 @@
               "alt": "Bunte geflochtene Körbe, mauritisches Handwerk"
             },
             {
+              "image": "/photos/excursion-pirogue-devant-le-morne-noir-et-blanc.webp",
+              "alt": "Fischerboot vor dem Berg Le Morne, in Schwarz-Weiß"
+            },
+            {
               "image": "/photos/excursion-visiteurs-sur-la-plage.webp",
               "alt": "Besucher an einem Strand auf Mauritius"
             },
@@ -814,18 +826,6 @@
             {
               "image": "/photos/excursion-au-bord-du-lagon.webp",
               "alt": "Am Rand der Lagune, Mauritius"
-            },
-            {
-              "image": "/photos/excursion-etoile-de-mer-noir-et-blanc.webp",
-              "alt": "Seestern in der Lagune, in Schwarz-Weiß"
-            },
-            {
-              "image": "/photos/excursion-le-morne-noir-et-blanc.webp",
-              "alt": "Der Berg Le Morne in Schwarz-Weiß, Mauritius"
-            },
-            {
-              "image": "/photos/excursion-pirogue-devant-le-morne-noir-et-blanc.webp",
-              "alt": "Fischerboot vor dem Berg Le Morne, in Schwarz-Weiß"
             }
           ]
         },
@@ -1320,8 +1320,7 @@
         {
           "type": "cta",
           "title": "Bereit, über das Wasser zu fliegen?",
-          "body": "Schreib uns auf WhatsApp oder folge unseren Sessions auf Instagram. Wir antworten schnell.",
-          "image": "/photos/kitesurf-figure-coucher-de-soleil-le-morne.webp"
+          "body": "Schreib uns auf WhatsApp oder folge unseren Sessions auf Instagram. Wir antworten schnell."
         }
       ]
     },
