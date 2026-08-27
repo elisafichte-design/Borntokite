@@ -1,4 +1,5 @@
 ---
+import Icon from "../Icon.astro";
 const { block } = Astro.props;
 ---
 <section class="section">
@@ -7,7 +8,7 @@ const { block } = Astro.props;
     <div class="list">
       {block.items.map((i, index) => (
         <details data-reveal="1" data-delay={index * 70}>
-          <summary>{i.q}</summary>
+          <summary><span class="q">{i.icon && <span class="ico"><Icon name={i.icon} size={19} /></span>}{i.q}</span></summary>
           <p class="muted">{i.a}</p>
         </details>
       ))}
@@ -16,6 +17,10 @@ const { block } = Astro.props;
 </section>
 <style>
   .list { margin-top: var(--space-5); }
+  .q { display: inline-flex; align-items: center; }
+  /* L icône est posée par un composant enfant : on la cale depuis son
+     enveloppe, la portée des styles ne traverse pas les composants. */
+  .ico { display: inline-flex; color: var(--ink-faint); margin-right: var(--space-3); }
   details { border-bottom: 1px solid var(--line); padding-block: var(--space-4); }
   summary { cursor: pointer; font-weight: var(--weight-medium); list-style: none; display: flex; justify-content: space-between; gap: var(--space-4); }
   summary::-webkit-details-marker { display: none; }

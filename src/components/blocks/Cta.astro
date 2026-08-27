@@ -1,5 +1,6 @@
 ---
 import site from "../../data/site.json";
+import Icon from "../Icon.astro";
 const { block, ui } = Astro.props;
 const message = block.message ? `?text=${encodeURIComponent(block.message)}` : "";
 const href = block.href || `https://wa.me/${site.whatsappClean}${message}`;
@@ -9,6 +10,7 @@ const isWhatsApp = href.startsWith("https://wa.me/");
   {block.image && <img class="bg" src={block.image} alt="" width="1600" height="1067" loading="lazy" decoding="async" data-reveal="zoom" />}
   {block.image && <div class="veil" aria-hidden="true"></div>}
   <div class="container narrow box" data-reveal="1">
+    {block.icon && <span class="icon"><Icon name={block.icon} size={24} /></span>}
     {block.eyebrow && <p class="eyebrow">{block.eyebrow}</p>}
     <h2>{block.title}</h2>
     {block.body && <p class="muted body">{block.body}</p>}
@@ -30,6 +32,8 @@ const isWhatsApp = href.startsWith("https://wa.me/");
   /* Piste A : pas de carte, pas d'ombre. Le bloc est délimité par deux filets. */
   .box { position: relative; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding-block: var(--space-7); }
   .eyebrow + h2 { margin-top: var(--space-4); }
+  .icon { display: block; color: var(--ink-faint); margin-bottom: var(--space-3); }
+  .photo .icon, .featured .icon { color: var(--line); }
   .body { margin-top: var(--space-4); max-width: 46ch; }
   .btn { margin-top: var(--space-6); }
   .featured { background: var(--ink); }

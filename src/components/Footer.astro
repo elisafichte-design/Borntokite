@@ -1,5 +1,6 @@
 ---
 import site from "../data/site.json";
+import Icon from "./Icon.astro";
 const { lang, ui, nav = [] } = Astro.props;
 const base = lang === site.defaultLocale ? "" : `/${lang}`;
 const year = 2026;
@@ -35,9 +36,9 @@ const mapsUrl = site.sameAs?.find((url) => url.includes("maps.google"));
         WhatsApp
       </a>
       <ul class="footer-links contact-links">
-        <li><a href={`mailto:${site.email}`}>{site.email}</a></li>
-        {site.instagram && <li><a href={`https://instagram.com/${site.instagram}`} target="_blank" rel="noopener">@{site.instagram}</a></li>}
-        {mapsUrl && <li><a href={mapsUrl} target="_blank" rel="noopener">{copy.map}</a></li>}
+        <li><a href={`mailto:${site.email}`}><Icon name="mail" size={17} />{site.email}</a></li>
+        {site.instagram && <li><a href={`https://instagram.com/${site.instagram}`} target="_blank" rel="noopener"><Icon name="instagram" size={17} />@{site.instagram}</a></li>}
+        {mapsUrl && <li><a href={mapsUrl} target="_blank" rel="noopener"><Icon name="map" size={17} />{copy.map}</a></li>}
       </ul>
     </div>
   </div>
@@ -47,6 +48,8 @@ const mapsUrl = site.sameAs?.find((url) => url.includes("maps.google"));
   </div>
 </footer>
 <style>
+  .contact-links a { display: inline-flex; align-items: center; gap: var(--space-2); }
+  .contact-links :global(.btk-icon) { color: var(--ink-faint); }
   footer { border-top: 1px solid var(--line); padding-block: var(--space-8) var(--space-6); }
   .inner { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-7); }
   .inner img { width: 160px; height: auto; }

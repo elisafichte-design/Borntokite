@@ -51,6 +51,10 @@
       "text": "Les avis Google sont fournis par un service tiers qui dépose des cookies. Le reste du site n'en utilise aucun.",
       "accept": "Accepter",
       "decline": "Refuser"
+    },
+    "sound": {
+      "on": "Activer le son",
+      "off": "Couper le son"
     }
   },
   "pages": [
@@ -98,6 +102,14 @@
             {
               "id": "faq",
               "label": "Questions"
+            },
+            {
+              "href": "/tarifs/#shoot",
+              "label": "Shoot ton ride"
+            },
+            {
+              "href": "/carte-cadeau/",
+              "label": "Cadeau"
             }
           ]
         },
@@ -109,8 +121,8 @@
               "label": "années d'expérience en kitesurf"
             },
             {
-              "value": "5,0",
-              "label": "sur 31 avis Google"
+              "value": "5/5",
+              "label": "note sur Google"
             },
             {
               "value": "2026",
@@ -145,8 +157,8 @@
               "body": "De l'initiation aux figures avancées, sur l'un des plus beaux spots de l'océan Indien.",
               "href": "/cours-de-kitesurf/",
               "linkLabel": "Voir les cours de kitesurf",
-              "image": "/photos/cours-de-kitesurf-lagon-le-morne.webp",
-              "alt": "Kitesurfeur sur le lagon du Morne devant la montagne, île Maurice",
+              "image": "/photos/kitesurf-ailes-au-dessus-du-lagon.webp",
+              "alt": "Ailes de kitesurf au-dessus du lagon, devant les montagnes de l île Maurice",
               "facts": [
                 {
                   "label": "Durée",
@@ -213,10 +225,10 @@
         },
         {
           "type": "image",
-          "image": "/photos/kitesurf-contre-jour-lagon-le-morne.webp",
-          "alt": "Kitesurfeuse en contre-jour sur le lagon du Morne, île Maurice",
-          "width": 1600,
-          "height": 1067
+          "image": "/photos/kitesurf-saut-ciel-le-morne.webp",
+          "alt": "Kitesurfeur en plein saut au-dessus du lagon, île Maurice",
+          "width": 1440,
+          "height": 960
         },
         {
           "type": "weather",
@@ -225,7 +237,7 @@
           "spot": 118,
           "loadLabel": "Afficher les prévisions Windguru",
           "note": "Le module affiche AROME-FR 2,5 km pour une prévision locale détaillée à court terme. Pour les prévisions plus longues, consultez",
-          "liveLabel": "Voir la météo du jour sur Instagram",
+          "liveLabel": "La météo en direct avec Ritik",
           "liveHref": "https://www.instagram.com/born_to_kite_/",
           "id": "meteo"
         },
@@ -325,7 +337,7 @@
           "type": "reviews",
           "eyebrow": "Avis clients",
           "heading": "Ce que disent nos élèves.",
-          "source": "5,0 sur 31 avis Google, reproduits mot pour mot.",
+          "source": "5/5 sur Google, avis reproduits mot pour mot.",
           "sourceLabel": "Voir tous les avis sur Google",
           "items": [
             {
@@ -362,8 +374,8 @@
           "body": "Une carte cadeau Born To Kite, c'est offrir un souvenir sur le lagon du Morne — cours, stage, ou session VIP, à choisir selon l'envie.",
           "label": "Découvrir la carte cadeau",
           "href": "/carte-cadeau/",
-          "featured": true,
-          "eyebrow": "Carte cadeau"
+          "eyebrow": "Carte cadeau",
+          "image": "/photos/banc-de-sable-lagon-le-morne.webp"
         },
         {
           "type": "prose",
@@ -537,11 +549,21 @@
           ]
         },
         {
+          "type": "cta",
+          "eyebrow": "Photos et vidéos",
+          "title": "Repartez avec les images de votre session.",
+          "body": "Une photographe suit régulièrement les sessions, depuis la plage ou depuis l'eau. Vous repartez avec de vraies photos, pas seulement des souvenirs. À demander au moment de la réservation, selon disponibilité.",
+          "label": "Voir son travail sur Instagram",
+          "href": "https://www.instagram.com/eliminolta/",
+          "icon": "camera",
+          "id": "shoot"
+        },
+        {
           "type": "image",
-          "image": "/photos/bateau-ecole-le-morne-noir-et-blanc.webp",
-          "alt": "Bateau de l'école devant la montagne du Morne, île Maurice",
-          "width": 1400,
-          "height": 933
+          "image": "/photos/kitesurf-contre-jour-lagon-le-morne.webp",
+          "alt": "Kitesurfeuse en contre-jour sur le lagon du Morne, île Maurice",
+          "width": 1600,
+          "height": 1067
         },
         {
           "type": "cta",
@@ -567,10 +589,10 @@
         },
         {
           "type": "image",
-          "image": "/photos/montagne-du-morne-vue-du-lagon.webp",
-          "alt": "La montagne du Morne vue depuis le lagon, île Maurice",
+          "image": "/photos/le-morne-vu-du-ciel-ile-maurice.webp",
+          "alt": "Le Morne et son lagon vus du ciel, île Maurice",
           "width": 1600,
-          "height": 1061
+          "height": 1067
         },
         {
           "type": "spotsmap",
@@ -702,7 +724,8 @@
           "body": [
             "Sur le Morne, le vent dominant est le sud-est (les alizés), généralement plus fort en début d'après-midi. Nos moniteurs vérifient les conditions avant chaque session et adaptent la taille du matériel à la force du vent et à votre niveau.",
             "Le lagon du Morne est protégé par la barrière de corail : l'eau y est plate, sans grosse vague, ce qui en fait un spot idéal pour apprendre."
-          ]
+          ],
+          "icon": "wind"
         },
         {
           "type": "cards",
@@ -712,21 +735,25 @@
           "items": [
             {
               "title": "Le vent",
-              "body": "Sur le Morne, le vent dominant est le sud-est (les alizés), généralement plus fort en début d'après-midi."
+              "body": "Sur le Morne, le vent dominant est le sud-est (les alizés), généralement plus fort en début d'après-midi.",
+              "icon": "wind"
             },
             {
               "title": "Les vagues",
-              "body": "L'intérieur du lagon reste plat — les vagues surfables se trouvent au large, hors du récif, encadrées selon le niveau de chacun."
+              "body": "L'intérieur du lagon reste plat — les vagues surfables se trouvent au large, hors du récif, encadrées selon le niveau de chacun.",
+              "icon": "wave"
             },
             {
               "title": "Sécurité",
-              "body": "Savoir nager est indispensable. Respectez la priorité du surfeur déjà sur la vague et gardez vos distances avec les autres pratiquants."
+              "body": "Savoir nager est indispensable. Respectez la priorité du surfeur déjà sur la vague et gardez vos distances avec les autres pratiquants.",
+              "icon": "shield"
             }
           ]
         },
         {
           "type": "windmonths",
-          "data": "fr"
+          "data": "fr",
+          "lead": "Les conditions observées par l’école pour choisir la période la plus adaptée à votre niveau. Ces repères valent pour le kitesurf : en wingfoil, moins de nœuds sont nécessaires."
         },
         {
           "type": "prose",
@@ -741,11 +768,10 @@
         },
         {
           "type": "image",
-          "image": "/photos/kites-et-arc-en-ciel-spot-du-morne.webp",
+          "image": "/photos/spot-arc-en-ciel-le-morne.webp",
           "alt": "Ailes de kitesurf posées sur le spot du Morne sous un arc-en-ciel, île Maurice",
-          "width": 1200,
-          "height": 1600,
-          "full": false,
+          "width": 1600,
+          "height": 1067,
           "caption": "Le spot de lancement, côté lagon."
         },
         {
@@ -754,15 +780,18 @@
           "items": [
             {
               "q": "Priorité au rider sous le vent",
-              "a": "Le rider situé sous le vent (downwind) est toujours prioritaire."
+              "a": "Le rider situé sous le vent (downwind) est toujours prioritaire.",
+              "icon": "wind"
             },
             {
               "q": "Ne jamais couper une ligne",
-              "a": "Ne passez jamais entre un rider et son kite, ni au-dessus de ses lignes."
+              "a": "Ne passez jamais entre un rider et son kite, ni au-dessus de ses lignes.",
+              "icon": "nocross"
             },
             {
               "q": "Anticipez, communiquez",
-              "a": "En cas de doute, ralentissez et laissez la priorité."
+              "a": "En cas de doute, ralentissez et laissez la priorité.",
+              "icon": "chat"
             }
           ]
         }
@@ -789,12 +818,13 @@
           "spot": 118,
           "loadLabel": "Afficher les prévisions Windguru",
           "note": "Le module affiche AROME-FR 2,5 km pour une prévision locale détaillée à court terme. Pour les prévisions plus longues, consultez",
-          "liveLabel": "Voir la météo du jour de Ritik sur Instagram",
+          "liveLabel": "La météo en direct avec Ritik",
           "liveHref": "https://www.instagram.com/born_to_kite_/"
         },
         {
           "type": "windmonths",
-          "data": "fr"
+          "data": "fr",
+          "lead": "Les conditions observées par l’école pour choisir la période la plus adaptée à votre niveau. Ces repères valent pour le kitesurf : en wingfoil, moins de nœuds sont nécessaires."
         }
       ]
     },
@@ -816,10 +846,6 @@
           "eyebrow": "Galerie",
           "heading": "L'île Maurice.",
           "items": [
-            {
-              "image": "/photos/banc-de-sable-lagon-le-morne.webp",
-              "alt": "Banc de sable et lagon turquoise du Morne vus du ciel"
-            },
             {
               "image": "/photos/galerie-crystal-rock-lagon.webp",
               "alt": "Crystal Rock au milieu du lagon turquoise"
@@ -927,6 +953,13 @@
           ]
         },
         {
+          "type": "image",
+          "image": "/photos/bateau-ecole-le-morne-noir-et-blanc.webp",
+          "alt": "Bateau au mouillage devant la montagne du Morne, en noir et blanc",
+          "width": 1600,
+          "height": 1067
+        },
+        {
           "type": "cta",
           "title": "Demander une excursion",
           "body": "Dites-nous ce qui vous intéresse et pour combien de personnes, on vous fait une proposition."
@@ -949,10 +982,10 @@
         },
         {
           "type": "image",
-          "image": "/photos/cours-de-kitesurf-lagon-le-morne.webp",
-          "alt": "Kitesurfeur sur le lagon du Morne devant la montagne, île Maurice",
-          "width": 1000,
-          "height": 750
+          "image": "/photos/kitesurf-lagon-turquoise-le-morne.webp",
+          "alt": "Kitesurfeur sur le lagon turquoise du Morne, île Maurice",
+          "width": 1600,
+          "height": 1067
         },
         {
           "type": "prices",
@@ -976,13 +1009,6 @@
                 "6 h — 230 €/pers",
                 "8 h — 300 €/pers",
                 "10 h — 380 €/pers"
-              ]
-            },
-            {
-              "name": "Perfectionnement & sauts",
-              "detail": "Pour riders autonomes qui veulent passer le cap.",
-              "lines": [
-                "40 €/h"
               ]
             }
           ]
@@ -1021,6 +1047,23 @@
           "body": [
             "Vous naviguez déjà en autonomie et vous voulez passer un cap ? Travaillez votre pop, vos rotations, vos grabs et vos réceptions avec un coaching individuel adapté à votre niveau.",
             "Chaque session se concentre sur quelques objectifs précis pour gagner en régularité, corriger les mouvements qui vous bloquent et tenter de nouvelles figures dans des conditions adaptées."
+          ]
+        },
+        {
+          "type": "prices",
+          "items": [
+            {
+              "name": "Perfectionnement sauts",
+              "lines": [
+                "1 h — 40 €"
+              ]
+            },
+            {
+              "name": "Cours dans les vagues",
+              "lines": [
+                "1 h — 50 €"
+              ]
+            }
           ]
         },
         {
@@ -1078,7 +1121,8 @@
         {
           "type": "cta",
           "title": "Prêt à voler sur l'eau ?",
-          "body": "Écrivez-nous sur WhatsApp ou suivez nos sessions sur Instagram — réponse rapide garantie."
+          "body": "Écrivez-nous sur WhatsApp ou suivez nos sessions sur Instagram — réponse rapide garantie.",
+          "image": "/photos/kitesurf-figure-coucher-de-soleil-le-morne.webp"
         }
       ],
       "course": true
@@ -1099,10 +1143,10 @@
         },
         {
           "type": "image",
-          "image": "/photos/wingfoil-le-morne-ile-maurice.webp",
-          "alt": "Élèves préparant une aile de wingfoil sur la plage du Morne, île Maurice",
-          "width": 1000,
-          "height": 750
+          "image": "/photos/wingfoil-le-morne-2026.webp",
+          "alt": "Wingfoil sur le lagon du Morne, île Maurice",
+          "width": 1600,
+          "height": 1067
         },
         {
           "type": "prices",
@@ -1162,7 +1206,8 @@
         {
           "type": "cta",
           "title": "Prêt à voler sur l'eau ?",
-          "body": "Écrivez-nous sur WhatsApp ou suivez nos sessions sur Instagram — réponse rapide garantie."
+          "body": "Écrivez-nous sur WhatsApp ou suivez nos sessions sur Instagram — réponse rapide garantie.",
+          "image": "/photos/kitesurf-figure-coucher-de-soleil-le-morne.webp"
         }
       ],
       "course": true
@@ -1214,7 +1259,8 @@
           "title": "Les vagues",
           "body": [
             "L'intérieur du lagon reste plat — les vagues surfables se trouvent au large, hors du récif, encadrées selon le niveau de chacun."
-          ]
+          ],
+          "icon": "wave"
         },
         {
           "type": "prose",
@@ -1222,12 +1268,14 @@
           "title": "Sécurité",
           "body": [
             "Savoir nager est indispensable. Respectez la priorité du surfeur déjà sur la vague et gardez vos distances avec les autres pratiquants."
-          ]
+          ],
+          "icon": "shield"
         },
         {
           "type": "cta",
           "title": "Prêt à voler sur l'eau ?",
-          "body": "Écrivez-nous sur WhatsApp ou suivez nos sessions sur Instagram — réponse rapide garantie."
+          "body": "Écrivez-nous sur WhatsApp ou suivez nos sessions sur Instagram — réponse rapide garantie.",
+          "image": "/photos/kitesurf-figure-coucher-de-soleil-le-morne.webp"
         }
       ],
       "course": true
@@ -1395,7 +1443,8 @@
         {
           "type": "cta",
           "title": "Prêt à voler sur l'eau ?",
-          "body": "Écrivez-nous sur WhatsApp ou suivez nos sessions sur Instagram — réponse rapide garantie."
+          "body": "Écrivez-nous sur WhatsApp ou suivez nos sessions sur Instagram — réponse rapide garantie.",
+          "image": "/photos/kitesurf-figure-coucher-de-soleil-le-morne.webp"
         }
       ]
     },

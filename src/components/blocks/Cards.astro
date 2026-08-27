@@ -1,6 +1,7 @@
 ---
 // Orientation vers les pages disciplines. Pas de carte au sens graphique :
 // une photo, un titre, une phrase, un lien. Le filet remplace le conteneur.
+import Icon from "../Icon.astro";
 const { block } = Astro.props;
 ---
 <section class="section">
@@ -14,6 +15,7 @@ const { block } = Astro.props;
       {block.items.map((it, index) => it.href ? (
         <a class="item" href={it.href} data-reveal="1" data-delay={index * 140}>
           {it.image && <div class="media"><img src={it.image} alt={it.alt} width="1200" height="900" loading="lazy" decoding="async" style={it.position ? `object-position:${it.position}` : undefined} /></div>}
+          {it.icon && <span class="icon"><Icon name={it.icon} size={22} /></span>}
           <h3>{it.title}</h3>
           {it.body && <p class="muted">{it.body}</p>}
           {it.facts && (
@@ -26,6 +28,7 @@ const { block } = Astro.props;
       ) : (
         <article class="item" data-reveal="1" data-delay={index * 140}>
           {it.image && <div class="media"><img src={it.image} alt={it.alt} width="1200" height="900" loading="lazy" decoding="async" style={it.position ? `object-position:${it.position}` : undefined} /></div>}
+          {it.icon && <span class="icon"><Icon name={it.icon} size={22} /></span>}
           <h3>{it.title}</h3>
           {it.body && <p class="muted">{it.body}</p>}
           {it.facts && (
@@ -55,6 +58,10 @@ const { block } = Astro.props;
   .media { overflow: hidden; background: var(--surface); }
   .item img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
   .item h3 { margin-top: var(--space-4); }
+  /* L'icône se lit comme une majuscule ornée : même encre atténuée que
+     le sur-titre, jamais l'accent, qui reste réservé aux liens. */
+  .icon { display: block; color: var(--ink-faint); }
+  .icon + h3 { margin-top: var(--space-3); }
   .item p { margin-top: var(--space-2); font-size: var(--size-small); }
   /* Écart minimal avant le tableau de repères, que sa marge haute soit
      absorbée ou non par l alignement en bas de carte. */

@@ -51,6 +51,10 @@
       "text": "The Google reviews are provided by a third-party service that sets cookies. The rest of the site uses none.",
       "accept": "Accept",
       "decline": "Decline"
+    },
+    "sound": {
+      "on": "Turn sound on",
+      "off": "Turn sound off"
     }
   },
   "pages": [
@@ -98,6 +102,14 @@
             {
               "id": "faq",
               "label": "Questions"
+            },
+            {
+              "href": "/en/tarifs/#shoot",
+              "label": "Shoot your ride"
+            },
+            {
+              "href": "/en/carte-cadeau/",
+              "label": "Gift card"
             }
           ]
         },
@@ -109,8 +121,8 @@
               "label": "years of kitesurfing experience"
             },
             {
-              "value": "5,0",
-              "label": "from 31 Google reviews"
+              "value": "5/5",
+              "label": "Google rating"
             },
             {
               "value": "2026",
@@ -145,8 +157,8 @@
               "body": "From your first lesson to advanced tricks, on one of the Indian Ocean's most beautiful spots.",
               "href": "/en/cours-de-kitesurf/",
               "linkLabel": "See kitesurf lessons",
-              "image": "/photos/cours-de-kitesurf-lagon-le-morne.webp",
-              "alt": "Kitesurfer on Le Morne lagoon in front of the mountain, Mauritius",
+              "image": "/photos/kitesurf-ailes-au-dessus-du-lagon.webp",
+              "alt": "Kites above the lagoon, with the mountains of Mauritius behind",
               "facts": [
                 {
                   "label": "Duration",
@@ -213,10 +225,10 @@
         },
         {
           "type": "image",
-          "image": "/photos/kitesurf-contre-jour-lagon-le-morne.webp",
-          "alt": "Kitesurfer silhouetted against the light on Le Morne lagoon, Mauritius",
-          "width": 1600,
-          "height": 1067
+          "image": "/photos/kitesurf-saut-ciel-le-morne.webp",
+          "alt": "Kitesurfer mid-jump above the lagoon, Mauritius",
+          "width": 1440,
+          "height": 960
         },
         {
           "type": "weather",
@@ -225,7 +237,7 @@
           "spot": 118,
           "loadLabel": "Show the Windguru forecast",
           "note": "The module displays AROME-FR 2.5 km for a detailed local short-range forecast. For longer-range forecasts, visit",
-          "liveLabel": "See today's weather update on Instagram",
+          "liveLabel": "Live weather updates with Ritik",
           "liveHref": "https://www.instagram.com/born_to_kite_/",
           "id": "meteo"
         },
@@ -325,7 +337,7 @@
           "type": "reviews",
           "eyebrow": "Guest reviews",
           "heading": "What our students say.",
-          "source": "5.0 from 31 Google reviews, shown in their original language.",
+          "source": "5/5 on Google, reviews shown in their original language.",
           "sourceLabel": "See all reviews on Google",
           "items": [
             {
@@ -362,8 +374,8 @@
           "body": "A Born To Kite gift card gives someone a lasting memory on Le Morne lagoon. Choose a lesson, a multi-day course or a VIP session.",
           "label": "Discover the gift card",
           "href": "/en/carte-cadeau/",
-          "featured": true,
-          "eyebrow": "Gift card"
+          "eyebrow": "Gift card",
+          "image": "/photos/banc-de-sable-lagon-le-morne.webp"
         },
         {
           "type": "prose",
@@ -537,11 +549,21 @@
           ]
         },
         {
+          "type": "cta",
+          "eyebrow": "Photos and videos",
+          "title": "Leave with the images of your session.",
+          "body": "A photographer regularly follows the sessions, from the beach or from the water. You leave with real photographs, not just memories. Ask when you book, subject to availability.",
+          "label": "See her work on Instagram",
+          "href": "https://www.instagram.com/eliminolta/",
+          "icon": "camera",
+          "id": "shoot"
+        },
+        {
           "type": "image",
-          "image": "/photos/bateau-ecole-le-morne-noir-et-blanc.webp",
-          "alt": "The school boat in front of Le Morne mountain, Mauritius",
-          "width": 1400,
-          "height": 933
+          "image": "/photos/kitesurf-contre-jour-lagon-le-morne.webp",
+          "alt": "Kitesurfer silhouetted against the light on Le Morne lagoon, Mauritius",
+          "width": 1600,
+          "height": 1067
         },
         {
           "type": "cta",
@@ -567,10 +589,10 @@
         },
         {
           "type": "image",
-          "image": "/photos/montagne-du-morne-vue-du-lagon.webp",
-          "alt": "Le Morne mountain seen from the lagoon, Mauritius",
+          "image": "/photos/le-morne-vu-du-ciel-ile-maurice.webp",
+          "alt": "Le Morne and its lagoon seen from the air, Mauritius",
           "width": 1600,
-          "height": 1061
+          "height": 1067
         },
         {
           "type": "prose",
@@ -579,7 +601,8 @@
           "body": [
             "At Le Morne, the prevailing south-easterly trade wind is generally stronger in the early afternoon. Our instructors check the conditions before every session and choose equipment suited to the wind strength and your level.",
             "Le Morne lagoon is protected by the coral reef. The water is flat and free from large waves, making it an ideal place to learn."
-          ]
+          ],
+          "icon": "wind"
         },
         {
           "type": "cards",
@@ -589,21 +612,25 @@
           "items": [
             {
               "title": "The wind",
-              "body": "At Le Morne, the prevailing south-easterly trade wind is generally stronger in the early afternoon."
+              "body": "At Le Morne, the prevailing south-easterly trade wind is generally stronger in the early afternoon.",
+              "icon": "wind"
             },
             {
               "title": "The waves",
-              "body": "The inside of the lagoon remains flat. Surfable waves are found offshore beyond the reef, with coaching adapted to each person's level."
+              "body": "The inside of the lagoon remains flat. Surfable waves are found offshore beyond the reef, with coaching adapted to each person's level.",
+              "icon": "wave"
             },
             {
               "title": "Safety",
-              "body": "You must be able to swim. Give way to the surfer already riding the wave and keep a safe distance from other water users."
+              "body": "You must be able to swim. Give way to the surfer already riding the wave and keep a safe distance from other water users.",
+              "icon": "shield"
             }
           ]
         },
         {
           "type": "windmonths",
-          "data": "en"
+          "data": "en",
+          "lead": "Conditions observed by the school to help you choose the period best suited to your level. These figures are for kitesurfing: wingfoiling needs fewer knots."
         },
         {
           "type": "prose",
@@ -618,11 +645,10 @@
         },
         {
           "type": "image",
-          "image": "/photos/kites-et-arc-en-ciel-spot-du-morne.webp",
+          "image": "/photos/spot-arc-en-ciel-le-morne.webp",
           "alt": "Kitesurf kites on Le Morne beach beneath a rainbow, Mauritius",
-          "width": 1200,
-          "height": 1600,
-          "full": false,
+          "width": 1600,
+          "height": 1067,
           "caption": "The launch area on the lagoon side."
         },
         {
@@ -631,15 +657,18 @@
           "items": [
             {
               "q": "The downwind rider has priority",
-              "a": "The rider who is downwind always has priority."
+              "a": "The rider who is downwind always has priority.",
+              "icon": "wind"
             },
             {
               "q": "Never cross a kite line",
-              "a": "Never pass between a rider and their kite or over their lines."
+              "a": "Never pass between a rider and their kite or over their lines.",
+              "icon": "nocross"
             },
             {
               "q": "Anticipate and communicate",
-              "a": "If in doubt, slow down and give way."
+              "a": "If in doubt, slow down and give way.",
+              "icon": "chat"
             }
           ]
         }
@@ -666,12 +695,13 @@
           "spot": 118,
           "loadLabel": "Show the Windguru forecast",
           "note": "The module displays AROME-FR 2.5 km for a detailed local short-range forecast. For longer-range forecasts, visit",
-          "liveLabel": "See Ritik's weather update today on Instagram",
+          "liveLabel": "Live weather updates with Ritik",
           "liveHref": "https://www.instagram.com/born_to_kite_/"
         },
         {
           "type": "windmonths",
-          "data": "en"
+          "data": "en",
+          "lead": "Conditions observed by the school to help you choose the period best suited to your level. These figures are for kitesurfing: wingfoiling needs fewer knots."
         }
       ]
     },
@@ -693,10 +723,6 @@
           "eyebrow": "Gallery",
           "heading": "Mauritius.",
           "items": [
-            {
-              "image": "/photos/banc-de-sable-lagon-le-morne.webp",
-              "alt": "Aerial view of a sandbank and the turquoise Le Morne lagoon"
-            },
             {
               "image": "/photos/galerie-crystal-rock-lagon.webp",
               "alt": "Crystal Rock in the middle of the turquoise lagoon"
@@ -804,6 +830,13 @@
           ]
         },
         {
+          "type": "image",
+          "image": "/photos/bateau-ecole-le-morne-noir-et-blanc.webp",
+          "alt": "Boat moored in front of Le Morne mountain, in black and white",
+          "width": 1600,
+          "height": 1067
+        },
+        {
           "type": "cta",
           "title": "Ask about an excursion",
           "body": "Tell us what you would like to see and how many people are coming, and we will suggest a programme."
@@ -826,10 +859,10 @@
         },
         {
           "type": "image",
-          "image": "/photos/cours-de-kitesurf-lagon-le-morne.webp",
-          "alt": "Kitesurfer on Le Morne lagoon in front of the mountain, Mauritius",
-          "width": 1000,
-          "height": 750
+          "image": "/photos/kitesurf-lagon-turquoise-le-morne.webp",
+          "alt": "Kitesurfer on the turquoise lagoon of Le Morne, Mauritius",
+          "width": 1600,
+          "height": 1067
         },
         {
           "type": "prices",
@@ -853,13 +886,6 @@
                 "6 h — 230 €/person",
                 "8 h — 300 €/person",
                 "10 h — 380 €/person"
-              ]
-            },
-            {
-              "name": "Advanced riding & jumps",
-              "detail": "For independent riders ready to step up.",
-              "lines": [
-                "40 €/h"
               ]
             }
           ]
@@ -898,6 +924,23 @@
           "body": [
             "Already riding independently and ready for the next step? Work on your pop, rotations, grabs and landings with individual coaching matched to your current level.",
             "Each session focuses on a few clear goals, helping you build consistency, correct the movements holding you back and try new tricks in suitable conditions."
+          ]
+        },
+        {
+          "type": "prices",
+          "items": [
+            {
+              "name": "Advanced riding & jumps",
+              "lines": [
+                "1 h — 40 €"
+              ]
+            },
+            {
+              "name": "Lesson in the waves",
+              "lines": [
+                "1 h — 50 €"
+              ]
+            }
           ]
         },
         {
@@ -955,7 +998,8 @@
         {
           "type": "cta",
           "title": "Ready to fly over the water?",
-          "body": "Message us on WhatsApp or follow our sessions on Instagram. We reply quickly."
+          "body": "Message us on WhatsApp or follow our sessions on Instagram. We reply quickly.",
+          "image": "/photos/kitesurf-figure-coucher-de-soleil-le-morne.webp"
         }
       ],
       "course": true
@@ -976,10 +1020,10 @@
         },
         {
           "type": "image",
-          "image": "/photos/wingfoil-le-morne-ile-maurice.webp",
-          "alt": "Students preparing a wingfoil wing on Le Morne beach, Mauritius",
-          "width": 1000,
-          "height": 750
+          "image": "/photos/wingfoil-le-morne-2026.webp",
+          "alt": "Wingfoiling on Le Morne lagoon, Mauritius",
+          "width": 1600,
+          "height": 1067
         },
         {
           "type": "prices",
@@ -1039,7 +1083,8 @@
         {
           "type": "cta",
           "title": "Ready to fly over the water?",
-          "body": "Message us on WhatsApp or follow our sessions on Instagram. We reply quickly."
+          "body": "Message us on WhatsApp or follow our sessions on Instagram. We reply quickly.",
+          "image": "/photos/kitesurf-figure-coucher-de-soleil-le-morne.webp"
         }
       ],
       "course": true
@@ -1091,7 +1136,8 @@
           "title": "The waves",
           "body": [
             "The inside of the lagoon remains flat. Surfable waves are found offshore beyond the reef, with coaching adapted to each person's level."
-          ]
+          ],
+          "icon": "wave"
         },
         {
           "type": "prose",
@@ -1099,12 +1145,14 @@
           "title": "Safety",
           "body": [
             "You must be able to swim. Give way to the surfer already riding the wave and keep a safe distance from other water users."
-          ]
+          ],
+          "icon": "shield"
         },
         {
           "type": "cta",
           "title": "Ready to fly over the water?",
-          "body": "Message us on WhatsApp or follow our sessions on Instagram. We reply quickly."
+          "body": "Message us on WhatsApp or follow our sessions on Instagram. We reply quickly.",
+          "image": "/photos/kitesurf-figure-coucher-de-soleil-le-morne.webp"
         }
       ],
       "course": true
@@ -1272,7 +1320,8 @@
         {
           "type": "cta",
           "title": "Ready to fly over the water?",
-          "body": "Message us on WhatsApp or follow our sessions on Instagram. We reply quickly."
+          "body": "Message us on WhatsApp or follow our sessions on Instagram. We reply quickly.",
+          "image": "/photos/kitesurf-figure-coucher-de-soleil-le-morne.webp"
         }
       ]
     },

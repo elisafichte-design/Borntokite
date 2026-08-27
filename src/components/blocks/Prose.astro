@@ -1,9 +1,11 @@
 ---
+import Icon from "../Icon.astro";
 const { block, heading = 2 } = Astro.props;
 const H = heading === 1 ? "h1" : "h2";
 ---
 <section class="section">
   <div class="container narrow" data-reveal="1">
+    {block.icon && <span class="icon"><Icon name={block.icon} size={26} /></span>}
     {block.eyebrow && <p class="eyebrow">{block.eyebrow}</p>}
     {block.title && <H>{block.title}</H>}
     {(block.body || []).map((p) => <p class="muted para">{p}</p>)}
@@ -11,5 +13,9 @@ const H = heading === 1 ? "h1" : "h2";
 </section>
 <style>
   h1, h2 { margin-top: var(--space-4); }
+  /* Un repère visuel discret en tête de section, dans la même encre atténuée
+     que le sur-titre : de quoi rythmer la page sans y poser une image. */
+  .icon { display: block; color: var(--ink-faint); margin-bottom: var(--space-4); }
+  .icon + .eyebrow + h2 { margin-top: var(--space-3); }
   .para { margin-top: var(--space-5); }
 </style>

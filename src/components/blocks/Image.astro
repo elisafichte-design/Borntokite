@@ -1,15 +1,39 @@
 ---
-// Respiration photo. Deux variantes :
+// Respiration photo ou vidéo. Deux variantes pour la photo :
 //   full: true  → bandeau pleine largeur, recadré (réservé aux photos paysage)
 //   full: false → image dans la colonne de texte, ratio d'origine conservé
-const { block, index = 0 } = Astro.props;
+//
+// La vidéo est verticale (tournée au téléphone). Elle garde son format, centrée
+// sur le fond crème du site : pas de bandes noires, pas de recadrage qui
+// couperait le rider. Elle démarre seule, en boucle et muette — les navigateurs
+// n'autorisent la lecture automatique qu'à cette condition — et un bouton
+// permet d'activer le son.
+const { block, ui, index = 0 } = Astro.props;
 const full = block.full !== false;
+const sound = (ui && ui.sound) || { on: "Activer le son", off: "Couper le son" };
 ---
 <figure class={full ? "fig full" : "fig held"} data-reveal={full ? "zoom" : (index % 2 === 0 ? "tiltl" : "tiltr")}>
   {block.video ? (
-    <video autoplay muted loop playsinline preload="auto" poster={block.poster} aria-label={block.alt}>
-      <source src={block.video} type="video/mp4" />
-    </video>
+    <div class="video">
+      <video autoplay muted loop playsinline preload="auto" poster={block.poster} aria-label={block.alt}>
+        <source src={block.video} type="video/mp4" />
+      </video>
+      <button
+        type="button"
+        class="sound"
+        data-btk-sound
+        data-label-on={sound.on}
+        data-label-off={sound.off}
+        aria-label={sound.on}
+        aria-pressed="false"
+      >
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+          <path class="speaker" d="M4 9.5h3.2L12 5.5v13l-4.8-4H4z" />
+          <path class="off" d="M16 9.5l4.5 5m0-5l-4.5 5" />
+          <path class="on" d="M15.5 9.2a4 4 0 0 1 0 5.6M18 7a7.4 7.4 0 0 1 0 10" />
+        </svg>
+      </button>
+    </div>
   ) : (
     <img
       src={block.image}
@@ -23,12 +47,73 @@ const full = block.full !== false;
   )}
   {block.caption && <figcaption class="container"><span class="faint">{block.caption}</span></figcaption>}
 </figure>
+<script is:inline>
+  (function () {
+    if (window.__btksound) return;
+    window.__btksound = true;
+    document.addEventListener("click", function (ev) {
+      var target = ev.target;
+      if (!target || !target.closest) return;
+      var btn = target.closest("[data-btk-sound]");
+      if (!btn) return;
+      var wrap = btn.parentNode;
+      var video = wrap && wrap.querySelector("video");
+      if (!video) return;
+      var on = video.muted;
+      video.muted = !on;
+      if (on && video.paused) video.play();
+      btn.setAttribute("aria-pressed", on ? "true" : "false");
+      btn.setAttribute("aria-label", btn.getAttribute(on ? "data-label-off" : "data-label-on"));
+    });
+  })();
+</script>
 <style>
   .fig { margin: 0; }
-  .full img { width: 100%; aspect-ratio: 3 / 2; max-height: min(60vh, 560px); object-fit: cover; }
+  /* Le bandeau garde le format 3/2 de la photo aussi longtemps que possible :
+     plus la hauteur maximale est basse, plus la photo est rognée haut et bas. */
+  .full img { width: 100%; aspect-ratio: 3 / 2; max-height: min(88vh, 880px); object-fit: cover; }
   .held { max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter); }
-  .held img { width: 100%; max-height: 76vh; object-fit: cover; }
-  video { display: block; width: 100%; max-height: 76vh; background: var(--ink); }
+  /* Photo dans la colonne : format d origine, jamais rognée. */
+  .held img { width: auto; max-width: 100%; max-height: 76vh; margin-inline: auto; }
   figcaption { margin-top: var(--space-3); font-size: var(--size-small); }
   .held figcaption { padding-inline: 0; }
+
+  /* Vidéo verticale : format conservé, centrée sur le fond du site. */
+  .video {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background: var(--surface);
+    border-block: 1px solid var(--line);
+  }
+  .video video {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    max-height: min(78vh, 720px);
+  }
+  .sound {
+    position: absolute;
+    right: var(--space-4);
+    bottom: var(--space-4);
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    background: var(--bg);
+    color: var(--ink);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: border-color var(--dur-fast) var(--ease-out), opacity var(--dur-fast) var(--ease-out);
+  }
+  .sound svg { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+  .sound .speaker { fill: currentColor; stroke-width: 1; }
+  .sound .on { display: none; }
+  .sound[aria-pressed="true"] .off { display: none; }
+  .sound[aria-pressed="true"] .on { display: inline; }
+  @media (hover: hover) and (pointer: fine) {
+    .sound:hover { border-color: var(--ink); }
+  }
 </style>
