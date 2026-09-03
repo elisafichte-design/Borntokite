@@ -1,225 +1,472 @@
 ---
+// Carte interactive des spots (remplace l'ancienne carte SVG statique).
+// Fournie par la cliente sous forme de bloc HTML/CSS/JS autonome ; adaptée
+// ici pour puiser tout le texte visible dans le bloc "spotsmap" (fr uniquement
+// pour l'instant, comme l'ancienne carte). La géométrie (latitude/longitude,
+// disciplines, niveaux, décalages d'étiquette) reste dans ce composant, comme
+// pour l'ancienne carte où les tracés SVG étaient aussi codés en dur ici.
+// Polices Google retirées : Fraunces et Inter sont déjà auto-hébergées par le
+// site (voir Base.astro) — pas de requête tierce supplémentaire.
 const { block } = Astro.props;
 
-const levelClass = {
-  beginner: "beginner",
-  intermediate: "intermediate",
-  advanced: "advanced",
-};
+// Géométrie fixe des 8 spots, dans le même ordre que block.spots.
+const GEO = [
+  { lat: -20.33, lng: 57.3565, p: "r", d: ["surf"], lv: ["avance"] },
+  { lat: -20.4585, lng: 57.3155, L: [52, -48], d: ["kite"], lv: ["debutant"], school: true },
+  { lat: -20.476, lng: 57.311, L: [-70, 44], d: ["kite"], lv: ["intermediaire", "avance"] },
+  { lat: -20.46, lng: 57.3025, L: [-60, -74], d: ["kite", "surf"], lv: ["avance"] },
+  { lat: -20.4675, lng: 57.304, L: [-68, 8], d: ["surf"], lv: ["avance"] },
+  { lat: -20.5045, lng: 57.379, L: [20, -22], d: ["kite"], lv: ["intermediaire", "avance"] },
+  { lat: -20.5145, lng: 57.413, L: [-14, 28], d: ["kite"], lv: ["intermediaire"] },
+  { lat: -20.53, lng: 57.518, L: [4, -28], d: ["surf"], lv: ["avance"] },
+];
+
+const SPOTS = block.spots.map((s, i) => ({
+  ...GEO[i],
+  n: s.name,
+  t: s.description,
+  dt: s.activity,
+  lt: s.level,
+  ...(s.school ? { tag: [block.schoolShortLabel] } : {}),
+}));
 ---
+<style>
+.btk-spots{
+  --sea:var(--bg); --lagoon:#EDE4D5; --land:#CFC3AB;
+  font-family:var(--font-body); -webkit-font-smoothing:antialiased;
+  display:block;
+}
+.btk-spots *{box-sizing:border-box}
+.btk-spots h2,.btk-spots h3,.btk-spots p,.btk-spots span,.btk-spots button,.btk-spots div{color:inherit;line-height:normal}
+.btk-spots h2,.btk-spots h3,.btk-spots p,.btk-spots button,.btk-spots span{font-family:inherit;text-transform:none}
+@keyframes btk-ping{0%{opacity:.7;transform:scale(1)}70%{opacity:0;transform:scale(3.4)}100%{opacity:0;transform:scale(3.4)}}
+@keyframes btk-swell{from{transform:translate(0,0)}to{transform:translate(17px,4.8px)}}
 
-<section class="spots section" aria-labelledby="spots-title">
-  <div class="container">
-    <header class="spots-intro narrow">
-      <p class="eyebrow">{block.eyebrow}</p>
-      <h2 id="spots-title">{block.title}</h2>
-      <p class="lead">{block.intro}</p>
-    </header>
+.btk-spots a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
+.btk-spots a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+.btk-spots .wrap{max-width:var(--container);margin:0 auto;padding:clamp(44px,6vw,96px) clamp(22px,4vw,48px)}
+.btk-spots h2,.btk-spots h3,.btk-spots p{margin:0}
 
-    <div class="legend" aria-label={block.legendLabel}>
-      <div class="legend-group activities">
-        <span class="legend-item">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 12 12 21 5 12Z M12 3v18 M5 12h14 M12 21q2 3 5 2.5" /></svg>
-          {block.kiteLabel}
-        </span>
-        <span class="legend-item">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 16q4-6 9-1t9-2 M3 16q4 4 9 0" /></svg>
-          {block.surfLabel}
-        </span>
-      </div>
-      <div class="legend-group levels">
-        {block.levels.map((level) => (
-          <span class="legend-item"><span class={`level-dot ${levelClass[level.key]}`}></span>{level.label}</span>
-        ))}
-      </div>
-      <span class="legend-item school-mark"><span aria-hidden="true">★</span>{block.schoolLabel}</span>
+.btk-spots .eyebrow{font-family:var(--font-body);font-size:.625rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);margin:0 0 16px}
+.btk-spots h2{font-family:var(--font-display);font-weight:400;font-size:clamp(1.55rem,3vw,2.3rem);line-height:1.2;letter-spacing:-.01em;margin:0 0 16px;max-width:20ch;text-wrap:balance}
+.btk-spots .lede{color:var(--ink-muted);font-size:1.0625rem;line-height:1.6;max-width:62ch;margin:0}
+
+.btk-spots .bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:32px 0 16px}
+.btk-spots .bar .sep{width:1px;height:20px;background:var(--line)}
+.btk-spots .chip{font-family:var(--font-body);font-size:.8125rem;font-weight:600;color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:var(--radius);padding:9px 16px;cursor:pointer;transition:opacity .14s,border-color .14s,background .14s,color .14s}
+.btk-spots .chip:hover{border-color:var(--ink)}
+.btk-spots .chip:active{opacity:.75}
+.btk-spots .chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.btk-spots .chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.btk-spots .spacer{margin-left:auto}
+
+.btk-spots .stage{display:grid;grid-template-columns:minmax(0,1fr) 360px;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--bg)}
+.btk-spots .mapbox{position:relative;min-height:700px;overflow:hidden;background:var(--sea)}
+.btk-spots svg.map{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:pan-y}
+.btk-spots #btk-wind{position:absolute;inset:0;pointer-events:none}
+
+.btk-spots .hud{position:absolute;left:20px;top:20px;font-family:var(--font-mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-muted);border:1px solid var(--line);border-radius:var(--radius);padding:10px 12px;line-height:1.9;background:rgba(250,248,244,.86);white-space:nowrap;opacity:0;transform:translateY(-6px);transition:opacity .22s,transform .22s}
+.btk-spots .hud b{color:var(--ink);font-weight:400}
+.btk-spots .rose{position:absolute;right:20px;top:20px;display:flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:10px;letter-spacing:.1em;color:var(--ink-muted);opacity:0;transition:opacity .22s}
+.btk-spots .rose .box{width:28px;height:28px;border:1px solid var(--line);border-radius:var(--radius);display:grid;place-items:center;background:rgba(250,248,244,.86)}
+.btk-spots .scalebar{position:absolute;left:20px;bottom:18px;font-family:var(--font-mono);font-size:9.5px;letter-spacing:.06em;color:var(--ink-muted);opacity:0;transition:opacity .22s}
+.btk-spots .scalebar .rule{height:1px;background:var(--ink-muted);margin-bottom:5px}
+.btk-spots .note{position:absolute;right:20px;bottom:18px;font-family:var(--font-mono);font-size:9px;letter-spacing:.04em;color:var(--ink-faint);text-align:right;line-height:1.7}
+.btk-spots .on-air .hud,.btk-spots .on-air .rose,.btk-spots .on-air .scalebar{opacity:1;transform:none}
+
+.btk-spots .sea{fill:var(--sea)}
+.btk-spots .coast{fill:var(--land);stroke:rgba(20,32,43,.55);stroke-width:1.3;stroke-linejoin:round}
+.btk-spots .lagoon{fill:var(--lagoon);stroke:none}
+.btk-spots .contour{fill:none;stroke:rgba(122,111,92,.35);stroke-width:1}
+.btk-spots .relief{fill:none;stroke:rgba(20,32,43,.45);stroke-width:1.1;stroke-linecap:round}
+.btk-spots .reef{fill:none;stroke:var(--ink);stroke-width:1.5;stroke-linecap:round;stroke-dasharray:7 8;opacity:.85}
+.btk-spots .reef-halo{fill:none;stroke:var(--ink);stroke-width:9;opacity:.05}
+.btk-spots .dw{fill:none;stroke:var(--ink);stroke-width:1.3;stroke-dasharray:5 7;opacity:0;transition:opacity .22s}
+.btk-spots .dw-live{opacity:.7}
+.btk-spots .kite{opacity:0;transition:opacity .22s}
+.btk-spots .coast,.btk-spots .reef,.btk-spots .reef-halo,.btk-spots .contour,.btk-spots .relief,.btk-spots .dw,.btk-spots .spot .sq,.btk-spots .spot .ring,.btk-spots .isle{vector-effect:non-scaling-stroke}
+.btk-spots .isle{fill:var(--land);stroke:rgba(20,32,43,.55);stroke-width:1.2}
+.btk-spots .placename{font-family:var(--font-mono);font-size:calc(8.5px * var(--k,1));letter-spacing:.14em;fill:var(--ink-faint);text-transform:uppercase;paint-order:stroke;stroke:var(--bg);stroke-width:2.6px;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+
+.btk-spots .spot{cursor:pointer;transition:opacity .22s}
+.btk-spots .spot .hit{fill:transparent}
+.btk-spots .spot .sq{fill:var(--bg);stroke:var(--ink);stroke-width:1.3;transform-box:fill-box;transform-origin:center;transform:scale(0);transition:transform .22s cubic-bezier(.2,.9,.25,1),fill .14s,stroke .14s}
+.btk-spots .spot.in .sq{transform:scale(1)}
+.btk-spots .spot .ring{fill:none;stroke:var(--accent);stroke-width:1.2;opacity:0;transform-box:fill-box;transform-origin:center}
+.btk-spots .spot .leader{stroke:var(--ink);stroke-width:1;opacity:.45;vector-effect:non-scaling-stroke}
+.btk-spots .spot.school .leader{stroke:var(--accent);opacity:.8}
+.btk-spots .spot .lab{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.1em;fill:var(--ink);text-transform:uppercase;opacity:0;transition:opacity .22s;paint-order:stroke;stroke:var(--bg);stroke-width:2.8px;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.btk-spots .spot.in .lab{opacity:1}
+.btk-spots .spot.school .sq{fill:var(--accent);stroke:var(--accent)}
+.btk-spots .spot.school .ring{animation:btk-ping 3.2s cubic-bezier(.2,.7,.3,1) infinite}
+.btk-spots .spot.on .sq{fill:var(--ink);stroke:var(--ink);transform:scale(1.5)}
+.btk-spots .spot.school.on .sq{fill:var(--accent);stroke:var(--accent)}
+.btk-spots .spot.dim{opacity:.22;pointer-events:none}
+.btk-spots .spot.pin .lab,.btk-spots .spot.pin .leader{opacity:0}
+.btk-spots .spot.pin .sq{opacity:.5;transform:scale(.7)}
+.btk-spots .spot.pin.in .sq{transform:scale(.7)}
+
+.btk-spots .swell{animation:btk-swell 9s linear infinite}
+
+.btk-spots .rail{border-left:1px solid var(--line);background:var(--surface);display:flex;flex-direction:column;min-width:0}
+.btk-spots .rail-head{padding:16px 20px 14px;border-bottom:1px solid var(--line);font-family:var(--font-body);font-size:.625rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);display:flex;justify-content:space-between}
+.btk-spots .rail-head b{color:var(--ink);font-weight:500}
+.btk-spots .list{overflow-y:auto;flex:1}
+.btk-spots .item{display:block;width:100%;text-align:left;background:transparent;border:0;border-bottom:1px solid var(--line);padding:16px 20px;cursor:pointer;color:inherit;font:inherit;position:relative;transition:background .14s}
+.btk-spots .item:hover,.btk-spots .item.on{background:rgba(227,221,210,.45)}
+.btk-spots .item.on::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--ink)}
+.btk-spots .item.school.on::before{background:var(--accent)}
+.btk-spots .item:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.btk-spots .item .top{display:flex;align-items:baseline;gap:10px}
+.btk-spots .item .n{font-family:var(--font-mono);font-size:10px;color:var(--ink-faint)}
+.btk-spots .item h3{font-family:var(--font-display);font-weight:400;font-size:1.15rem;line-height:1.2;letter-spacing:-.01em;margin:0}
+.btk-spots .item .star{color:var(--accent);font-size:11px;line-height:1}
+.btk-spots .item p{margin:6px 0 10px;font-size:.8125rem;line-height:1.7;color:var(--ink-muted)}
+.btk-spots .tags{display:flex;flex-wrap:wrap;gap:6px}
+.btk-spots .tag{font-family:var(--font-body);font-size:.625rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;border:1px solid var(--line);border-radius:var(--radius);padding:3px 7px;color:var(--ink-faint)}
+.btk-spots .tag.acc{border-color:var(--accent);color:var(--accent)}
+.btk-spots .item.hide{display:none}
+.btk-spots .foot{padding:14px 20px;border-top:1px solid var(--line);font-family:var(--font-body);font-size:.8125rem;line-height:1.7;color:var(--ink-muted)}
+
+@media (prefers-reduced-motion:reduce){
+  .btk-spots .swell,.btk-spots .spot.school .ring{animation:none}
+}
+
+@media (max-width:1000px){
+  .btk-spots .stage{grid-template-columns:1fr}
+  .btk-spots .mapbox{position:sticky;top:0;z-index:2;height:62vh;min-height:380px;max-height:78vh;border-bottom:1px solid var(--line)}
+  .btk-spots .rail{border-left:0}
+  .btk-spots .list{overflow:visible}
+  .btk-spots .rail-head{position:sticky;top:min(78vh,max(380px,62vh));z-index:1;background:var(--surface)}
+  .btk-spots .hud,.btk-spots .rose{font-size:9px}
+  .btk-spots .hud{left:12px;top:12px;padding:8px 10px}
+  .btk-spots .rose{right:12px;top:12px}
+  .btk-spots .note{display:none}
+  .btk-spots .scalebar{left:12px;bottom:12px}
+  .btk-spots .item{padding:20px 18px}
+}
+</style>
+
+<section class="btk-spots section" id="btk-root">
+<div class="wrap">
+  <p class="eyebrow">{block.eyebrow}</p>
+  <h2>{block.title}</h2>
+  <p class="lede">{block.intro}</p>
+
+  <div class="bar">
+    <button class="chip" data-f="discipline" data-v="kite" aria-pressed="false">{block.kiteLabel}</button>
+    <button class="chip" data-f="discipline" data-v="surf" aria-pressed="false">{block.surfLabel}</button>
+    <span class="sep"></span>
+    <button class="chip" data-f="level" data-v="debutant" aria-pressed="false">{block.levels[0].label}</button>
+    <button class="chip" data-f="level" data-v="intermediaire" aria-pressed="false">{block.levels[1].label}</button>
+    <button class="chip" data-f="level" data-v="avance" aria-pressed="false">{block.levels[2].label}</button>
+    <span class="spacer"></span>
+    <button class="chip" id="btk-dw" aria-pressed="false">{block.downwindLabel}</button>
+    <button class="chip" id="btk-replay" aria-pressed="false">{block.replayLabel}</button>
+  </div>
+
+  <div class="stage">
+    <div class="mapbox" id="btk-mapbox">
+      <svg class="map" id="btk-svg" viewBox="0 0 800 700" preserveAspectRatio="xMidYMid meet" role="img" aria-label={block.mapTitle}></svg>
+      <canvas id="btk-wind"></canvas>
+      <div class="hud" id="btk-hud" set:html={block.hud}></div>
+      <div class="rose"><span class="box"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1 L10 12 L7 9.4 L4 12 Z" fill="#B4532A"/></svg></span><span>{block.compassLabel}</span></div>
+      <div class="scalebar"><div class="rule" id="btk-rule" style="width:54px"></div>{block.scaleUnit}</div>
+      <div class="note">{block.mapFromTo}<br />{block.mapScale}</div>
     </div>
 
-    <figure class="map">
-      <figcaption>
-        <span>{block.mapFromTo}</span>
-        <span>{block.mapScale}</span>
-      </figcaption>
-      <svg viewBox="0 0 880 900" role="img" aria-labelledby="map-title map-desc">
-        <title id="map-title">{block.mapTitle}</title>
-        <desc id="map-desc">{block.mapDescription}</desc>
-        <rect width="880" height="900" class="water" />
-
-        <g class="water-lines" fill="none">
-          <path d="M40 60q15-6 30 0t30 0 M60 140q15-6 30 0t30 0 M30 220q15-6 30 0t30 0 M90 300q15-6 30 0t30 0 M40 380q15-6 30 0t30 0 M60 620q15-6 30 0t30 0 M100 700q15-6 30 0t30 0 M180 760q15-6 30 0t30 0 M540 60q15-6 30 0t30 0 M420 120q15-6 30 0t30 0 M340 210q15-6 30 0t30 0 M600 500q15-6 30 0t30 0 M420 700q15-6 30 0t30 0 M300 830q15-6 30 0t30 0" />
-        </g>
-
-        <path class="lagoon" d="M60 470q35-55 105-65 50-5 75 25 22 35 22 105 0 55-62 70-90 15-135-45-25-60-5-90Z" />
-        <path class="reef" d="M55 470q40-55 110-65 50-5 75 25 M65 560q45 40 110 20 50-14 80-45" />
-
-        <path class="land" d="M660-20c-42 60-30 110-95 138-43 30-63 72-87 114-38 70-158 130-216 188-48 22-100 28-130 52-20 30 0 60 40 74 38 10 68-4 90-24 40 24 80 38 122 58 64 30 138 52 176 82 62 38 140 80 206 130 40 30 70 60 100 110h54V-20Z" />
-        <path class="coast" d="M660-20c-42 60-30 110-95 138-43 30-63 72-87 114-38 70-158 130-216 188-48 22-100 28-130 52-20 30 0 60 40 74 38 10 68-4 90-24 40 24 80 38 122 58 64 30 138 52 176 82 62 38 140 80 206 130 40 30 70 60 100 110" />
-
-        <g class="mountain" transform="translate(150 470)">
-          <path d="m-46 34 28-64 16 22 16-32 32 74Z" />
-          <path d="m-18-30 12 16 M14-40l8 20" />
-        </g>
-
-        <g class="crystal" transform="translate(232 530)">
-          <path d="m-9 8 5-16 9-1 4 15-7 4Z" />
-          <text x="18" y="5">Crystal Rock</text>
-        </g>
-
-        <g class="palm" transform="translate(600 600)">
-          <path d="M0 40q-4-30 2-58 M2-18q-24-12-36 4 M2-18q-16-20-8-32 M2-18q8-22 2-36 M2-18q24-14 32 2 M2-18q20 12 30 24" />
-        </g>
-
-        <g class="compass" transform="translate(100 820)">
-          <circle r="34" />
-          <path class="north" d="M0-26 6 0 0 26-6 0Z" />
-          <path d="M-26 0 0 6 26 0 0-6Z" />
-          <text y="-40">N</text>
-        </g>
-
-        <g class="wind" transform="translate(340 760)">
-          <path d="m40 30-70-60 M-30-30l14 2 M-30-30l4 14" />
-          <text x="20" y="48">{block.windLabel}</text>
-        </g>
-
-        <path class="route" d="M555 660Q400 600 240 480" />
-
-        {block.spots.map((spot) => (
-          <g class={`pin pin-${levelClass[spot.levelKey]}`} transform={`translate(${spot.x} ${spot.y})`}>
-            <circle r={spot.school ? 19 : 17} />
-            <text class="pin-number" y="6">{spot.number}</text>
-            {spot.school && <text class="pin-star" x="18" y="-17">★</text>}
-            <g class="map-label" transform={`translate(${spot.labelX || 25} ${spot.labelY || 0})`}>
-              <text y="4">{spot.mapName}</text>
-            </g>
-          </g>
-        ))}
-      </svg>
-    </figure>
-
-    <ol class="spot-list">
-      {block.spots.map((spot) => (
-        <li>
-          <span class={`number ${levelClass[spot.levelKey]}`}>{spot.number}</span>
-          <div class="spot-copy">
-            <div class="spot-heading">
-              <h3>{spot.name}</h3>
-              <span class="activity">{spot.activity}</span>
-              <span class={`level ${levelClass[spot.levelKey]}`}>{spot.level}</span>
-              {spot.school && <span class="school-mark"><span aria-hidden="true">★</span>{block.schoolShortLabel}</span>}
-            </div>
-            <p>{spot.description}</p>
-          </div>
-        </li>
-      ))}
-    </ol>
-
-    <footer class="note">
-      <p>{block.disclaimer}</p>
-      <p class="credit">Born To Kite · Le Morne<br /><span>borntokitemauritius.com</span></p>
-    </footer>
+    <div class="rail">
+      <div class="rail-head"><span>{block.railLabel}</span><span><b id="btk-count">{block.spots.length}</b> / {block.spots.length}</span></div>
+      <div class="list" id="btk-list"></div>
+      <div class="foot">{block.disclaimer}</div>
+    </div>
   </div>
+</div>
 </section>
 
-<style>
-  .spots { border-block: 1px solid var(--line); }
-  .spots-intro { display: grid; gap: var(--space-4); }
-  .spots-intro h2 { max-width: 18ch; }
-  .legend {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: var(--space-4) var(--space-6);
-    margin-top: var(--space-7);
-    padding-block: var(--space-4);
-    border-block: 1px solid var(--line);
-  }
-  .legend-group { display: flex; flex-wrap: wrap; gap: var(--space-4); }
-  .legend-item, .activity, .level, .credit {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-2);
-    font-family: var(--font-mono);
-    font-size: var(--size-eyebrow);
-    font-weight: var(--weight-semibold);
-    letter-spacing: var(--ls-mono);
-    text-transform: uppercase;
-    color: var(--ink-muted);
-  }
-  .legend-item svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; }
-  .level-dot { width: 12px; height: 12px; border: 1px solid var(--ink); border-radius: 50%; }
-  .level-dot.beginner, .number.beginner { background: var(--surface); }
-  .level-dot.intermediate, .number.intermediate { background: var(--ink-faint); color: var(--bg); }
-  .level-dot.advanced, .number.advanced { background: var(--ink); color: var(--bg); }
-  .school-mark { color: var(--accent); }
+<script define:vars={{ SPOTS }}>
+(function(){
+const root=document.getElementById('btk-root');
+const gid=id=>document.getElementById('btk-'+id);
+/* ---------------- géométrie (routes, côte, lieux-dits) ---------------- */
+const COAST = [[57.3730,-20.2700],[57.3700,-20.2900],[57.3680,-20.3100],[57.3690,-20.3210],[57.3650,-20.3280],[57.3618,-20.3370],[57.3648,-20.3455],[57.3640,-20.3600],[57.3600,-20.3700],[57.3640,-20.3820],[57.3650,-20.3960],[57.3620,-20.4100],[57.3580,-20.4240],[57.3480,-20.4340],[57.3360,-20.4400],[57.3230,-20.4420],[57.3140,-20.4470],[57.3110,-20.4570],[57.3150,-20.4660],[57.3230,-20.4700],[57.3290,-20.4640],[57.3300,-20.4530],[57.3320,-20.4430],[57.3400,-20.4430],[57.3490,-20.4500],[57.3600,-20.4620],[57.3700,-20.4750],[57.3780,-20.4850],[57.3830,-20.4930],[57.3960,-20.4990],[57.4150,-20.5040],[57.4400,-20.5080],[57.4700,-20.5120],[57.5000,-20.5170],[57.5250,-20.5210],[57.5600,-20.5230]];
+/* le récif s'arrête peu après Bel Ombre : la côte de Souillac est exposée */
+const REEF  = [[57.3540,-20.2700],[57.3500,-20.2920],[57.3470,-20.3140],[57.3440,-20.3330],[57.3400,-20.3560],[57.3360,-20.3800],[57.3300,-20.4030],[57.3190,-20.4250],[57.3020,-20.4460],[57.2950,-20.4620],[57.2990,-20.4780],[57.3150,-20.4880],[57.3380,-20.4950],[57.3620,-20.5020],[57.3880,-20.5080],[57.4150,-20.5130],[57.4400,-20.5170],[57.4600,-20.5200]];
+const DOWNWIND = [[57.4130,-20.5145],[57.3950,-20.5100],[57.3750,-20.5040],[57.3550,-20.4990],[57.3350,-20.4930],[57.3180,-20.4870],[57.3080,-20.4770],[57.3060,-20.4680],[57.3110,-20.4600]];
+const BENITIER = [[57.3280,-20.4160],[57.3360,-20.4150],[57.3400,-20.4220],[57.3340,-20.4280],[57.3270,-20.4250]];
+const PLACES = [[57.3810,-20.3600,"RIVIÈRE NOIRE"],[57.3450,-20.4085,"ÎLOT BÉNITIER"],[57.2760,-20.3300,"OCÉAN INDIEN"]];
 
-  .map { margin: var(--space-6) 0 0; border-bottom: 1px solid var(--line); }
-  .map figcaption {
-    display: flex;
-    justify-content: space-between;
-    gap: var(--space-4);
-    margin-bottom: var(--space-3);
-    font-family: var(--font-mono);
-    font-size: var(--size-eyebrow);
-    letter-spacing: var(--ls-mono);
-    text-transform: uppercase;
-    color: var(--ink-faint);
-  }
-  .map svg { width: min(100%, 880px); height: auto; display: block; margin-inline: auto; }
-  .water { fill: var(--surface); }
-  .water-lines { stroke: var(--ink-faint); stroke-width: 1.4; opacity: 0.28; stroke-linecap: round; }
-  .lagoon { fill: var(--line); opacity: 0.65; }
-  .reef { fill: none; stroke: var(--ink-muted); stroke-width: 2; stroke-dasharray: 2 8; stroke-linecap: round; }
-  .land { fill: var(--bg); stroke: var(--ink); stroke-width: 4.5; stroke-linejoin: round; }
-  .coast { fill: none; stroke: var(--line); stroke-width: 2; }
-  .mountain path:first-child { fill: var(--ink); stroke: var(--ink); stroke-width: 3.5; }
-  .mountain path:last-child { fill: none; stroke: var(--bg); stroke-width: 2; opacity: 0.55; }
-  .crystal path { fill: var(--bg); stroke: var(--ink); stroke-width: 2; }
-  .crystal text, .wind text { fill: var(--ink-muted); font-family: var(--font-mono); font-size: 11px; }
-  .palm { fill: none; stroke: var(--ink); stroke-width: 2.6; stroke-linecap: round; }
-  .compass circle { fill: var(--bg); stroke: var(--ink); stroke-width: 1.6; }
-  .compass path { fill: var(--ink-faint); }
-  .compass .north { fill: var(--accent); }
-  .compass text { text-anchor: middle; fill: var(--ink); font-family: var(--font-mono); font-size: 11px; }
-  .wind path, .route { fill: none; stroke: var(--ink-muted); stroke-width: 2; stroke-dasharray: 1 8; stroke-linecap: round; }
-  .pin circle { stroke: var(--ink); stroke-width: 2.5; }
-  .pin-beginner circle { fill: var(--surface); }
-  .pin-intermediate circle { fill: var(--ink-faint); }
-  .pin-advanced circle { fill: var(--ink); }
-  .pin-number { text-anchor: middle; fill: var(--ink); font-family: var(--font-display); font-size: 17px; }
-  .pin-intermediate .pin-number, .pin-advanced .pin-number { fill: var(--bg); }
-  .pin-star { fill: var(--accent); font-size: 18px; stroke: var(--bg); stroke-width: 4; paint-order: stroke fill; }
-  .map-label text {
-    fill: var(--ink);
-    stroke: var(--bg);
-    stroke-width: 6;
-    paint-order: stroke fill;
-    font-family: var(--font-mono);
-    font-size: 12px;
-  }
+/* ---------------- projection ---------------- */
+const LNG0=57.262, LAT0=-20.302, KX=2820, KY=KX/Math.cos(20.46*Math.PI/180);
+const BREAK=57.415, SQUEEZE=0.34;              // « sans échelle » : l'est se resserre
+const XB=(BREAK-LNG0)*KX;
+const PX = ([lng,lat]) => [ lng<=BREAK ? (lng-LNG0)*KX : XB+(lng-BREAK)*KX*SQUEEZE,
+                            (LAT0-lat)*KY ];
+const P  = s => PX([s.lng,s.lat]);
 
-  .spot-list { list-style: none; margin: var(--space-7) 0 0; padding: 0; }
-  .spot-list li { display: grid; grid-template-columns: 44px 1fr; gap: var(--space-5); padding-block: var(--space-5); border-bottom: 1px solid var(--line); }
-  .number { width: 40px; height: 40px; display: grid; place-items: center; border: 2px solid var(--ink); border-radius: 50%; font-family: var(--font-display); font-size: 1.05rem; }
-  .spot-copy { display: grid; gap: var(--space-2); }
-  .spot-heading { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2) var(--space-4); }
-  .spot-heading h3 { margin-right: var(--space-1); }
-  .activity { color: var(--ink-muted); }
-  .level { border: 1px solid var(--line); border-radius: var(--radius); padding: 3px var(--space-2); }
-  .level.advanced { color: var(--ink); border-color: var(--ink); }
-  .spot-copy p { max-width: 720px; color: var(--ink-muted); }
-  .note { display: flex; justify-content: space-between; gap: var(--space-7); padding-top: var(--space-6); }
-  .note > p:first-child { max-width: 720px; color: var(--ink-muted); font-size: var(--size-small); }
-  .credit { display: block; text-align: right; color: var(--ink); white-space: nowrap; }
-  .credit span { color: var(--ink-faint); font-size: var(--size-eyebrow); }
-
-  @media (max-width: 680px) {
-    .legend { align-items: flex-start; gap: var(--space-4); }
-    .activities, .levels { width: 100%; }
-    .map { margin-inline: calc(var(--gutter) * -1); }
-    .map figcaption { padding-inline: var(--gutter); }
-    .spot-list li { grid-template-columns: 36px 1fr; gap: var(--space-4); }
-    .number { width: 34px; height: 34px; font-size: 0.95rem; }
-    .note { flex-direction: column; gap: var(--space-4); }
-    .credit { text-align: left; }
+function curve(pts, closed){
+  const p = pts.map(PX);
+  if(closed) p.push(p[0]);
+  let d = `M${p[0][0].toFixed(1)},${p[0][1].toFixed(1)}`;
+  for(let i=0;i<p.length-1;i++){
+    const p0=p[i-1]||p[i], p1=p[i], p2=p[i+1], p3=p[i+2]||p2;
+    const c1=[p1[0]+(p2[0]-p0[0])/6, p1[1]+(p2[1]-p0[1])/6];
+    const c2=[p2[0]-(p3[0]-p1[0])/6, p2[1]-(p3[1]-p1[1])/6];
+    d+=`C${c1[0].toFixed(1)},${c1[1].toFixed(1)} ${c2[0].toFixed(1)},${c2[1].toFixed(1)} ${p2[0].toFixed(1)},${p2[1].toFixed(1)}`;
   }
-</style>
+  return d + (closed ? ' Z' : '');
+}
+const XE=3000,YT=-2400,X0=PX([57.3730,-20.2700])[0].toFixed(1);
+const YE=PX(COAST[COAST.length-1])[1].toFixed(1);
+const landPath = curve(COAST) + ` L${XE},${YE} L${XE},${YT} L${X0},${YT} Z`;
+const lagoonPath = curve(REEF) + ' ' + curve([...COAST].reverse()).replace('M','L') + ' Z';
+
+/* ---------------- rendu ---------------- */
+const BBOX=(()=>{
+  const pts=[...BENITIER,...SPOTS.map(s=>[s.lng,s.lat])].map(PX);
+  const xs=pts.map(p=>p[0]),ys=pts.map(p=>p[1]);
+  const x0=Math.min(...xs)-78,x1=Math.max(...xs)+70,y0=Math.min(...ys)-34,y1=Math.max(...ys)+46;
+  return {x:x0,y:y0,w:x1-x0,h:y1-y0};
+})();
+const NS='http://www.w3.org/2000/svg';
+const svg = gid('svg');
+const box = gid('mapbox');
+const el = (t,a,parent)=>{const n=document.createElementNS(NS,t);for(const k in a)n.setAttribute(k,a[k]);(parent||svg).appendChild(n);return n;};
+
+el('rect',{class:'sea',x:-4000,y:-4000,width:8000,height:8000});
+
+const gSwell = el('g',{class:'swell'});
+for(let i=0;i<13;i++){
+  const off = 16+i*17;
+  el('path',{class:'contour', opacity:Math.max(.08,.42-i*.03).toFixed(2),
+    d: curve(REEF.map(([lng,lat])=>[lng-off/KX, lat-off/KY*0.28]))}, gSwell);
+}
+el('path',{class:'lagoon', d:lagoonPath});
+el('path',{class:'coast', d:landPath});
+el('path',{class:'isle', d:curve(BENITIER,true)});
+
+const gRel = el('g',{});
+[[57.3175,-20.4520,20],[57.3205,-20.4560,26],[57.3160,-20.4585,16],[57.3235,-20.4520,14],[57.3195,-20.4620,12]].forEach(([lng,lat,w])=>{
+  const [x,y]=PX([lng,lat]);
+  el('path',{class:'relief', d:`M${x-w/2},${y} q${w/2},${-w*0.55} ${w},0`},gRel);
+});
+
+PLACES.forEach(([lng,lat,name])=>{
+  const [x,y]=PX([lng,lat]);
+  const t=el('text',{class:'placename',x:x.toFixed(1),y:(y+3).toFixed(1)});
+  t.textContent=name;
+  if(name==='OCÉAN INDIEN'){t.setAttribute('letter-spacing','.36em');}
+});
+
+const reefHalo = el('path',{class:'reef-halo', d:curve(REEF)});
+const reefPath = el('path',{class:'reef', d:curve(REEF)});
+const reefLabel = (()=>{ const [x,y]=PX([57.2860,-20.4200]);
+  const t=el('text',{class:'placename',x,y,opacity:'0',transform:`rotate(-70 ${x} ${y})`});
+  t.textContent='BARRIÈRE DE CORAIL'; return t; })();
+
+const dwPath = el('path',{class:'dw', d:curve(DOWNWIND)});
+const gKite = el('g',{class:'kite'});
+el('path',{d:'M0,-6 L5,3 L0,1 L-5,3 Z', fill:'#14202B'},gKite);
+const dwLabel = (()=>{ const [x,y]=PX([57.2960,-20.5140]);
+  const t=el('text',{class:'placename',x:x+8,y:y+16,fill:'#14202B',opacity:'0'});
+  t.textContent='DOWNWIND SIGNATURE'; return t; })();
+
+const gSpots = el('g',{});
+const spotNodes = SPOTS.map((s,i)=>{
+  const g = el('g',{class:'spot'+(s.school?' school':''),'data-i':i,tabindex:'0',role:'button','aria-label':s.n},gSpots);
+  el('rect',{class:'hit',x:-22,y:-22,width:44,height:44},g);
+  el('rect',{class:'ring',x:-6,y:-6,width:12,height:12,rx:2},g);
+  el('rect',{class:'sq',x:-6,y:-6,width:12,height:12,rx:2},g);
+  let lx,ly,anchor;
+  if(s.L){ const [dx,dy]=s.L;
+    el('line',{class:'leader',x1:0,y1:0,x2:dx,y2:dy},g);
+    lx = dx + (dx<0?-5:5); ly = dy+3.5; anchor = dx<0?'end':'start';
+  } else {
+    lx = s.p==='l' ? -13 : s.p==='t'||s.p==='b' ? 0 : 13;
+    ly = (s.p==='t' ? -15 : s.p==='b' ? 21 : 3.5) + (s.dy||0);
+    anchor = s.p==='l'?'end':(s.p==='t'||s.p==='b')?'middle':'start';
+  }
+  const lab = el('text',{class:'lab',x:lx,y:ly,'text-anchor':anchor},g);
+  lab.textContent = s.n;
+  g.addEventListener('mouseenter',()=>select(i));
+  g.addEventListener('focus',()=>select(i));
+  g.addEventListener('click',()=>{select(i);scrollToItem(i);});
+  return g;
+});
+
+/* ---------------- liste ---------------- */
+const list = gid('list');
+list.innerHTML = SPOTS.map((s,i)=>`
+  <button class="item${s.school?' school':''}" data-i="${i}">
+    <span class="top"><span class="n">${i+1}</span>
+      <h3>${s.n}</h3>${s.school?'<span class="star">★</span>':''}</span>
+    <p>${s.t}</p>
+    <span class="tags">
+      <span class="tag">${s.dt}</span><span class="tag">${s.lt}</span>
+      ${(s.tag||[]).map(t=>`<span class="tag acc">★ ${t}</span>`).join('')}
+    </span>
+  </button>`).join('');
+const items=[...list.querySelectorAll('.item')];
+let current=-1;
+function select(i){
+  layout(); clearTimeout(zLeave);
+  if(CLUSTER.includes(i)) setZoom(1); else zLeave=setTimeout(()=>setZoom(0),260);
+  if(current===i) return; current=i;
+  items.forEach((e,j)=>e.classList.toggle('on',j===i));
+  spotNodes.forEach((e,j)=>e.classList.toggle('on',j===i));
+}
+function clearSel(){ current=-1; clearTimeout(zLeave); zLeave=setTimeout(()=>setZoom(0),700); items.forEach(e=>e.classList.remove('on')); spotNodes.forEach(e=>e.classList.remove('on')); }
+function scrollToItem(i){ const r=items[i].getBoundingClientRect(); scrollBy({top:r.top-innerHeight*0.55,behavior:'smooth'}); }
+items.forEach(e=>{const i=+e.dataset.i;
+  e.addEventListener('mouseenter',()=>{ if(!isMobile()) select(i); });
+  e.addEventListener('click',()=>select(i)); });
+list.addEventListener('mouseleave',()=>{ if(!isMobile()) clearSel(); });
+
+/* ---------------- filtres ---------------- */
+const active={discipline:new Set(),level:new Set()};
+root.querySelectorAll('.chip[data-f]').forEach(c=>c.addEventListener('click',()=>{
+  const set=active[c.dataset.f],v=c.dataset.v;
+  set.has(v)?set.delete(v):set.add(v);
+  c.setAttribute('aria-pressed',set.has(v));
+  let n=0;
+  SPOTS.forEach((s,i)=>{
+    const ok=(!active.discipline.size||s.d.some(x=>active.discipline.has(x)))
+          && (!active.level.size||s.lv.some(x=>active.level.has(x)));
+    if(ok)n++;
+    items[i].classList.toggle('hide',!ok);
+    spotNodes[i].classList.toggle('dim',!ok);
+  });
+  gid('count').textContent=n;
+}));
+
+/* ---------------- alizés ---------------- */
+const cv=gid('wind'),ctx=cv.getContext('2d');
+let W=0,H=0,parts=[],windLevel=0,kiteRun=false,kiteT=0;
+const isMobile=()=>matchMedia('(max-width:1000px)').matches;
+const calm=()=>matchMedia('(prefers-reduced-motion:reduce)').matches;
+function sizeCanvas(){
+  const r=cv.parentElement.getBoundingClientRect(),dpr=Math.min(devicePixelRatio||1,2);
+  W=r.width;H=r.height;cv.width=W*dpr;cv.height=H*dpr;cv.style.width=W+'px';cv.style.height=H+'px';
+  ctx.setTransform(dpr,0,0,dpr,0,0);
+  parts=Array.from({length:Math.max(18,Math.round(W*H/(isMobile()?16000:9000)))},()=>spawn(true));
+}
+function spawn(any){return{x:any?Math.random()*W*1.4-W*.2:0,y:any?Math.random()*H*1.4-H*.2:0,
+  len:12+Math.random()*34,sp:.4+Math.random()*1.2,a:.04+Math.random()*.09};}
+const DIRX=-0.90,DIRY=-0.43;
+function tick(){
+  ctx.clearRect(0,0,W,H);
+  if(windLevel>0.01){
+    for(const p of parts){
+      p.x+=DIRX*p.sp*windLevel; p.y+=DIRY*p.sp*windLevel;
+      if(p.x<-W*.3||p.y<-H*.3){p.x=W*.75+Math.random()*W*.5;p.y=H*.4+Math.random()*H*.8;}
+      ctx.strokeStyle=`rgba(20,32,43,${(p.a*windLevel).toFixed(3)})`;
+      ctx.lineWidth=.9;ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(p.x-DIRX*p.len,p.y-DIRY*p.len);ctx.stroke();
+    }
+  }
+  if(kiteRun) stepKite();
+  requestAnimationFrame(tick);
+}
+const CLUSTER = SPOTS.map((s,i)=>[i,s]).filter(([,s])=>
+  Math.abs(s.lat+20.466)<0.016 && Math.abs(s.lng-57.309)<0.014).map(([i])=>i);
+let zoom=0, zTarget=0, zRAF=null, zSnap=null, zLeave=null;
+function setVB(){
+  const r=box.getBoundingClientRect(); if(!r.height) return;
+  const A=r.width/r.height;
+  let w0,h0;
+  if(A < BBOX.w/BBOX.h){ w0=BBOX.w*1.06; h0=w0/A; } else { h0=BBOX.h*1.06; w0=h0*A; }
+  let cx=BBOX.x+BBOX.w/2, cy=BBOX.y+BBOX.h/2;
+  if(zoom>0.001){
+    const pts=CLUSTER.map(i=>P(SPOTS[i]));
+    const zx=pts.reduce((a,p)=>a+p[0],0)/pts.length, zy=pts.reduce((a,p)=>a+p[1],0)/pts.length;
+    cx+=(zx-cx)*zoom; cy+=(zy-cy)*zoom;
+    const f=1-0.58*zoom; w0*=f; h0*=f;   /* zoom modéré : ×2,4 au plus */
+  }
+  const vx=cx-w0/2, vy=cy-h0/2;
+  svg.setAttribute('viewBox',`${vx.toFixed(0)} ${vy.toFixed(0)} ${w0.toFixed(0)} ${h0.toFixed(0)}`);
+  const k=Math.max(.7,Math.min(2.6,h0/r.height));
+  svg.style.setProperty('--k',k.toFixed(3));
+  const m=16*k;
+  spotNodes.forEach((g,i)=>{ const [x,y]=P(SPOTS[i]);
+    const px=Math.min(Math.max(x,vx+m),vx+w0-m), py=Math.min(Math.max(y,vy+m),vy+h0-m);
+    g.classList.toggle('pin', Math.abs(px-x)>0.5||Math.abs(py-y)>0.5);
+    g.setAttribute('transform',`translate(${px.toFixed(1)},${py.toFixed(1)}) scale(${k.toFixed(3)})`); });
+  gKite.setAttribute('data-k',k.toFixed(3));
+  gid('rule').style.width=(54.5*r.height/h0).toFixed(1)+'px';
+}
+function setZoom(t){
+  zTarget=t; clearTimeout(zSnap);
+  zSnap=setTimeout(()=>{ zoom=zTarget; setVB(); },620);
+  if(zRAF) return;
+  (function step(){ zRAF=null;
+    const d=zTarget-zoom;
+    if(Math.abs(d)<0.006){ zoom=zTarget; setVB(); return; }
+    zoom+=d*0.17; setVB(); zRAF=requestAnimationFrame(step); })();
+}
+let played=false, laidOut=false;
+function layout(){ const r=box.getBoundingClientRect(); if(!r.height||!r.width) return false;
+  setVB(); sizeCanvas(); laidOut=true; return true; }
+tick();
+new ResizeObserver(()=>{ if(layout()) maybeIntro(); }).observe(box);
+layout();
+const id=setInterval(()=>{ if(layout()){ clearInterval(id); maybeIntro(); } },80);
+addEventListener('resize',()=>layout());
+
+/* ---------------- downwind ---------------- */
+function stepKite(){
+  kiteT+=calm()?0:0.0032; if(kiteT>1) kiteT=0;
+  const L=dwPath.getTotalLength(), pt=dwPath.getPointAtLength(kiteT*L),
+        pt2=dwPath.getPointAtLength(Math.min(L,kiteT*L+4));
+  const ang=Math.atan2(pt2.y-pt.y,pt2.x-pt.x)*180/Math.PI+90;
+  gKite.setAttribute('transform',`translate(${pt.x},${pt.y}) rotate(${ang}) scale(${gKite.getAttribute('data-k')||1})`);
+}
+function downwind(on){
+  kiteRun=on;
+  dwPath.classList.toggle('dw-live',on);
+  gKite.style.opacity=on?1:0;
+  dwLabel.style.opacity=on?1:0;
+  gid('dw').setAttribute('aria-pressed',on);
+  if(on) drawIn(dwPath,1000,.7);
+}
+gid('dw').addEventListener('click',()=>downwind(!kiteRun));
+
+/* ---------------- révélation ---------------- */
+function drawIn(node,dur,op,delay){
+  const L=node.getTotalLength(), dash=getComputedStyle(node).strokeDasharray;
+  node.style.strokeDasharray=L; node.style.strokeDashoffset=L;
+  node.animate([{strokeDashoffset:L},{strokeDashoffset:0}],
+    {duration:dur,delay:delay||0,easing:'cubic-bezier(.35,0,.15,1)',fill:'both'});
+  setTimeout(()=>{node.style.strokeDasharray=dash;node.style.strokeDashoffset='';},dur+(delay||0)+40);
+}
+function intro(){
+  layout(); played=true; box.classList.remove('on-air');
+  spotNodes.forEach(n=>n.classList.remove('in'));
+  reefLabel.style.opacity=0; downwind(false); windLevel=0; zoom=0; zTarget=0; setVB();
+  const mob=isMobile();
+  svg.style.opacity=1;
+  svg.animate([{transform:'translateY(10px)'},{transform:'none'}],
+    {duration:mob?700:950,easing:'cubic-bezier(.22,.61,.24,1)'});
+  drawIn(reefPath, mob?900:1100, .85, mob?400:600);
+  reefHalo.animate([{opacity:0},{opacity:.05}],{duration:600,delay:mob?900:1100,fill:'both'});
+  setTimeout(()=>{reefLabel.style.opacity=1;},mob?1200:1600);
+  setTimeout(()=>{ box.classList.add('on-air');
+    spotNodes.forEach((n,i)=>setTimeout(()=>n.classList.add('in'), i*(mob?60:80)));
+  }, mob?800:1100);
+  const t0=performance.now(), d0=mob?700:1000;
+  if(!calm()) (function ramp(now){ const t=Math.min(1,Math.max(0,(now-t0-d0)/1600));
+    windLevel=t; if(t<1) requestAnimationFrame(ramp); })(t0);
+  setTimeout(()=>downwind(true), mob?1800:2300);
+}
+new IntersectionObserver(e=>{layout(); if(e[0].isIntersecting&&!played&&laidOut)intro();},{threshold:.25}).observe(box);
+function maybeIntro(){ if(played||!laidOut) return; const r=box.getBoundingClientRect();
+  if(r.top<innerHeight*0.9 && r.bottom>innerHeight*0.1) intro(); }
+addEventListener('load',()=>setTimeout(()=>{layout();maybeIntro();},120));
+setTimeout(()=>{layout();maybeIntro();},700);
+gid('replay').addEventListener('click',intro);
+
+/* ---------------- mobile : le scroll pilote la carte ---------------- */
+const mo=new IntersectionObserver(entries=>{ if(!isMobile())return;
+  entries.forEach(en=>{ if(en.isIntersecting) select(+en.target.dataset.i); });
+},{rootMargin:'-62% 0px -30% 0px',threshold:0});
+items.forEach(e=>mo.observe(e));
+})();
+</script>

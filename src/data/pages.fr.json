@@ -715,7 +715,13 @@
               "description": "Falaises, houle du sud puissante et courants forts. Spectaculaire à regarder, exigeant à naviguer — pas un spot d'apprentissage."
             }
           ],
-          "disclaimer": "Carte dessinée à la main, non contractuelle et sans échelle — les positions et distances sont approximatives. Vérifiez toujours les conditions du jour avec un moniteur local avant de naviguer."
+          "disclaimer": "Carte dessinée à la main, non contractuelle et sans échelle — les positions et distances sont approximatives. Vérifiez toujours les conditions du jour avec un moniteur local avant de naviguer.",
+          "downwindLabel": "Downwind Bel Ombre → Le Morne",
+          "replayLabel": "Rejouer",
+          "hud": "Alizés <b>SE</b><br>Lagon protégé par le récif<br>Vent plus fort en début d’après-midi",
+          "compassLabel": "NORD",
+          "scaleUnit": "2 KM",
+          "railLabel": "Les spots"
         },
         {
           "type": "prose",
