@@ -18,6 +18,7 @@ import Gallery from "../components/blocks/Gallery.astro";
 import Weather from "../components/blocks/Weather.astro";
 import StoryAlbum from "../components/blocks/StoryAlbum.astro";
 import SpotsMap from "../components/blocks/SpotsMap.astro";
+import Includes from "../components/blocks/Includes.astro";
 import site from "../data/site.json";
 import fr from "../data/pages.fr.json";
 import en from "../data/pages.en.json";
@@ -51,6 +52,7 @@ const components = {
   windmonths: WindMonths,
   sectionnav: SectionNav,
   spotsmap: SpotsMap,
+  includes: Includes,
 };
 
 // Un seul h1 par page : le hero le porte. Sans hero, le premier bloc prose

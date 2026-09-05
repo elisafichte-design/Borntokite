@@ -378,6 +378,16 @@
           "image": "/photos/banc-de-sable-lagon-le-morne.webp"
         },
         {
+          "type": "cta",
+          "id": "coaching",
+          "icon": "chat",
+          "eyebrow": "Bientôt disponible",
+          "title": "Coaching individuel avec BB Talkin.",
+          "body": "Un retour vocal en temps réel sur l'eau grâce au casque BB Talkin, pour un coaching individuel encore plus précis. Disponible prochainement.",
+          "label": "Me prévenir au lancement",
+          "message": "Bonjour Born To Kite ! Le coaching individuel avec BB Talkin m'intéresse, prévenez-moi quand c'est disponible."
+        },
+        {
           "type": "prose",
           "eyebrow": "Au-delà du kite",
           "title": "Excursions & visites guidées",
@@ -483,7 +493,8 @@
                 "Sur demande"
               ]
             }
-          ]
+          ],
+          "note": "Groupe de 4 personnes ou plus : -10 % sur le prix total."
         },
         {
           "type": "image",
@@ -994,6 +1005,33 @@
           "height": 1067
         },
         {
+          "type": "includes",
+          "eyebrow": "Le cours Born To Kite",
+          "title": "Ce qui est inclus dans le cours.",
+          "items": [
+            {
+              "title": "Des moniteurs passionnés",
+              "text": "Ritik enseigne le kitesurf depuis plus de dix ans, entouré d'une petite équipe locale et familiale."
+            },
+            {
+              "title": "Du matériel complet, fourni",
+              "text": "Aile, planche, harnais, casque et gilet : tout est fourni, adapté à votre gabarit et au vent du jour."
+            },
+            {
+              "title": "Un encadrement resserré",
+              "text": "Cours privé 100 % individuel, ou deux élèves maximum par moniteur en semi-privé."
+            },
+            {
+              "title": "Le report sans frais",
+              "text": "Si le vent manque, la session est déplacée à un autre créneau — la sécurité avant tout."
+            },
+            {
+              "title": "Une vraie ambiance familiale",
+              "text": "Une école locale, née d'une passion, dans la bonne humeur et la bienveillance."
+            }
+          ]
+        },
+        {
           "type": "prices",
           "heading": "Apprentissage",
           "items": [
@@ -1382,19 +1420,13 @@
           ]
         },
         {
-          "type": "image",
-          "image": "/photos/banc-de-sable-lagon-le-morne.webp",
-          "alt": "Banc de sable et lagon turquoise du Morne vus du ciel, île Maurice",
-          "width": 1600,
-          "height": 1061
-        },
-        {
           "type": "cta",
           "title": "Demander une carte cadeau",
-          "body": "Cours, stage ou session VIP : écrivez-nous pour choisir la formule.",
+          "body": "Écrivez-nous pour choisir la formule qui vous convient.",
           "label": "Écrire sur WhatsApp",
           "message": "Bonjour Born To Kite ! Je souhaite offrir une carte cadeau. Pouvez-vous m'aider à choisir la formule ?",
-          "featured": true
+          "image": "/photos/banc-de-sable-lagon-le-morne.webp",
+          "alt": "Banc de sable et lagon turquoise du Morne vus du ciel, île Maurice"
         }
       ]
     },

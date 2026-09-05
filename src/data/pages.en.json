@@ -378,6 +378,16 @@
           "image": "/photos/banc-de-sable-lagon-le-morne.webp"
         },
         {
+          "type": "cta",
+          "id": "coaching",
+          "icon": "chat",
+          "eyebrow": "Coming soon",
+          "title": "One-on-one coaching with BB Talkin.",
+          "body": "Real-time voice coaching on the water with the BB Talkin headset, for even more precise one-on-one lessons. Coming soon.",
+          "label": "Notify me at launch",
+          "message": "Hello Born To Kite! I'm interested in one-on-one coaching with BB Talkin — please let me know when it's available."
+        },
+        {
           "type": "prose",
           "eyebrow": "Beyond kitesurfing",
           "title": "Excursions & guided tours",
@@ -483,7 +493,8 @@
                 "On request"
               ]
             }
-          ]
+          ],
+          "note": "Groups of 4 or more: -10% off the total price."
         },
         {
           "type": "image",
@@ -863,6 +874,33 @@
           "alt": "Kitesurfer on the turquoise lagoon of Le Morne, Mauritius",
           "width": 1600,
           "height": 1067
+        },
+        {
+          "type": "includes",
+          "eyebrow": "The Born To Kite lesson",
+          "title": "What's included in the lesson.",
+          "items": [
+            {
+              "title": "Passionate instructors",
+              "text": "Ritik has been teaching kitesurfing for over ten years, backed by a small, local, family team."
+            },
+            {
+              "title": "Full equipment, provided",
+              "text": "Wing, board, harness, helmet and vest: everything is provided, matched to your size and the day's wind."
+            },
+            {
+              "title": "Close supervision",
+              "text": "Fully private lessons, or a maximum of two students per instructor in semi-private lessons."
+            },
+            {
+              "title": "Free rescheduling",
+              "text": "If the wind doesn't cooperate, your session moves to another slot — safety comes first."
+            },
+            {
+              "title": "A real family feel",
+              "text": "A local school born from passion, run with good humour and care."
+            }
+          ]
         },
         {
           "type": "prices",
@@ -1253,19 +1291,13 @@
           ]
         },
         {
-          "type": "image",
-          "image": "/photos/banc-de-sable-lagon-le-morne.webp",
-          "alt": "Aerial view of a sandbank and the turquoise Le Morne lagoon, Mauritius",
-          "width": 1600,
-          "height": 1061
-        },
-        {
           "type": "cta",
           "title": "Ask for a gift card",
-          "body": "Choose a lesson, multi-day course or VIP session. Message us to select the right option.",
+          "body": "Message us to choose the option that suits you.",
           "label": "Message us on WhatsApp",
           "message": "Hello Born To Kite! I would like to give someone a gift card. Can you help me choose the right option?",
-          "featured": true
+          "image": "/photos/banc-de-sable-lagon-le-morne.webp",
+          "alt": "Aerial view of a sandbank and the turquoise Le Morne lagoon, Mauritius"
         }
       ]
     },

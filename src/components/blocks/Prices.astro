@@ -17,10 +17,12 @@ const { block } = Astro.props;
         </div>
       ))}
     </div>
+    {block.note && <p class="note faint">{block.note}</p>}
   </div>
 </section>
 <style>
   .list { display: grid; gap: var(--space-3); margin-top: var(--space-5); }
+  .note { margin-top: var(--space-4); font-size: var(--size-small); }
   .row { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: start; gap: var(--space-5); padding: var(--space-5); border: 1px solid var(--line); border-radius: var(--radius); }
   .name { font-weight: var(--weight-medium); }
   .detail { font-size: var(--size-small); margin-top: var(--space-1); max-width: 42ch; }
