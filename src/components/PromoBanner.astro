@@ -1,0 +1,79 @@
+---
+// Bandeau promo en haut de la page d'accueil (au-dessus de l'en-tête), pour
+// une annonce ponctuelle — ici le lancement à venir du coaching BB Talkin.
+// Fermable, mémorisé en localStorage comme CookieConsent.astro : une fois
+// fermé, il ne réapparaît plus pour ce visiteur. La clé est versionnée par
+// promo.id — changer ce champ (nouvelle annonce) fait réapparaître le
+// bandeau même pour quelqu'un qui avait fermé le précédent.
+import site from "../data/site.json";
+import Icon from "./Icon.astro";
+const { promo } = Astro.props;
+const message = promo?.message ? `?text=${encodeURIComponent(promo.message)}` : "";
+const href = promo?.href || `https://wa.me/${site.whatsappClean}${message}`;
+const key = `btk-promo-${promo?.id || "default"}-v1`;
+---
+{promo && (
+  <div class="promo" id="btk-promo" hidden>
+    <div class="inner">
+      {promo.icon && <span class="ico"><Icon name={promo.icon} size={18} /></span>}
+      <p class="txt">{promo.text}</p>
+      <a class="link" href={href} target="_blank" rel="noopener">{promo.label}</a>
+      <button type="button" class="close" aria-label={promo.close || "Fermer"}>×</button>
+    </div>
+  </div>
+)}
+{promo && (
+  <script define:vars={{ key }}>
+    (function () {
+      var el = document.getElementById("btk-promo");
+      if (!el) return;
+      var dismissed = false;
+      try { dismissed = localStorage.getItem(key) === "1"; } catch (e) {}
+      if (!dismissed) el.hidden = false;
+      var btn = el.querySelector(".close");
+      if (btn) {
+        btn.addEventListener("click", function () {
+          el.hidden = true;
+          try { localStorage.setItem(key, "1"); } catch (e) {}
+        });
+      }
+    })();
+  </script>
+)}
+<style>
+  .promo { background: var(--ink); color: var(--bg); }
+  .inner {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: var(--space-3) var(--gutter);
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+  }
+  .ico { display: flex; flex: none; color: var(--line); }
+  .txt { flex: 1 1 auto; margin: 0; font-size: var(--size-small); }
+  .link {
+    flex: none;
+    color: var(--bg);
+    font-weight: var(--weight-medium);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    border-bottom: 0;
+  }
+  .link:hover { color: var(--accent); }
+  .close {
+    flex: none;
+    background: transparent;
+    border: 0;
+    color: var(--bg);
+    font-size: 1.25rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: var(--space-1) var(--space-2);
+  }
+  .close:hover { color: var(--line); }
+  @media (max-width: 640px) {
+    .inner { flex-wrap: wrap; }
+    .txt { flex-basis: 100%; order: -1; }
+  }
+</style>

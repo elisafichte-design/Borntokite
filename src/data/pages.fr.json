@@ -378,16 +378,6 @@
           "image": "/photos/banc-de-sable-lagon-le-morne.webp"
         },
         {
-          "type": "cta",
-          "id": "coaching",
-          "icon": "chat",
-          "eyebrow": "Bientôt disponible",
-          "title": "Coaching individuel avec BB Talkin.",
-          "body": "Un retour vocal en temps réel sur l'eau grâce au casque BB Talkin, pour un coaching individuel encore plus précis. Disponible prochainement.",
-          "label": "Me prévenir au lancement",
-          "message": "Bonjour Born To Kite ! Le coaching individuel avec BB Talkin m'intéresse, prévenez-moi quand c'est disponible."
-        },
-        {
           "type": "prose",
           "eyebrow": "Au-delà du kite",
           "title": "Excursions & visites guidées",
@@ -428,7 +418,15 @@
           "body": "Écrivez-nous sur WhatsApp ou suivez nos sessions sur Instagram — réponse rapide garantie.",
           "image": "/photos/montagne-du-morne-vue-du-lagon.webp"
         }
-      ]
+      ],
+      "promo": {
+        "id": "bb-talkin",
+        "icon": "chat",
+        "text": "Coaching individuel avec casque BB Talkin — retour vocal en temps réel sur l'eau. Bientôt disponible.",
+        "label": "Me prévenir au lancement",
+        "message": "Bonjour Born To Kite ! Le coaching individuel avec BB Talkin m'intéresse, prévenez-moi quand c'est disponible.",
+        "close": "Fermer"
+      }
     },
     {
       "slug": "tarifs",
