@@ -30,7 +30,13 @@ const SPOTS = block.spots.map((s, i) => ({
   ...(s.school ? { tag: [block.schoolShortLabel] } : {}),
 }));
 ---
-<style>
+<style is:global>
+/* is:global : une bonne partie de cette carte (tracés SVG, liste des spots)
+   est construite dynamiquement en JavaScript, donc ces éléments n'existent
+   pas au moment où Astro attribue son marquage de portée (data-astro-cid-*).
+   Avec un <style> scoppé normalement, aucune de ces règles ne les
+   atteindrait — la carte s'affichait en noir. Les classes sont déjà toutes
+   préfixées .btk-spots, donc pas de risque de fuite vers le reste du site. */
 .btk-spots{
   --sea:var(--bg); --lagoon:#EDE4D5; --land:#CFC3AB;
   font-family:var(--font-body); -webkit-font-smoothing:antialiased;
