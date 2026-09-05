@@ -544,20 +544,6 @@
           ]
         },
         {
-          "type": "prices",
-          "heading": "En option",
-          "aValider": true,
-          "items": [
-            {
-              "name": "Photos et vidéos de session",
-              "detail": "Un photographe capte votre session depuis la plage ou depuis l'eau. Sur demande, selon disponibilité.",
-              "lines": [
-                "Sur demande"
-              ]
-            }
-          ]
-        },
-        {
           "type": "cta",
           "eyebrow": "Photos et vidéos",
           "title": "Repartez avec les images de votre session.",

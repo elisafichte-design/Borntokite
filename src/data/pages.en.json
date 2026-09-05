@@ -544,20 +544,6 @@
           ]
         },
         {
-          "type": "prices",
-          "heading": "Optional extras",
-          "aValider": true,
-          "items": [
-            {
-              "name": "Session photos and videos",
-              "detail": "A photographer captures your session from the beach or the water. Available on request, subject to availability.",
-              "lines": [
-                "On request"
-              ]
-            }
-          ]
-        },
-        {
           "type": "cta",
           "eyebrow": "Photos and videos",
           "title": "Leave with the images of your session.",

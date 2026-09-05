@@ -544,20 +544,6 @@
           ]
         },
         {
-          "type": "prices",
-          "heading": "Optional",
-          "aValider": true,
-          "items": [
-            {
-              "name": "Fotos und Videos der Session",
-              "detail": "Ein Fotograf begleitet deine Session vom Strand oder vom Wasser aus. Auf Anfrage und je nach Verfügbarkeit.",
-              "lines": [
-                "Auf Anfrage"
-              ]
-            }
-          ]
-        },
-        {
           "type": "cta",
           "eyebrow": "Fotos und Videos",
           "title": "Nimm die Bilder deiner Session mit.",
