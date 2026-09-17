@@ -1,16 +1,18 @@
 ---
-// Bandeau de consentement. Il n'existe que pour un seul service : le module
-// d'avis Google (Elfsight), qui dépose ses propres cookies. Rien d'autre sur
-// le site n'en pose — pas d'analytics à cookie, pas de vidéo intégrée, pas
-// d'iframe Calendly. Sans accord explicite du visiteur, le script tiers n'est
-// jamais chargé : le refus est l'état par défaut, y compris si le visiteur
-// ferme la page sans répondre.
+// Bandeau de consentement. Deux services en dépendent : le module d'avis
+// Google (Elfsight) et Google Analytics (mesure d'audience), qui déposent
+// chacun leurs propres cookies. Rien d'autre sur le site n'en pose — pas
+// de vidéo intégrée, pas d'iframe Calendly. Sans accord explicite du
+// visiteur, aucun des deux scripts n'est jamais chargé : le refus est
+// l'état par défaut, y compris si le visiteur ferme la page sans répondre.
 import site from "../data/site.json";
 const { ui } = Astro.props;
 const c = ui.consent || {};
 const app = site.elfsightReviewsApp;
+const ga4Id = site.ga4MeasurementId;
+const needsConsent = Boolean(app || ga4Id);
 ---
-{app && (
+{needsConsent && (
   <div class="consent" id="btk-consent" hidden>
     <div class="inner">
       <p class="txt">{c.text}</p>
@@ -21,8 +23,8 @@ const app = site.elfsightReviewsApp;
     </div>
   </div>
 )}
-{app && (
-  <script is:inline>
+{needsConsent && (
+  <script is:inline define:vars={{ hasElfsight: Boolean(app), ga4Id: ga4Id || "" }}>
     (function () {
       if (window.__btkconsent) return;
       window.__btkconsent = true;
@@ -34,10 +36,23 @@ const app = site.elfsightReviewsApp;
       var loadWidget = function () {
         if (loaded) return;
         loaded = true;
-        var s = document.createElement("script");
-        s.src = "https://elfsightcdn.com/platform.js";
-        s.async = true;
-        document.head.appendChild(s);
+        if (hasElfsight) {
+          var s = document.createElement("script");
+          s.src = "https://elfsightcdn.com/platform.js";
+          s.async = true;
+          document.head.appendChild(s);
+        }
+        if (ga4Id) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() { dataLayer.push(arguments); }
+          window.gtag = gtag;
+          gtag("js", new Date());
+          gtag("config", ga4Id, { anonymize_ip: true });
+          var g = document.createElement("script");
+          g.src = "https://www.googletagmanager.com/gtag/js?id=" + ga4Id;
+          g.async = true;
+          document.head.appendChild(g);
+        }
       };
 
       var banner = function () { return document.getElementById("btk-consent"); };
