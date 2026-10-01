@@ -60,8 +60,8 @@
   "pages": [
     {
       "slug": "",
-      "title": "Kitesurf school at Le Morne, Mauritius",
-      "description": "A local, family-run kitesurf, wingfoil and surf school on Le Morne lagoon. Private and semi-private lessons, downwind trips and VIP boat sessions. Prices shown online.",
+      "title": "Kitesurf lessons at Le Morne, Mauritius",
+      "description": "Private & semi-private kitesurf lessons on Le Morne's flat lagoon. All gear included, 10+ years teaching, 5★ on Google. From €80. Book on WhatsApp.",
       "blocks": [
         {
           "type": "hero",
@@ -671,8 +671,8 @@
     },
     {
       "slug": "meteo",
-      "title": "Live weather and wind at Le Morne",
-      "description": "Live forecasts, Born To Kite's daily weather update and a month-by-month wind table for Le Morne lagoon.",
+      "title": "Le Morne wind forecast today – live kite conditions",
+      "description": "Live wind forecast for Le Morne lagoon, daily weather and a 12-month wind table. Local kite school, lessons from €80 – book on WhatsApp.",
       "blocks": [
         {
           "type": "prose",
