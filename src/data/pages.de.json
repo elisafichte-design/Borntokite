@@ -391,7 +391,7 @@
           "items": [
             {
               "q": "Welches Niveau brauche ich, um mit dem Kitesurfen zu beginnen?",
-              "a": "Vorkenntnisse sind nicht erforderlich. Der Kurs beginnt mit Theorie und Kite-Handling an Land, bevor es ins Wasser geht. Du musst schwimmen können."
+              "a": "Vorkenntnisse sind nicht erforderlich. Der Kurs beginnt mit Theorie und Kite-Handling an Land, bevor es ins Wasser geht. Schwimmen können musst du nicht: In der ganzen Lagune kannst du stehen. Sich im Wasser wohlzufühlen, ist aber ein Plus."
             },
             {
               "q": "Wie lange dauert es, selbstständig zu fahren?",
@@ -399,7 +399,7 @@
             },
             {
               "q": "Ist die Ausrüstung inklusive?",
-              "a": "Ja. Kite, Board, Trapez, Helm und Schwimmweste sind inklusive und werden passend zu deiner Größe und zum Wind des Tages ausgewählt."
+              "a": "Ja. Kite, Board, Trapez, Helm, Schwimmweste, Lycra oder Neoprenanzug und Neoprenschuhe sind inklusive und werden passend zu deiner Größe und zum Wind des Tages ausgewählt."
             },
             {
               "q": "Was passiert, wenn es keinen Wind gibt?",
@@ -471,6 +471,13 @@
               ]
             },
             {
+              "name": "Kitesurfen in den Wellen",
+              "detail": "Am Spot von Le Morne.",
+              "lines": [
+                "50 €/Std."
+              ]
+            },
+            {
               "name": "Betreuung",
               "detail": "Du fährst bereits selbstständig? Fahre unter Aufsicht der Schule.",
               "lines": [
@@ -532,13 +539,6 @@
               "detail": "Eine betreute 90-minütige Session mit Ausrüstung.",
               "lines": [
                 "60 € — 1 h 30"
-              ]
-            },
-            {
-              "name": "Session in den Wellen",
-              "detail": "Am Spot von Le Morne.",
-              "lines": [
-                "50 €/Std."
               ]
             }
           ]
@@ -617,7 +617,7 @@
             },
             {
               "title": "Sicherheit",
-              "body": "Du musst schwimmen können. Gib dem Surfer auf der Welle Vorfahrt und halte ausreichend Abstand zu anderen Wassersportlern.",
+              "body": "Schwimmen zu können ist besser; Schwimmwesten stehen bereit. Gib dem Surfer auf der Welle Vorfahrt und halte ausreichend Abstand zu anderen Wassersportlern.",
               "icon": "shield"
             }
           ]
@@ -634,7 +634,7 @@
           "body": [
             "Der Wind weht in der Regel von 7:00 bis 18:30 Uhr und ist am frühen Nachmittag stärker. Er hängt auch von der Tide ab und nimmt mit auflaufendem Wasser zu.",
             "Von November bis April passt sich die Schule den Bedingungen an. Reicht der Wind nicht aus, wird die Session erstattet oder verschoben. Wir können auch zu einem anderen Spot wechseln.",
-            "Der Februar ist der unzuverlässigste Monat zum Kitesurfen. Auch Dezember und Mitte Januar sind weniger konstant, wobei die Natur immer unberechenbar bleibt.",
+            "Dezember, Januar und Februar sind Nebensaison: Kiten ist möglich, aber an weniger Tagen im Monat und unregelmäßiger.",
             "Von Mai bis September ist die Lagune stärker besucht. Ab Ende September wird es ruhiger."
           ]
         },
@@ -664,6 +664,29 @@
               "q": "Vorausschauend fahren und kommunizieren",
               "a": "Im Zweifel langsamer werden und Vorfahrt gewähren.",
               "icon": "chat"
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "eyebrow": "Weiterlesen",
+          "heading": "Deine Reise vorbereiten.",
+          "items": [
+            {
+              "title": "Wann nach Mauritius zum Kiten?",
+              "body": "Wind, fahrbare Tage und Wassertemperatur, Monat für Monat.",
+              "href": "/de/meilleure-periode-kitesurf-ile-maurice/",
+              "linkLabel": "Zum Ratgeber",
+              "image": "/photos/montagne-du-morne-vue-du-lagon.webp",
+              "alt": "Der Berg Le Morne von der Lagune aus gesehen, Mauritius"
+            },
+            {
+              "title": "Kitesurfen lernen am Le Morne",
+              "body": "Wie viele Stunden, welches Budget, ab welchem Alter.",
+              "href": "/de/apprendre-le-kitesurf-le-morne/",
+              "linkLabel": "Zum Ratgeber",
+              "image": "/photos/galerie-briefing-au-sol-le-morne.webp",
+              "alt": "Einweisung an Land vor einem Kitesurf-Kurs am Le Morne"
             }
           ]
         }
@@ -697,6 +720,349 @@
           "type": "windmonths",
           "data": "de",
           "lead": "Von der Schule beobachtete Bedingungen, damit du die passende Reisezeit für dein Niveau wählen kannst. Diese Werte gelten fürs Kitesurfen: Wingfoilen braucht weniger Knoten."
+        }
+      ]
+    },
+    {
+      "slug": "meilleure-periode-kitesurf-ile-maurice",
+      "title": "Beste Reisezeit zum Kitesurfen auf Mauritius, Monat für Monat",
+      "description": "Wann am Le Morne kiten? Juni bis September für starken Wind, März bis Mai und Oktober für eine ruhigere Lagune. Wind, fahrbare Tage und Wasser, Monat für Monat.",
+      "blocks": [
+        {
+          "type": "prose",
+          "eyebrow": "Ratgeber",
+          "title": "Wann ist die beste Zeit zum Kitesurfen auf Mauritius?",
+          "body": [
+            "Die beste Zeit zum Kitesurfen am Le Morne ist von Juni bis September. Der Wind weht dann mit 15 bis 33 Knoten, mit 20 bis 30 fahrbaren Tagen im August und September. März, April, Mai und Oktober sind ebenfalls gut, mit einer ruhigeren Lagune. Von Dezember bis Februar ist Nebensaison: Kiten ist möglich, aber an weniger Tagen und unregelmäßiger."
+          ]
+        },
+        {
+          "type": "windmonths",
+          "data": "de",
+          "lead": "Von der Schule beobachtete Bedingungen, damit du die passende Reisezeit für dein Niveau wählen kannst. Diese Werte gelten fürs Kitesurfen: Wingfoilen braucht weniger Knoten."
+        },
+        {
+          "type": "prose",
+          "title": "Welcher Monat für Anfänger?",
+          "body": [
+            "Von März bis November eignet sich jeder Monat für Anfänger. Die Lagune bleibt flach, und die Kitegröße wird an den Wind des Tages angepasst. März, April und Mai bringen mittleren Wind, 10 bis 22 Knoten, und weniger Betrieb auf dem Wasser."
+          ]
+        },
+        {
+          "type": "prose",
+          "title": "Welcher Monat für erfahrene Rider?",
+          "body": [
+            "Juni, Juli, August und September: Der Wind ist stark, 15 bis 33 Knoten. Das ist die Saison für den Downwind von Bel Ombre nach Le Morne und für Sprung-Sessions. Von Mai bis September ist die Lagune auch am vollsten, ab Ende September wird es ruhiger."
+          ]
+        },
+        {
+          "type": "prose",
+          "title": "Und von November bis April?",
+          "body": [
+            "Die Schule bleibt geöffnet und passt sich an. Reicht der Wind nicht, wird die Session erstattet oder verschoben, und die Schule kann für bessere Bedingungen den Spot wechseln. Dezember, Januar und Februar sind Nebensaison: Kiten ist möglich, aber an weniger Tagen im Monat und unregelmäßiger."
+          ]
+        },
+        {
+          "type": "prose",
+          "title": "Wann weht der Wind?",
+          "body": [
+            "In der Saison weht der Wind von 7:00 bis 18:30 Uhr. Am frühen Nachmittag ist er stärker, und er nimmt mit auflaufendem Wasser zu."
+          ]
+        },
+        {
+          "type": "prose",
+          "title": "Welchen Neoprenanzug brauche ich?",
+          "body": [
+            "Das Wasser hat das ganze Jahr 24 bis 27 °C: Von November bis April reicht ein Lycra, von Mai bis Oktober ist ein Neoprenanzug sinnvoll. Kaufen musst du nichts: Lycras, Neoprenanzüge und Neoprenschuhe stellt die Schule."
+          ]
+        },
+        {
+          "type": "image",
+          "image": "/photos/montagne-du-morne-vue-du-lagon.webp",
+          "alt": "Der Berg Le Morne von der Lagune aus gesehen, Mauritius",
+          "width": 1600,
+          "height": 1061
+        },
+        {
+          "type": "faq",
+          "heading": "Häufige Fragen.",
+          "items": [
+            {
+              "q": "Was ist die beste Saison zum Kitesurfen auf Mauritius?",
+              "a": "Juni bis September, mit 15 bis 33 Knoten am Le Morne."
+            },
+            {
+              "q": "Kann man im Dezember oder Januar auf Mauritius kiten?",
+              "a": "Ja, das ist die Nebensaison: Kiten ist möglich, aber an weniger Tagen im Monat und unregelmäßiger."
+            },
+            {
+              "q": "Und zum Wingfoilen?",
+              "a": "Wingfoilen braucht weniger Wind als Kitesurfen, also sind mehr Tage möglich."
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "eyebrow": "Weiterlesen",
+          "heading": "Deine Reise vorbereiten.",
+          "items": [
+            {
+              "title": "Kitesurfen lernen am Le Morne",
+              "body": "Wie viele Stunden, welches Budget, ab welchem Alter.",
+              "href": "/de/apprendre-le-kitesurf-le-morne/",
+              "linkLabel": "Zum Ratgeber",
+              "image": "/photos/galerie-briefing-au-sol-le-morne.webp",
+              "alt": "Einweisung an Land vor einem Kitesurf-Kurs am Le Morne"
+            },
+            {
+              "title": "Kitesurf-Kurse",
+              "body": "Privat- und Halbprivatkurse, Ausrüstung inklusive.",
+              "href": "/de/cours-de-kitesurf/",
+              "linkLabel": "Kurse ansehen",
+              "image": "/photos/kitesurf-lagon-turquoise-le-morne.webp",
+              "alt": "Kitesurfer in der türkisfarbenen Lagune von Le Morne, Mauritius"
+            }
+          ]
+        },
+        {
+          "type": "cta",
+          "title": "Bereit, über das Wasser zu fliegen?",
+          "body": "Schreib uns auf WhatsApp oder folge unseren Sessions auf Instagram. Wir antworten schnell.",
+          "image": "/photos/kitesurf-figure-coucher-de-soleil-le-morne.webp"
+        }
+      ]
+    },
+    {
+      "slug": "apprendre-le-kitesurf-le-morne",
+      "title": "Kitesurfen lernen am Le Morne: Dauer, Preis, Alter",
+      "description": "Wie viele Stunden bis zum selbstständigen Fahren, was es kostet, ab welchem Alter. Antworten eines Lehrers am Le Morne, flache Lagune, Ausrüstung inklusive.",
+      "blocks": [
+        {
+          "type": "prose",
+          "eyebrow": "Ratgeber",
+          "title": "Wie lange dauert es, Kitesurfen zu lernen?",
+          "body": [
+            "In der Regel brauchst du 6 bis 10 Unterrichtsstunden, um selbstständig zu fahren. Am Le Morne lernst du in einer flachen, seichten Lagune, die vom Korallenriff geschützt wird. Ein 6-Stunden-Paket kostet 420 € im Privatkurs oder 230 € pro Person im Halbprivatkurs."
+          ]
+        },
+        {
+          "type": "image",
+          "image": "/photos/galerie-briefing-au-sol-le-morne.webp",
+          "alt": "Einweisung an Land vor einem Kitesurf-Kurs am Le Morne",
+          "width": 700,
+          "height": 700,
+          "full": false
+        },
+        {
+          "type": "prose",
+          "title": "Wie läuft die erste Stunde ab?",
+          "body": [
+            "Vorkenntnisse sind nicht nötig. Der Kurs beginnt mit Theorie und Kite-Handling an Land, bevor es ins Wasser geht. Schwimmen können musst du nicht: In der ganzen Lagune kannst du stehen. Sich im Wasser wohlzufühlen, ist aber ein Plus.",
+            "Die gesamte Ausrüstung ist inklusive: Kite, Board, Trapez, Helm, Weste, Lycra oder Neoprenanzug und Neoprenschuhe, passend zu deiner Größe und zum Wind des Tages."
+          ]
+        },
+        {
+          "type": "prose",
+          "title": "Warum in der Lagune von Le Morne lernen?",
+          "body": [
+            "Die Lagune ist seicht, du kannst überall stehen, und das Riff schützt sie vor großem Wellengang. Das Wasser ist flach, ohne große Wellen. Der vorherrschende Wind ist der Südostpassat, am frühen Nachmittag stärker."
+          ]
+        },
+        {
+          "type": "prose",
+          "title": "Privat- oder Halbprivatkurs?",
+          "body": [
+            "Im Privatkurs ist der Lehrer nur für dich da. Im Halbprivatkurs betreut er höchstens zwei Schüler. Du kannst zu zweit kommen oder mit einem anderen Schüler gleichen Niveaus zusammengebracht werden."
+          ]
+        },
+        {
+          "type": "prices",
+          "heading": "Preise für Kurse",
+          "items": [
+            {
+              "name": "Privatkurs",
+              "detail": "Persönliches Einzelcoaching, damit du in deinem Tempo Fortschritte machst.",
+              "lines": [
+                "2 h — 150 €",
+                "6 h — 420 €",
+                "8 h — 550 €",
+                "10 h — 700 €"
+              ]
+            },
+            {
+              "name": "Halbprivatkurs",
+              "detail": "Maximal zwei Personen pro Lehrer, damit ihr gemeinsam Fortschritte macht.",
+              "lines": [
+                "2 h — 80 €/Person",
+                "6 h — 230 €/Person",
+                "8 h — 300 €/Person",
+                "10 h — 380 €/Person"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "title": "Ab welchem Alter?",
+          "body": [
+            "Ab 7 oder 8 Jahren, je nach Gewicht des Kindes. Eine Altersgrenze nach oben gibt es nicht."
+          ]
+        },
+        {
+          "type": "prose",
+          "title": "Was muss ich mitbringen?",
+          "body": [
+            "Sonnenbrille, Handtuch und Sonnencreme. Alles andere ist inklusive, auch Lycra, Neoprenanzug und Neoprenschuhe."
+          ]
+        },
+        {
+          "type": "prose",
+          "title": "Und wenn kein Wind ist?",
+          "body": [
+            "Die Session wird erstattet oder verschoben. Die Schule kann auch für bessere Bedingungen den Spot wechseln."
+          ]
+        },
+        {
+          "type": "faq",
+          "heading": "Häufige Fragen.",
+          "items": [
+            {
+              "q": "Wie viele Stunden bis zum selbstständigen Kitesurfen?",
+              "a": "In der Regel 6 bis 10 Stunden, je nach Gefühl auf dem Wasser und Wind."
+            },
+            {
+              "q": "Was kostet es, Kitesurfen zu lernen?",
+              "a": "420 bis 700 € im Privatkurs (6 bis 10 Std.), 230 bis 380 € pro Person im Halbprivatkurs."
+            },
+            {
+              "q": "Muss ich sportlich sein oder schwimmen können?",
+              "a": "Vorkenntnisse sind nicht nötig. Schwimmen musst du auch nicht können: In der ganzen Lagune kannst du stehen."
+            },
+            {
+              "q": "Welche Saison für den Einstieg?",
+              "a": "März bis November. Die Details Monat für Monat stehen in unserem Ratgeber zur besten Reisezeit."
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "eyebrow": "Weiterlesen",
+          "heading": "Deine Reise vorbereiten.",
+          "items": [
+            {
+              "title": "Wann nach Mauritius zum Kiten?",
+              "body": "Wind, fahrbare Tage und Wassertemperatur, Monat für Monat.",
+              "href": "/de/meilleure-periode-kitesurf-ile-maurice/",
+              "linkLabel": "Zum Ratgeber",
+              "image": "/photos/montagne-du-morne-vue-du-lagon.webp",
+              "alt": "Der Berg Le Morne von der Lagune aus gesehen, Mauritius"
+            },
+            {
+              "title": "Kitesurf-Kurse",
+              "body": "Privat- und Halbprivatkurse, Ausrüstung inklusive.",
+              "href": "/de/cours-de-kitesurf/",
+              "linkLabel": "Kurse ansehen",
+              "image": "/photos/kitesurf-lagon-turquoise-le-morne.webp",
+              "alt": "Kitesurfer in der türkisfarbenen Lagune von Le Morne, Mauritius"
+            }
+          ]
+        },
+        {
+          "type": "cta",
+          "title": "Bereit, über das Wasser zu fliegen?",
+          "body": "Schreib uns auf WhatsApp oder folge unseren Sessions auf Instagram. Wir antworten schnell.",
+          "form": true
+        }
+      ]
+    },
+    {
+      "slug": "du-kitesurf-au-wingfoil",
+      "title": "Vom Kitesurfen zum Wingfoilen: wie viele Stunden bis zum Abheben?",
+      "description": "Ein selbstständiger Kitesurfer hebt meist nach 4 bis 6 Stunden Wingfoil ab, ein Anfänger nach 6 bis 10 Stunden. Was sich ändert und wo du auf Mauritius lernst.",
+      "blocks": [
+        {
+          "type": "prose",
+          "eyebrow": "Ratgeber",
+          "title": "Vom Kitesurfen zum Wingfoilen: wie lange dauert es?",
+          "body": [
+            "Ein selbstständiger Kitesurfer braucht in der Regel 4 bis 6 Stunden, um auf dem Foil abzuheben. Ein kompletter Anfänger eher 6 bis 10 Stunden. Wingfoilen braucht weniger Wind als Kitesurfen: Am Le Morne bringt es dir also mehr Tage auf dem Wasser."
+          ]
+        },
+        {
+          "type": "image",
+          "image": "/photos/wingfoil-le-morne-ile-maurice.webp",
+          "alt": "Wingfoilen in der Lagune von Le Morne, Mauritius",
+          "width": 1000,
+          "height": 750
+        },
+        {
+          "type": "prose",
+          "title": "Was bringt dir das Kitesurfen?",
+          "body": [
+            "Du kannst den Wind schon lesen, dich auf dem Wasser positionieren und die Vorfahrtsregeln einhalten. Das spart dir mehrere Stunden gegenüber einem kompletten Anfänger."
+          ]
+        },
+        {
+          "type": "prose",
+          "title": "Was ändert sich?",
+          "body": [
+            "Den Wing hältst du in der Hand, ohne Leinen und ohne Bar. Das Gleichgewicht findest du auf dem Foil, einem Board, das sich über das Wasser hebt."
+          ]
+        },
+        {
+          "type": "prose",
+          "title": "Welchen Kurs wählen?",
+          "body": [
+            "Wingfoil-Kurse kosten so viel wie Kitesurf-Kurse: 2 Stunden für 150 € privat oder 80 € pro Person im Halbprivatkurs. Für 4 bis 6 Stunden passt das 6-Stunden-Paket am besten (420 € privat, 230 € pro Person halbprivat).",
+            "Wenn du selbstständig fährst, kostet die Betreuung 30 € pro Stunde und das Leihmaterial 20 €."
+          ]
+        },
+        {
+          "type": "faq",
+          "heading": "Häufige Fragen.",
+          "items": [
+            {
+              "q": "Lernen Kitesurfer schneller Wingfoilen?",
+              "a": "Ja: in der Regel 4 bis 6 Stunden, gegenüber 6 bis 10 Stunden für Anfänger."
+            },
+            {
+              "q": "Braucht man viel Wind zum Wingfoilen?",
+              "a": "Weniger als zum Kitesurfen."
+            },
+            {
+              "q": "Ist die Ausrüstung inklusive?",
+              "a": "Ja, die gesamte Ausrüstung ist inklusive, auch Lycra, Neoprenanzug und Neoprenschuhe."
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "eyebrow": "Weiterlesen",
+          "heading": "Deine Reise vorbereiten.",
+          "items": [
+            {
+              "title": "Wingfoil-Kurse",
+              "body": "Wingfoilen lernen in der Lagune von Le Morne.",
+              "href": "/de/wingfoil/",
+              "linkLabel": "Kurse ansehen",
+              "image": "/photos/wingfoil-le-morne-2026.webp",
+              "alt": "Wingfoiler über der Lagune von Le Morne, Mauritius"
+            },
+            {
+              "title": "Wann nach Mauritius zum Kiten?",
+              "body": "Wind, fahrbare Tage und Wassertemperatur, Monat für Monat.",
+              "href": "/de/meilleure-periode-kitesurf-ile-maurice/",
+              "linkLabel": "Zum Ratgeber",
+              "image": "/photos/montagne-du-morne-vue-du-lagon.webp",
+              "alt": "Der Berg Le Morne von der Lagune aus gesehen, Mauritius"
+            }
+          ]
+        },
+        {
+          "type": "cta",
+          "title": "Bereit, über das Wasser zu fliegen?",
+          "body": "Schreib uns auf WhatsApp oder folge unseren Sessions auf Instagram. Wir antworten schnell.",
+          "image": "/photos/kitesurf-figure-coucher-de-soleil-le-morne.webp"
         }
       ]
     },
@@ -870,7 +1236,7 @@
             },
             {
               "title": "Komplette Ausrüstung inklusive",
-              "text": "Kite, Board, Trapez, Helm und Schwimmweste – alles inklusive, passend zu deiner Größe und zum Wind des Tages."
+              "text": "Kite, Board, Trapez, Helm, Schwimmweste, Lycra oder Neoprenanzug und Neoprenschuhe – alles inklusive, passend zu deiner Größe und zum Wind des Tages."
             },
             {
               "title": "Enge Betreuung",
@@ -911,6 +1277,16 @@
               ]
             }
           ]
+        },
+        {
+          "type": "prose",
+          "title": "Halbprivatkurs: Kitesurfen zu zweit lernen",
+          "body": [
+            "Ein Halbprivatkurs bringt höchstens zwei Schüler mit einem Lehrer zusammen. Er kostet 80 € pro Person für 2 Stunden und 230 € pro Person für 6 Stunden, Ausrüstung inklusive.",
+            "Du kannst zu zweit kommen: als Paar, mit Freunden oder mit der Familie. Du kommst allein? Wir bringen dich mit einem anderen Schüler gleichen Niveaus zusammen.",
+            "Es ist der günstigste Weg zu lernen, und ein schöner Moment zum Teilen."
+          ],
+          "id": "semi-prive"
         },
         {
           "type": "prices",
@@ -993,15 +1369,19 @@
           "items": [
             {
               "q": "Welches Niveau brauche ich, um mit dem Kitesurfen zu beginnen?",
-              "a": "Vorkenntnisse sind nicht erforderlich. Der Kurs beginnt mit Theorie und Kite-Handling an Land, bevor es ins Wasser geht. Du musst schwimmen können."
+              "a": "Vorkenntnisse sind nicht erforderlich. Der Kurs beginnt mit Theorie und Kite-Handling an Land, bevor es ins Wasser geht. Schwimmen können musst du nicht: In der ganzen Lagune kannst du stehen. Sich im Wasser wohlzufühlen, ist aber ein Plus."
             },
             {
               "q": "Wie lange dauert es, selbstständig zu fahren?",
               "a": "In der Regel reichen 6 bis 10 Unterrichtsstunden, um die Grundlagen für selbstständiges Fahren zu lernen. Das hängt von deinem Gefühl auf dem Wasser und den Windbedingungen ab."
             },
             {
+              "q": "Was ist ein Halbprivatkurs?",
+              "a": "Ein Kurs mit höchstens zwei Schülern pro Lehrer, für 80 € pro Person für 2 Stunden. Du kommst zu zweit, oder wir bringen dich mit einem Schüler gleichen Niveaus zusammen."
+            },
+            {
               "q": "Ist die Ausrüstung inklusive?",
-              "a": "Ja. Kite, Board, Trapez, Helm und Schwimmweste sind inklusive und werden passend zu deiner Größe und zum Wind des Tages ausgewählt."
+              "a": "Ja. Kite, Board, Trapez, Helm, Schwimmweste, Lycra oder Neoprenanzug und Neoprenschuhe sind inklusive und werden passend zu deiner Größe und zum Wind des Tages ausgewählt."
             },
             {
               "q": "Bietet ihr Freestyle-Coaching für fortgeschrittene Rider an?",
@@ -1014,6 +1394,29 @@
             {
               "q": "Wie buche ich?",
               "a": "Am einfachsten schickst du uns deine verfügbaren Zeiten per WhatsApp. Wir bestätigen den Termin abhängig vom Wetter."
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "eyebrow": "Weiterlesen",
+          "heading": "Deine Reise vorbereiten.",
+          "items": [
+            {
+              "title": "Kitesurfen lernen am Le Morne",
+              "body": "Wie viele Stunden, welches Budget, ab welchem Alter.",
+              "href": "/de/apprendre-le-kitesurf-le-morne/",
+              "linkLabel": "Zum Ratgeber",
+              "image": "/photos/galerie-briefing-au-sol-le-morne.webp",
+              "alt": "Einweisung an Land vor einem Kitesurf-Kurs am Le Morne"
+            },
+            {
+              "title": "Wann nach Mauritius zum Kiten?",
+              "body": "Wind, fahrbare Tage und Wassertemperatur, Monat für Monat.",
+              "href": "/de/meilleure-periode-kitesurf-ile-maurice/",
+              "linkLabel": "Zum Ratgeber",
+              "image": "/photos/montagne-du-morne-vue-du-lagon.webp",
+              "alt": "Der Berg Le Morne von der Lagune aus gesehen, Mauritius"
             }
           ]
         },
@@ -1103,6 +1506,72 @@
           ]
         },
         {
+          "type": "prose",
+          "title": "Wie viele Stunden, um Wingfoilen zu lernen?",
+          "body": [
+            "Ein kompletter Anfänger braucht in der Regel 6 bis 10 Stunden, um auf dem Foil abzuheben. Ein selbstständiger Kitesurfer schafft es eher in 4 bis 6 Stunden. Die Pakete mit 6, 8 und 10 Stunden sind genau dafür gedacht."
+          ]
+        },
+        {
+          "type": "prose",
+          "title": "Warum Wingfoilen am Le Morne lernen?",
+          "body": [
+            "Die Lagune von Le Morne ist seicht, flach und vom Korallenriff geschützt. Wingfoilen braucht weniger Wind als Kitesurfen: So kannst du an mehr Tagen im Jahr aufs Wasser."
+          ]
+        },
+        {
+          "type": "prose",
+          "title": "Allein oder zu zweit?",
+          "body": [
+            "Im Privatkurs ist der Lehrer nur für dich da. Im Halbprivatkurs höchstens zwei Schüler pro Lehrer: Du kommst zu zweit oder wirst mit einem Schüler gleichen Niveaus zusammengebracht."
+          ]
+        },
+        {
+          "type": "faq",
+          "heading": "Häufige Fragen.",
+          "items": [
+            {
+              "q": "Muss ich kitesurfen können, um Wingfoilen zu lernen?",
+              "a": "Nein. Ein kompletter Anfänger hebt in der Regel nach 6 bis 10 Stunden ab. Schwimmen musst du nicht können: In der ganzen Lagune kannst du stehen."
+            },
+            {
+              "q": "Ist die Ausrüstung inklusive?",
+              "a": "Ja, alles ist inklusive, auch Lycra, Neoprenanzug und Neoprenschuhe. Bring Sonnenbrille, Handtuch und Sonnencreme mit."
+            },
+            {
+              "q": "Welche Saison zum Wingfoilen auf Mauritius?",
+              "a": "Das ganze Jahr ist möglich, mit mehr fahrbaren Tagen als beim Kitesurfen. Die windigsten Monate sind Juni bis September."
+            },
+            {
+              "q": "Was passiert, wenn kein Wind ist?",
+              "a": "Die Session wird erstattet oder verschoben."
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "eyebrow": "Weiterlesen",
+          "heading": "Deine Reise vorbereiten.",
+          "items": [
+            {
+              "title": "Vom Kitesurfen zum Wingfoilen",
+              "body": "Wie viele Stunden bis zum Abheben, wenn du schon kitest.",
+              "href": "/de/du-kitesurf-au-wingfoil/",
+              "linkLabel": "Zum Ratgeber",
+              "image": "/photos/wingfoil-le-morne-ile-maurice.webp",
+              "alt": "Wingfoilen in der Lagune von Le Morne, Mauritius"
+            },
+            {
+              "title": "Wann nach Mauritius zum Kiten?",
+              "body": "Wind, fahrbare Tage und Wassertemperatur, Monat für Monat.",
+              "href": "/de/meilleure-periode-kitesurf-ile-maurice/",
+              "linkLabel": "Zum Ratgeber",
+              "image": "/photos/montagne-du-morne-vue-du-lagon.webp",
+              "alt": "Der Berg Le Morne von der Lagune aus gesehen, Mauritius"
+            }
+          ]
+        },
+        {
           "type": "cta",
           "title": "Bereit, über das Wasser zu fliegen?",
           "body": "Schreib uns auf WhatsApp oder folge unseren Sessions auf Instagram. Wir antworten schnell.",
@@ -1142,14 +1611,21 @@
               "lines": [
                 "60 € — 1 h 30"
               ]
-            },
-            {
-              "name": "Session in den Wellen",
-              "detail": "Am Spot von Le Morne.",
-              "lines": [
-                "50 €/Std."
-              ]
             }
+          ]
+        },
+        {
+          "type": "prose",
+          "title": "Wie läuft ein Surfkurs ab?",
+          "body": [
+            "Ein Surfkurs dauert 1 Std. 30 und kostet 60 €, Ausrüstung inklusive. Der Spot wird am selben Tag je nach Wellengang gewählt, unter mehreren Spots im Süden der Insel. Anfänger sind willkommen."
+          ]
+        },
+        {
+          "type": "prose",
+          "title": "Für wen?",
+          "body": [
+            "Für alle Niveaus, vom ersten Surfkurs bis zu Surfern, die besser werden wollen. Schwimmen zu können ist besser; Schwimmwesten stehen bereit."
           ]
         },
         {
@@ -1166,9 +1642,31 @@
           "eyebrow": "Sicherheit",
           "title": "Sicherheit",
           "body": [
-            "Du musst schwimmen können. Gib dem Surfer auf der Welle Vorfahrt und halte ausreichend Abstand zu anderen Wassersportlern."
+            "Schwimmen zu können ist besser; Schwimmwesten stehen bereit. Gib dem Surfer auf der Welle Vorfahrt und halte ausreichend Abstand zu anderen Wassersportlern."
           ],
           "icon": "shield"
+        },
+        {
+          "type": "faq",
+          "heading": "Häufige Fragen.",
+          "items": [
+            {
+              "q": "Was kostet ein Surfkurs auf Mauritius?",
+              "a": "60 € für 1 Std. 30, Ausrüstung inklusive."
+            },
+            {
+              "q": "Wo finden die Surfkurse statt?",
+              "a": "An mehreren Spots im Süden der Insel, am selben Tag je nach Wellengang gewählt. Die Lagune von Le Morne bleibt flach: Die Wellen liegen hinter dem Riff."
+            },
+            {
+              "q": "Muss ich schon surfen können?",
+              "a": "Nein, Anfänger sind willkommen. Schwimmen zu können ist besser; Schwimmwesten stehen bereit."
+            },
+            {
+              "q": "Wie buche ich?",
+              "a": "Per WhatsApp, mit deinen verfügbaren Zeiten. Der Termin wird je nach Wellengang bestätigt."
+            }
+          ]
         },
         {
           "type": "cta",

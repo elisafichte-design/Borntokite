@@ -391,7 +391,7 @@
           "items": [
             {
               "q": "What level do I need to start kitesurfing?",
-              "a": "No previous experience is required. Lessons begin with theory and kite handling on land before entering the water. You must be able to swim."
+              "a": "No previous experience is required. Lessons begin with theory and kite handling on land before entering the water. You don't need to be able to swim: you can stand everywhere in the lagoon. Being comfortable in the water is a plus."
             },
             {
               "q": "How long does it take to ride independently?",
@@ -399,7 +399,7 @@
             },
             {
               "q": "Is the equipment included?",
-              "a": "Yes. The kite, board, harness, helmet and buoyancy aid are all included and selected for your size and the day's wind."
+              "a": "Yes. The kite, board, harness, helmet, buoyancy aid, rash vest or wetsuit and booties are all included and selected for your size and the day's wind."
             },
             {
               "q": "What happens if there is no wind?",
@@ -471,6 +471,13 @@
               ]
             },
             {
+              "name": "Kitesurf in the waves",
+              "detail": "At the Le Morne spot.",
+              "lines": [
+                "50 €/h"
+              ]
+            },
+            {
               "name": "Supervision",
               "detail": "Already independent? Ride under the school's supervision.",
               "lines": [
@@ -532,13 +539,6 @@
               "detail": "A 90-minute coached session with equipment included.",
               "lines": [
                 "60 € — 1 h 30"
-              ]
-            },
-            {
-              "name": "Session in the waves",
-              "detail": "At the Le Morne spot.",
-              "lines": [
-                "50 €/h"
               ]
             }
           ]
@@ -617,7 +617,7 @@
             },
             {
               "title": "Safety",
-              "body": "You must be able to swim. Give way to the surfer already riding the wave and keep a safe distance from other water users.",
+              "body": "Being able to swim is better; buoyancy vests are available. Give way to the surfer already riding the wave and keep a safe distance from other water users.",
               "icon": "shield"
             }
           ]
@@ -634,7 +634,7 @@
           "body": [
             "The wind generally blows from 7:00 am to 6:30 pm and is stronger in the early afternoon. It also depends on the tide and increases as the tide rises.",
             "From November to April, the school adapts to the conditions. If there is not enough wind, the session is refunded or rescheduled, or we may move to another spot.",
-            "February is the least reliable month for kitesurfing. December and mid-January are also less consistent, although nature always remains unpredictable.",
+            "December, January and February are the low season: you can kite, but on fewer days in the month and less regularly.",
             "The lagoon is busier from May to September and starts to become quieter from late September."
           ]
         },
@@ -664,6 +664,29 @@
               "q": "Anticipate and communicate",
               "a": "If in doubt, slow down and give way.",
               "icon": "chat"
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "eyebrow": "Read next",
+          "heading": "Plan your trip.",
+          "items": [
+            {
+              "title": "When to kitesurf in Mauritius",
+              "body": "Wind, rideable days and water temperature, month by month.",
+              "href": "/en/meilleure-periode-kitesurf-ile-maurice/",
+              "linkLabel": "Read the guide",
+              "image": "/photos/montagne-du-morne-vue-du-lagon.webp",
+              "alt": "Le Morne mountain seen from the lagoon, Mauritius"
+            },
+            {
+              "title": "Learning to kitesurf at Le Morne",
+              "body": "How many hours, what budget, from what age.",
+              "href": "/en/apprendre-le-kitesurf-le-morne/",
+              "linkLabel": "Read the guide",
+              "image": "/photos/galerie-briefing-au-sol-le-morne.webp",
+              "alt": "Ground briefing before a kitesurf lesson at Le Morne"
             }
           ]
         }
@@ -697,6 +720,349 @@
           "type": "windmonths",
           "data": "en",
           "lead": "Conditions observed by the school to help you choose the period best suited to your level. These figures are for kitesurfing: wingfoiling needs fewer knots."
+        }
+      ]
+    },
+    {
+      "slug": "meilleure-periode-kitesurf-ile-maurice",
+      "title": "Best time to kitesurf in Mauritius, month by month",
+      "description": "When to kite at Le Morne? June to September for strong wind, March to May and October for a quieter lagoon. Wind, rideable days and water, month by month.",
+      "blocks": [
+        {
+          "type": "prose",
+          "eyebrow": "Guide",
+          "title": "When is the best time to kitesurf in Mauritius?",
+          "body": [
+            "The best time to kitesurf at Le Morne is June to September. The wind then blows at 15 to 33 knots, with 20 to 30 rideable days in August and September. March, April, May and October are still good, with a quieter lagoon. December to February is the low season: you can still kite, but on fewer days and less regularly."
+          ]
+        },
+        {
+          "type": "windmonths",
+          "data": "en",
+          "lead": "Conditions observed by the school to help you choose the period best suited to your level. These figures are for kitesurfing: wingfoiling needs fewer knots."
+        },
+        {
+          "type": "prose",
+          "title": "Which month for a beginner?",
+          "body": [
+            "Every month from March to November suits a beginner. The lagoon stays flat, and the kite size is matched to the day's wind. March, April and May bring medium wind, 10 to 22 knots, and fewer people on the water."
+          ]
+        },
+        {
+          "type": "prose",
+          "title": "Which month for experienced riders?",
+          "body": [
+            "June, July, August and September: the wind is strong, 15 to 33 knots. It is the season for the Bel Ombre → Le Morne downwind and for jump sessions. The lagoon is also busiest from May to September, then empties from late September."
+          ]
+        },
+        {
+          "type": "prose",
+          "title": "What about November to April?",
+          "body": [
+            "The school stays open and adapts. If there is not enough wind, the session is refunded or rescheduled, and the school may move to another spot for better conditions. December, January and February are the low season: you can kite, but on fewer days in the month and less regularly."
+          ]
+        },
+        {
+          "type": "prose",
+          "title": "What time does the wind blow?",
+          "body": [
+            "In season, the wind blows from 7:00 am to 6:30 pm. It is stronger in the early afternoon and increases as the tide rises."
+          ]
+        },
+        {
+          "type": "prose",
+          "title": "What wetsuit do I need?",
+          "body": [
+            "The water stays between 24 and 27 °C all year: a rash vest is enough from November to April, a wetsuit is useful from May to October. Nothing to buy: rash vests, wetsuits and booties are provided by the school."
+          ]
+        },
+        {
+          "type": "image",
+          "image": "/photos/montagne-du-morne-vue-du-lagon.webp",
+          "alt": "Le Morne mountain seen from the lagoon, Mauritius",
+          "width": 1600,
+          "height": 1061
+        },
+        {
+          "type": "faq",
+          "heading": "Frequently asked questions.",
+          "items": [
+            {
+              "q": "What is the best season for kitesurfing in Mauritius?",
+              "a": "June to September, with 15 to 33 knots at Le Morne."
+            },
+            {
+              "q": "Can you kitesurf in Mauritius in December or January?",
+              "a": "Yes, it is the low season: you can kite, but on fewer days in the month and less regularly."
+            },
+            {
+              "q": "What about wingfoiling?",
+              "a": "It needs less wind than kitesurfing, so more days are possible."
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "eyebrow": "Read next",
+          "heading": "Plan your trip.",
+          "items": [
+            {
+              "title": "Learning to kitesurf at Le Morne",
+              "body": "How many hours, what budget, from what age.",
+              "href": "/en/apprendre-le-kitesurf-le-morne/",
+              "linkLabel": "Read the guide",
+              "image": "/photos/galerie-briefing-au-sol-le-morne.webp",
+              "alt": "Ground briefing before a kitesurf lesson at Le Morne"
+            },
+            {
+              "title": "Kitesurf lessons",
+              "body": "Private and semi-private lessons, equipment included.",
+              "href": "/en/cours-de-kitesurf/",
+              "linkLabel": "See lessons",
+              "image": "/photos/kitesurf-lagon-turquoise-le-morne.webp",
+              "alt": "Kitesurfer on the turquoise lagoon of Le Morne, Mauritius"
+            }
+          ]
+        },
+        {
+          "type": "cta",
+          "title": "Ready to fly over the water?",
+          "body": "Message us on WhatsApp or follow our sessions on Instagram. We reply quickly.",
+          "image": "/photos/kitesurf-figure-coucher-de-soleil-le-morne.webp"
+        }
+      ]
+    },
+    {
+      "slug": "apprendre-le-kitesurf-le-morne",
+      "title": "Learn to kitesurf at Le Morne: hours, price, age",
+      "description": "How many hours to ride on your own, what it costs, from what age. Answers from a Le Morne instructor, on a flat lagoon with equipment included.",
+      "blocks": [
+        {
+          "type": "prose",
+          "eyebrow": "Guide",
+          "title": "How long does it take to learn kitesurfing?",
+          "body": [
+            "It usually takes 6 to 10 hours of lessons to ride on your own. At Le Morne, you learn on a shallow, flat lagoon protected by the coral reef. A 6-hour package costs €420 as a private lesson, or €230 per person semi-private."
+          ]
+        },
+        {
+          "type": "image",
+          "image": "/photos/galerie-briefing-au-sol-le-morne.webp",
+          "alt": "Ground briefing before a kitesurf lesson at Le Morne",
+          "width": 700,
+          "height": 700,
+          "full": false
+        },
+        {
+          "type": "prose",
+          "title": "What happens in the first lesson?",
+          "body": [
+            "No experience is needed. The lesson starts with theory and kite handling on land, before going into the water. You don't need to be able to swim: you can stand everywhere in the lagoon. Being comfortable in the water is a plus.",
+            "All equipment is provided: kite, board, harness, helmet, vest, rash vest or wetsuit and booties, matched to your size and the day's wind."
+          ]
+        },
+        {
+          "type": "prose",
+          "title": "Why learn on Le Morne lagoon?",
+          "body": [
+            "The lagoon is shallow, you can stand everywhere, and the reef protects it from big swells. The water is flat, with no big waves. The prevailing wind is the south-east trade wind, stronger in the early afternoon."
+          ]
+        },
+        {
+          "type": "prose",
+          "title": "Private or semi-private?",
+          "body": [
+            "In a private lesson, the instructor is with you alone. Semi-private means two students at most per instructor. You can come as a pair, or be matched with another student of the same level."
+          ]
+        },
+        {
+          "type": "prices",
+          "heading": "Learning prices",
+          "items": [
+            {
+              "name": "Private lesson",
+              "detail": "One-to-one coaching so you can progress at your own pace.",
+              "lines": [
+                "2 h — 150 €",
+                "6 h — 420 €",
+                "8 h — 550 €",
+                "10 h — 700 €"
+              ]
+            },
+            {
+              "name": "Semi-private lesson",
+              "detail": "A maximum of two people per instructor, so you can progress together.",
+              "lines": [
+                "2 h — 80 €/person",
+                "6 h — 230 €/person",
+                "8 h — 300 €/person",
+                "10 h — 380 €/person"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "title": "From what age?",
+          "body": [
+            "From 7 or 8 years old, depending on the child's weight. There is no upper age limit."
+          ]
+        },
+        {
+          "type": "prose",
+          "title": "What should I bring?",
+          "body": [
+            "Sunglasses, a towel and sunscreen. Everything else is provided, including rash vest, wetsuit and booties."
+          ]
+        },
+        {
+          "type": "prose",
+          "title": "What if there is no wind?",
+          "body": [
+            "The session is refunded or rescheduled. The school may also move to another spot for better conditions."
+          ]
+        },
+        {
+          "type": "faq",
+          "heading": "Frequently asked questions.",
+          "items": [
+            {
+              "q": "How many hours to kitesurf on my own?",
+              "a": "Usually 6 to 10 hours, depending on your confidence and the wind."
+            },
+            {
+              "q": "How much does learning cost?",
+              "a": "€420 to €700 private (6 to 10 h), €230 to €380 per person semi-private."
+            },
+            {
+              "q": "Do I need to be fit or able to swim?",
+              "a": "No experience is needed. You don't need to swim either: you can stand everywhere in the lagoon."
+            },
+            {
+              "q": "Which season to start?",
+              "a": "March to November. Month-by-month details are in our best-time guide."
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "eyebrow": "Read next",
+          "heading": "Plan your trip.",
+          "items": [
+            {
+              "title": "When to kitesurf in Mauritius",
+              "body": "Wind, rideable days and water temperature, month by month.",
+              "href": "/en/meilleure-periode-kitesurf-ile-maurice/",
+              "linkLabel": "Read the guide",
+              "image": "/photos/montagne-du-morne-vue-du-lagon.webp",
+              "alt": "Le Morne mountain seen from the lagoon, Mauritius"
+            },
+            {
+              "title": "Kitesurf lessons",
+              "body": "Private and semi-private lessons, equipment included.",
+              "href": "/en/cours-de-kitesurf/",
+              "linkLabel": "See lessons",
+              "image": "/photos/kitesurf-lagon-turquoise-le-morne.webp",
+              "alt": "Kitesurfer on the turquoise lagoon of Le Morne, Mauritius"
+            }
+          ]
+        },
+        {
+          "type": "cta",
+          "title": "Ready to fly over the water?",
+          "body": "Message us on WhatsApp or follow our sessions on Instagram. We reply quickly.",
+          "form": true
+        }
+      ]
+    },
+    {
+      "slug": "du-kitesurf-au-wingfoil",
+      "title": "From kitesurf to wingfoil: how many hours to fly?",
+      "description": "An independent kitesurfer usually gets up on the foil after 4 to 6 hours of wingfoil, versus 6 to 10 hours for a beginner. What changes, and where to learn in Mauritius.",
+      "blocks": [
+        {
+          "type": "prose",
+          "eyebrow": "Guide",
+          "title": "From kitesurf to wingfoil: how long does it take?",
+          "body": [
+            "An independent kitesurfer usually needs 4 to 6 hours to get up on the foil. A complete beginner needs more like 6 to 10 hours. Wingfoiling needs less wind than kitesurfing, so at Le Morne it opens up more days on the water."
+          ]
+        },
+        {
+          "type": "image",
+          "image": "/photos/wingfoil-le-morne-ile-maurice.webp",
+          "alt": "Wingfoiling on Le Morne lagoon, Mauritius",
+          "width": 1000,
+          "height": 750
+        },
+        {
+          "type": "prose",
+          "title": "What does kitesurfing give you?",
+          "body": [
+            "You already know how to read the wind, position yourself on the water and follow the right-of-way rules. That is what saves several hours compared with a complete beginner."
+          ]
+        },
+        {
+          "type": "prose",
+          "title": "What changes?",
+          "body": [
+            "The wing is held in your hands, with no lines or bar. Balance happens on the foil, a board that lifts above the water."
+          ]
+        },
+        {
+          "type": "prose",
+          "title": "Which lesson should I choose?",
+          "body": [
+            "Wingfoil lessons cost the same as kitesurf lessons: 2 hours for €150 private, or €80 per person semi-private. For 4 to 6 hours, the 6-hour package (€420 private, €230 per person semi-private) fits best.",
+            "Once you are independent, supervision costs €30 per hour and rental €20."
+          ]
+        },
+        {
+          "type": "faq",
+          "heading": "Frequently asked questions.",
+          "items": [
+            {
+              "q": "Do kitesurfers learn wingfoil faster?",
+              "a": "Yes: usually 4 to 6 hours, versus 6 to 10 hours for a beginner."
+            },
+            {
+              "q": "Do you need a lot of wind for wingfoil?",
+              "a": "Less than for kitesurfing."
+            },
+            {
+              "q": "Is equipment included?",
+              "a": "Yes, all equipment is provided, including rash vest, wetsuit and booties."
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "eyebrow": "Read next",
+          "heading": "Plan your trip.",
+          "items": [
+            {
+              "title": "Wingfoil lessons",
+              "body": "Learn to wingfoil on Le Morne lagoon.",
+              "href": "/en/wingfoil/",
+              "linkLabel": "See lessons",
+              "image": "/photos/wingfoil-le-morne-2026.webp",
+              "alt": "Wingfoiler above Le Morne lagoon, Mauritius"
+            },
+            {
+              "title": "When to kitesurf in Mauritius",
+              "body": "Wind, rideable days and water temperature, month by month.",
+              "href": "/en/meilleure-periode-kitesurf-ile-maurice/",
+              "linkLabel": "Read the guide",
+              "image": "/photos/montagne-du-morne-vue-du-lagon.webp",
+              "alt": "Le Morne mountain seen from the lagoon, Mauritius"
+            }
+          ]
+        },
+        {
+          "type": "cta",
+          "title": "Ready to fly over the water?",
+          "body": "Message us on WhatsApp or follow our sessions on Instagram. We reply quickly.",
+          "image": "/photos/kitesurf-figure-coucher-de-soleil-le-morne.webp"
         }
       ]
     },
@@ -870,7 +1236,7 @@
             },
             {
               "title": "Full equipment, provided",
-              "text": "Wing, board, harness, helmet and vest: everything is provided, matched to your size and the day's wind."
+              "text": "Kite, board, harness, helmet, vest, rash vest or wetsuit and booties: everything is provided, matched to your size and the day's wind."
             },
             {
               "title": "Close supervision",
@@ -911,6 +1277,16 @@
               ]
             }
           ]
+        },
+        {
+          "type": "prose",
+          "title": "Semi-private lessons: learn to kitesurf as a pair",
+          "body": [
+            "A semi-private lesson brings together two students at most with one instructor. It costs €80 per person for 2 hours, and €230 per person for 6 hours, equipment included.",
+            "You can come as a pair: as a couple, with a friend or with family. Coming alone? We can match you with another student of the same level.",
+            "It is the most affordable way to learn, and a great moment to share."
+          ],
+          "id": "semi-prive"
         },
         {
           "type": "prices",
@@ -993,15 +1369,19 @@
           "items": [
             {
               "q": "What level do I need to start kitesurfing?",
-              "a": "No previous experience is required. Lessons begin with theory and kite handling on land before entering the water. You must be able to swim."
+              "a": "No previous experience is required. Lessons begin with theory and kite handling on land before entering the water. You don't need to be able to swim: you can stand everywhere in the lagoon. Being comfortable in the water is a plus."
             },
             {
               "q": "How long does it take to ride independently?",
               "a": "In general, 6 to 10 hours of lessons are enough to learn the basics of riding independently, depending on your confidence and the wind conditions."
             },
             {
+              "q": "What is a semi-private lesson?",
+              "a": "A lesson with two students at most per instructor, at €80 per person for 2 hours. Come as a pair, or we match you with a student of the same level."
+            },
+            {
               "q": "Is the equipment included?",
-              "a": "Yes. The kite, board, harness, helmet and buoyancy aid are all included and selected for your size and the day's wind."
+              "a": "Yes. The kite, board, harness, helmet, buoyancy aid, rash vest or wetsuit and booties are all included and selected for your size and the day's wind."
             },
             {
               "q": "Do you offer freestyle coaching for advanced riders?",
@@ -1014,6 +1394,29 @@
             {
               "q": "How do I book?",
               "a": "The easiest way is to send us your availability on WhatsApp. We confirm the time according to the weather."
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "eyebrow": "Read next",
+          "heading": "Plan your trip.",
+          "items": [
+            {
+              "title": "Learning to kitesurf at Le Morne",
+              "body": "How many hours, what budget, from what age.",
+              "href": "/en/apprendre-le-kitesurf-le-morne/",
+              "linkLabel": "Read the guide",
+              "image": "/photos/galerie-briefing-au-sol-le-morne.webp",
+              "alt": "Ground briefing before a kitesurf lesson at Le Morne"
+            },
+            {
+              "title": "When to kitesurf in Mauritius",
+              "body": "Wind, rideable days and water temperature, month by month.",
+              "href": "/en/meilleure-periode-kitesurf-ile-maurice/",
+              "linkLabel": "Read the guide",
+              "image": "/photos/montagne-du-morne-vue-du-lagon.webp",
+              "alt": "Le Morne mountain seen from the lagoon, Mauritius"
             }
           ]
         },
@@ -1103,6 +1506,72 @@
           ]
         },
         {
+          "type": "prose",
+          "title": "How many hours to learn wingfoil?",
+          "body": [
+            "A complete beginner usually needs 6 to 10 hours to get up on the foil. An independent kitesurfer gets there in 4 to 6 hours. The 6, 8 and 10-hour packages are designed for this path."
+          ]
+        },
+        {
+          "type": "prose",
+          "title": "Why learn wingfoil at Le Morne?",
+          "body": [
+            "Le Morne lagoon is shallow, flat and protected by the coral reef. Wingfoiling needs less wind than kitesurfing, so you can ride on more days of the year."
+          ]
+        },
+        {
+          "type": "prose",
+          "title": "On your own or as a pair?",
+          "body": [
+            "In a private lesson, the instructor is with you alone. Semi-private means two students at most per instructor: come as a pair, or be matched with a student of the same level."
+          ]
+        },
+        {
+          "type": "faq",
+          "heading": "Frequently asked questions.",
+          "items": [
+            {
+              "q": "Do I need to kitesurf to learn wingfoil?",
+              "a": "No. A complete beginner usually gets up on the foil in 6 to 10 hours. You don't need to swim: you can stand everywhere in the lagoon."
+            },
+            {
+              "q": "Is equipment included?",
+              "a": "Yes, everything is included, rash vest, wetsuit and booties too. Bring sunglasses, a towel and sunscreen."
+            },
+            {
+              "q": "Which season for wingfoil in Mauritius?",
+              "a": "All year is possible, with more rideable days than kitesurfing. The windiest months are June to September."
+            },
+            {
+              "q": "What if there is no wind?",
+              "a": "The session is refunded or rescheduled."
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "eyebrow": "Read next",
+          "heading": "Plan your trip.",
+          "items": [
+            {
+              "title": "From kitesurf to wingfoil",
+              "body": "How many hours to fly when you can already kite.",
+              "href": "/en/du-kitesurf-au-wingfoil/",
+              "linkLabel": "Read the guide",
+              "image": "/photos/wingfoil-le-morne-ile-maurice.webp",
+              "alt": "Wingfoiling on Le Morne lagoon, Mauritius"
+            },
+            {
+              "title": "When to kitesurf in Mauritius",
+              "body": "Wind, rideable days and water temperature, month by month.",
+              "href": "/en/meilleure-periode-kitesurf-ile-maurice/",
+              "linkLabel": "Read the guide",
+              "image": "/photos/montagne-du-morne-vue-du-lagon.webp",
+              "alt": "Le Morne mountain seen from the lagoon, Mauritius"
+            }
+          ]
+        },
+        {
           "type": "cta",
           "title": "Ready to fly over the water?",
           "body": "Message us on WhatsApp or follow our sessions on Instagram. We reply quickly.",
@@ -1142,14 +1611,21 @@
               "lines": [
                 "60 € — 1 h 30"
               ]
-            },
-            {
-              "name": "Session in the waves",
-              "detail": "At the Le Morne spot.",
-              "lines": [
-                "50 €/h"
-              ]
             }
+          ]
+        },
+        {
+          "type": "prose",
+          "title": "What is a surf lesson like?",
+          "body": [
+            "A surf lesson lasts 1 h 30 and costs €60, equipment included. The spot is chosen on the day according to the swell, among several spots in the south of the island. Beginners are welcome."
+          ]
+        },
+        {
+          "type": "prose",
+          "title": "Who is it for?",
+          "body": [
+            "All levels, from your first surf lesson to surfers who want to improve. Being able to swim is better; buoyancy vests are available."
           ]
         },
         {
@@ -1166,9 +1642,31 @@
           "eyebrow": "Safety",
           "title": "Safety",
           "body": [
-            "You must be able to swim. Give way to the surfer already riding the wave and keep a safe distance from other water users."
+            "Being able to swim is better; buoyancy vests are available. Give way to the surfer already riding the wave and keep a safe distance from other water users."
           ],
           "icon": "shield"
+        },
+        {
+          "type": "faq",
+          "heading": "Frequently asked questions.",
+          "items": [
+            {
+              "q": "How much is a surf lesson in Mauritius?",
+              "a": "€60 for 1 h 30, equipment included."
+            },
+            {
+              "q": "Where do the surf lessons take place?",
+              "a": "On several spots in the south of the island, chosen on the day according to the swell. Le Morne lagoon stays flat: the waves are beyond the reef."
+            },
+            {
+              "q": "Do I need to know how to surf?",
+              "a": "No, beginners are welcome. Being able to swim is better; buoyancy vests are available."
+            },
+            {
+              "q": "How do I book?",
+              "a": "On WhatsApp, with your availability. The time is confirmed according to the swell."
+            }
+          ]
         },
         {
           "type": "cta",
