@@ -83,6 +83,18 @@ const graph = [
     telephone: site.whatsapp,
     email: site.email,
     sameAs: site.sameAs,
+    image: new URL(site.image, site.domain).href,
+    logo: new URL(site.logo, site.domain).href,
+    priceRange: site.priceRange,
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      opens: site.opens,
+      closes: site.closes,
+    },
+    hasMap: site.sameAs[0],
+    areaServed: "Le Morne, Mauritius",
+    knowsLanguage: site.locales,
   },
 ];
 
