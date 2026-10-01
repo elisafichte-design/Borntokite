@@ -11,14 +11,14 @@ Langues parlées : français, anglais, allemand.
 ## Tarifs 2026
 
 - Cours privé (matériel inclus) : 2 h 150 € · 6 h 420 € · 8 h 550 € · 10 h 700 €
-- Cours semi-privé, 2 personnes max par moniteur (matériel inclus) : 2 h 80 €/pers · 6 h 230 €/pers · 8 h 300 €/pers · 10 h 380 €/pers
+- Cours semi-privé, 2 personnes max par moniteur, à deux ou associé à un élève du même niveau (matériel inclus) : 2 h 80 €/pers · 6 h 230 €/pers · 8 h 300 €/pers · 10 h 380 €/pers
 - Perfectionnement & sauts, pour riders autonomes : 40 €/h
 - Supervision, pour rider déjà autonome : 30 €/h
 - Location de matériel : 20 €/h
 - Downwind Bel Ombre → Le Morne, 2 à 3 h : 75 €/personne
 - Leçons VIP, banc de sable en bateau : 220 €/personne
 - Session surf encadrée, 1 h 30 (matériel inclus) : 60 €
-- Session dans les vagues, spot du Morne : 50 €/h
+- Kitesurf dans les vagues, spot du Morne : 50 €/h
 - Wingfoil : mêmes tarifs que le kitesurf
 - Stages multi-jours : sur demande
 - Excursions : sur demande, réservation WhatsApp
@@ -31,9 +31,28 @@ Lagon du Morne, eau plate protégée par la barrière de corail, praticable avec
 pied. Vent dominant de sud-est (alizés), plus fort en début d'après-midi.
 Saison principale de mars à novembre. La période la plus régulière va de juin
 à août, avec généralement 15 à 33 nœuds et 15 à 30 jours navigables par mois.
-Février est le mois le moins intéressant pour le kite. Le vent souffle en
+Décembre, janvier et février forment la saison basse : on peut kiter, mais
+moins de jours et de façon irrégulière. Le vent souffle en
 général de 7 h à 18 h 30 et se renforce en début d'après-midi. Il varie aussi
 avec la marée et monte avec la marée montante.
+
+## Apprendre
+
+- Kitesurf : 6 à 10 heures de cours en général pour naviguer seul. Dès 7-8 ans
+  selon le poids, pas d'âge maximum.
+- Pas besoin de savoir nager pour le kite et le wingfoil : on a pied partout
+  dans le lagon. Surf : savoir nager est préférable, des gilets sont à disposition.
+- Matériel fourni, lycras, combinaisons et chaussons compris. À apporter :
+  lunettes de soleil, serviette, crème solaire.
+- Wingfoil : 6 à 10 heures pour décoller sur le foil en partant de zéro, 4 à 6
+  heures pour un kitesurfeur autonome. Il faut moins de vent qu'en kite.
+- Surf : 1 h 30, spot choisi le jour même selon la houle, sud de l'île.
+
+## Guides
+
+- /meilleure-periode-kitesurf-ile-maurice/ : meilleure période, mois par mois
+- /apprendre-le-kitesurf-le-morne/ : débuter le kitesurf (durée, prix, âge)
+- /du-kitesurf-au-wingfoil/ : passer du kite au wingfoil
 
 ## Pages
 
