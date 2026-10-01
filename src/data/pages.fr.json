@@ -430,8 +430,8 @@
     },
     {
       "slug": "tarifs",
-      "title": "Tarifs 2026",
-      "description": "Tous les tarifs de l'école Born To Kite au Morne : cours privé, cours semi-privé, downwind Bel Ombre au Morne, leçons VIP en bateau, session surf. Prix affichés en clair.",
+      "title": "Tarifs 2026 kitesurf, wingfoil et surf au Morne",
+      "description": "Tous les prix en clair : cours privés dès 150 €, semi-privés dès 80 €/pers (matériel inclus), downwind, leçons VIP en bateau.",
       "blocks": [
         {
           "type": "prose",
@@ -800,8 +800,8 @@
     },
     {
       "slug": "meteo",
-      "title": "Météo en direct et vent au Morne",
-      "description": "Prévisions en direct, météo quotidienne de Born To Kite et tableau du vent mois par mois sur le lagon du Morne.",
+      "title": "Météo vent Le Morne en direct – conditions kite",
+      "description": "Prévisions de vent en direct sur le lagon du Morne, météo du jour et tableau des 12 mois. Cours de kite dès 80 €, réservation WhatsApp.",
       "blocks": [
         {
           "type": "prose",
@@ -1242,8 +1242,8 @@
     },
     {
       "slug": "surf",
-      "title": "Cours de surf encadrés, sud de l'île Maurice",
-      "description": "Sessions de surf encadrées au sud de l'île Maurice, une heure trente, matériel inclus. Plusieurs spots selon les prévisions, tous niveaux.",
+      "title": "Cours de surf à l'île Maurice (Le Morne)",
+      "description": "Cours de surf encadrés près du Morne : 1 h 30, matériel inclus, débutants bienvenus. Spots choisis selon la houle. Réservation WhatsApp.",
       "blocks": [
         {
           "type": "prose",
@@ -1416,8 +1416,8 @@
     },
     {
       "slug": "l-ecole",
-      "title": "L'école",
-      "description": "Qui nous sommes, notre équipe et les langues que nous parlons.",
+      "title": "L'école : moniteurs de kitesurf au Morne",
+      "description": "École locale et familiale au Morne. Plus de dix ans d'enseignement du kitesurf, cours en français, anglais et allemand.",
       "blocks": [
         {
           "type": "prose",
