@@ -23,20 +23,26 @@
     "Confirmer le numéro WhatsApp et le nom du contact avec la cliente",
     "Faire ajouter le site web sur la fiche Google Business Profile : le champ est vide",
     "Faire changer la catégorie de la fiche : « Club de sport » → « École de kitesurf »",
-    "Créer le compte Calendly (fuseau Indian/Mauritius) et coller son URL dans calendlyUrl : tant que le champ est vide, le bouton ne s'affiche pas",
-    "Demander à la cliente les horaires d'ouverture : ni le site ni le JSON-LD n'en affichent"
+    "Créer le compte Calendly (fuseau Indian/Mauritius) et coller son URL dans calendlyUrl : tant que le champ est vide, le bouton ne s'affiche pas"
   ],
   "plusCode": "G8P9+C6 Le Morne",
   "sameAs": [
     "https://maps.google.com/?cid=16583647237779172102",
     "https://www.instagram.com/born_to_kite_/",
-    "https://www.threads.com/@born_to_kite_"
+    "https://www.threads.com/@born_to_kite_",
+    "https://www.tripadvisor.com/Attraction_Review-g488105-d34619279-Reviews-Born_To_Kite_Le_Morne-Le_Morne.html",
+    "https://www.manawa.com/fr/providers/69387-born-to-kite"
   ],
   "googleRating": {
     "value": "5,0",
-    "count": 31
+    "count": 70
   },
   "calendlyUrl": "",
   "elfsightReviewsApp": "147d359c-78d2-474b-8854-19a8af629cfa",
-  "ga4MeasurementId": "G-0ELSV94LQP"
+  "ga4MeasurementId": "G-0ELSV94LQP",
+  "priceRange": "20 € – 700 €",
+  "opens": "09:00",
+  "closes": "18:00",
+  "logo": "/logo-principal-couleur.png",
+  "image": "/photos/cours-de-kitesurf-lagon-le-morne.webp"
 }
