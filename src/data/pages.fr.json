@@ -68,8 +68,10 @@
           "eyebrow": "Le Morne · Île Maurice",
           "title": "Le kitesurf au Morne, île Maurice. Apprenez à voler sur l'eau.",
           "lead": "Born To Kite est une école de kitesurf locale et familiale, née en janvier 2026 sur le lagon du Morne. Plus de dix ans à transmettre la passion du kite, dans la bonne humeur et une sécurité maximale.",
-          "image": "/photos/kitesurf-coucher-de-soleil-ile-maurice.webp",
-          "alt": "Kitesurfeur en silhouette au coucher de soleil sur le lagon du Morne, île Maurice",
+          "video": "/videos/born-to-kite-accueil-960.mp4",
+          "videoMobile": "/videos/born-to-kite-accueil-720.mp4",
+          "poster": "/photos/accueil-video-poster.webp",
+          "alt": "Session de kitesurf au coucher du soleil, filmée par drone au-dessus du lagon, île Maurice",
           "cta": {
             "label": "Voir les tarifs",
             "href": "/tarifs/"
@@ -142,10 +144,10 @@
         },
         {
           "type": "image",
-          "video": "/videos/born-to-kite-session-le-morne.mp4",
-          "poster": "/photos/video-session-kite-le-morne-poster.webp",
-          "alt": "Une session de kitesurf Born To Kite sur le lagon du Morne",
-          "full": false
+          "image": "/photos/kitesurf-coucher-de-soleil-ile-maurice.webp",
+          "alt": "Kitesurfeur en silhouette au coucher de soleil sur le lagon du Morne, île Maurice",
+          "width": 1600,
+          "height": 1067
         },
         {
           "type": "cards",
@@ -1380,6 +1382,13 @@
               "text": "Une école locale, née d'une passion, dans la bonne humeur et la bienveillance."
             }
           ]
+        },
+        {
+          "type": "image",
+          "video": "/videos/born-to-kite-session-le-morne.mp4",
+          "poster": "/photos/video-session-kite-le-morne-poster.webp",
+          "alt": "Une session de kitesurf avec l'équipe Born To Kite au Morne",
+          "full": false
         },
         {
           "type": "prices",

@@ -68,8 +68,10 @@
           "eyebrow": "Le Morne · Mauritius",
           "title": "Kitesurfen am Le Morne, Mauritius. Lerne, über das Wasser zu fliegen.",
           "lead": "Born To Kite ist eine lokale, familiengeführte Kitesurf-Schule, die im Januar 2026 an der Lagune von Le Morne gegründet wurde. Seit mehr als zehn Jahren geben wir unsere Begeisterung fürs Kitesurfen weiter, mit guter Stimmung und größtmöglicher Sicherheit.",
-          "image": "/photos/kitesurf-coucher-de-soleil-ile-maurice.webp",
-          "alt": "Kitesurfer als Silhouette bei Sonnenuntergang auf der Lagune von Le Morne, Mauritius",
+          "video": "/videos/born-to-kite-accueil-960.mp4",
+          "videoMobile": "/videos/born-to-kite-accueil-720.mp4",
+          "poster": "/photos/accueil-video-poster.webp",
+          "alt": "Kitesurf-Session bei Sonnenuntergang, per Drohne über der Lagune gefilmt, Mauritius",
           "cta": {
             "label": "Preise ansehen",
             "href": "/de/tarifs/"
@@ -142,10 +144,10 @@
         },
         {
           "type": "image",
-          "video": "/videos/born-to-kite-session-le-morne.mp4",
-          "poster": "/photos/video-session-kite-le-morne-poster.webp",
-          "alt": "Eine Kitesurf-Session mit Born To Kite auf der Lagune von Le Morne",
-          "full": false
+          "image": "/photos/kitesurf-coucher-de-soleil-ile-maurice.webp",
+          "alt": "Kitesurfer als Silhouette bei Sonnenuntergang auf der Lagune von Le Morne, Mauritius",
+          "width": 1600,
+          "height": 1067
         },
         {
           "type": "cards",
@@ -1251,6 +1253,13 @@
               "text": "Eine lokale Schule aus Leidenschaft, mit guter Stimmung und Herzlichkeit."
             }
           ]
+        },
+        {
+          "type": "image",
+          "video": "/videos/born-to-kite-session-le-morne.mp4",
+          "poster": "/photos/video-session-kite-le-morne-poster.webp",
+          "alt": "Eine Kitesurf-Session mit dem Born To Kite Team am Le Morne",
+          "full": false
         },
         {
           "type": "prices",
