@@ -7,7 +7,8 @@
 // sur le fond crème du site : pas de bandes noires, pas de recadrage qui
 // couperait le rider. Elle démarre seule, en boucle et muette — les navigateurs
 // n'autorisent la lecture automatique qu'à cette condition — et un bouton
-// permet d'activer le son.
+// permet d'activer le son. Elle ne se télécharge qu'à l'approche de l'écran :
+// le poster s'affiche d'abord, la lecture démarre quand la vidéo est visible.
 const { block, ui, index = 0 } = Astro.props;
 const full = block.full !== false;
 const sound = (ui && ui.sound) || { on: "Activer le son", off: "Couper le son" };
@@ -15,7 +16,7 @@ const sound = (ui && ui.sound) || { on: "Activer le son", off: "Couper le son" }
 <figure class={full ? "fig full" : "fig held"} data-reveal={full ? "zoom" : (index % 2 === 0 ? "tiltl" : "tiltr")}>
   {block.video ? (
     <div class="video">
-      <video autoplay muted loop playsinline preload="auto" poster={block.poster} aria-label={block.alt}>
+      <video muted loop playsinline preload="none" poster={block.poster} aria-label={block.alt} data-btk-lazy-video>
         <source src={block.video} type="video/mp4" />
       </video>
       <button
@@ -51,6 +52,23 @@ const sound = (ui && ui.sound) || { on: "Activer le son", off: "Couper le son" }
   (function () {
     if (window.__btksound) return;
     window.__btksound = true;
+    function lazyVideos() {
+    var lazy = document.querySelectorAll("[data-btk-lazy-video]");
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          var v = e.target;
+          if (e.isIntersecting) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+          else if (!v.paused) v.pause();
+        });
+      }, { rootMargin: "200px 0px", threshold: 0.15 });
+      lazy.forEach(function (v) { io.observe(v); });
+    } else {
+      lazy.forEach(function (v) { v.autoplay = true; v.play(); });
+    }
+    }
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", lazyVideos);
+    else lazyVideos();
     document.addEventListener("click", function (ev) {
       var target = ev.target;
       if (!target || !target.closest) return;
