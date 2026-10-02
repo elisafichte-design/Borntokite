@@ -7,7 +7,7 @@ const whatsappHref = `https://wa.me/${site.whatsappClean}`;
   {block.video
     ? (
       <video class="bg" autoplay muted loop playsinline preload="auto" poster={block.poster} aria-label={block.alt} data-reveal="zoom" data-btk-hero-video>
-        {block.videoMobile && <source src={block.videoMobile} type="video/mp4" media="(max-width: 760px)" />}
+        {block.videoMobile && <source src={block.videoMobile} type="video/mp4" media="(orientation: portrait) and (max-width: 900px)" />}
         <source src={block.video} type="video/mp4" />
       </video>
     )
