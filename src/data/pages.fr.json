@@ -450,9 +450,11 @@
               "detail": "Un encadrement 100% individuel, pour progresser à votre rythme.",
               "lines": [
                 "2 h — 150 €",
-                "6 h — 420 €",
-                "8 h — 550 €",
-                "10 h — 700 €"
+                "4 h — 300 €",
+                "6 h — 435 €",
+                "8 h — 570 €",
+                "10 h — 700 €",
+                "12 h — 825 €"
               ]
             },
             {
@@ -460,16 +462,18 @@
               "detail": "2 personnes maximum par moniteur, pour progresser ensemble.",
               "lines": [
                 "2 h — 80 €/pers",
-                "6 h — 230 €/pers",
-                "8 h — 300 €/pers",
-                "10 h — 380 €/pers"
+                "4 h — 160 €/pers",
+                "6 h — 235 €/pers",
+                "8 h — 310 €/pers",
+                "10 h — 380 €/pers",
+                "12 h — 450 €/pers"
               ]
             },
             {
               "name": "Perfectionnement & sauts",
               "detail": "Pour riders autonomes qui veulent passer le cap.",
               "lines": [
-                "40 €/h"
+                "50 €/h"
               ]
             },
             {
@@ -973,7 +977,7 @@
           "eyebrow": "Guide",
           "title": "Combien de temps pour apprendre le kitesurf ?",
           "body": [
-            "Il faut en général 6 à 10 heures de cours pour naviguer seul. Au Morne, on apprend sur un lagon peu profond et plat, protégé par la barrière de corail. Un forfait de 6 heures coûte 420 € en cours privé, ou 230 € par personne en semi-privé."
+            "Il faut en général 6 à 10 heures de cours pour naviguer seul. Au Morne, on apprend sur un lagon peu profond et plat, protégé par la barrière de corail. Un forfait de 6 heures coûte 435 € en cours privé, ou 235 € par personne en semi-privé."
           ]
         },
         {
@@ -1015,9 +1019,11 @@
               "detail": "Un encadrement 100% individuel, pour progresser à votre rythme.",
               "lines": [
                 "2 h — 150 €",
-                "6 h — 420 €",
-                "8 h — 550 €",
-                "10 h — 700 €"
+                "4 h — 300 €",
+                "6 h — 435 €",
+                "8 h — 570 €",
+                "10 h — 700 €",
+                "12 h — 825 €"
               ]
             },
             {
@@ -1025,9 +1031,11 @@
               "detail": "2 personnes maximum par moniteur, pour progresser ensemble.",
               "lines": [
                 "2 h — 80 €/pers",
-                "6 h — 230 €/pers",
-                "8 h — 300 €/pers",
-                "10 h — 380 €/pers"
+                "4 h — 160 €/pers",
+                "6 h — 235 €/pers",
+                "8 h — 310 €/pers",
+                "10 h — 380 €/pers",
+                "12 h — 450 €/pers"
               ]
             }
           ]
@@ -1063,7 +1071,7 @@
             },
             {
               "q": "Combien coûte l'apprentissage complet ?",
-              "a": "De 420 à 700 € en privé (6 à 10 h), de 230 à 380 € par personne en semi-privé."
+              "a": "De 435 à 700 € en privé (6 à 10 h), de 235 à 380 € par personne en semi-privé."
             },
             {
               "q": "Faut-il être sportif ou savoir nager ?",
@@ -1144,7 +1152,7 @@
           "type": "prose",
           "title": "Quel cours choisir ?",
           "body": [
-            "Les cours de wingfoil sont aux mêmes tarifs que le kitesurf : 2 heures à 150 € en privé, ou 80 € par personne en semi-privé. Pour 4 à 6 heures, le forfait de 6 heures (420 € en privé, 230 € par personne en semi-privé) est le plus adapté.",
+            "Les cours de wingfoil sont aux mêmes tarifs que le kitesurf : 2 heures à 150 € en privé, ou 80 € par personne en semi-privé. Pour aller plus loin, le forfait de 4 heures coûte 300 € en privé (160 € par personne en semi-privé), et celui de 6 heures 435 € (235 € par personne).",
             "Une fois autonome, la supervision coûte 30 € de l'heure et la location 20 €."
           ]
         },
@@ -1399,9 +1407,11 @@
               "detail": "Un encadrement 100% individuel, pour progresser à votre rythme.",
               "lines": [
                 "2 h — 150 €",
-                "6 h — 420 €",
-                "8 h — 550 €",
-                "10 h — 700 €"
+                "4 h — 300 €",
+                "6 h — 435 €",
+                "8 h — 570 €",
+                "10 h — 700 €",
+                "12 h — 825 €"
               ]
             },
             {
@@ -1409,9 +1419,11 @@
               "detail": "2 personnes maximum par moniteur, pour progresser ensemble.",
               "lines": [
                 "2 h — 80 €/pers",
-                "6 h — 230 €/pers",
-                "8 h — 300 €/pers",
-                "10 h — 380 €/pers"
+                "4 h — 160 €/pers",
+                "6 h — 235 €/pers",
+                "8 h — 310 €/pers",
+                "10 h — 380 €/pers",
+                "12 h — 450 €/pers"
               ]
             }
           ]
@@ -1420,7 +1432,7 @@
           "type": "prose",
           "title": "Cours semi-privé : apprendre le kitesurf à deux",
           "body": [
-            "Un cours semi-privé réunit deux élèves au maximum avec un moniteur. Il coûte 80 € par personne pour 2 heures, et 230 € par personne pour 6 heures, matériel inclus.",
+            "Un cours semi-privé réunit deux élèves au maximum avec un moniteur. Il coûte 80 € par personne pour 2 heures, et 235 € par personne pour 6 heures, matériel inclus.",
             "Vous pouvez venir à deux : en couple, entre amis ou en famille. Vous venez seul ? Nous pouvons vous associer à un autre élève du même niveau.",
             "C'est la formule la plus accessible pour apprendre, et un bon moment à partager."
           ],
@@ -1468,7 +1480,7 @@
             {
               "name": "Perfectionnement sauts",
               "lines": [
-                "1 h — 40 €"
+                "1 h — 50 €"
               ]
             },
             {
@@ -1597,9 +1609,11 @@
               "detail": "Un encadrement 100% individuel, pour progresser à votre rythme.",
               "lines": [
                 "2 h — 150 €",
-                "6 h — 420 €",
-                "8 h — 550 €",
-                "10 h — 700 €"
+                "4 h — 300 €",
+                "6 h — 435 €",
+                "8 h — 570 €",
+                "10 h — 700 €",
+                "12 h — 825 €"
               ]
             },
             {
@@ -1607,9 +1621,11 @@
               "detail": "2 personnes maximum par moniteur, pour progresser ensemble.",
               "lines": [
                 "2 h — 80 €/pers",
-                "6 h — 230 €/pers",
-                "8 h — 300 €/pers",
-                "10 h — 380 €/pers"
+                "4 h — 160 €/pers",
+                "6 h — 235 €/pers",
+                "8 h — 310 €/pers",
+                "10 h — 380 €/pers",
+                "12 h — 450 €/pers"
               ]
             },
             {

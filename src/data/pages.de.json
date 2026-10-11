@@ -450,9 +450,11 @@
               "detail": "Persönliches Einzelcoaching, damit du in deinem Tempo Fortschritte machst.",
               "lines": [
                 "2 h — 150 €",
-                "6 h — 420 €",
-                "8 h — 550 €",
-                "10 h — 700 €"
+                "4 h — 300 €",
+                "6 h — 435 €",
+                "8 h — 570 €",
+                "10 h — 700 €",
+                "12 h — 825 €"
               ]
             },
             {
@@ -460,16 +462,18 @@
               "detail": "Maximal zwei Personen pro Lehrer, damit ihr gemeinsam Fortschritte macht.",
               "lines": [
                 "2 h — 80 €/Person",
-                "6 h — 230 €/Person",
-                "8 h — 300 €/Person",
-                "10 h — 380 €/Person"
+                "4 h — 160 €/Person",
+                "6 h — 235 €/Person",
+                "8 h — 310 €/Person",
+                "10 h — 380 €/Person",
+                "12 h — 450 €/Person"
               ]
             },
             {
               "name": "Fortgeschrittene & Sprünge",
               "detail": "Für selbstständige Fahrer, die den nächsten Schritt gehen wollen.",
               "lines": [
-                "40 €/Std."
+                "50 €/Std."
               ]
             },
             {
@@ -844,7 +848,7 @@
           "eyebrow": "Ratgeber",
           "title": "Wie lange dauert es, Kitesurfen zu lernen?",
           "body": [
-            "In der Regel brauchst du 6 bis 10 Unterrichtsstunden, um selbstständig zu fahren. Am Le Morne lernst du in einer flachen, seichten Lagune, die vom Korallenriff geschützt wird. Ein 6-Stunden-Paket kostet 420 € im Privatkurs oder 230 € pro Person im Halbprivatkurs."
+            "In der Regel brauchst du 6 bis 10 Unterrichtsstunden, um selbstständig zu fahren. Am Le Morne lernst du in einer flachen, seichten Lagune, die vom Korallenriff geschützt wird. Ein 6-Stunden-Paket kostet 435 € im Privatkurs oder 235 € pro Person im Halbprivatkurs."
           ]
         },
         {
@@ -886,9 +890,11 @@
               "detail": "Persönliches Einzelcoaching, damit du in deinem Tempo Fortschritte machst.",
               "lines": [
                 "2 h — 150 €",
-                "6 h — 420 €",
-                "8 h — 550 €",
-                "10 h — 700 €"
+                "4 h — 300 €",
+                "6 h — 435 €",
+                "8 h — 570 €",
+                "10 h — 700 €",
+                "12 h — 825 €"
               ]
             },
             {
@@ -896,9 +902,11 @@
               "detail": "Maximal zwei Personen pro Lehrer, damit ihr gemeinsam Fortschritte macht.",
               "lines": [
                 "2 h — 80 €/Person",
-                "6 h — 230 €/Person",
-                "8 h — 300 €/Person",
-                "10 h — 380 €/Person"
+                "4 h — 160 €/Person",
+                "6 h — 235 €/Person",
+                "8 h — 310 €/Person",
+                "10 h — 380 €/Person",
+                "12 h — 450 €/Person"
               ]
             }
           ]
@@ -934,7 +942,7 @@
             },
             {
               "q": "Was kostet es, Kitesurfen zu lernen?",
-              "a": "420 bis 700 € im Privatkurs (6 bis 10 Std.), 230 bis 380 € pro Person im Halbprivatkurs."
+              "a": "435 bis 700 € im Privatkurs (6 bis 10 Std.), 235 bis 380 € pro Person im Halbprivatkurs."
             },
             {
               "q": "Muss ich sportlich sein oder schwimmen können?",
@@ -1015,7 +1023,7 @@
           "type": "prose",
           "title": "Welchen Kurs wählen?",
           "body": [
-            "Wingfoil-Kurse kosten so viel wie Kitesurf-Kurse: 2 Stunden für 150 € privat oder 80 € pro Person im Halbprivatkurs. Für 4 bis 6 Stunden passt das 6-Stunden-Paket am besten (420 € privat, 230 € pro Person halbprivat).",
+            "Wingfoil-Kurse kosten so viel wie Kitesurf-Kurse: 2 Stunden für 150 € privat oder 80 € pro Person im Halbprivatkurs. Für mehr Praxis kostet das 4-Stunden-Paket 300 € privat (160 € pro Person halbprivat) und das 6-Stunden-Paket 435 € (235 € pro Person).",
             "Wenn du selbstständig fährst, kostet die Betreuung 30 € pro Stunde und das Leihmaterial 20 €."
           ]
         },
@@ -1270,9 +1278,11 @@
               "detail": "Persönliches Einzelcoaching, damit du in deinem Tempo Fortschritte machst.",
               "lines": [
                 "2 h — 150 €",
-                "6 h — 420 €",
-                "8 h — 550 €",
-                "10 h — 700 €"
+                "4 h — 300 €",
+                "6 h — 435 €",
+                "8 h — 570 €",
+                "10 h — 700 €",
+                "12 h — 825 €"
               ]
             },
             {
@@ -1280,9 +1290,11 @@
               "detail": "Maximal zwei Personen pro Lehrer, damit ihr gemeinsam Fortschritte macht.",
               "lines": [
                 "2 h — 80 €/Person",
-                "6 h — 230 €/Person",
-                "8 h — 300 €/Person",
-                "10 h — 380 €/Person"
+                "4 h — 160 €/Person",
+                "6 h — 235 €/Person",
+                "8 h — 310 €/Person",
+                "10 h — 380 €/Person",
+                "12 h — 450 €/Person"
               ]
             }
           ]
@@ -1291,7 +1303,7 @@
           "type": "prose",
           "title": "Halbprivatkurs: Kitesurfen zu zweit lernen",
           "body": [
-            "Ein Halbprivatkurs bringt höchstens zwei Schüler mit einem Lehrer zusammen. Er kostet 80 € pro Person für 2 Stunden und 230 € pro Person für 6 Stunden, Ausrüstung inklusive.",
+            "Ein Halbprivatkurs bringt höchstens zwei Schüler mit einem Lehrer zusammen. Er kostet 80 € pro Person für 2 Stunden und 235 € pro Person für 6 Stunden, Ausrüstung inklusive.",
             "Du kannst zu zweit kommen: als Paar, mit Freunden oder mit der Familie. Du kommst allein? Wir bringen dich mit einem anderen Schüler gleichen Niveaus zusammen.",
             "Es ist der günstigste Weg zu lernen, und ein schöner Moment zum Teilen."
           ],
@@ -1339,7 +1351,7 @@
             {
               "name": "Fortgeschrittene & Sprünge",
               "lines": [
-                "1 Std. — 40 €"
+                "1 Std. — 50 €"
               ]
             },
             {
@@ -1468,9 +1480,11 @@
               "detail": "Persönliches Einzelcoaching, damit du in deinem Tempo Fortschritte machst.",
               "lines": [
                 "2 h — 150 €",
-                "6 h — 420 €",
-                "8 h — 550 €",
-                "10 h — 700 €"
+                "4 h — 300 €",
+                "6 h — 435 €",
+                "8 h — 570 €",
+                "10 h — 700 €",
+                "12 h — 825 €"
               ]
             },
             {
@@ -1478,9 +1492,11 @@
               "detail": "Maximal zwei Personen pro Lehrer, damit ihr gemeinsam Fortschritte macht.",
               "lines": [
                 "2 h — 80 €/Person",
-                "6 h — 230 €/Person",
-                "8 h — 300 €/Person",
-                "10 h — 380 €/Person"
+                "4 h — 160 €/Person",
+                "6 h — 235 €/Person",
+                "8 h — 310 €/Person",
+                "10 h — 380 €/Person",
+                "12 h — 450 €/Person"
               ]
             },
             {
